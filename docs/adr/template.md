@@ -1,8 +1,8 @@
 # [short title of solved problem and solution]
 
-* Status: [accepted | superseeded by [ADR-0005](0005-example.md) | deprecated | …] <!-- optional -->
-* Deciders: [list everyone involved in the decision] <!-- optional -->
-* Date: [YYYY-MM-DD when the decision was last updated] <!-- optional -->
+* Status: [accepted | superseeded by [ADR-0005](0005-example.md) | deprecated | …]
+* Deciders: [list everyone involved in the decision]
+* Date: [YYYY-MM-DD when the decision was last updated]
 
 Technical Story: [description | ticket/issue URL] <!-- optional -->
 
@@ -10,7 +10,7 @@ Technical Story: [description | ticket/issue URL] <!-- optional -->
 
 [Describe the context and problem statement, e.g., in free form using two to three sentences. You may want to articulate the problem in form of a question.]
 
-## Decision Drivers <!-- optional -->
+## Decision Drivers
 
 * [driver 1, e.g., a force, facing concern, …]
 * [driver 2, e.g., a force, facing concern, …]
@@ -27,12 +27,12 @@ Technical Story: [description | ticket/issue URL] <!-- optional -->
 
 Chosen option: "[option 1]", because [justification. e.g., only option, which meets k.o. criterion decision driver | which resolves force force | … | comes out best (see below)].
 
-### Positive Consequences <!-- optional -->
+### Positive Consequences
 
 * [e.g., improvement of quality attribute satisfaction, follow-up decisions required, …]
 * …
 
-### Negative consequences <!-- optional -->
+### Negative consequences
 
 * [e.g., compromising quality attribute, follow-up decisions required, …]
 * …
