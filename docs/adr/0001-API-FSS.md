@@ -6,6 +6,8 @@
 
 Technical Story: [description | ticket/issue URL] <!-- optional -->
 
+https://github.com/navikt/eessi-pensjon/blob/feature/ADR-for-API/docs/adr/oidc-ark-integrasjon-idporten.PNG
+
 ## Context and Problem Statement
 
 Vi har i dag to komponenter som deler ett repository:
