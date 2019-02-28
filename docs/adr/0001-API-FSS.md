@@ -1,7 +1,7 @@
 # [short title of solved problem and solution]
 
 * Status: in progress [accepted | proposed | deprecated | …]
-* Deciders: @kjetiljd, [list everyone involved in the decision]
+* Deciders: @kjetiljd, @mammut89, @jensnav [list everyone involved in the decision]
 * Date: [YYYY-MM-DD when the decision was last updated]
 
 Technical Story: [description | ticket/issue URL] <!-- optional -->
@@ -13,6 +13,11 @@ Vi har i dag to komponenter som deler ett repository:
 * API-FSS - kjører i fagsystemsonen (FSS); tilbyr tjenester til frontend for _saksbehandlere_; kaller videre til en rekke tjenester i FSS-sonen
 
 Det meldes om "API-spaghetti" - og er reist spørsmål om vi bør gjøre noe med dette.
+
+Problemmer:
+1.  Vi har kode som skal kun kjøres i en sone tilgjengelig i begge soner. Dette fører til overflødig kode i visse tilfeller.
+2.  Applikasjonen må hele tiden holde styr på hvilken sone den kjører i sånn at den velger riktig variant av en metode. Testene må også skrives deretter i henhold til sone.
+3.  Unødvendig videresendingskall fra SBS til FSS som til slutt egentlig skal til en 3. tjenste. Dette gjelder oggså kall fra FSS   saksbehandler UI i FSS api og videresenderkall til f.eks fagmodul.
 
 ## Decision Drivers
 
