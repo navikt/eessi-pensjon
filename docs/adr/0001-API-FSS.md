@@ -17,11 +17,19 @@ Det meldes om "API-spaghetti" - og er reist spørsmål om vi bør gjøre noe med
 Problemmer:
 1.  Vi har kode som skal kun kjøres i en sone tilgjengelig i begge soner. Dette fører til overflødig kode i visse tilfeller.
 2.  Applikasjonen må hele tiden holde styr på hvilken sone den kjører i sånn at den velger riktig variant av en metode. Testene må også skrives deretter i henhold til sone.
-3.  Unødvendig videresendingskall fra SBS til FSS som til slutt egentlig skal til en 3. tjenste. Dette gjelder oggså kall fra FSS   saksbehandler UI i FSS api og videresenderkall til f.eks fagmodul.
+3.  Unødvendig videresendingskall fra SBS til FSS som til slutt egentlig skal til en 3. tjeneste. Dette gjelder oggså kall fra FSS   saksbehandler UI i FSS api og videresenderkall til f.eks fagmodul.
 
 ## Decision Drivers
 
-* Utvikleropplevelse - <...>
+* Utvikleropplevelse - Forenkle verdikjeden med færre kall. Forenkle kodestrukturen med renere skille. 
+* Vi kan ende opp med å kun ha loginservice og lagre til S3. Alle andre kall går da direkte til 3. tjeneste 
+mulige nye navn på tjenestene: 
+
+ep-selvbetjening-backend  (login, storage crypt, videresende )
+
+ep-saksbehandling-backend (login, storage ucrypt, kafka, varsel, whitelisting, pdf)
+
+
 * Deploymentforhold - i dag deployes det som to komponenter i relativt rask rekkefølge
 * [driver 3, e.g., a force, facing concern, …]
 * [driver n, e.g., a force, facing concern, …]
