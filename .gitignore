@@ -1,3 +1,5 @@
 .repo
 eessi-pensjon-*
 *-eessi-pensjon-*
+
+.gradle/

@@ -20,6 +20,8 @@ repo start --all master
 
 Nå kan git brukes som normalt for hvert repo.
 
+Dersom du nå åpner `build.gradle` med `Open` (som Project) i IntelliJ så får du alle komponentene inn i ett IntelliJ-oppsett.
+
 ## Dokumentasjon
 
 ### Architectural Decisions
