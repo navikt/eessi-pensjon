@@ -12,7 +12,7 @@ https://github.com/navikt/eessi-pensjon/blob/feature/ADR-for-API/docs/adr/oidc-a
 
 Vi har i dag to komponenter som deler ett repository:
 * API-SBS - kjører i selvbetjeningssonen (SBS); tilbyr tjenester til frontend for _borgere_; kaller videre (via API Gateway) til API-FSS, samt til S3 i SBS(?)
-* API-FSS - kjører i fagsystemsonen (FSS); tilbyr tjenester til frontend for _saksbehandlere_; kaller videre til en rekke tjenester i FSS-sonen
+* API-FSS - kjører i fagsystemsonen (FSS); tilbyr tjenester til frontend for saksbehandlere og kaller nav registre for SBS soinen
 
 Det meldes om "API-spaghetti" - og er reist spørsmål om vi bør gjøre noe med dette.
 
@@ -23,13 +23,7 @@ Problemmer:
 
 ## Decision Drivers
 
-* Utvikleropplevelse - Forenkle verdikjeden med færre kall. Forenkle kodestrukturen med renere skille. 
-* Vi kan ende opp med å kun ha loginservice og lagre til S3. Alle andre kall går da direkte til 3. tjeneste 
-mulige nye navn på tjenestene: 
-
-ep-selvbetjening-backend  (login, storage crypt, videresende )
-
-ep-saksbehandling-backend (login, storage ucrypt, kafka, varsel, whitelisting, pdf)
+* Utvikleropplevelse - Forenkle verdikjeden. Forenkle kodestrukturen med renere skille. 
 
 
 * Deploymentforhold - i dag deployes det som to komponenter i relativt rask rekkefølge
@@ -41,9 +35,8 @@ ep-saksbehandling-backend (login, storage ucrypt, kafka, varsel, whitelisting, p
 
 * La det være slik det er (i én kodebase)
 * Splitte i to kodebaser
-* Fjerne API-FSS
+* Fjerne API-FSS, opprett 1 eller flere applikasjoner med nytt navn som har konkret ansvarsområde
 * Fikse på problemene med at det er i én kodebase
-* <finnes det flere alternativ?>
 
 ## Decision Outcome
 
@@ -51,11 +44,15 @@ Chosen option: "[option 1]", because [justification. e.g., only option, which me
 
 ### Positive Consequences
 
+Mindre kode i hver kodebase. Mer lesbart hvilke tjenester som tilbys av hvilken app. 
+Mindre sjangse for produksjonsfeil fordi man forsøkte å kjøre en kode i feil sone, eller at kode som ikke skulle vært kjørt ble kjørt i feil sone.
+
 * [e.g., improvement of quality attribute satisfaction, follow-up decisions required, …]
 * …
 
 ### Negative consequences
 
+Det tar litt tid å utføre dette
 * [e.g., compromising quality attribute, follow-up decisions required, …]
 * …
 
@@ -65,12 +62,17 @@ Chosen option: "[option 1]", because [justification. e.g., only option, which me
 
 [example | description | pointer to more information | …] <!-- optional -->
 
+Bra fordi da bruker vi ikke tid på det nå og kan fokusere på conformance test
+Dårlig fordi det vil fortsette å oppstå feil og det vil fortsette å ta lenger tid å utvikle på API
+ 
 * Good, because [argument a]
 * Good, because [argument b]
 * Bad, because [argument c]
 * … <!-- numbers of pros and cons can vary -->
 
 ### Splitte i to kodebaser
+
+Bra fordi da har vi et klart lesbart skille av hva som utføres av hvilken applikasjon. Mindre feil. Kortere tid å utvikle og forstå koden i fremtiden
 
 [example | description | pointer to more information | …] <!-- optional -->
 
@@ -81,6 +83,9 @@ Chosen option: "[option 1]", because [justification. e.g., only option, which me
 
 ### Fjerne API-FSS
 
+Bra for da kan vi lage mer granulert microservices som har mer avgrensede ansvarsområder.
+Dårlig fordi da må vi bruker litt mer tid på å utføre dette. Frontend må for eksempel søtte CORS for flere pather/apper
+
 [example | description | pointer to more information | …] <!-- optional -->
 
 * Good, because: en komponent mindre å vedlikeholde
@@ -89,6 +94,8 @@ Chosen option: "[option 1]", because [justification. e.g., only option, which me
 * … <!-- numbers of pros and cons can vary -->
 
 ### Fikse på problemene med at det er i én kodebase
+
+Dårlig for det er et tidsspørsmål før vi uansett må gjøre dette. Det vil smerte mer og med med tiden og bli mer og mer vanskelig å løsrive.
 
 [example | description | pointer to more information | …] <!-- optional -->
 
