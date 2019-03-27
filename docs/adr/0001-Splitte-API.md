@@ -4,9 +4,6 @@
 * Deciders: @kjetiljd, @mammut89, @jensnav, @MariamPervez, @PetterLowzow, @oyvindbuer, @NunoCardoso, @erlend-axelsson
 * Date: 2019-03-27
 
-Technical Story: [description | ticket/issue URL] <!-- optional -->
-
-https://github.com/navikt/eessi-pensjon/blob/feature/ADR-for-API/docs/adr/oidc-ark-integrasjon-idporten.PNG
 
 ## Context and Problem Statement
 
@@ -41,8 +38,8 @@ tror det blir enklere å resonnere rundt to uavhengige kodebaser.
 
 ### Positive Consequences
 
-* Mindre kode i hver kodebase. 
-* Mer lesbart hvilke tjenester som tilbys av hvilken app. 
+* Mindre kode i hver kodebase.
+* Mer lesbart hvilke tjenester som tilbys av hvilken app.
 * Mindre sjangse for produksjonsfeil fordi man forsøkte å kjøre en kode i feil sone, eller at kode som ikke skulle vært kjørt ble kjørt i feil sone.
 
 ### Negative consequences
@@ -55,7 +52,7 @@ tror det blir enklere å resonnere rundt to uavhengige kodebaser.
 
 Bra fordi da bruker vi ikke tid på det nå og kan fokusere på conformance test
 Dårlig fordi det vil fortsette å oppstå feil og det vil fortsette å ta lenger tid å utvikle på API
- 
+
 ### 2. Splitte i to kodebaser
 
 Bra fordi da har vi et klart lesbart skille av hva som utføres av hvilken applikasjon. Mindre feil. Kortere tid å utvikle og forstå koden i fremtiden
@@ -68,3 +65,5 @@ Dårlig fordi da må vi bruker litt mer tid på å utføre dette. Frontend må f
 ### 4. Fikse på problemene med at det er i én kodebase
 
 Dårlig for det er et tidsspørsmål før vi uansett må gjøre dette. Det vil smerte mer og med med tiden og bli mer og mer vanskelig å løsrive.
+
+![OIDC-ARK Integrason Idporten](https://github.com/navikt/eessi-pensjon/blob/feature/ADR-for-API/docs/adr/oidc-ark-integrasjon-idporten.PNG)
