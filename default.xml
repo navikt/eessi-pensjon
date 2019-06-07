@@ -8,9 +8,12 @@
   <project name="eessi-pensjon" path="." />
   <project name="eessi-pensjon-automatic-tests"/>
   <project name="eessi-pensjon-fagmodul"/>
-  <project name="eessi-pensjon-frontend-api"/>
-  <project name="eessi-pensjon-frontend-ui"/>
+  <project name="eessi-pensjon-journalforing"/>
   <project name="eessi-pensjon-mottak"/>
+  <project name="eessi-pensjon-saksbehandling-api"/>
+  <project name="eessi-pensjon-saksbehandling-ui"/>
+  <project name="eessi-pensjon-selvbetjening-api"/>
+  <project name="eessi-pensjon-selvbetjening-ui"/>
   <project name="jenkins-eessi-pensjon-nais-deploy-pipeline"/>
   <project name="jenkins-eessi-pensjon-pipeline"/>
 </manifest>
