@@ -3,6 +3,7 @@
 <!-- adrlog -- Regenerate the content by using "adr-log -i". You can install it via "npm install -g adr-log" -->
 
 - [ADR-0001](0001-Splitte-API.md) - Splitte API-modul i API-SBS og API-FSS
+- [ADR-0002](0002-Tilgangsstyring.md) - Tilgangsstyring
 
 <!-- adrlogstop -->
 
