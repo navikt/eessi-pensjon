@@ -1,6 +1,6 @@
 # Delegering av tilgangsskontroll
 
-* Status: Proposed
+* Status: Accepted
 * Deciders: Mo Amini, Øyvind Buer, Petter Lowzow, Kjetil Jørgensen-Dahl, Jens Madsen
 * Date: 2019-09-20
 
