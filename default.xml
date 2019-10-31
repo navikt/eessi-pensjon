@@ -7,6 +7,7 @@
     <!-- list should be sorted alphabetically -->
   <project name="eessi-pensjon" path="." />
   <project name="eessi-pensjon-automatic-tests"/>
+  <project name="eessi-pensjon-begrens-innsyn"/>
   <project name="eessi-pensjon-fagmodul"/>
   <project name="eessi-pensjon-journalforing"/>
   <project name="eessi-pensjon-mottak"/>
