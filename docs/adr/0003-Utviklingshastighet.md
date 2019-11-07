@@ -4,7 +4,7 @@
 * Deciders: Mo Amini, Jens Christian Madsen, Nuno Cardoso, Petter Lowzow, Kjetil Jørgensen-Dahl
 * Date: 2019-11-07
 
-Technical Story: [ADR for økt Utviklingshastighet](https://jira.adeo.no/browse/EESSIPEN-690)
+Technical Story: [ADR for økt Utviklingshastighet EESSIPEN-690](https://jira.adeo.no/browse/EESSIPEN-690)
 
 ## Context and Problem Statement
 
