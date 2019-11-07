@@ -1,10 +1,10 @@
-# [short title of solved problem and solution]
+# Øke utviklingshastigheten EESSI Pensjon
 
-* Status: [accepted | superseeded by [ADR-0005](0005-example.md) | deprecated | …]
-* Deciders: [list everyone involved in the decision]
-* Date: [YYYY-MM-DD when the decision was last updated]
+* Status: Proposed
+* Deciders: Mo Amini, Jens Christian Madsen, Nuno Cardoso, Petter Lowzow, Kjetil Jørgensen-Dahl
+* Date: 2019-11-07
 
-Technical Story: [description | ticket/issue URL] <!-- optional -->
+Technical Story: [ADR for økt Utviklingshastighet | https://jira.adeo.no/browse/EESSIPEN-690] <!-- optional -->
 
 ## Context and Problem Statement
 
