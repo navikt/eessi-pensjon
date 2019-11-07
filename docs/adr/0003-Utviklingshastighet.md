@@ -4,11 +4,13 @@
 * Deciders: Mo Amini, Jens Christian Madsen, Nuno Cardoso, Petter Lowzow, Kjetil Jørgensen-Dahl
 * Date: 2019-11-07
 
-Technical Story: [ADR for økt Utviklingshastighet EESSIPEN-690](https://jira.adeo.no/browse/EESSIPEN-690)
+Technical Story: [EESSIPEN-690 - ADR for økt Utviklingshastighet](https://jira.adeo.no/browse/EESSIPEN-690)
 
 ## Context and Problem Statement
 
-Denne ADR startet opprinnelig som en ADR for å se på hvordan vi kan øke den automatiserte testdekningen i EESSI Pensjon, men ble raskt utvidet til å gjelde alle tiltak som kan øke utviklingshastigheten.
+Denne ADR startet opprinnelig som et tiltak for å øke autotestdekningen i EESSI Pensjon, men ble raskt utvidet til å gjelde alle tiltak som kan gi økt utviklingshastighet. EESSI Pensjon har som mål å levere funksjonalitet raskest mulig til produksjon. Dette forutsetter optimale praksiser og rutiner. Samtidig er hyppige leveranser i seg selv er en pårdiver for forbedrede praksiser ved at repeterende arbeid vil automatiseres og forenkles. Fordelene ved kontinuerlige leveranser er mange. Automatisering reduserer tidsbruk og kostnader, risko for feil er mindre og opprydding i etterkant er enklere ved små endringer. Og ikke minst får det fortere å reagere på endrede behov og feil. 
+
+Tiltak som kan gi økt utviklingshastighet er derfor viktig å få oversikt over.
 
 ## Decision Drivers
 
