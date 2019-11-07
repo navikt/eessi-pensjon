@@ -8,7 +8,7 @@ Technical Story: [EESSIPEN-690 - ADR for økt Utviklingshastighet](https://jira.
 
 ## Context and Problem Statement
 
-Denne ADR startet opprinnelig som et tiltak for å øke autotestdekningen i EESSI Pensjon, men ble raskt utvidet til å gjelde alle tiltak som kan gi økt utviklingshastighet. EESSI Pensjon har som mål å levere funksjonalitet raskest mulig til produksjon. Dette forutsetter optimale praksiser og rutiner. Samtidig er hyppige leveranser i seg selv er en pårdiver for forbedrede praksiser ved at repeterende arbeid vil automatiseres og forenkles. Fordelene ved kontinuerlige leveranser er mange. Automatisering reduserer tidsbruk og kostnader, risko for feil er mindre og opprydding i etterkant er enklere ved små endringer. Og ikke minst får det fortere å reagere på endrede behov og feil. 
+Denne ADR startet opprinnelig som et tiltak for å øke autotestdekningen i EESSI Pensjon. Men den ble raskt utvidet til å gjelde alle tiltak som kan gi økt utviklingshastighet. EESSI Pensjon har som mål å levere funksjonalitet raskest mulig til produksjon. Dette forutsetter optimale praksiser og rutiner. Hyppige leveranser vil i tillegg ha en selvforsterkende effekt når det kommer til effektivisering, da repeterende arbeid fremtvinnger automatisering og forenkling. Fordelene ved kontinuerlige leveranser er mange. Automatisering reduserer tidsbruk og kostnader, risko for feil blir lavere og opprydding i etterkant er enklere ved små endringer. Og ikke minst går det fortere å reagere på endrede behov og feil. 
 
 Tiltak som kan gi økt utviklingshastighet er derfor viktig å få oversikt over.
 
