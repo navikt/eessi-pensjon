@@ -1,4 +1,4 @@
-# Øke utviklingshastigheten EESSI Pensjon
+# Økt utviklingshastighet EESSI Pensjon
 
 * Status: Proposed
 * Deciders: Mo Amini, Jens Christian Madsen, Nuno Cardoso, Petter Lowzow, Kjetil Jørgensen-Dahl
@@ -8,7 +8,7 @@ Technical Story: [ADR for økt Utviklingshastighet | https://jira.adeo.no/browse
 
 ## Context and Problem Statement
 
-[Describe the context and problem statement, e.g., in free form using two to three sentences. You may want to articulate the problem in form of a question.]
+Denne ADR startet opprinnelig som en ADR for å se på hvordan vi kan øke den automatiserte testdekningen i EESSI Pensjon, men ble raskt utvidet til å gjelde alle tiltak som kan øke utviklingshastigheten.
 
 ## Decision Drivers
 
