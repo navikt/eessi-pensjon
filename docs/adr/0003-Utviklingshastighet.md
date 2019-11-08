@@ -14,9 +14,26 @@ Tiltak som kan gi økt utviklingshastighet er derfor viktig å få oversikt over
 
 ## Decision Drivers
 
-* [driver 1, e.g., a force, facing concern, …]
-* [driver 2, e.g., a force, facing concern, …]
-* … <!-- numbers of drivers can vary -->
+* Risiko
+  * Risiko og konsekvens knyttet til feil
+  * Kompleksitet i testing/ kvalitetssikring
+  * Kompleksitet i gjennomføring (manuelle vs. automatisk deploy/ prodsetting)
+* Endringsdyktighet
+  * Raskere Feilretting - Mindre testbehov (automatisert), automatisert deploy, automatiserte prosesser, mer erfaring..  
+  * Hyppige endringer Produksjon - Reagere på endrede behov
+* Kostnader
+  * Automatisering vs. manuelle prosesser/ rutiner
+* Utviklerhensy
+  * Utviklingsomfang
+  * Testing under utvikling
+  * Utvikling på laptop
+* Kjøretidshensyn 
+  * Nedetidsfri deploy
+  * Manuelt arbeid/ applikasjonsdrift
+* Kompetanse
+  * Personavhengighet
+  * Domenekunnskap
+
 
 ## Considered Options
 
