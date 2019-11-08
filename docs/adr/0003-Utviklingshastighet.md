@@ -38,8 +38,10 @@ Resultatet av denne ADR vil være en prioritert liste av tiltak vi vil fokusere 
 ## Considered Options
 
 * [1. Prosess, organisasjon og metodikk](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#1-prosess-organisasjon-og-metodikk)
-* [option 2]
-* [option 3]
+* [2. Teknologi](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#2-teknologi)
+* [3. Applikasjonsdrift, Logging og Monitorering](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#3-Applikasjonsdrift-Logging-og-Monitorering)
+* [3. Applikasjonsdrift, Logging og Monitorering](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#3-applikasjonsdrift-logging-og-monitorering)
+* [4. Autoteste](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#4-autotest)
 * … <!-- numbers of options can vary -->
 
 ## Decision Outcome
@@ -48,13 +50,18 @@ Chosen option: "[option 1]", because [justification. e.g., only option, which me
 
 ### Positive Consequences
 
-* [e.g., improvement of quality attribute satisfaction, follow-up decisions required, …]
-* …
+* Mer endringsdyktig
+* Økt ledetid
+* Får gjort mer ved å fokusere på mindre
+* Flere mindre endringer gir færre feil
+* Lettere å rette feil ved små endringer
+* Raskere feilretting
+* Reduserte kostnader ved automatiserte prosesser (over tid)
+* Lettter å reagere på endrede behov
 
 ### Negative consequences
 
-* [e.g., compromising quality attribute, follow-up decisions required, …]
-* …
+* Automatisering er komplisert/ ressurskrevende til å begynne med
 
 ## Pros and Cons of the Options 
 
@@ -65,28 +72,43 @@ Hva kan gjøres med prosess, organisering og metodikk for å øke utviklkingshas
 * Er teamet organisert på optimal måte?
 * Jobbes det med de til enhver tid viktigeste oppgavene?
 * Jobbers det effektivt med hver enkelt oppgave?
-* Context Switching
+* Context Switching 
+* Avbrytelser
 * Fullføre enkeltoppgaver vs. flere oppgaver i paralell
+* Avhengigheter til andre team
+* Avhengigheter innad i team
+* Høy ledetid
+* Enhetstestdekning
+* TDD
 
-### [option 2]
+### 2. Teknologi  
 
-[example | description | pointer to more information | …] <!-- optional -->
+Har vi noen begrensninger i teknologien som er valgt som hindrer utviklingshastighet?
+
+* Camel?
+* Modularisering
+* 
+
+
+### 3. Applikasjonsdrift, Logging og Monitorering
+
+Har vi god nok kontroll på produksjon? Bedre applikasjonsdrift, logging og monitorering gi oss trygghet for økt utviklingshastighet?
 
 * Good, because [argument a]
 * Good, because [argument b]
 * Bad, because [argument c]
 * … <!-- numbers of pros and cons can vary -->
 
-### [option 3]
+### 4. Autotest
 
-[example | description | pointer to more information | …] <!-- optional -->
+Autotester er nødvendig for økt utviklngshastighet. Reduserer behovet for 
 
-* Good, because [argument a]
-* Good, because [argument b]
-* Bad, because [argument c]
-* … <!-- numbers of pros and cons can vary -->
+### 5. Kompetanse
+
+* Få erfarne utviklere
+* Kompetansedeling
+* Personavhengighet (Fagmodul og FrontEnd)
 
 ## Links <!-- optional -->
 
-* [Link type] [Link to ADR] <!-- example: Refined by [ADR-0005](0005-example.md) -->
-* … <!-- numbers of links can vary -->
+* [Kontinuerlige leveranser - Bekk Radar] [https://radar.bekk.no/tech2018/prosess-og-kvalitet/kontinuerlige-leveranser]
