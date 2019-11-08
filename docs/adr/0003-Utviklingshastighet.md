@@ -41,7 +41,8 @@ Chosen option: "[option 1]", because [justification. e.g., only option, which me
 
 ## Pros and Cons of the Options <!-- optional -->
 
-### [option 1]
+### Prosess og organisasjon
+https://blogg.bekk.no/a-maturity-model-for-continuous-delivery-991be2a64e4c
 
 [example | description | pointer to more information | …] <!-- optional -->
 
