@@ -94,10 +94,7 @@ Har vi noen begrensninger i teknologien som er valgt som hindrer utviklingshasti
 
 Har vi god nok kontroll på produksjon? Bedre applikasjonsdrift, logging og monitorering gi oss trygghet for økt utviklingshastighet?
 
-* Good, because [argument a]
-* Good, because [argument b]
-* Bad, because [argument c]
-* … <!-- numbers of pros and cons can vary -->
+Klarer vi reagere på Alerts, logger og feil?
 
 ### 4. Kvalitetssikring og Autotest
 
