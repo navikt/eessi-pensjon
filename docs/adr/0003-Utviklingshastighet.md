@@ -40,9 +40,8 @@ Resultatet av denne ADR vil være en prioritert liste av tiltak vi vil fokusere 
 * [1. Prosess, organisasjon og metodikk](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#1-prosess-organisasjon-og-metodikk)
 * [2. Teknologi](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#2-teknologi)
 * [3. Applikasjonsdrift, Logging og Monitorering](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#3-Applikasjonsdrift-Logging-og-Monitorering)
-* [3. Applikasjonsdrift, Logging og Monitorering](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#3-applikasjonsdrift-logging-og-monitorering)
-* [4. Autoteste](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#4-autotest)
-* … <!-- numbers of options can vary -->
+* [4. Kvalitetssiring og Autotest](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#5-kvalitetssikring-og-autotest)
+* [5. Kompetanse](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#5-kompetanse)
 
 ## Decision Outcome
 
@@ -89,7 +88,6 @@ Har vi noen begrensninger i teknologien som er valgt som hindrer utviklingshasti
 * Modularisering
 * 
 
-
 ### 3. Applikasjonsdrift, Logging og Monitorering
 
 Har vi god nok kontroll på produksjon? Bedre applikasjonsdrift, logging og monitorering gi oss trygghet for økt utviklingshastighet?
@@ -99,7 +97,7 @@ Har vi god nok kontroll på produksjon? Bedre applikasjonsdrift, logging og moni
 * Bad, because [argument c]
 * … <!-- numbers of pros and cons can vary -->
 
-### 4. Autotest
+### 4. Kvalitetssikring og Autotest
 
 Autotester er nødvendig for økt utviklngshastighet. Reduserer behovet for 
 
@@ -112,3 +110,4 @@ Autotester er nødvendig for økt utviklngshastighet. Reduserer behovet for
 ## Links <!-- optional -->
 
 * [Kontinuerlige leveranser - Bekk Radar] [https://radar.bekk.no/tech2018/prosess-og-kvalitet/kontinuerlige-leveranser]
+* [A maturity Model for Continuous Delivery - Bekk Blog](https://blogg.bekk.no/a-maturity-model-for-continuous-delivery-991be2a64e4c)
