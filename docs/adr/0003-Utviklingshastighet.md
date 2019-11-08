@@ -42,6 +42,8 @@ Resultatet av denne ADR vil være en prioritert liste av tiltak vi vil fokusere 
 * [3. Applikasjonsdrift, Logging og Monitorering](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#3-Applikasjonsdrift-Logging-og-Monitorering)
 * [4. Kvalitetssiring og Autotest](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#5-kvalitetssikring-og-autotest)
 * [5. Kompetanse](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#5-kompetanse)
+* [6. Deployrutiner (CI/CD)](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#6-6.-deployrutiner-(CI/CD))
+6. Deployrutiner (CI/CD)
 
 ## Decision Outcome
 
@@ -99,7 +101,9 @@ Har vi god nok kontroll på produksjon? Bedre applikasjonsdrift, logging og moni
 
 ### 4. Kvalitetssikring og Autotest
 
-Autotester er nødvendig for økt utviklngshastighet. Reduserer behovet for 
+Autotester er nødvendig for økt utviklngshastighet. Reduserer behovet for manuelle tester.
+
+Integrasjonstest og Kompetansetest?
 
 ### 5. Kompetanse
 
@@ -107,7 +111,17 @@ Autotester er nødvendig for økt utviklngshastighet. Reduserer behovet for
 * Kompetansedeling
 * Personavhengighet (Fagmodul og FrontEnd)
 
-## Links <!-- optional -->
+### 6. Deployrutiner (CI/CD)
+
+Deploy bør ikke være tidskrevende. Kan automatiseres.
+
+### 7. Konfigurasjonsstyring
+
+Sørg for enkel konfigurasjonsstyring
+
+### 8. 
+
+## Links 
 
 * [Kontinuerlige leveranser - Bekk Radar] [https://radar.bekk.no/tech2018/prosess-og-kvalitet/kontinuerlige-leveranser]
 * [A maturity Model for Continuous Delivery - Bekk Blog](https://blogg.bekk.no/a-maturity-model-for-continuous-delivery-991be2a64e4c)
