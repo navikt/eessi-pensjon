@@ -52,7 +52,7 @@ Chosen option: "[option 1]", because [justification. e.g., only option, which me
 ### Positive Consequences
 
 * Mer endringsdyktig
-* Økt ledetid
+* Forbedret ledetid
 * Får gjort mer ved å fokusere på mindre
 * Flere mindre endringer gir færre feil
 * Lettere å rette feil ved små endringer
