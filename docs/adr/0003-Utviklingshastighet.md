@@ -88,7 +88,7 @@ Har vi noen begrensninger i teknologien som er valgt som hindrer utviklingshasti
 
 * Camel?
 * Modularisering
-* 
+* S3
 
 ### 3. Applikasjonsdrift, Logging og Monitorering
 
