@@ -120,5 +120,5 @@ Sørg for enkel konfigurasjonsstyring
 
 ## Links 
 
-* [Kontinuerlige leveranser - Bekk Radar] [https://radar.bekk.no/tech2018/prosess-og-kvalitet/kontinuerlige-leveranser]
+* [Kontinuerlige leveranser - Bekk Radar](https://radar.bekk.no/tech2018/prosess-og-kvalitet/kontinuerlige-leveranser)
 * [A maturity Model for Continuous Delivery - Bekk Blog](https://blogg.bekk.no/a-maturity-model-for-continuous-delivery-991be2a64e4c)
