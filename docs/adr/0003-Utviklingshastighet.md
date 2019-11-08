@@ -8,19 +8,19 @@ Technical Story: [EESSIPEN-690 - ADR for økt Utviklingshastighet](https://jira.
 
 ## Context and Problem Statement
 
-Denne ADR startet opprinnelig som et tiltak for å øke autotestdekningen i EESSI Pensjon. Men den ble raskt utvidet til å gjelde alle tiltak som kan gi økt utviklingshastighet. EESSI Pensjon har som mål å levere funksjonalitet raskest mulig til produksjon. Dette forutsetter optimale praksiser og rutiner. Hyppige leveranser vil i tillegg ha en selvforsterkende effekt når det kommer til effektivisering, da repeterende arbeid fremtvinnger automatisering og forenkling. Fordelene ved kontinuerlige leveranser er mange. Automatisering reduserer tidsbruk og kostnader, risko for feil blir lavere og opprydding i etterkant er enklere ved små endringer. Og ikke minst går det fortere å reagere på endrede behov og feil. 
+Denne ADR startet opprinnelig som et tiltak for å øke autotestdekningen i EESSI Pensjon. Men den ble raskt utvidet til å gjelde alle tiltak som kan gi økt utviklingshastighet. EESSI Pensjon har som mål å levere funksjonalitet raskest mulig til produksjon. Dette forutsetter optimale praksiser og rutiner. Men hyppige leveranser vil også ha en selvforsterkende effekt når det kommer til effektivisering, da repeterende arbeid i seg selv fremtvinnger automatisering og forenkling. 
 
-Tiltak som kan gi økt utviklingshastighet er derfor viktig å få oversikt over.
+Resultatet av denne ADR vil være en prioritert liste av tiltak vi vil fokusere på for økt utviklingshastighet. ADR'en har ikke som henikt å finne ett konkret tiltak som skal velges, men heller identifisere flere tiltak som vi ønsker å jobbe videre med. Enkelte av tiltakene vil også kunne kreve egne konkrete ADR'er for å avgjøre strategi og løsningsvalg.
 
 ## Decision Drivers
 
+* Endringsdyktighet
+  * Rask Feilretting
+  * Hyppige endringer Produksjon
 * Risiko
   * Risiko og konsekvens knyttet til feil
   * Kompleksitet i testing/ kvalitetssikring
   * Kompleksitet i gjennomføring (manuelle vs. automatisk deploy/ prodsetting)
-* Endringsdyktighet
-  * Raskere Feilretting - Mindre testbehov (automatisert), automatisert deploy, automatiserte prosesser, mer erfaring..  
-  * Hyppige endringer Produksjon - Reagere på endrede behov
 * Kostnader
   * Automatisering vs. manuelle prosesser/ rutiner
 * Utviklerhensy
@@ -56,17 +56,17 @@ Chosen option: "[option 1]", because [justification. e.g., only option, which me
 * [e.g., compromising quality attribute, follow-up decisions required, …]
 * …
 
-## Pros and Cons of the Options <!-- optional -->
+## Pros and Cons of the Options 
 
-### Prosess og organisasjon
-https://blogg.bekk.no/a-maturity-model-for-continuous-delivery-991be2a64e4c
+### 1. Prosess, organisasjon og metodikk
 
-[example | description | pointer to more information | …] <!-- optional -->
+Hva kan gjøres med prosess, organisering og metodikk for å øke utviklkingshastigheten?
 
-* Good, because [argument a]
-* Good, because [argument b]
-* Bad, because [argument c]
-* … <!-- numbers of pros and cons can vary -->
+* Er teamet organisert på optimal måte?
+* Jobbes det med de til enhver tid viktigeste oppgavene?
+* Jobbers det effektivt med hver enkelt oppgave?
+* Context Switching
+* Fullføre enkeltoppgaver vs. flere oppgaver i paralell
 
 ### [option 2]
 
