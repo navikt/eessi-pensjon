@@ -39,12 +39,12 @@ Resultatet av denne ADR vil være en prioritert liste av tiltak vi vil fokusere 
 
 * [1. Prosess, organisasjon og metodikk](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#1-prosess-organisasjon-og-metodikk)
 * [2. Teknologi](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#2-teknologi)
-* [3. Applikasjonsdrift, Logging og Monitorering](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#3-Applikasjonsdrift-Logging-og-Monitorering)
-* [4. Kvalitetssiring og Autotest](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#5-kvalitetssikring-og-autotest)
+* [3. Applikasjonsdrift, Logging og Monitorering](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#3-applikasjonsdrift-logging-og-monitorering)
+* [4. Kvalitetssiring og Autotest](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#4-kvalitetssikring-og-autotest)
 * [5. Kompetanse](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#5-kompetanse)
-* [6. Deployrutiner (CI/CD)](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#6-Deployrutiner-(CI/CD))
-* [7. Konfigurasjonsstyring](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#7-Konfigurasjons
-* [8. Arbeidsregler Git: Commit, Branching & Pull Requests](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#8-Arbeidsregler-Git:-Commit,-Branching-&-Pull-Requests
+* [6. Deployrutiner (CI/CD)](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#6-deployrutiner-cicd)
+* [7. Konfigurasjonsstyring](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#7-konfigurasjonsstyring)
+* [8. Arbeidsregler Git: Commit, Branching & Pull Requests](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#8-arbeidsregler-git-commit-branching--pull-requests)
 
 ## Decision Outcome
 
