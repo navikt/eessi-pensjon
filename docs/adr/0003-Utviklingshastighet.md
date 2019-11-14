@@ -42,8 +42,9 @@ Resultatet av denne ADR vil være en prioritert liste av tiltak vi vil fokusere 
 * [3. Applikasjonsdrift, Logging og Monitorering](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#3-Applikasjonsdrift-Logging-og-Monitorering)
 * [4. Kvalitetssiring og Autotest](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#5-kvalitetssikring-og-autotest)
 * [5. Kompetanse](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#5-kompetanse)
-* [6. Deployrutiner (CI/CD)](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#6-6.-deployrutiner-(CI/CD))
-6. Deployrutiner (CI/CD)
+* [6. Deployrutiner (CI/CD)](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#6-Deployrutiner-(CI/CD))
+* [7. Konfigurasjonsstyring](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#7-Konfigurasjons
+* [8. Arbeidsregler Git: Commit, Branching & Pull Requests](https://github.com/navikt/eessi-pensjon/blob/feature/adr-utviklingshastighet/docs/adr/0003-Utviklingshastighet.md#8-Arbeidsregler-Git:-Commit,-Branching-&-Pull-Requests
 
 ## Decision Outcome
 
@@ -116,7 +117,8 @@ Deploy bør ikke være tidskrevende. Kan automatiseres.
 
 Sørg for enkel konfigurasjonsstyring
 
-### 8. 
+### 8. Arbeidsregler Git: Commit, Branching & Pull Requests
+[Arbeidsregler Git: Commit, Branching & Pull Requests](https://confluence.adeo.no/display/EP/Arbeidsregler+git+-+commits%2C+brancher%2C+pull+requests)
 
 ## Links 
 
