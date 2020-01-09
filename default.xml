@@ -16,6 +16,7 @@
   <project name="eessi-pensjon-saksbehandling-ui"/>
   <project name="eessi-pensjon-selvbetjening-api"/>
   <project name="eessi-pensjon-selvbetjening-ui"/>
+  <project name="eessi-pensjon-ui"/>
   <project name="jenkins-eessi-pensjon-nais-deploy-pipeline"/>
   <project name="jenkins-eessi-pensjon-pipeline"/>
 </manifest>
