@@ -10,7 +10,6 @@
   <project name="eessi-pensjon-begrens-innsyn"/>
   <project name="eessi-pensjon-fagmodul"/>
   <project name="eessi-pensjon-journalforing"/>
-  <project name="eessi-pensjon-logging"/>
   <project name="eessi-pensjon-mottak"/>
   <project name="eessi-pensjon-oppgave"/>
   <project name="eessi-pensjon-saksbehandling-api"/>
@@ -18,6 +17,7 @@
   <project name="eessi-pensjon-selvbetjening-api"/>
   <project name="eessi-pensjon-selvbetjening-ui"/>
   <project name="eessi-pensjon-ui"/>
+  <project name="ep-logging"/>
   <project name="ep-metrics"/>
   <project name="jenkins-eessi-pensjon-nais-deploy-pipeline"/>
   <project name="jenkins-eessi-pensjon-pipeline"/>
