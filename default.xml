@@ -10,7 +10,6 @@
   <project name="eessi-pensjon-begrens-innsyn"/>
   <project name="eessi-pensjon-fagmodul"/>
   <project name="eessi-pensjon-journalforing"/>
-  <project name="eessi-pensjon-mottak"/>
   <project name="eessi-pensjon-oppgave"/>
   <project name="eessi-pensjon-saksbehandling-api"/>
   <project name="eessi-pensjon-saksbehandling-ui"/>
