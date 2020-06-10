@@ -18,6 +18,7 @@
   <project name="eessi-pensjon-ui"/>
   <project name="ep-logging"/>
   <project name="ep-metrics"/>
+  <project name="ep-personoppslag"/>
   <project name="ep-security-sts"/>
   <project name="jenkins-eessi-pensjon-nais-deploy-pipeline"/>
   <project name="jenkins-eessi-pensjon-pipeline"/>
