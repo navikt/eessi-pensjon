@@ -11,6 +11,7 @@
   <project name="eessi-pensjon-fagmodul"/>
   <project name="eessi-pensjon-journalforing"/>
   <project name="eessi-pensjon-oppgave"/>
+  <project name="eessi-pensjon-statistikk"/>
   <project name="eessi-pensjon-saksbehandling-api"/>
   <project name="eessi-pensjon-saksbehandling-ui"/>
   <project name="eessi-pensjon-ui"/>
