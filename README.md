@@ -42,5 +42,6 @@ Interne henvendelser kan sendes via Slack i kanalen #eessi-pensjonpub.
 
 # For å hente ut info om siste ukes commits
 
-(echo “./.git”; ls -d */.git) | sed ‘s#/.git##’ | xargs -I{} sh -c “git pull --rebase --autostash > /dev/null ; pushd {} > /dev/null ; git log --reverse --format=' (%cr) %h %s’ --since=‘8 days’ | sed ‘s/^/{}:/’ ; popd > /dev/null”
+(echo "./.git"; ls -d */.git) | sed 's#/.git##' | xargs -I{} sh -c "git pull --rebase --autostash > /dev/null ; pushd {} > /dev/null ; git log --reverse --format=' (%cr) %h %s' --since='8 days' | sed 's/^/{}:/' ; popd > /dev/null"
+
 
