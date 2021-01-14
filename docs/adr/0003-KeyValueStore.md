@@ -2,7 +2,7 @@
 
 * Status: In progress
 * Deciders: Mo Amini, Jens Madsen, Nicolas Nordhagen, Daniel Skarpås, Mariam Pervez
-* Date: 2021-01-13
+* Date: 2021-01-14
 
 Technical Story: https://jira.adeo.no/browse/EP-858 
 
@@ -33,13 +33,13 @@ Vi ser behovet for en key-value database
 
 
 ## Decision Outcome
-
+Vi velger å bruke S3 fordi det er det som er enklest å ta i bruk raskt og dekker våre behov idag.
 
 ### Positive Consequences
-
+Mindre arbeid med å sette opp et nytt lagringsmedium og komme igang med rutiner
 
 ### Negative consequences
-
+S3 er ikke det beste valget når behovet blir mer komplekst enn bare enkel key-value
 
 ## Pros and Cons of the Options
 
