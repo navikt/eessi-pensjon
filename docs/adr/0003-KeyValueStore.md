@@ -48,6 +48,7 @@ Vi ser behovet for en key-value database
 * Bra, fordi det er kjent teknologi , de fleste kan SQL 
 * Bra, mange bruker det og fungerer greit
 * Bra, det finnes en egel postgeSQL kanal med et fagmiljø på slack
+* Bra, enkelt å sjekke og kjøre uttrekk
 * Dårlig, overkill for dette formålet
 * Dårlig, relasjonsdatabaser har en tendens til å ese ut og krever mer tid i vedlikehold
 
@@ -58,6 +59,7 @@ Vi ser behovet for en key-value database
 * Bra, det er enkelt å ta i bruk
 * Bra, det er en key-value store
 * Dårlig, en gang mistet vi alt vi hadde på S3 på grunn av problemer på drift
+* Dårlig, litt krøkkete å sjekke hva som ligger i S3 i prod
 
 3. Redis
 
