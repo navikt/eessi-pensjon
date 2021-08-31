@@ -15,7 +15,7 @@ Repositoriene settes opp med:
 ```
 mkdir eessi-pensjon
 cd eessi-pensjon
-repo init -u git@github.com:navikt/eessi-pensjon.git
+repo init -u git@github.com:navikt/eessi-pensjon.git --config-name
 repo sync
 repo start --all master
 ```

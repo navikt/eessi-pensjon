@@ -15,6 +15,7 @@
   <project name="eessi-pensjon-saksbehandling-api"/>
   <project name="eessi-pensjon-saksbehandling-ui"/>
   <project name="eessi-pensjon-ui"/>
+  <project name="ep-eux"/>
   <project name="ep-logging"/>
   <project name="ep-metrics"/>
   <project name="ep-personoppslag"/>
