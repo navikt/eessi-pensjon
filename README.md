@@ -41,6 +41,19 @@ Spørsmål knyttet til koden eller prosjektet kan rettes mot:
 Interne henvendelser kan sendes via Slack i kanalen #eessi-pensjon.
 
 # For å hente ut info om siste ukes commits
+```bash
+set -o pipefail
+set -o errexit
+for repo in $(find . -type d -name '.git'); do
+  pushd "$(dirname "$repo")" >/dev/null
+  # Debug prints
+  # echo -e "\nNow in $(pwd)"
+  # git rev-parse HEAD
+  git log --reverse --format=' (%cr) %h %s' --since='8 days' \
+  | sed "s@^@$(basename "$(pwd)"):@"
+  popd >/dev/null
+done
+```
+As one-liner:
 
-(echo "./.git"; ls -d */.git) | sed 's#/.git##' | xargs -I{} sh -c "git pull --rebase --autostash > /dev/null ; pushd {} > /dev/null ; git log --reverse --format=' (%cr) %h %s' --since='8 days' | sed 's/^/{}:/' ; popd > /dev/null"
-
+`for repo in $(find . -type d -name '.git'); do pushd "$(dirname "$repo")" 1>/dev/null && git log --reverse --format=' (%cr) %h %s' --since='8 days' | sed "s@^@$(basename "$(pwd)"):@" && popd 1>/dev/null; done` 
