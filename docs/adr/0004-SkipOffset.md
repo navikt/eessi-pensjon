@@ -23,21 +23,20 @@ Ingen mulighet for å rekonsumere meldingen på en rask og enkel måte uten å d
 ## Considered Options
 
 * Benytte S3 for å lagre feilede meldinger, bruke timer/cronjob til å prøve på nytt 
-* Benytte s3 for å lagre feilede meldinger, bruke GUI for å rekjøre ( fagperson kan rekjøre uten utvikler)
-* Benytte en ny retryTopic som rekjører et par ganger før alternativ over
-* Benytte retry med sjekk for hvor langt man har kommet og lage funksjonalitet for hva som mangler
-* Splitte opp journalføring sånn at den bare lager journalposten og lager en ny kafkamelding som oppgave tar opp
-* 
+* Bruke GUI for å rekjøre ( fagperson kan rekjøre uten utvikler)
+* Benytte en ny retryTopic (deadletterqueue) som rekjører et par ganger før alternativ over
+* Gjøre ingenting, ingen forbedringer
 * … <!-- numbers of options can vary -->
 
 ## Decision Outcome
 
-Chosen option: "[option 1]", because [justification. e.g., only option, which meets k.o. criterion decision driver | which resolves force force | … | comes out best (see below)].
+Chosen option: 2, Denne vil dekke et bredere spekter av feilede hendelser, samt gi en god oversikt over hendelsene. 
+Fagperson kan også legge inn kommentar til hva som er årsaken til problemet. Dette valget vil også hinde JF i å stoppe.
 
 ### Positive Consequences
 
-* [e.g., improvement of quality attribute satisfaction, follow-up decisions required, …]
-* …
+* Denne løsningen vil dekke et bredere spekter av feilede hendelser, samt gi en god oversikt over hendelsene.
+  Fagperson kan også legge inn kommentar til hva som er årsaken til problemet. Dette valget vil også hinde JF i å stoppe.
 
 ### Negative consequences
 
@@ -46,32 +45,37 @@ Chosen option: "[option 1]", because [justification. e.g., only option, which me
 
 ## Pros and Cons of the Options <!-- optional -->
 
-### [option 1]
+### 1.) Benytte S3 for å lagre feilede meldinger, bruke timer/cronjob til å prøve på nytt
 
-[example | description | pointer to more information | …] <!-- optional -->
 
-* Good, because [argument a]
-* Good, because [argument b]
-* Bad, because [argument c]
+* Good, fordi vi ikke benytter oss av noen enkel db.
+* Good, rask til å hente ut data, kjent api, enkel api da den benyttes på andre av våre apper.
+* Bad, må ha kjennskap til koden og db for å forstå mappingen
+
+### 2.) Bruke GUI for å rekjøre hendelser ( fagperson kan rekjøre meldinger uten assistanse fra utvikler)
+
+Tar utgangspunkt i at vi fremdeles benytter s3 for å lagre feilede meldinger <!-- optional -->
+
+
+* Good, da vi får en fin oversikt via et grafisk grensesnitt.
+* Good, fristiller utvikler til å ta til seg andre oppgaver, da fagperson kan selv betjene denne tjenesten selv
+* Bad, må involvere frontendutvikler
+* Bad, må ha tilgangskontroll/token (komplekst)
+
+### 3.) Benytte en ny retryTopic og errorTopic som rekjører et par ganger før alternativ over
+
+Meldinger som ikke går igjennom etter retry havner på errorTopicen <!-- optional -->
+
+* Good, automatisert rekjøring av feilede hendelser 
+* Good, enkelt å sette opp
+* Bad, noen av de feilede vil mest sannsynlig feile igjen og deretter havne på errortopicen
+* Bad, errortopicen krever manuell håndtering
 * … <!-- numbers of pros and cons can vary -->
 
-### [option 2]
+### 4.) Gjøre ingenting
 
-[example | description | pointer to more information | …] <!-- optional -->
-
-* Good, because [argument a]
-* Good, because [argument b]
-* Bad, because [argument c]
-* … <!-- numbers of pros and cons can vary -->
-
-### [option 3]
-
-[example | description | pointer to more information | …] <!-- optional -->
-
-* Good, because [argument a]
-* Good, because [argument b]
-* Bad, because [argument c]
-* … <!-- numbers of pros and cons can vary -->
+* Good, gjøre ingenting 
+* Bad, da problemet ikke blir borte.
 
 ## Links <!-- optional -->
 
