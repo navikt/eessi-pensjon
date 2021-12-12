@@ -15,7 +15,7 @@ if test -f build.gradle || test -f build.gradle.kts; then
     ./gradlew wrapper --gradle-version "$GRADLEW_VERSION" --distribution-type all
     echo "Building post-upgrade ..."
     $(dirname -- "$0")/build.sh
-    echo "Commiting changes ..."
+    echo "Committing changes ..."
     git add gradle gradlew.bat gradlew
     git commit -m"Upgrade Gradle wrapper to $GRADLEW_VERSION"
   fi
