@@ -10,7 +10,11 @@
   <project name="eessi-pensjon-begrens-innsyn"/>
   <project name="eessi-pensjon-fagmodul"/>
   <project name="eessi-pensjon-journalforing"/>
+  <project name="eessi-pensjon-krav-initialisering"/>
   <project name="eessi-pensjon-oppgave"/>
+  <project name="eessi-pensjon-pdl-produsent"/>
+  <project name="eessi-pensjon-prefill"/>
+  <project name="eessi-pensjon-retry-api"/>
   <project name="eessi-pensjon-statistikk"/>
   <project name="eessi-pensjon-saksbehandling-api"/>
   <project name="eessi-pensjon-saksbehandling-ui"/>
