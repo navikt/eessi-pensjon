@@ -1,0 +1,22 @@
+{
+  "projects": {
+    "eessi-pensjon-automatic-tests": "git@github.com:navikt/eessi-pensjon-automatic-tests",
+    "eessi-pensjon-begrens-innsyn": "git@github.com:navikt/eessi-pensjon-begrens-innsyn",
+    "eessi-pensjon-fagmodul": "git@github.com:navikt/eessi-pensjon-fagmodul",
+    "eessi-pensjon-journalforing": "git@github.com:navikt/eessi-pensjon-journalforing",
+    "eessi-pensjon-krav-initialisering": "git@github.com:navikt/eessi-pensjon-krav-initialisering",
+    "eessi-pensjon-oppgave": "git@github.com:navikt/eessi-pensjon-oppgave",
+    "eessi-pensjon-pdl-produsent":  "git@github.com:navikt/eessi-pensjon-pdl-produsent",
+    "eessi-pensjon-prefill": "git@github.com:navikt/eessi-pensjon-prefill",
+    "eessi-pensjon-retry-api":  "git@github.com:navikt/eessi-pensjon-retry-api",
+    "eessi-pensjon-saksbehandling-api": "git@github.com:navikt/eessi-pensjon-saksbehandling-api",
+    "eessi-pensjon-saksbehandling-ui": "git@github.com:navikt/eessi-pensjon-saksbehandling-ui",
+    "eessi-pensjon-statistikk": "git@github.com:navikt/eessi-pensjon-statistikk",
+    "eessi-pensjon-ui": "git@github.com:navikt/eessi-pensjon-ui",
+    "ep-eux": "git@github.com:navikt/ep-eux",
+    "ep-logging": "git@github.com:navikt/ep-logging",
+    "ep-metrics": "git@github.com:navikt/ep-metrics",
+    "ep-personoppslag": "git@github.com:navikt/ep-personoppslag",
+    "ep-security-sts": "git@github.com:navikt/ep-security-sts"
+  }
+}

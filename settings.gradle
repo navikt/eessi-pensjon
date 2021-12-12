@@ -1,4 +1,4 @@
-rootProject.name = "eessi-pensjon-monorepo"
+rootProject.name = "eessi-pensjon-metarepo"
 
 includeBuild "eessi-pensjon-automatic-tests"
 includeBuild "eessi-pensjon-begrens-innsyn"

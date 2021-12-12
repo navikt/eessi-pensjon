@@ -1,26 +1,26 @@
 # EESSI Pensjon
 
-En samling tjenester og verktøy, som utgjør EESSI Pensjon.
+En samlingmeta-repo med applikasjoner, bibliotek og verktøy - som utgjør EESSI Pensjon.
 
 ## Komme i gang
 
-[repo](https://source.android.com/setup/develop/repo) brukes til å sette opp
-repositories for alle komponentene. Det kan [installeres
-manuelt](https://source.android.com/setup/build/downloading) eller via homebrew:
+[meta](https://github.com/mateodelnorte/meta) brukes til å sette opp
+repositories for alle repoene.
 
-`brew install repo`
-
-Repositoriene settes opp med:
+Enn så lenge må du sørge for å ha `npm` installert (`brew install node`).
 
 ```
-mkdir eessi-pensjon
-cd eessi-pensjon
-repo init -u git@github.com:navikt/eessi-pensjon.git --config-name
-repo sync
-repo start --all master
+npm install meta -g --no-save
+```
+
+Merk! meta foran vanlig clone-kommando:
+```
+meta git clone git@github.com:navikt/eessi-pensjon.git
 ```
 
 Nå kan git brukes som normalt for hvert repo.
+
+Se [meta](https://github.com/mateodelnorte/meta) for flere kommandoer.
 
 Dersom du nå åpner `build.gradle` med `Open` (som Project) i IntelliJ så får du alle komponentene inn i ett IntelliJ-oppsett.
 
