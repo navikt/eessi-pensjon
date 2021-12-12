@@ -1,5 +1,7 @@
 .PHONY: $(shell sed -n -e '/^$$/ { n ; /^[^ .\#][^ ]*:/ { s/:.*$$// ; p ; } ; }' $(MAKEFILE_LIST))
 
+root_dir := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
+
 help:
 	 @echo "$$(grep -hE '^\S+:.*##' $(MAKEFILE_LIST) | sed -e 's/:.*##\s*/:/' -e 's/^\(.\+\):\(.*\)/\\x1b[36m\1\\x1b[m:\2/' | column -c2 -t -s :)"
 
@@ -13,4 +15,4 @@ mainline: ## Switch all repos to mainline (main/master)
 	@meta exec "git branch --all | sed 's/^[* ] //' | egrep '^main|^master' | xargs git checkout"
 
 build: ## Run ./gradlew build
-	@meta exec "../script/build.sh"
+	@meta loop "$(root_dir)script/build.sh"

@@ -4,5 +4,5 @@ function java_use() {
    unset JAVA_HOME
    export JAVA_HOME=$(/usr/libexec/java_home -v "$1")
    export PATH=$JAVA_HOME/bin:$PATH
-   java -version
+   java --version | head -1
 }
