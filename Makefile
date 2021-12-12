@@ -18,4 +18,4 @@ build: ## Run ./gradlew build
 	@meta loop "$(root_dir)script/build.sh"
 
 upgrade-gradle: ## Upgrade gradle in all projects - usage GRADLEW_VERSION=x.x.x make upgrade-gradle
-	@meta exec "$(root_dir)script/update_gradle.sh"
+	@meta exec "$(root_dir)script/upgrade_gradle.sh"
