@@ -11,6 +11,7 @@
     "eessi-pensjon-saksbehandling-ui": "git@github.com:navikt/eessi-pensjon-saksbehandling-ui",
     "eessi-pensjon-statistikk": "git@github.com:navikt/eessi-pensjon-statistikk",
     "eessi-pensjon-ui": "git@github.com:navikt/eessi-pensjon-ui",
+    "eessi-pensjon-onprem-proxy": "git@github.com:navikt/eessi-pensjon-onprem-proxy",
     "ep-eux": "git@github.com:navikt/ep-eux",
     "ep-logging": "git@github.com:navikt/ep-logging",
     "ep-metrics": "git@github.com:navikt/ep-metrics",
