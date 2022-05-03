@@ -30,6 +30,10 @@ Dersom du nå åpner `build.gradle` med `Open` (som Project) i IntelliJ så får
 
 Se [Architectural Decision Log](docs/adr/index.md) for prosjektet
 
+### SonarQube
+
+Les mer om bruk av [SonarQube](docs/dev/sonarqube.md)
+
 ## Henvendelser
 
 Spørsmål knyttet til koden eller prosjektet kan rettes mot:
