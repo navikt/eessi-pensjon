@@ -17,5 +17,8 @@ mainline: ## Switch all repos to mainline (main/master)
 build: ## Run ./gradlew build
 	@meta loop "$(root_dir)script/build.sh"
 
+gw: ## Run ./gradlew <target> - (e.g run using: make gw clean build)
+	@meta loop "$(root_dir)script/gw.sh $(filter-out $@,$(MAKECMDGOALS))"
+
 upgrade-gradle: ## Upgrade gradle in all projects - usage GRADLEW_VERSION=x.x.x make upgrade-gradle
 	@meta exec "$(root_dir)script/upgrade_gradle.sh"
