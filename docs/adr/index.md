@@ -5,6 +5,8 @@
 - [ADR-0001](0001-Splitte-API.md) - Splitte API-modul i API-SBS og API-FSS
 - [ADR-0002](0002-Tilgangsstyring.md) - Tilgangsstyring
 - [ADR-0003](0003-KeyValueStore.md) - Enkel persistering av data
+- [ADR-0005](0005-Rammeverk-for-EP-lytter-apper.md) - Rammeverksmodul for app'er som lytter på Kafka
+- 
 
 <!-- adrlogstop -->
 
