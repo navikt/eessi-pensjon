@@ -4,6 +4,7 @@
 
 - [ADR-0001](0001-Splitte-API.md) - Splitte API-modul i API-SBS og API-FSS
 - [ADR-0002](0002-Tilgangsstyring.md) - Tilgangsstyring
+- [ADR-0003](0003-KeyValueStore.md) - Enkel persistering av data
 
 <!-- adrlogstop -->
 
