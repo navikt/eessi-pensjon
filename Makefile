@@ -15,10 +15,10 @@ mainline: ## Switch all repos to mainline (main/master)
 	@meta exec "git branch --all | sed 's/^[* ] //' | egrep '^main|^master' | xargs git checkout"
 
 build: ## Run ./gradlew build
-	@meta loop "$(root_dir)script/build.sh"
+	@meta loop "$(root_dir)script/build.sh" --exclude "eessi-pensjon"
 
 gw: ## Run ./gradlew <target> - (e.g run using: make gw clean build)
-	@meta loop "$(root_dir)script/gw.sh $(filter-out $@,$(MAKECMDGOALS))"
+	@meta loop "$(root_dir)script/gw.sh $(filter-out $@,$(MAKECMDGOALS))" --exclude "eessi-pensjon" --parallel
 
 upgrade-gradle: ## Upgrade gradle in all projects - usage GRADLEW_VERSION=x.x.x make upgrade-gradle
 	@meta exec "$(root_dir)script/upgrade_gradle.sh"
