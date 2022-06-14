@@ -26,12 +26,11 @@ Løsning for å melde utenlandske id'er er laget i app'en [eessi-pensjon-pdl-pro
 
 ## Considered Options
 
-* Én app, to lyttere
-* To uavhengige app'er (med hver sin lytter)
-* Én kodebase, men to app'er, som kjører opp hver sin lytter.
-* To app'er, mest mulig i bibliotek
-* 
-* 
+1. Én app, to lyttere
+2. To uavhengige app'er (med hver sin lytter)
+3. Én kodebase, men to app'er, som kjører opp hver sin lytter.
+4. To app'er, mest mulig i bibliotek
+5. 
 
 ## Decision Outcome
 
@@ -49,31 +48,50 @@ Chosen option: "[option 1]", because [justification. e.g., only option, which me
 
 ## Pros and Cons of the Options <!-- optional -->
 
-### [option 1]
+### 1. Én app, to lyttere
 
-[example | description | pointer to more information | …] <!-- optional -->
+Legge to lyttere i samme pdl-konsument.
 
-* Good, because [argument a]
-* Good, because [argument b]
-* Bad, because [argument c]
+* Good, because vi slipper med én app
+* Good, because en del logikk er felles og vil være tilgjengelig og ikke trenge duplisering
+* Bad, because det operasjonelle blir mer komplisert (kan være i tilstand med én fungerende lytter)
+* Bad, because konfigurasjon blir mer komplisert
+* 
 * … <!-- numbers of pros and cons can vary -->
 
-### [option 2]
+### 2. To uavhengige app'er (med hver sin lytter)
 
-[example | description | pointer to more information | …] <!-- optional -->
+Lage to uavhengige app'er, i hvert sitt repo.
 
-* Good, because [argument a]
-* Good, because [argument b]
-* Bad, because [argument c]
+* Good, because det operasjonelle blir tydeligere
+* Good, because app'ene er uavhengige
+* Bad, because duplisering
+* Bad, because det er en investering up front i å lage app
+* 
 * … <!-- numbers of pros and cons can vary -->
 
-### [option 3]
+### 3. Én kodebase, men to app'er, som kjører opp hver sin lytter.
 
-[example | description | pointer to more information | …] <!-- optional -->
+En kodebase, men som kan kjøres i to ulike modus, én for adresse og én for id.
 
-* Good, because [argument a]
-* Good, because [argument b]
-* Bad, because [argument c]
+* Good, because det operasjonelle blir tydeligere, men litt mer komplisert
+* Good, because en del logikk er felles og vil være tilgjengelig og ikke trenge duplisering
+* Bad, because det er et uvant mønster man må være klar over
+* Bad, fordi det er kompliserende og kan være vanskelig å oppdage om begge lyttere plutselig er i gang i samme app
+* Bad, because det er litt arbeid å lage to modus, kanskje like mye eller mer enn å sette opp to uavhengige app'er
+* 
+* … <!-- numbers of pros and cons can vary -->
+
+### 4. To app'er, mest mulig i bibliotek
+
+Lage to uavhengige app'er, i hvert sitt repo, men skille ut felles ting i bibliotek (ett eller flere)
+
+* Good, because det operasjonelle blir tydeligere
+* Good, because mindre kodeduplisering
+* Bad, because det blir mer kopling mellom app'er
+* Bad, det mer avhengigheter å holde ajour
+* Bad, because det er en investering up front i å lage app
+* 
 * … <!-- numbers of pros and cons can vary -->
 
 ## Links <!-- optional -->
