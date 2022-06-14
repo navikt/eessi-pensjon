@@ -30,13 +30,14 @@ Kan det å lage en felles "rammeverkskomponent" som tar unna mye "boilerplate" v
 
 ## Considered Options
 
-* Fortsette som i dag
-* Lage en rammeverkskomponent som tas i bruk på (ny) pdl-konsument app i første omgang
-* Lage en rammeverkskomponent som tas i bruk på alle Kafka-lytter app'er
-* Droppe rammeverkskomponent, lage mer i bibliotek
-* Lage mer bibliotek og en modul som inneholder avhengighet til bibliotekene - slik at man bare oppdaterer én avhengighet for alt
-* 
-* [option x]
+0. Fortsette som i dag
+1. Lage en rammeverkskomponent som tas i bruk på (ny) pdl-produsent app, i første omgang
+2. Lage en rammeverkskomponent som tas i bruk på alle Kafka-lytter app'er
+3. Lage en rammeverkskomponent som tas i bruk på én eksisterende app i første omgang
+4. Droppe rammeverkskomponent, lage mer i bibliotek
+5. Lage mer bibliotek og en modul som inneholder avhengighet til bibliotekene - slik at man bare oppdaterer én avhengighet for alt
+6. 
+7. [option x]
 * … <!-- numbers of options can vary -->
 
 ## Decision Outcome
@@ -55,31 +56,69 @@ Chosen option: "[option 1]", because [justification. e.g., only option, which me
 
 ## Pros and Cons of the Options <!-- optional -->
 
-### [option 1]
+### 0. Fortsette som i dag
 
-[example | description | pointer to more information | …] <!-- optional -->
+Dvs lage nye app'er ved behov og av og til trekke ut felles funksjonalitet i bibliotek.
 
-* Good, because [argument a]
-* Good, because [argument b]
-* Bad, because [argument c]
+* Good, because dette vet vi hvordan vi gjør.
+* Good, because app'er er praktisk talt uavhengige av hverandre.
+* Bad, because det er mye boilerplate som går igjen mellom app'er.
+* Bad, because det blir mye duplisering, eller mange avhengigheter å oppdatere.
+* 
 * … <!-- numbers of pros and cons can vary -->
 
-### [option 2]
+### 1. Lage en rammeverkskomponent som tas i bruk på (ny) pdl-produsent app, i første omgang
 
-[example | description | pointer to more information | …] <!-- optional -->
+Gjøre dette som en del av pdl-adresse-saken. 
 
-* Good, because [argument a]
-* Good, because [argument b]
-* Bad, because [argument c]
+* Good, because det er en reell oppgave som vi skal jobbe med
+* Good, because det gir oss en rammeverkskomponent.
+* Bad, because det øker risikoen på tid på pdl-adresse-oppgaven
+* Bad, because det skaper avhengighet mellom de to oppgavene
+* Bad, because det utsetter arbeidet med å få app'ene over på ny komponent
+* 
 * … <!-- numbers of pros and cons can vary -->
 
-### [option 3]
+### 2. Lage en rammeverkskomponent som tas i bruk på alle Kafka-lytter app'er
 
-[example | description | pointer to more information | …] <!-- optional -->
+Dvs lage en rammeverkskomponent og ta den i bruk på alle Kafka-lytter app'er.
 
-* Good, because [argument a]
-* Good, because [argument b]
-* Bad, because [argument c]
+* Good, because da blir jobben gjort ...
+* Good, because det blir betydelig redusert kodebase 
+* Bad, because det er sannsynligvis mye jobb, og vil påvirke andre oppgaver
+* 
+* … <!-- numbers of pros and cons can vary -->
+
+### 3. Lage en rammeverkskomponent som tas i bruk på én eksisterende app i første omgang
+
+Dvs lage en rammeverkskomponent og ta den i bruk på én eksisterende app'er, først.
+
+* Good, because det fjerner avhengighet til pdl-adresse-oppgaven
+* Good, because det gir oss en rammeverkskomponent
+* Bad, because det utsetter arbeidet med å få app'ene over på ny komponent
+* Bad, because pdl-adresse-app'en vil lage enda mer duplisering enn vi har fra før 
+* 
+* … <!-- numbers of pros and cons can vary -->
+
+### 4. Droppe rammeverkskomponent, lage mer i bibliotek
+
+Lage mer bibliotek.
+
+* Good, because det reduserer kodeduplisering
+* Good, because det er en enklere oppgave
+* Bad, because det øker antall avhengigheter i app'ene
+*
+* … <!-- numbers of pros and cons can vary -->
+
+### 5. Lage mer bibliotek og en modul som inneholder avhengighet til bibliotekene - slik at man bare oppdaterer én avhengighet for alt
+
+Lage en (eller flere?) "modul" som inkluderer felles avhengigheter som app'er bruker.
+
+* Good, because det reduserer antall avhengigheter som må oppdateres
+* Bad, because vi vil fortsatt ha en del boilerplate i app'ene
+* Bad, because det øker koplingen mellom bibliotekene
+* Bad, because det er risiko for at app'er kan feil'e på ett av bibliotekene, og da kan det være vanskelig å se hvilket.
+* 
 * … <!-- numbers of pros and cons can vary -->
 
 ## Links <!-- optional -->
