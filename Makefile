@@ -21,4 +21,5 @@ gw: ## Run ./gradlew <target> - (e.g run using: make gw clean build)
 	@meta loop "$(root_dir)script/gw.sh $(filter-out $@,$(MAKECMDGOALS))" --exclude "eessi-pensjon" --parallel
 
 upgrade-gradle: ## Upgrade gradle in all projects - usage GRADLEW_VERSION=x.x.x make upgrade-gradle
-	@meta exec "$(root_dir)script/upgrade_gradle.sh"
+	@meta exec "$(root_dir)script/upgrade_gradle.sh" --exclude "eessi-pensjon"
+	script/upgrade_gradle.sh
