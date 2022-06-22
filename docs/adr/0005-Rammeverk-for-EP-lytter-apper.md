@@ -14,6 +14,18 @@ Per i dag er noe fellesfunksjonalitet tatt ut i bibliotek (det er laget seks sli
 
 Kan det å lage en felles "rammeverkskomponent" som tar unna mye "boilerplate" være lurt, slik at en app bare trenger å legge til sin konfigurasjon og sin spesifikke funksjonalitet?
 
+Fra _Object Design: Roles, Responsibilities, and Collaborations_ av Rebecca Wirfs-Brock:
+
+> Frameworks offer a number of advantages to the developer:
+> * Efficiency: A framework means less design and coding.
+> * Consistency: Developers become familiar with the approach imposed by the framework.
+> * Predictability: A framework has undergone several iterations of development and testing.
+
+> But they don’t come without costs:
+> * Complexity: Frameworks often have a steep learning curve.
+> * If you only have a hammer, everything looks like a nail: Frameworks require a specific approach to solving the problem.
+> * Performance: A framework often trades flexibility and reusability for performance.
+
 [Describe the context and problem statement, e.g., in free form using two to three sentences. You may want to articulate the problem in form of a question.]
 
 ## Decision Drivers
