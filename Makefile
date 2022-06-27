@@ -9,10 +9,10 @@ meta-update: ## Clone any repos that exist in your .meta file but aren't cloned 
 	@meta git update
 
 pull: ## Run git pull --all --rebase --autostash on all repos
-	@meta exec "git pull --all --rebase --autostash"
+	@meta exec "$(root_dir)script/pull_from_repo.sh"
 
 mainline: ## Switch all repos to mainline (main/master)
-	@meta exec "git branch --all | sed 's/^[* ] //' | egrep '^main|^master' | xargs git checkout"
+	@meta exec "$(root_dir)script/switch_to_mainline.sh"
 
 build: ## Run ./gradlew build
 	@meta loop "$(root_dir)script/build.sh" --exclude "eessi-pensjon"
