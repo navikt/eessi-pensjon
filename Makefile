@@ -17,7 +17,7 @@ mainline: ## Switch all repos to mainline (main/master)
 build: ## Run ./gradlew build
 	@meta loop "$(root_dir)script/build.sh" --exclude "eessi-pensjon"
 
-gw: ## Run ./gradlew <target> - (e.g run using: make gw clean build)
+gw: ## Run ./gradlew <target> - (e.g run using make gw clean build)
 	@meta loop "$(root_dir)script/gw.sh $(filter-out $@,$(MAKECMDGOALS))" --exclude "eessi-pensjon" --parallel
 
 upgrade-gradle: ## Upgrade gradle in all projects - usage GRADLEW_VERSION=x.x.x make upgrade-gradle
