@@ -23,3 +23,6 @@ gw: ## Run ./gradlew <target> - (e.g run using make gw clean build)
 upgrade-gradle: ## Upgrade gradle in all projects - usage GRADLEW_VERSION=x.x.x make upgrade-gradle
 	@meta exec "$(root_dir)script/upgrade_gradle.sh" --exclude "eessi-pensjon"
 	script/upgrade_gradle.sh
+
+upgrade-dependency: ## Upgrade dep in all projects usage DEPENDENCY=group-colon-name make upgrade-dependency
+	@meta exec "$(root_dir)script/upgrade_dependency.sh | tail -n1" --exclude "eessi-pensjon"
