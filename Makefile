@@ -18,11 +18,17 @@ build: ## Run ./gradlew build
 	@meta loop "$(root_dir)script/build.sh" --exclude "eessi-pensjon"
 
 gw: ## Run ./gradlew <target> - (e.g run using make gw clean build)
-	@meta loop "$(root_dir)script/gw.sh $(filter-out $@,$(MAKECMDGOALS))" --exclude "eessi-pensjon" --parallel
+	@meta loop "$(root_dir)script/gw.sh $(filter-out $@,$(MAKECMDGOALS))" --exclude "eessi-pensjon,eessi-pensjon-saksbehandling-ui,eessi-pensjon-ui" --parallel
 
 upgrade-gradle: ## Upgrade gradle in all projects - usage GRADLEW_VERSION=x.x.x make upgrade-gradle
-	@meta exec "$(root_dir)script/upgrade_gradle.sh" --exclude "eessi-pensjon"
+	@meta exec "$(root_dir)script/upgrade_gradle.sh" --exclude "eessi-pensjon,eessi-pensjon-saksbehandling-ui,eessi-pensjon-ui"
 	script/upgrade_gradle.sh
 
 upgrade-dependency: ## Upgrade dep in all projects usage DEPENDENCY=group-colon-name make upgrade-dependency
 	@meta exec "$(root_dir)script/upgrade_dependency.sh | tail -n1" --exclude "eessi-pensjon"
+
+upgrade-safe-dependencies: ## Upgrade "safe" (test) dependencies in all projects (see script/safe_dependency_updates.sh)
+	@meta exec "$(root_dir)script/upgrade_safe_dependencies.sh | grep -A 100 'Commits:'" --exclude "eessi-pensjon" --parallel
+
+check-if-up-to-date: ## check if all changes are commited and pushed - and that we are on the mainline with all changes pulled
+	@meta exec "$(root_dir)script/check_if_we_are_up_to_date.sh" --exclude "eessi-pensjon" # --parallel seemed to skip some projects(?!)

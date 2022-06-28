@@ -1,0 +1,15 @@
+com.nhaarman.mockitokotlin2:mockito-kotlin
+com.ninja-squad:springmockk
+com.tngtech.archunit:archunit
+com.tngtech.archunit:archunit-junit5
+io.findify:s3mock_2.13
+io.mockk:mockk
+org.junit.jupiter:junit-jupiter
+org.junit.jupiter:junit-jupiter-params
+org.mock-server:mockserver-client-java
+org.mock-server:mockserver-netty
+org.mockito:mockito-junit-jupiter
+org.pac4j:spring-webmvc-pac4j
+org.skyscreamer:jsonassert
+org.testcontainers:junit-jupiter
+org.testcontainers:testcontainers
