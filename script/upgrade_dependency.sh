@@ -20,7 +20,7 @@ java_use "$JAVA_VERSION"
 if test ! -f build.gradle && test ! -f build.gradle.kts; then
   echo "Not a Gradle project."
 else
-  $(dirname -- "$0")/check_if_we_are_up_to_date.sh || exit 1
+  $(dirname -- "$0")/check_if_we_are_up_to_date.sh --allow-local-commits|| exit 1
 
   ./gradlew useLatestVersions --update-dependency $DEPENDENCY
 
