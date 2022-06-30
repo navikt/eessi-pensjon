@@ -25,7 +25,7 @@ Fra rotprosjektet kan man kjøre:
 ```shell
 make upgrade-safe-dependencies
 ```
-Etter å ha sett over commits kan man deretter push'e endringene (det skal være bygget lokalt for hver enkelt commit).
+Etter å ha sett over commits (`make list-local-commits` for å liste ut) kan man deretter push'e endringene (det skal være bygget lokalt for hver enkelt commit).
 
 ## Enkelt-avhengigheter
 

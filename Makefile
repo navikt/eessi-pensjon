@@ -32,3 +32,6 @@ upgrade-safe-dependencies: ## Upgrade "safe" (test) dependencies in all projects
 
 check-if-up-to-date: ## check if all changes are commited and pushed - and that we are on the mainline with all changes pulled
 	@meta exec "$(root_dir)script/check_if_we_are_up_to_date.sh" --exclude "eessi-pensjon" # --parallel seemed to skip some projects(?!)
+
+list-local-commits: ## shows local, unpushed, commits
+	@meta exec "git log --oneline origin/HEAD..HEAD"
