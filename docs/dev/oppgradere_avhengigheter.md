@@ -7,7 +7,7 @@ hjelpe til litt med prosessen.
 
 ## Før man oppgraderer
 
-Pass på at alle lokale endringer er commit'et, pushet og at man har gjort pull og er på mainline(master/main).
+Pass på at alle lokale endringer er commit'et, pushet og at du er på mainline (master/main) (`make mainline`) og man har gjort pull (`make pull`).
 
 Denne kommandoen sjekker at alt er ok:
 
