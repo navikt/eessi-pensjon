@@ -38,7 +38,7 @@ Les mer om bruk av [SonarQube](docs/dev/sonarqube.md)
 
 Spørsmål knyttet til koden eller prosjektet kan rettes mot:
 
-* Øyvind Buer oyvind.buer@nav.no
+* Mariam (mariam.pervez at nav.no)
 
 ### For NAV-ansatte
 
