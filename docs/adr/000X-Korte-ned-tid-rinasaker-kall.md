@@ -8,15 +8,15 @@ Technical Story: [EP-1306](https://jira.adeo.no/browse/EP-1306)
 
 ## Context and Problem Statement
 
-Det tar typisk fra 15 til 30 sekunder (og av og til mer) fra bruker kommer inn i EESSI Pensjon til man 
-får se listen over BUC'er. Dette skydes i all hovedsak et kall til EUX/Rina for å hente liste med
-BUC'er for en bruker/pesys-sak. 
+Det tar typisk fra 15 til 30 sekunder fra bruker kommer inn i EESSI Pensjon til man får se listen over BUC'er. Dette skydes i all hovedsak et kall (i EP kalt "HentRinasaker"), som bruker 15-20 sekunder, og av og til mer, til EUX/Rina for å hente liste med BUC'er for en bruker/pesys-sak.
+
+Vi ser at responstidene på HentRinasaker varierer, tilsynelatende med den generelle aktiviteten. I perioder med lite aktivitet er responstiden lavere, 3-10 sekunder.
 
 [Describe the context and problem statement, e.g., in free form using two to three sentences. You may want to articulate the problem in form of a question.]
 
 ## Decision Drivers
 
-* Brukeopplevelse - dagens lekstreme reponstid er frustrerende og reduserer produktiviten
+* Brukeropplevelse - dagens høye reponstid er frustrerende og reduserer produktiviten
 * Hva kan vi selv gjøre noe med
 * Nødvendig omfang av innsats
 * Når kan man forvente å få til en forbedring, og hvor stor kan den bli?
@@ -25,29 +25,29 @@ BUC'er for en bruker/pesys-sak.
 
 ## Considered Options
 
-1. Kan man forbedre ytelse på rinasaker-kallet til EUX/rina
+1. Undersøke nærmere ytelsesforbedringer på rinasaker-kallet til EUX/Rina
 
-2. Kan vi unngå å liste alle buc'er (arbeidsflyt til saksbehandlere)
+2. Oppfordre EESSI Basis til å gi Rina evt EUX mer server-ressurser (Siden vi ser at HentRinaSaker går kjappere i perioder med lavere last er det ikke helt umulig at dette kan være en idé.)
 
-3. Kan vi søke med noe annet enn fnr/pensak-id?
+3. Undersøke om man kan gjøre noe lurt med "forhåndsbestemt søk"-funksjonaliteten
 
-4. Kan vi få "EU" til å fikse responstiden?
+4. Appellere til "EU" om å fikse responstiden
 
-5. Kan vi starte kallet tidligere i app'en?
+5. Undersøke om det kan søkes med noe annet enn fnr/pensak-id
 
-6. Kan vi lage skygge-database av sammenhengen mellom ident/pensak-id og rinasak (gjennom f eks trigger på tabeller i Rina-databasen)?
+6. Undersøke å starte kallet tidligere i app'en
 
-7. Finnes det en Kafka-strøm vi kan bruke til å bygeg opp en indeks av sammenheng mellom ident/pensak-id og rinasak?
+7. Unngå å liste alle buc'er (arbeidsflyt til saksbehandlere)
 
-8. Kan man bygeget nytt EUX-endepunkt som går rett mot databasen?
+8. Bygge et nytt EUX-endepunkt som går rett mot databasen
 
-9. Kan det hjelpe å gi RIna mer server-ressurser?
+9. Lage skygge-database av sammenhengen mellom ident/pensak-id og rinasak (gjennom f eks trigger på tabeller i Rina-databasen)
 
-10. Kan man ta Pensjons-sakene ut av felles-Rina?
+10. Bygge opp en indeks av sammenheng mellom ident/pensak-id og rinasak, basert på hendelser på Kafka eller liknende
 
-11. Kan vi gjøre noe lurt med "forhåndsbestemt søk"-funksjonaliteten?
+11. Ta Pensjons-sakene ut av felles-Rina
 
-12. 
+12. Undersøke om det nye endepunkt på EUX (`v2/person/{fnr}/saker/oversikt`) er raskere og evtkan erstatte dagens HentRinaSaker
 
 ## Decision Outcome
 
