@@ -35,3 +35,6 @@ check-if-up-to-date: ## check if all changes are commited and pushed - and that 
 
 list-local-commits: ## shows local, unpushed, commits
 	@meta exec "git log --oneline origin/HEAD..HEAD"
+
+upgradable-dependencies-report: ## Lists dependencies that are outdated - across all projects - then sorted uniquely
+	@make gw dependencyUpdates 2>&1 | grep '\->' | grep -v "Gradle" | cut -d' ' -f3,4,6 | sed 's#\[##' | sed 's#\]##' | sort | uniq
