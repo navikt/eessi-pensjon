@@ -36,3 +36,9 @@ DEPENDENCY=group:name make upgrade-dependency
 ```
 
 Etter å ha sett over commits kan man deretter push'e endringene (det skal være bygget lokalt for hver enkelt commit).
+
+## Liste ut utdaterte avhengigheter på tvers av prosjektene
+
+```shell
+make upgradable-dependencies-report
+```
