@@ -1,8 +1,8 @@
-# [short title of solved problem and solution]
+# Én PDL-produsent-app med to lyttere på samme topic 
 
-* Status: WIP [accepted | superseeded by [ADR-0005](0005-example.md) | deprecated | …]
-* Deciders: Mariam Pervez, Daniel Skarpås, Kjetil JD
-* Date: [YYYY-MM-DD when the decision was last updated]
+* Status: Accepted
+* Deciders: Kjetil JD, Daniel S
+* Date: 2022-07-11
 
 Technical Story: Relatert til [EP-1229 Innlesing av data fra SED til PDL](https://jira.adeo.no/browse/EP-1229)
 
@@ -21,43 +21,48 @@ Løsning for å melde utenlandske id'er er laget i app'en [eessi-pensjon-pdl-pro
 * Vedlikehold av app'er
 * Initiell innsats med å sette opp to app'er
 * 
-* [driver x, e.g., a force, facing concern, …]
-* … <!-- numbers of drivers can vary -->
 
 ## Considered Options
 
-1. Én app, to lyttere
+0. Én app med én lytter
+1. Én app, to lyttere (på samme topic)
 2. To uavhengige app'er (med hver sin lytter)
 3. Én kodebase, men to app'er, som kjører opp hver sin lytter.
 4. To app'er, mest mulig i bibliotek
-5. 
 
 ## Decision Outcome
 
-Chosen option: "[option 1]", because [justification. e.g., only option, which meets k.o. criterion decision driver | which resolves force force | … | comes out best (see below)].
+Chosen option: Én app, to lyttere (på samme topic), because fordi vi tror fordelene med å ha dette i én app overveier
+det uventede med å ha to lyttere på én topic.
 
 ### Positive Consequences
 
-* [e.g., improvement of quality attribute satisfaction, follow-up decisions required, …]
-* …
+* Mindre duplisering i kodebasen, uten å måtte lage flere komponenter
+* Én app å drifte
 
 ### Negative consequences
 
-* [e.g., compromising quality attribute, follow-up decisions required, …]
-* …
+* Har i dag en client-id som ikke indikerer at det handler om lytte med tanke på "id-oppdatering" til PDL, den bør oppdateres, noe som kan være en risky operasjon for man kan komme til å lese alle meldinger på nytt.
+* Kan være vrient å få med seg at én av to lyttere på samme topic er nede.
 
 ## Pros and Cons of the Options <!-- optional -->
 
-### 1. Én app, to lyttere
+### 0. Én app med én lytter
 
-Legge to lyttere i samme pdl-konsument.
+En lytter på sed-mottatt, som leder til oppdateringer for både id og adresse.
+
+* Bad, because det vil bli problematisk å ACK'e dersom én av de to oppdateringene feiler.
+
+### 1. Én app, to lyttere (på samme topic)
+
+Legge to lyttere i samme pdl-konsument, på samme topic (dvs to group'ids).
 
 * Good, because vi slipper med én app
 * Good, because en del logikk er felles og vil være tilgjengelig og ikke trenge duplisering
+* Bad, because det er litt forvirrende at én app lytter med to lyttere på samme topic
 * Bad, because det operasjonelle blir mer komplisert (kan være i tilstand med én fungerende lytter)
 * Bad, because konfigurasjon blir mer komplisert
-* 
-* … <!-- numbers of pros and cons can vary -->
+* Bad, because dagens group id har et generisk navn (som ikke sier at det handler om id)
 
 ### 2. To uavhengige app'er (med hver sin lytter)
 
@@ -67,8 +72,6 @@ Lage to uavhengige app'er, i hvert sitt repo.
 * Good, because app'ene er uavhengige
 * Bad, because duplisering
 * Bad, because det er en investering up front i å lage app
-* 
-* … <!-- numbers of pros and cons can vary -->
 
 ### 3. Én kodebase, men to app'er, som kjører opp hver sin lytter.
 
@@ -79,8 +82,6 @@ En kodebase, men som kan kjøres i to ulike modus, én for adresse og én for id
 * Bad, because det er et uvant mønster man må være klar over
 * Bad, fordi det er kompliserende og kan være vanskelig å oppdage om begge lyttere plutselig er i gang i samme app
 * Bad, because det er litt arbeid å lage to modus, kanskje like mye eller mer enn å sette opp to uavhengige app'er
-* 
-* … <!-- numbers of pros and cons can vary -->
 
 ### 4. To app'er, mest mulig i bibliotek
 
@@ -91,10 +92,8 @@ Lage to uavhengige app'er, i hvert sitt repo, men skille ut felles ting i biblio
 * Bad, because det blir mer kopling mellom app'er
 * Bad, det mer avhengigheter å holde ajour
 * Bad, because det er en investering up front i å lage app
-* 
-* … <!-- numbers of pros and cons can vary -->
 
-## Links <!-- optional -->
+## Links 
 
-* [Link type] [Link to ADR] <!-- example: Refined by [ADR-0005](0005-example.md) -->
-* … <!-- numbers of links can vary -->
+* [EP-1229 Innlesing av data fra SED til PDL](https://jira.adeo.no/browse/EP-1229)
+* [Skisse på Confluence](https://confluence.adeo.no/x/MkHDGQ)
