@@ -9,16 +9,16 @@ meta-update: ## Clone any repos that exist in your .meta file but aren't cloned 
 	@meta git update
 
 pull: ## Run git pull --all --rebase --autostash on all repos
-	@meta exec "$(root_dir)script/pull_from_repo.sh"
+	@meta exec "$(root_dir)script/pull_from_repo.sh" --parallel
 
 mainline: ## Switch all repos to mainline (main/master)
-	@meta exec "$(root_dir)script/switch_to_mainline.sh"
+	@meta exec "$(root_dir)script/switch_to_mainline.sh"  --parallel
 
 build: ## Run ./gradlew build
-	@meta loop "$(root_dir)script/build.sh" --exclude "eessi-pensjon"
+	@meta exec "$(root_dir)script/build.sh" --exclude "eessi-pensjon"
 
 gw: ## Run ./gradlew <target> - (e.g run using make gw clean build)
-	@meta loop "$(root_dir)script/gw.sh $(filter-out $@,$(MAKECMDGOALS))" --exclude "eessi-pensjon,eessi-pensjon-saksbehandling-ui,eessi-pensjon-ui" --parallel
+	@meta exec "$(root_dir)script/gw.sh $(filter-out $@,$(MAKECMDGOALS))" --exclude "eessi-pensjon,eessi-pensjon-saksbehandling-ui,eessi-pensjon-ui" --parallel
 
 upgrade-gradle: ## Upgrade gradle in all projects - usage GRADLEW_VERSION=x.x.x make upgrade-gradle
 	@meta exec "$(root_dir)script/upgrade_gradle.sh" --exclude "eessi-pensjon,eessi-pensjon-saksbehandling-ui,eessi-pensjon-ui"
