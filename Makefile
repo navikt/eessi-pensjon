@@ -34,7 +34,7 @@ check-if-up-to-date: ## check if all changes are commited and pushed - and that 
 	@meta exec "$(root_dir)script/check_if_we_are_up_to_date.sh" --exclude "eessi-pensjon" # --parallel seemed to skip some projects(?!)
 
 list-local-commits: ## shows local, unpushed, commits
-	@meta exec "git log --oneline origin/HEAD..HEAD"
+	@meta exec "git log --oneline origin/HEAD..HEAD | cat"
 
 upgradable-dependencies-report: ## Lists dependencies that are outdated - across all projects - then sorted uniquely
 	@make gw dependencyUpdates 2>&1 | grep '\->' | grep -v "Gradle" | cut -d' ' -f3,4,6 | sed 's#\[##' | sed 's#\]##' | sort | uniq
