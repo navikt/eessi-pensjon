@@ -5,9 +5,10 @@
 * [ADR-0001](0001-Splitte-API.md) - Splitte API-modul i API-SBS og API-FSS
 * [ADR-0002](0002-Tilgangsstyring.md) - Delegering av tilgangsskontroll
 * [ADR-0003](0003-KeyValueStore.md) - Valg av lagringsmedie/rammeverk for enkel persistering av data
-* [ADR-0004](0004-PDL-produsent-i-flere-apper.md) - Én PDL-produsent-app med to lyttere på samme topic 
+* [ADR-0004](0004-Utviklingshastighet.md) - Økt utviklingshastighet EESSI Pensjon
 * [ADR-0005](0005-Deling_av_kode.md) - [Deling av kode ved å ...]
-* [ADR-0006](0006-Korte-ned-tid-rinasaker-kall.md) - [short title of solved problem and solution]
+* [ADR-0006](0006-PDL-produsent-i-flere-apper.md) - Én PDL-produsent-app med to lyttere på samme topic 
+* [ADR-0007](0007-Korte-ned-tid-rinasaker-kall.md) - [short title of solved problem and solution]
 * [ADR-9999](9999-template.md) - [short title of solved problem and solution]
 
 <!-- adrlogstop -->
