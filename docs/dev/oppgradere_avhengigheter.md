@@ -82,3 +82,14 @@ Etter å ha sett over commits kan man deretter push'e endringene (det skal være
 ```shell
 make upgradable-dependencies-report
 ```
+
+### Oppgrader avhengigheter til ep-bibliotek
+
+Når man har gjort oppdatering av eksterne avhengigheter er laget en et sett med kommandoer for å ta unna oppdateringen av avhengighetene til ep-*-bibliotekene:
+
+```shell
+make upgrade-ep-libraries-part-1
+make upgrade-ep-libraries-part-2
+... osv ...
+make upgrade-ep-libraries-part-9
+```
