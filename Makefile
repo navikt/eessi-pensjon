@@ -39,7 +39,7 @@ list-local-commits: ## shows local, unpushed, commits
 upgradable-dependencies-report: ## Lists dependencies that are outdated - across all projects - then sorted uniquely
 	@make gw dependencyUpdates 2>&1 | grep '\->' | grep -v "Gradle" | cut -d' ' -f3,4,6 | sed 's#\[##' | sed 's#\]##' | sort | uniq
 
-prepush-review: ## let's you look at local commits across all projectts and decide if you want to push
+prepush-review: ## let's you look at local commits across all projects and decide if you want to push
 	@meta exec 'output=$$(git log --oneline origin/HEAD..HEAD) ; [ -n "$$output" ] && (git show --oneline origin/HEAD..HEAD | cat && echo "Pushe? (y/N)" && read a && [ "$$a" = "y" ] && git push) || true' --exclude eessi-pensjon
 
 upgrade-ep-libraries-part-1: ## First (of nine) steps in upgrading the ep-*-libraries dependencies ...
@@ -47,7 +47,7 @@ upgrade-ep-libraries-part-1: ## First (of nine) steps in upgrading the ep-*-libr
 	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-metrics | tail -n1" --include-only ep-security-sts,ep-pensjonsinformasjon,ep-eux # ep-personoppslag er syk
 
 upgrade-ep-libraries-part-2: ## ... second step ...
-	@echo "Nå må du oppdatere manuelt i ep-personoppslag og commit'e (på grunn av kotlin-versjonen vi hodler tilbake)"
+	@echo "Nå må du oppdatere manuelt i ep-personoppslag og commit'e (på grunn av kotlin-versjonen vi holder tilbake)"
 
 upgrade-ep-libraries-part-3: ## ... third ...
 	$(MAKE) prepush-review

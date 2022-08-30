@@ -85,7 +85,7 @@ make upgradable-dependencies-report
 
 ### Oppgrader avhengigheter til ep-bibliotek
 
-Når man har gjort oppdatering av eksterne avhengigheter er laget en et sett med kommandoer for å ta unna oppdateringen av avhengighetene til ep-*-bibliotekene:
+Når man har gjort oppdatering av eksterne avhengigheter er det laget et sett med kommandoer for å ta unna oppdateringen av avhengighetene til ep-*-bibliotekene:
 
 ```shell
 make upgrade-ep-libraries-part-1
