@@ -65,7 +65,9 @@ Fra rotprosjektet kan man kjøre:
 ```shell
 make upgrade-safe-dependencies
 ```
-Etter å ha sett over commits (`make list-local-commits` for å liste ut) kan man deretter push'e endringene (det skal være bygget lokalt for hver enkelt commit). En annen kommando man kan bruke er `make prepush-review`, som lar deg se over og svare på om du vil push'e eller ikke.
+Etter å ha gjort dette anbefaler vi å bruke `make prepush-review`, som lar deg se over og svare på om du vil push'e eller ikke (det hender at issues i `build.gradle` gjør at den automatiske oppgraderingen feiler).
+
+Man kan også bruke `make list-local-commits` for å liste ut commits, men da ser man ikke hva som er gjort i hver commit.
 
 ### Enkelt-avhengigheter
 
