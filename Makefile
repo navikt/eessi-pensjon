@@ -25,10 +25,10 @@ upgrade-gradle: ## Upgrade gradle in all projects - usage GRADLEW_VERSION=x.x.x 
 	script/upgrade_gradle.sh
 
 upgrade-dependency: ## Upgrade dep in all projects usage DEPENDENCY=group-colon-name make upgrade-dependency
-	@meta exec "$(root_dir)script/upgrade_dependency.sh | tail -n1" --exclude "eessi-pensjon"
+	@meta exec "$(root_dir)script/upgrade_dependency.sh | tail -n1" --exclude eessi-pensjon,ep-personoppslag --parallel # ep-personoppslag er syk
 
 upgrade-safe-dependencies: ## Upgrade "safe" (test) dependencies in all projects (see script/safe_dependency_updates.sh)
-	@meta exec "$(root_dir)script/upgrade_safe_dependencies.sh | grep -A 100 'Commits:'" --exclude "eessi-pensjon" --parallel
+	@meta exec "$(root_dir)script/upgrade_safe_dependencies.sh | grep -A 100 'Commits:'" --exclude eessi-pensjon,ep-personoppslag # ep-personoppslag er syk
 
 check-if-up-to-date: ## check if all changes are commited and pushed - and that we are on the mainline with all changes pulled
 	@meta exec "$(root_dir)script/check_if_we_are_up_to_date.sh" --exclude "eessi-pensjon" # --parallel seemed to skip some projects(?!)
@@ -37,14 +37,15 @@ list-local-commits: ## shows local, unpushed, commits
 	@meta exec "git log --oneline origin/HEAD..HEAD | cat"
 
 upgradable-dependencies-report: ## Lists dependencies that are outdated - across all projects - then sorted uniquely
-	@make gw dependencyUpdates 2>&1 | grep '\->' | grep -v "Gradle" | cut -d' ' -f3,4,6 | sed 's#\[##' | sed 's#\]##' | sort | uniq
+	@make gw "dependencyUpdates --refresh-dependencies" 2>&1 | grep '\->' | grep -v "Gradle" | cut -d' ' -f3,4,6 | sed 's#\[##' | sed 's#\]##' | sort | uniq
 
 prepush-review: ## let's you look at local commits across all projects and decide if you want to push
 	@meta exec 'output=$$(git log --oneline origin/HEAD..HEAD) ; [ -n "$$output" ] && (git show --oneline origin/HEAD..HEAD | cat && echo "Pushe? (y/N)" && read a && [ "$$a" = "y" ] && git push) || true' --exclude eessi-pensjon
 
 upgrade-ep-libraries-part-1: ## First (of nine) steps in upgrading the ep-*-libraries dependencies ...
-	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-logging | tail -n1" --include-only ep-security-sts,ep-pensjonsinformasjon,ep-eux # ep-personoppslag er syk
-	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-metrics | tail -n1" --include-only ep-security-sts,ep-pensjonsinformasjon,ep-eux # ep-personoppslag er syk
+	@meta exec "./gradlew dependencyUpdates --refresh-dependencies | tail -n1" --exclude eessi-pensjon,eessi-pensjon-saksbehandling-ui,eessi-pensjon-ui
+	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-logging | tail -n1" --include-only ep-security-sts,ep-pensjonsinformasjon,ep-eux,ep-kodeverk # ep-personoppslag er syk
+	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-metrics | tail -n1" --include-only ep-security-sts,ep-pensjonsinformasjon,ep-eux,ep-kodeverk # ep-personoppslag er syk
 
 upgrade-ep-libraries-part-2: ## ... second step ...
 	@echo "Nå må du oppdatere manuelt i ep-personoppslag og commit'e (på grunn av kotlin-versjonen vi holder tilbake)"
