@@ -4,7 +4,6 @@ org.junit:junit-bom
 com.tngtech.archunit:archunit
 com.tngtech.archunit:archunit-junit5
 io.findify:s3mock_2.13
-io.mockk:mockk
 org.mock-server:mockserver-netty
 org.mockito:mockito-junit-jupiter
 org.pac4j:spring-webmvc-pac4j
