@@ -66,6 +66,7 @@ upgrade-ep-libraries-part-6: ## ... sixth ...
 	@echo "Vent til app'er er deployet og sjekk at det gikk bra"
 
 upgrade-ep-libraries-part-7: ## ... seventh ...
+	@meta exec "./gradlew dependencyUpdates --refresh-dependencies | tail -n1" --exclude eessi-pensjon,eessi-pensjon-saksbehandling-ui,eessi-pensjon-ui
 	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-pensjonsinformasjon | tail -n1" --exclude eessi-pensjon,ep-personoppslag
 	@meta exec "git push" --exclude eessi-pensjon
 	@echo "Vent til app'er er deployet og sjekk at det gikk bra"
@@ -75,7 +76,12 @@ upgrade-ep-libraries-part-8: ## ... eighth ...
 	@meta exec "git push" --exclude eessi-pensjon
 	@echo "Vent til app'er er deployet og sjekk at det gikk bra"
 
-upgrade-ep-libraries-part-9: ## ... ninth and final step.
+upgrade-ep-libraries-part-9: ## ... ninth ...
+	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-kodeverk | tail -n1"  --exclude eessi-pensjon,ep-personoppslag
+	@meta exec "git push" --exclude eessi-pensjon
+	@echo "Vent til app'er er deployet og sjekk at det gikk bra"
+
+upgrade-ep-libraries-part-10: ## ... tenth and final step.
 	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-eux | tail -n1"  --exclude eessi-pensjon,ep-personoppslag
 	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-security-sts | tail -n1"  --include-only eessi-pensjon-onprem-proxy
 	@meta exec "git push" --exclude eessi-pensjon
