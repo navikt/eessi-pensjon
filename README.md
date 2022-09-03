@@ -1,6 +1,6 @@
 # EESSI Pensjon
 
-En samlingmeta-repo med applikasjoner, bibliotek og verktøy - som utgjør EESSI Pensjon.
+Et meta-repo, med en samling med applikasjoner, bibliotek og verktøy - som utgjør EESSI Pensjon-systemet.
 
 ## Komme i gang
 
