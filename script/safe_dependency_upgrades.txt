@@ -10,6 +10,3 @@ org.pac4j:spring-webmvc-pac4j
 org.skyscreamer:jsonassert
 org.testcontainers:junit-jupiter
 org.testcontainers:testcontainers
-io.spring.dependency-management:io.spring.dependency-management.gradle.plugin
-org.owasp.dependencycheck:org.owasp.dependencycheck.gradle.plugin
-net.researchgate.release:net.researchgate.release.gradle.plugin

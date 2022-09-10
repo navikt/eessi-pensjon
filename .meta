@@ -14,6 +14,7 @@
     "eessi-pensjon-onprem-proxy": "git@github.com:navikt/eessi-pensjon-onprem-proxy",
     "ep-eux": "git@github.com:navikt/ep-eux",
     "ep-kodeverk": "git@github.com:navikt/ep-kodeverk",
+    "ep-script-plugins": "git@github.com:navikt/ep-library-plugin",
     "ep-logging": "git@github.com:navikt/ep-logging",
     "ep-metrics": "git@github.com:navikt/ep-metrics",
     "ep-personoppslag": "git@github.com:navikt/ep-personoppslag",
