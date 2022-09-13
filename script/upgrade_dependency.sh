@@ -30,10 +30,9 @@ else
 
   if [[ "$DIFF_STRING" =~ [=] ]]
   then # vi har en endring i en variabel-linje
-    OLD_VERSION=${DIFF_MINUS//\"/}
-    NEW_VERSION=${DIFF_PLUS//\"/}
+    OLD_VERSION=$(echo "$DIFF_MINUS"|cut -d'=' -f2| sed 's/"//g')
+    NEW_VERSION=$(echo "$DIFF_PLUS"|cut -d'=' -f2| sed 's/"//g')
     OLD_DEP="$DEPENDENCY:$OLD_VERSION"
-    NEW_DEP="$DEPENDENCY:$NEW_VERSION"
   else # mest sannsynlig endring i en dependency-linje
     OLD_DEP=$(echo $DIFF_MINUS | perl -lpe 'if ($_ =~ m/"([a-zA-Z0-9-.]+):([a-zA-Z0-9-.]+):([a-zA-Z0-9-.]+)"/) { print "$1:$2:$3\n"; }' | head -n 1 )
     NEW_DEP=$(echo $DIFF_PLUS | perl -lpe 'if ($_ =~ m/"([a-zA-Z0-9-.]+):([a-zA-Z0-9-.]+):([a-zA-Z0-9-.]+)"/) { print "$1:$2:$3\n"; }' | head -n 1 )
