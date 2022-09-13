@@ -25,18 +25,26 @@ else
   ./gradlew useLatestVersions --update-dependency $DEPENDENCY
 
   DIFF_STRING=$(git diff -U0 --word-diff | cat | tail -n1)
-  DIFF_MINUS=$(echo $DIFF_STRING | sed 's|.*\[-\(.*\)-\].*|\1|' | sed "s|\'|\"|" )
-  DIFF_PLUS=$(echo $DIFF_STRING | sed 's|.*{\+\(.*\)\+}.*|\1|' | sed "s|\'|\"|" )
-  OLD_DEP=$(echo $DIFF_MINUS | perl -lpe 'if ($_ =~ m/"([a-zA-Z0-9-.]+):([a-zA-Z0-9-.]+):([a-zA-Z0-9-.]+)"/) { print "$1:$2:$3\n"; }' | head -n 1 )
-  NEW_DEP=$(echo $DIFF_PLUS | perl -lpe 'if ($_ =~ m/"([a-zA-Z0-9-.]+):([a-zA-Z0-9-.]+):([a-zA-Z0-9-.]+)"/) { print "$1:$2:$3\n"; }' | head -n 1 )
-  OLD_MODULE=$(echo $OLD_DEP | cut -d':' -f2)
-  NEW_MODULE=$(echo $NEW_DEP | cut -d':' -f2)
-  NEW_VERSION=$(echo $NEW_DEP | cut -d':' -f3)
+  DIFF_MINUS=$(echo $DIFF_STRING | sed 's|.*\[-\(.*\)-\].*|\1|' | sed "s|\'|\"|g" )
+  DIFF_PLUS=$(echo $DIFF_STRING | sed 's|.*{\+\(.*\)\+}.*|\1|' | sed "s|\'|\"|g" )
 
-  if [[ "$OLD_MODULE" != "$NEW_MODULE" ]]
-  then
-    echo "Noe er galt - ny modul ($NEW_MODULE) er ikke lik gammel ($OLD_MODULE)"
-    exit 1
+  if [[ "$DIFF_STRING" =~ [=] ]]
+  then # vi har en endring i en variabel-linje
+    OLD_VERSION=${DIFF_MINUS//\"/}
+    NEW_VERSION=${DIFF_PLUS//\"/}
+    OLD_DEP="$DEPENDENCY:$OLD_VERSION"
+    NEW_DEP="$DEPENDENCY:$NEW_VERSION"
+  else # mest sannsynlig endring i en dependency-linje
+    OLD_DEP=$(echo $DIFF_MINUS | perl -lpe 'if ($_ =~ m/"([a-zA-Z0-9-.]+):([a-zA-Z0-9-.]+):([a-zA-Z0-9-.]+)"/) { print "$1:$2:$3\n"; }' | head -n 1 )
+    NEW_DEP=$(echo $DIFF_PLUS | perl -lpe 'if ($_ =~ m/"([a-zA-Z0-9-.]+):([a-zA-Z0-9-.]+):([a-zA-Z0-9-.]+)"/) { print "$1:$2:$3\n"; }' | head -n 1 )
+    OLD_MODULE=$(echo $OLD_DEP | cut -d':' -f2)
+    NEW_MODULE=$(echo $NEW_DEP | cut -d':' -f2)
+    NEW_VERSION=$(echo $NEW_DEP | cut -d':' -f3)
+    if [[ "$OLD_MODULE" != "$NEW_MODULE" ]]
+    then
+      echo "Noe er galt - ny modul ($NEW_MODULE) er ikke lik gammel ($OLD_MODULE)"
+      exit 1
+    fi
   fi
 
   if [[ -z $NEW_DEP ]]
