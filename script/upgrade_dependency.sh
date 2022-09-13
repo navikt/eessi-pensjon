@@ -24,14 +24,26 @@ else
 
   ./gradlew useLatestVersions --update-dependency $DEPENDENCY
 
-  # FIXME! Feilet for implementation("no.nav.eessi.pensjon:ep-metrics:0.4.25") i eessi-pensjon-saksbehandling-api
-  VERSION_NO=$(git diff -U0 --word-diff | cat | tail -n1 | sed 's|[^{]*{+\([^}]*\)+}|\1|')
+  DIFF_STRING=$(git diff -U0 --word-diff | cat | tail -n1)
+  DIFF_MINUS=$(echo $DIFF_STRING | sed 's|.*\[-\(.*\)-\].*|\1|' | sed "s|\'|\"|" )
+  DIFF_PLUS=$(echo $DIFF_STRING | sed 's|.*{\+\(.*\)\+}.*|\1|' | sed "s|\'|\"|" )
+  OLD_DEP=$(echo $DIFF_MINUS | perl -lpe 'if ($_ =~ m/"([a-zA-Z0-9-.]+):([a-zA-Z0-9-.]+):([a-zA-Z0-9-.]+)"/) { print "$1:$2:$3\n"; }' | head -n 1 )
+  NEW_DEP=$(echo $DIFF_PLUS | perl -lpe 'if ($_ =~ m/"([a-zA-Z0-9-.]+):([a-zA-Z0-9-.]+):([a-zA-Z0-9-.]+)"/) { print "$1:$2:$3\n"; }' | head -n 1 )
+  OLD_MODULE=$(echo $OLD_DEP | cut -d':' -f2)
+  NEW_MODULE=$(echo $NEW_DEP | cut -d':' -f2)
+  NEW_VERSION=$(echo $NEW_DEP | cut -d':' -f3)
 
-  if [[ -z $VERSION_NO ]]
+  if [[ "$OLD_MODULE" != "$NEW_MODULE" ]]
+  then
+    echo "Noe er galt - ny modul ($NEW_MODULE) er ikke lik gammel ($OLD_MODULE)"
+    exit 1
+  fi
+
+  if [[ -z $NEW_DEP ]]
   then
     echo "No version number found after upgrade attempt - either already up-to-date or $DEPENDENCY_NAME not in use."
   else
-    MSG="oppgraderer $DEPENDENCY_NAME -> $VERSION_NO"
-    ./gradlew build --quiet && git commit -am "E $MSG" && echo "$MSG - bygget og committet." || (echo "Noe feilet med bygg og commit."; exit 1)
+    MSG="oppgraderer $OLD_DEP -> $NEW_VERSION"
+    ./gradlew build --quiet && git commit -am "E $MSG" -m"Automatisert oppgradering av $DEPENDENCY." && echo "$MSG - bygget og committet." || (echo "Noe feilet med bygg og commit."; exit 1)
   fi
 fi
