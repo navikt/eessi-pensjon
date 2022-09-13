@@ -49,7 +49,7 @@ else
 
   if [[ -z $NEW_DEP ]]
   then
-    echo "No version number found after upgrade attempt - either already up-to-date or $DEPENDENCY_NAME not in use."
+    echo "No version number found after upgrade attempt - either already up-to-date, $DEPENDENCY_NAME not in use, or version is not specified by us (e.g set by Spring-BOM)."
   else
     MSG="oppgraderer $OLD_DEP -> $NEW_VERSION"
     ./gradlew build --quiet && git commit -am "E $MSG" -m"Automatisert oppgradering av $DEPENDENCY." && echo "$MSG - bygget og committet." || (echo "Noe feilet med bygg og commit."; exit 1)
