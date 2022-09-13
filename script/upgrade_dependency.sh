@@ -47,7 +47,7 @@ else
     fi
   fi
 
-  if [[ -z $NEW_DEP ]]
+  if [[ -z $NEW_VERSION ]]
   then
     echo "No version number found after upgrade attempt - either already up-to-date, $DEPENDENCY_NAME not in use, or version is not specified by us (e.g set by Spring-BOM)."
   else
