@@ -87,3 +87,9 @@ upgrade-ep-libraries-part-10: ## ... tenth and final step.
 	@meta exec "git push" --exclude eessi-pensjon
 	@echo "Vent til app'er er deployet og sjekk at det gikk bra"
 	@echo "Deretter er du done!"
+
+install-template-engine:
+	@brew install --quiet jinja2-cli
+
+generate-files: install-template-engine ## Oppdaterer filer fra templates i alle prosjekter
+	@meta exec "$(root_dir)script/generate_files.sh $(filter-out $@,$(MAKECMDGOALS))" --exclude eessi-pensjon
