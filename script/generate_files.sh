@@ -26,7 +26,7 @@ generate_file() {
     fi
 };
 
-data_file="../template_data/$(basename "$PWD").yml"
+data_file="../template-data/$(basename "$PWD").yml"
 
 if test ! -f "$data_file" ; then
     echo "No data-file \"$data_file\""
