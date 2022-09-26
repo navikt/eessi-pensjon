@@ -6,3 +6,4 @@ ep-*/
 
 codemr/
 /.idea/
+!/.idea/scopes/
