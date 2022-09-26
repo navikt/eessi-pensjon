@@ -1,2 +1,4 @@
 
 build_jar: "build/libs/eessi-pensjon-prefill.jar"
+
+ActiveProcessorCount: 4

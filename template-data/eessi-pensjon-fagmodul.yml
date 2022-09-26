@@ -1,2 +1,4 @@
 
 build_jar: "build/libs/eessi-fagmodul.jar"
+
+ActiveProcessorCount: 4
