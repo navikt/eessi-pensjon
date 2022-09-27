@@ -33,7 +33,8 @@ else
     OLD_VERSION=$(echo "$DIFF_MINUS"|cut -d'=' -f2| sed 's/"//g')
     NEW_VERSION=$(echo "$DIFF_PLUS"|cut -d'=' -f2| sed 's/"//g')
     OLD_DEP="$DEPENDENCY:$OLD_VERSION"
-  else # mest sannsynlig endring i en dependency-linje
+  elif [[ "$DIFF_STRING" =~ [:] ]] # mest sannsynlig endring i en dependency-linje
+  then
     OLD_DEP=$(echo $DIFF_MINUS | perl -lpe 'if ($_ =~ m/"([a-zA-Z0-9-.]+):([a-zA-Z0-9-.]+):([a-zA-Z0-9-.]+)"/) { print "$1:$2:$3\n"; }' | head -n 1 )
     NEW_DEP=$(echo $DIFF_PLUS | perl -lpe 'if ($_ =~ m/"([a-zA-Z0-9-.]+):([a-zA-Z0-9-.]+):([a-zA-Z0-9-.]+)"/) { print "$1:$2:$3\n"; }' | head -n 1 )
     OLD_MODULE=$(echo $OLD_DEP | cut -d':' -f2)
@@ -44,6 +45,10 @@ else
       echo "Noe er galt - ny modul ($NEW_MODULE) er ikke lik gammel ($OLD_MODULE)"
       exit 1
     fi
+  else # tror vi bare har en revisjon
+    OLD_VERSION=$(echo "$DIFF_MINUS"|sed 's/"//g')
+    NEW_VERSION=$(echo "$DIFF_PLUS"|sed 's/"//g')
+    OLD_DEP="$DEPENDENCY:$OLD_VERSION"
   fi
 
   if [[ -z $NEW_VERSION ]]
