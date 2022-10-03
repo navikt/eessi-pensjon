@@ -1,0 +1,9 @@
+
+build_jar: "build/libs/eessi-pensjon-onprem-proxy.jar"
+
+on_prem: true
+
+appd:
+  name: eessi-pensjon
+  tier: onprem-proxy
+  enabled: true
