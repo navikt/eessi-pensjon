@@ -1,3 +1,3 @@
 <component name="DependencyValidationManager">
-  <scope name="Github Actions" pattern="file:.github//*.yml||file:Dockerfile" />
+  <scope name="Github Actions" pattern="file:.github//*.yml||file:Dockerfile||file:templates//*||file:template-data//*" />
 </component>
