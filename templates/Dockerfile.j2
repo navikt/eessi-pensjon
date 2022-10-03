@@ -1,7 +1,8 @@
 FROM navikt/java:17{% if appd is defined %}-appdynamics{% endif %}
-
-{% if on_prem is undefined %}COPY init-scripts/ep-jvm-tuning.sh /init-scripts/
-{% endif %}COPY {{ build_jar }} /app/app.jar
+{% if on_prem is undefined %}
+COPY init-scripts/ep-jvm-tuning.sh /init-scripts/
+{% endif %}
+COPY {{ build_jar }} /app/app.jar
 {% if on_prem is defined and on_prem==true %}COPY nais/export-vault-secrets.sh /init-scripts/
 {% endif %}{% if appd is defined %}
 ENV APPD_NAME {{ appd.name }}
