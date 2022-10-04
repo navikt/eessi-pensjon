@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="logging" pattern="file:*.gradle||file:*//logbac*.xml&amp;&amp;!file:out//*" />
+</component>
