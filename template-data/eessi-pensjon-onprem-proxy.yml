@@ -7,3 +7,5 @@ appd:
   name: eessi-pensjon
   tier: onprem-proxy
   enabled: true
+
+ActiveProcessorCount: 4
