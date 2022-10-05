@@ -43,9 +43,9 @@ prepush-review: ## let's you look at local commits across all projects and decid
 	@meta exec 'output=$$(git log --oneline origin/HEAD..HEAD) ; [ -n "$$output" ] && (git show --oneline origin/HEAD..HEAD | cat && echo "Pushe? (y/N)" && read a && [ "$$a" = "y" ] && git push) || true' --exclude eessi-pensjon
 
 upgrade-ep-libraries-part-1: ## First (of nine) steps in upgrading the ep-*-libraries dependencies ...
-	@meta exec "./gradlew dependencyUpdates --refresh-dependencies | tail -n1" --exclude eessi-pensjon,eessi-pensjon-saksbehandling-ui,eessi-pensjon-ui
-	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-logging | tail -n1" --include-only ep-security-sts,ep-pensjonsinformasjon,ep-eux,ep-kodeverk # ep-personoppslag er syk
-	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-metrics | tail -n1" --include-only ep-security-sts,ep-pensjonsinformasjon,ep-eux,ep-kodeverk # ep-personoppslag er syk
+	@meta exec "./gradlew dependencyUpdates --refresh-dependencies | tail -n1" --parallel --exclude eessi-pensjon,eessi-pensjon-saksbehandling-ui,eessi-pensjon-ui
+	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-logging | tail -n1" --parallel --include-only ep-security-sts,ep-pensjonsinformasjon,ep-eux,ep-kodeverk # ep-personoppslag er syk
+	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-metrics | tail -n1" --parallel --include-only ep-security-sts,ep-pensjonsinformasjon,ep-eux,ep-kodeverk # ep-personoppslag er syk
 
 upgrade-ep-libraries-part-2: ## ... second step ...
 	@echo "Nå må du oppdatere manuelt i ep-personoppslag og commit'e (på grunn av kotlin-versjonen vi holder tilbake)"
@@ -60,30 +60,30 @@ upgrade-ep-libraries-part-5: ## ... fifth ...
 	$(MAKE) pull
 
 upgrade-ep-libraries-part-6: ## ... sixth ...
-	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-logging | tail -n1" --exclude eessi-pensjon,ep-personoppslag
-	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-metrics | tail -n1" --exclude eessi-pensjon,ep-personoppslag
+	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-logging | tail -n1" --parallel --exclude eessi-pensjon,ep-personoppslag
+	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-metrics | tail -n1" --parallel --exclude eessi-pensjon,ep-personoppslag
 	@meta exec "git push" --exclude eessi-pensjon
 	@echo "Vent til app'er er deployet og sjekk at det gikk bra"
 
 upgrade-ep-libraries-part-7: ## ... seventh ...
-	@meta exec "./gradlew dependencyUpdates --refresh-dependencies | tail -n1" --exclude eessi-pensjon,eessi-pensjon-saksbehandling-ui,eessi-pensjon-ui
-	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-pensjonsinformasjon | tail -n1" --exclude eessi-pensjon,ep-personoppslag
+	@meta exec "./gradlew dependencyUpdates --refresh-dependencies | tail -n1" --parallel --exclude eessi-pensjon,eessi-pensjon-saksbehandling-ui,eessi-pensjon-ui
+	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-pensjonsinformasjon | tail -n1" --parallel --exclude eessi-pensjon,ep-personoppslag
 	@meta exec "git push" --exclude eessi-pensjon
 	@echo "Vent til app'er er deployet og sjekk at det gikk bra"
 
 upgrade-ep-libraries-part-8: ## ... eighth ...
-	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-personoppslag | tail -n1"  --exclude eessi-pensjon,ep-personoppslag
+	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-personoppslag | tail -n1"  --parallel --exclude eessi-pensjon,ep-personoppslag
 	@meta exec "git push" --exclude eessi-pensjon
 	@echo "Vent til app'er er deployet og sjekk at det gikk bra"
 
 upgrade-ep-libraries-part-9: ## ... ninth ...
-	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-kodeverk | tail -n1"  --exclude eessi-pensjon,ep-personoppslag
+	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-kodeverk | tail -n1"  --parallel --exclude eessi-pensjon,ep-personoppslag
 	@meta exec "git push" --exclude eessi-pensjon
 	@echo "Vent til app'er er deployet og sjekk at det gikk bra"
 
 upgrade-ep-libraries-part-10: ## ... tenth and final step.
-	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-eux | tail -n1"  --exclude eessi-pensjon,ep-personoppslag
-	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-security-sts | tail -n1"  --include-only eessi-pensjon-onprem-proxy
+	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-eux | tail -n1"  --parallel --exclude eessi-pensjon,ep-personoppslag
+	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-security-sts | tail -n1"  --parallel --include-only eessi-pensjon-onprem-proxy
 	@meta exec "git push" --exclude eessi-pensjon
 	@echo "Vent til app'er er deployet og sjekk at det gikk bra"
 	@echo "Deretter er du done!"
