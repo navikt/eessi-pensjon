@@ -104,17 +104,18 @@ changes.sort(key=lambda change: change['module'])
 changes.sort(key=lambda change: change['type'])
 
 
-def report_part(description, changes, intentions):
+def report_part(description, changes, filter_rule):
     print("*** " + description + " *** ")
     print()
-    for change in filter(lambda change: change["intention"] in intentions, changes):
+    for change in filter(filter_rule, changes):
         print(f'{change["timestamp"].strftime("%d-%m-%Y %H:%M")} {change["module"]} - {change["message"]}  ({text_risk(change["risk"])})')
     print()
 
 
-report_part("Changes of unknown type", changes, {"*"})
-report_part("Feature and bugfix changes", changes, {"F", "B"})
-report_part("Refactoring and test and documentation changes", changes, {"R", "T", "D"})
-report_part("Minor changes", changes, {"A"})
-report_part("Environment and process changes", changes, {"E", "P"})
-report_part("Dependency updates", changes, {"U"})
+report_part("Highlight: Risky changes", changes, lambda change: 3 <= int(change["risk"]) < 5)
+report_part("Changes of unknown type", changes, lambda change: change["intention"] in {"*"})
+report_part("Feature and bugfix changes", changes, lambda change: change["intention"] in {"F", "B"})
+report_part("Refactoring, test and documentation changes", changes, lambda change: change["intention"] in {"R", "T", "D"})
+report_part("Minor changes", changes, lambda change: change["intention"] in {"A"})
+report_part("Environment and process changes", changes, lambda change: change["intention"] in {"E", "P"})
+report_part("Dependency updates", changes, lambda change: change["intention"] in {"U"})
