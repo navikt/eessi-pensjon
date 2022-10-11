@@ -17,7 +17,7 @@ if test -f build.gradle || test -f build.gradle.kts; then
     $(dirname -- "$0")/build.sh
     echo "Committing changes ..."
     git add gradle gradlew.bat gradlew
-    git commit -m"Upgrade Gradle wrapper to $GRADLEW_VERSION"
+    git commit -m"U - Upgrade Gradle wrapper to $GRADLEW_VERSION"
   fi
 else
   echo "Not a gradle project."
