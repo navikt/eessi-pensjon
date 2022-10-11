@@ -10,7 +10,7 @@
 * [ADR-0006](0006-PDL-produsent-i-flere-apper.md) - Én PDL-produsent-app med to lyttere på samme topic 
 * [ADR-0007](0007-Korte-ned-tid-rinasaker-kall.md) - [short title of solved problem and solution]
 * [ADR-0008](0008-Rammeverk-for-EP-lytter-apper.md) - [short title of solved problem and solution]
-* [ADR-9999](9999-template.md) - [short title of solved problem and solution]
+* [ADR-9999](9999-template.md) - [template - short title of solved problem and solution]
 
 <!-- adrlogstop -->
 
