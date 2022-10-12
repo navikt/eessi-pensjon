@@ -24,12 +24,19 @@ komponenter.
 
 ## Considered Options
 
+Første valg: Teknisk løsning
 0. La ting være som det er
 1. Nytt contract-driven API basert på OpenAPI og kodegenerering (med http-problem)
 1. Dagens API brukes som utgangspunkt for OpenAPI og så introduseres http-problem
 1. http-problem tas i bruk på dagens API (ingen kontrakt med OpenAPI)
 1. ??
 * … <!-- numbers of options can vary -->
+
+Andre valg: Feilhåndteringsstrategi (gitt http-problem)
+
+Ref A Philosophy of Software Dwsign
+
+Se https://github.com/zalando/problem og https://www.rfc-editor.org/rfc/pdfrfc/rfc7807.txt.pdf
 
 ## Decision Outcome
 
