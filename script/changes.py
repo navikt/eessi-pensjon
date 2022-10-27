@@ -100,6 +100,7 @@ for project in projects:
 
 changes.sort(key=lambda change: change['intention'])
 changes.sort(key=lambda change: change['risk'], reverse=True)
+changes.sort(key=lambda change: change['timestamp'])
 changes.sort(key=lambda change: change['module'])
 changes.sort(key=lambda change: change['type'])
 
@@ -113,9 +114,9 @@ def report_part(description, changes, filter_rule):
 
 
 report_part("Highlight: Risky changes", changes, lambda change: 3 <= int(change["risk"]) < 5)
-report_part("Changes of unknown type", changes, lambda change: change["intention"] in {"*"})
+report_part("Changes with unknown intention", changes, lambda change: change["intention"] in {"*"})
 report_part("Feature and bugfix changes", changes, lambda change: change["intention"] in {"F", "B"})
 report_part("Refactoring, test and documentation changes", changes, lambda change: change["intention"] in {"R", "T", "D"})
-report_part("Minor changes", changes, lambda change: change["intention"] in {"A"})
 report_part("Environment and process changes", changes, lambda change: change["intention"] in {"E", "P"})
 report_part("Dependency updates", changes, lambda change: change["intention"] in {"U"})
+report_part("Minor changes", changes, lambda change: change["intention"] in {"A"})
