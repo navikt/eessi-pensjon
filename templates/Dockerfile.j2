@@ -1,4 +1,4 @@
-FROM navikt/java:17{% if appd is defined %}-appdynamics{% endif %}
+FROM ghcr.io/navikt/baseimages/temurin:17{% if appd is defined %}-appdynamics{% endif %}
 
 COPY init-scripts/ep-jvm-tuning.sh /init-scripts/
 
