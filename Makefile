@@ -42,6 +42,13 @@ upgradable-dependencies-report: ## Lists dependencies that are outdated - across
 prepush-review: ## let's you look at local commits across all projects and decide if you want to push
 	@meta exec 'output=$$(git log --oneline origin/HEAD..HEAD) ; [ -n "$$output" ] && (git show --oneline origin/HEAD..HEAD | cat && echo "Pushe? (y/N)" && read a && [ "$$a" = "y" ] && git push) || true' --exclude eessi-pensjon
 
+install-template-engine:
+	@echo "Installerer jinja2 (template engine)..."
+	@brew install --quiet jinja2-cli
+
+generate-files: install-template-engine ## Oppdaterer filer fra templates i alle prosjekter
+	@meta exec "$(root_dir)script/generate_files.sh $(filter-out $@,$(MAKECMDGOALS))" --exclude eessi-pensjon
+
 upgrade-ep-libraries-part-1: ## First (of nine) steps in upgrading the ep-*-libraries dependencies ...
 	@meta exec "./gradlew dependencyUpdates --refresh-dependencies | tail -n1" --parallel --exclude eessi-pensjon,eessi-pensjon-saksbehandling-ui,eessi-pensjon-ui
 	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-logging | tail -n1" --parallel --include-only ep-security-sts,ep-pensjonsinformasjon,ep-eux,ep-kodeverk # ep-personoppslag er syk
@@ -89,10 +96,3 @@ upgrade-ep-libraries-part-9: ## ... ninth and final step.
 	@meta exec "git push" --exclude eessi-pensjon
 	@echo "Vent til app'er er deployet og sjekk at det gikk bra"
 	@echo "Deretter er du done!"
-
-install-template-engine:
-	@echo "Installerer jinja2 (template engine)..."
-	@brew install --quiet jinja2-cli
-
-generate-files: install-template-engine ## Oppdaterer filer fra templates i alle prosjekter
-	@meta exec "$(root_dir)script/generate_files.sh $(filter-out $@,$(MAKECMDGOALS))" --exclude eessi-pensjon
