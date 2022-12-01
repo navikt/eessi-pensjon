@@ -4,13 +4,16 @@ import re
 import subprocess
 from datetime import datetime
 
-projects_cmd = subprocess.run(["sh", "-c", "ls -d */.git"], stdout=subprocess.PIPE, text=True)
-if projects_cmd.returncode != 0:
-    exit(projects_cmd.returncode)
 
-projects = ["."] + [re.sub('/.git', '', x) for x in projects_cmd.stdout.split('\n') if x != ""]
+def projects_from_ls_cmd():
+    global projects
+    subfolders_with_git_cmd = subprocess.run(["sh", "-c", "ls -d */.git"], stdout=subprocess.PIPE, text=True)
+    if subfolders_with_git_cmd.returncode != 0:
+        exit(subfolders_with_git_cmd.returncode)
+    sub_folders_with_git = subfolders_with_git_cmd.stdout.split('\n')
+    root_project_folder = "."
+    return [root_project_folder] + [re.sub('/.git', '', folder) for folder in sub_folders_with_git if folder != ""]
 
-changes = []
 
 risks = {
     '0': "no risk",
@@ -76,26 +79,30 @@ def risk_from_message(message):
         return "5"
 
 
-for project in projects:
-    module = re.sub("^\.$", "meta", re.sub("eessi-pensjon-", "", project))
+changes = []
+
+
+for project in projects_from_ls_cmd():
+    short_project_names = re.sub("^\.$", "meta", re.sub("eessi-pensjon-", "", project))
     project_changes_cmd = subprocess.run(["sh", "-c",
-                                          f"pushd '{project}' >/dev/null && git fetch >/dev/null && git log origin/HEAD --reverse --format='{project};%ci;{module};%h;%s' --since='178 hours'"],
+                                          f"pushd '{project}' >/dev/null && git fetch >/dev/null && git log origin/HEAD --format='{project};%ci;{short_project_names};%h;%s' --since='178 hours'"],
                                          stdout=subprocess.PIPE, text=True)
     if project_changes_cmd.returncode != 0:
         exit(project_changes_cmd.returncode)
 
-    project_changes = [x.split(";") for x in project_changes_cmd.stdout.split('\n') if x != ""]
+    commit_lines = project_changes_cmd.stdout.split('\n')
+    project_commits = [line.split(";") for line in commit_lines if line != ""]
 
-    for change in project_changes:
+    for commit in project_commits:
         changes += [{
-            "repo": change[0],
-            "timestamp": datetime.strptime(change[1], "%Y-%m-%d %H:%M:%S %z"),
-            "module": change[2],
-            "type": "library" if change[0].startswith("ep-") else "meta" if change[2].startswith("meta") else "app",
-            "hash": change[3],
-            "message": change[4],
-            "intention": intention_from_message(change[4]),
-            "risk": risk_from_message(change[4])
+            "repo": commit[0],
+            "timestamp": datetime.strptime(commit[1], "%Y-%m-%d %H:%M:%S %z"),
+            "module": commit[2],
+            "type": "library" if commit[0].startswith("ep-") else "meta" if commit[2].startswith("meta") else "app",
+            "hash": commit[3],
+            "message": commit[4],
+            "intention": intention_from_message(commit[4]),
+            "risk": risk_from_message(commit[4])
         }]
 
 changes.sort(key=lambda change: change['intention'])
@@ -109,14 +116,14 @@ def report_part(description, changes, filter_rule):
     print("*** " + description + " *** ")
     print()
     for change in filter(filter_rule, changes):
-        print(f'{change["timestamp"].strftime("%d-%m-%Y %H:%M")} {change["module"]} - {change["message"]}  ({text_risk(change["risk"])})')
+        print(f'{change["timestamp"].strftime("%d-%m-%Y %H:%M")} {change["module"].rjust(22," ")} - {change["message"]}  ({text_risk(change["risk"])})')
     print()
 
 
-report_part("Highlight: Risky changes", changes, lambda change: 3 <= int(change["risk"]) < 5)
+report_part("Highlight: Risky changes", changes, lambda change: 3 <= int(change["risk"]) <= 5)
 report_part("Changes with unknown intention", changes, lambda change: change["intention"] in {"*"})
 report_part("Feature and bugfix changes", changes, lambda change: change["intention"] in {"F", "B"})
 report_part("Refactoring, test and documentation changes", changes, lambda change: change["intention"] in {"R", "T", "D"})
-report_part("Environment and process changes", changes, lambda change: change["intention"] in {"E", "P"})
+report_part("Environment changes", changes, lambda change: change["intention"] in {"E"})
 report_part("Dependency updates", changes, lambda change: change["intention"] in {"U"})
-report_part("Minor changes", changes, lambda change: change["intention"] in {"A"})
+report_part("Minor changes", changes, lambda change: change["intention"] in {"A", "P"})
