@@ -91,6 +91,7 @@ upgrade-ep-libraries-part-9: ## ... ninth and final step.
 	@echo "Deretter er du done!"
 
 install-template-engine:
+	@echo "Installerer jinja2 (template engine)..."
 	@brew install --quiet jinja2-cli
 
 generate-files: install-template-engine ## Oppdaterer filer fra templates i alle prosjekter
