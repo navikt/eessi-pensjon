@@ -76,8 +76,11 @@ def risk_from_message(message):
 
 
 def gather_changes_from_subprojects(duration):
+    print(duration)
     hours, remainder = divmod(duration.total_seconds(), 3600)
-    report_period = f"{str(hours + 1 if remainder > 0 else 0)} hours"
+    report_period = f"{str(hours + (1 if remainder > 0 else 0))} hours"
+
+    print(report_period)
 
     changes = []
 
@@ -85,8 +88,6 @@ def gather_changes_from_subprojects(duration):
         short_project_names = re.sub("^\.$", "meta", re.sub("eessi-pensjon-", "", project))
 
         commit_format_string=f"{project};%ci;{short_project_names};%h;%s"
-
-
 
         project_changes_cmd = subprocess.run(["sh", "-c",
                                               f"pushd '{project}' >/dev/null && git fetch >/dev/null && git log origin/HEAD --format='{commit_format_string}' --since='{report_period}'"],
