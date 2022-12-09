@@ -84,8 +84,13 @@ changes = []
 
 for project in projects_from_ls_cmd():
     short_project_names = re.sub("^\.$", "meta", re.sub("eessi-pensjon-", "", project))
+
+    commit_format_string=f"{project};%ci;{short_project_names};%h;%s"
+
+    report_period = f"{str(7 * 24 + 10)} hours" # en uke og litt
+
     project_changes_cmd = subprocess.run(["sh", "-c",
-                                          f"pushd '{project}' >/dev/null && git fetch >/dev/null && git log origin/HEAD --format='{project};%ci;{short_project_names};%h;%s' --since='178 hours'"],
+                                          f"pushd '{project}' >/dev/null && git fetch >/dev/null && git log origin/HEAD --format='{commit_format_string}' --since='{report_period}'"],
                                          stdout=subprocess.PIPE, text=True)
     if project_changes_cmd.returncode != 0:
         exit(project_changes_cmd.returncode)
