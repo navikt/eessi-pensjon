@@ -41,7 +41,7 @@ def intention_from_message(message):
         return "U"
     if message.startswith("Revert \""):
         return intention_from_message(message[len("Revert \""):])
-    if message[1:3] in (" -", "!!", "**") or message[1] == " ":  # last condition handles old messages
+    if (len(message) >= 3 and message[1:3] in (" -", "!!", "**")) or (len(message) >= 2 and message[1] == " "):  # last condition handles old messages
         return message[0].upper() if message[0].upper() in intentions.keys() else "*"
     return "*"
 
@@ -59,7 +59,7 @@ def risk_from_message(message):
         return "0"
     if message.startswith("Revert \""):
         return risk_from_message(message[len("Revert \""):])
-    if message[1:3] not in (" -", "!!", "**") and message[1] != " ":  # last condition handles old messages
+    if (len(message) >= 3 and message[1:3] not in (" -", "!!", "**")) and (len(message) > 2 and message[1] != " "):  # last condition handles old messages
         return "5"
     if message[0].islower():
         return "1"
@@ -76,11 +76,8 @@ def risk_from_message(message):
 
 
 def gather_changes_from_subprojects(duration):
-    print(duration)
     hours, remainder = divmod(duration.total_seconds(), 3600)
-    report_period = f"{str(hours + (1 if remainder > 0 else 0))} hours"
-
-    print(report_period)
+    report_period = "%d hours" % (hours + (1 if remainder > 0 else 0))
 
     changes = []
 
