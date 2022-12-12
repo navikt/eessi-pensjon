@@ -9,7 +9,7 @@ startdate = datetime(2021, 1, 1)
 
 changes = gather_changes_from_subprojects(datetime.now() - startdate)
 
-filename = "../analysis/commit-stats.csv"
+filename = "analysis/commit-stats.csv"
 
 
 def convert(value):
