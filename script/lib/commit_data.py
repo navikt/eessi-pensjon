@@ -1,16 +1,7 @@
 import subprocess
-import re
 from datetime import datetime
 
-def projects_from_ls_cmd():
-    global projects
-    subfolders_with_git_cmd = subprocess.run(["sh", "-c", "ls -d */.git"], stdout=subprocess.PIPE, text=True)
-    if subfolders_with_git_cmd.returncode != 0:
-        exit(subfolders_with_git_cmd.returncode)
-    sub_folders_with_git = subfolders_with_git_cmd.stdout.split('\n')
-    root_project_folder = "."
-    return [root_project_folder] + [re.sub('/.git', '', folder) for folder in sub_folders_with_git if folder != ""]
-
+from .repos import projects_info
 
 risks = {
     '0': "no risk",
@@ -20,6 +11,7 @@ risks = {
     '4': "(probably) broken",
     '5': "unknown risk",
 }
+
 intentions = {
     'F': "feature",
     'R': "refactoring",
@@ -80,30 +72,29 @@ def gather_changes_from_subprojects(duration):
     report_period = "%d hours" % (hours + (1 if remainder > 0 else 0))
 
     changes = []
-
-    for project in projects_from_ls_cmd():
-        short_project_names = re.sub("^\.$", "meta", re.sub("eessi-pensjon-", "", project))
-
-        commit_format_string=f"{project};%ci;{short_project_names};%h;%s"
-
-        project_changes_cmd = subprocess.run(["sh", "-c",
-                                              f"pushd '{project}' >/dev/null && git fetch >/dev/null && git log origin/HEAD --format='{commit_format_string}' --since='{report_period}'"],
-                                             stdout=subprocess.PIPE, text=True)
-        if project_changes_cmd.returncode != 0:
-            exit(project_changes_cmd.returncode)
-
-        commit_lines = project_changes_cmd.stdout.split('\n')
-        project_commits = [line.split(";") for line in commit_lines if line != ""]
-
-        for commit in project_commits:
+    for project_info in projects_info():
+        for commit in project_commits(project_info, report_period):
+            (timestamp, hash, subject) = tuple(commit)
             changes += [{
-                "repo": commit[0],
-                "timestamp": datetime.strptime(commit[1], "%Y-%m-%d %H:%M:%S %z"),
-                "module": commit[2],
-                "type": "library" if commit[0].startswith("ep-") else "meta" if commit[2].startswith("meta") else "app",
-                "hash": commit[3],
-                "message": commit[4],
-                "intention": intention_from_message(commit[4]),
-                "risk": risk_from_message(commit[4])
+                "repo": project_info["path"],
+                "timestamp": datetime.strptime(timestamp, "%Y-%m-%d %H:%M:%S %z"),
+                "module": project_info["module"],
+                "type": project_info["type"],
+                "hash": hash,
+                "message": subject,
+                "intention": intention_from_message(subject),
+                "risk": risk_from_message(subject)
             }]
     return changes
+
+
+def project_commits(project_info, report_period):
+    commit_format_string = f"%ci€%h€%s"
+    path = project_info["path"]
+    project_changes_cmd = subprocess.run(["sh", "-c",
+                                          f"pushd '{path}' >/dev/null && git fetch >/dev/null && git log origin/HEAD --format='{commit_format_string}' --since='{report_period}'"],
+                                         stdout=subprocess.PIPE, text=True)
+    if project_changes_cmd.returncode != 0:
+        exit(project_changes_cmd.returncode)
+    commit_lines = project_changes_cmd.stdout.split('\n')
+    return [line.split("€") for line in commit_lines if line != ""]
