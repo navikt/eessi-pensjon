@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import os
 from datetime import datetime
 from zoneinfo import ZoneInfo
 from lib.commit_data import gather_changes_from_subprojects
@@ -7,7 +8,7 @@ import csv
 
 startdate = datetime(2021, 1, 1)
 
-changes = gather_changes_from_subprojects(datetime.now() - startdate)
+changes = gather_changes_from_subprojects(os.getcwd(), datetime.now() - startdate)
 
 filename = "analysis/commit-stats.csv"
 

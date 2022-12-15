@@ -67,12 +67,12 @@ def risk_from_message(message):
         return "5"
 
 
-def gather_changes_from_subprojects(duration):
+def gather_changes_from_subprojects(folder, duration):
     hours, remainder = divmod(duration.total_seconds(), 3600)
     report_period = "%d hours" % (hours + (1 if remainder > 0 else 0))
 
     changes = []
-    for project_info in projects_info():
+    for project_info in projects_info(folder):
         for commit in project_commits(project_info, report_period):
             (timestamp, hash, subject) = tuple(commit)
             changes += [{
