@@ -1,10 +1,9 @@
 import re
 import subprocess
-import os
 
 
 def paths_from_ls_cmd(folder):
-    subfolders_with_git_cmd = subprocess.run(["sh", "-c", f"ls -d */.git"], stdout=subprocess.PIPE, text=True, cwd=folder)
+    subfolders_with_git_cmd = subprocess.run(["sh", "-c", f"ls --color=never -d */.git"], stdout=subprocess.PIPE, text=True, cwd=folder)
     if subfolders_with_git_cmd.returncode != 0:
         exit(subfolders_with_git_cmd.returncode)
     sub_folders_with_git = subfolders_with_git_cmd.stdout.split('\n')

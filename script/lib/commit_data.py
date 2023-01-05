@@ -92,9 +92,7 @@ def project_commits(project_info, report_period):
     commit_format_string = f"%ci€%h€%s"
     path = project_info["path"]
     project_changes_cmd = subprocess.run(["sh", "-c",
-                                          f"pushd '{path}' >/dev/null && git fetch >/dev/null && git log origin/HEAD --format='{commit_format_string}' --since='{report_period}'"],
-                                         stdout=subprocess.PIPE, text=True)
-    if project_changes_cmd.returncode != 0:
-        exit(project_changes_cmd.returncode)
+                                          f"git fetch >/dev/null && git log origin/HEAD --format='{commit_format_string}' --since='{report_period}'"],
+                                         cwd=path, stdout=subprocess.PIPE, text=True)
     commit_lines = project_changes_cmd.stdout.split('\n')
     return [line.split("€") for line in commit_lines if line != ""]
