@@ -50,7 +50,7 @@ generate-files: install-template-engine ## Oppdaterer filer fra templates i alle
 	@meta exec "$(root_dir)script/generate_files.sh $(filter-out $@,$(MAKECMDGOALS))" --exclude eessi-pensjon
 
 upgrade-ep-libraries-part-1: ## First (of nine) steps in upgrading the ep-*-libraries dependencies ...
-	@meta exec "./gradlew dependencyUpdates --refresh-dependencies | tail -n1" --parallel --exclude eessi-pensjon,eessi-pensjon-saksbehandling-ui,eessi-pensjon-ui
+	@meta exec "./gradlew dependencyUpdates --refresh-dependencies | tail -n1" --parallel --exclude eessi-pensjon,eessi-pensjon-saksbehandling-ui,eessi-pensjon-ui,ep-meta-analyse
 	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-logging | tail -n1" --parallel --include-only ep-security-sts,ep-pensjonsinformasjon,ep-eux,ep-kodeverk,ep-personoppslag
 	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-metrics | tail -n1" --parallel --include-only ep-security-sts,ep-pensjonsinformasjon,ep-eux,ep-kodeverk,ep-personoppslag
 
@@ -62,33 +62,33 @@ upgrade-ep-libraries-part-3: ## ... third ...
 
 upgrade-ep-libraries-part-4: ## ... fourth  ...
 	$(MAKE) pull
-	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-logging | tail -n1" --parallel --exclude eessi-pensjon
-	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-metrics | tail -n1" --parallel --exclude eessi-pensjon
+	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-logging | tail -n1" --parallel --exclude eessi-pensjon,ep-meta-analyse
+	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-metrics | tail -n1" --parallel --exclude eessi-pensjon,ep-meta-analyse
 	@meta exec "git push" --exclude eessi-pensjon
 	@echo "Vent til app'er er deployet og sjekk at det gikk bra"
 
 upgrade-ep-libraries-part-5: ## ... fifth ...
 	$(MAKE) pull
-	@meta exec "./gradlew dependencyUpdates --refresh-dependencies | tail -n1" --parallel --exclude eessi-pensjon,eessi-pensjon-saksbehandling-ui,eessi-pensjon-ui
-	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-pensjonsinformasjon | tail -n1" --parallel --exclude eessi-pensjon
+	@meta exec "./gradlew dependencyUpdates --refresh-dependencies | tail -n1" --parallel --exclude eessi-pensjon,eessi-pensjon-saksbehandling-ui,eessi-pensjon-ui,ep-meta-analyse
+	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-pensjonsinformasjon | tail -n1" --parallel --exclude eessi-pensjon,ep-meta-analyse
 	@meta exec "git push" --exclude eessi-pensjon
 	@echo "Vent til app'er er deployet og sjekk at det gikk bra"
 
 upgrade-ep-libraries-part-6: ## ... sixth ...
 	$(MAKE) pull
-	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-personoppslag | tail -n1"  --parallel --exclude eessi-pensjon
+	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-personoppslag | tail -n1"  --parallel --exclude eessi-pensjon,ep-meta-analyse
 	@meta exec "git push" --exclude eessi-pensjon
 	@echo "Vent til app'er er deployet og sjekk at det gikk bra"
 
 upgrade-ep-libraries-part-7: ## ... seventh ...
 	$(MAKE) pull
-	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-kodeverk | tail -n1"  --parallel --exclude eessi-pensjon
+	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-kodeverk | tail -n1"  --parallel --exclude eessi-pensjon,ep-meta-analyse
 	@meta exec "git push" --exclude eessi-pensjon
 	@echo "Vent til app'er er deployet og sjekk at det gikk bra"
 
 upgrade-ep-libraries-part-8: ## ... eigth and final step.
 	$(MAKE) pull
-	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-eux | tail -n1"  --parallel --exclude eessi-pensjon
+	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-eux | tail -n1"  --parallel --exclude eessi-pensjon,ep-meta-analyse
 	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-security-sts | tail -n1"  --parallel --include-only eessi-pensjon-onprem-proxy
 	@meta exec "git push" --exclude eessi-pensjon
 	@echo "Vent til app'er er deployet og sjekk at det gikk bra"
