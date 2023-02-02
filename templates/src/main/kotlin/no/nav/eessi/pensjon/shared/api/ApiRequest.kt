@@ -47,8 +47,8 @@
              "sakId" to sakId,
              "vedtakId" to vedtakId,
              "avdodfnr" to avdodfnr,
-             "buc" to buc,
-             "sed" to sed,
+             "buc" to buc?.name,
+             "sed" to sed?.name,
              "euxCaseId" to euxCaseId
          )
              .filterNot { (_, value) -> value.isNullOrBlank() }
@@ -64,6 +64,7 @@
 
          //validatate request and convert to PrefillDataModel
          fun buildPrefillDataModelOnExisting(request: ApiRequest, fodselsnr: String, avdodaktoerID: String? = null): PrefillDataModel {
+             logger.debug("*** apirequest: $request ***")
              val sedType = if (request.sed == null)
                  throw ResponseStatusException(HttpStatus.BAD_REQUEST,"SedType mangler")
              else
