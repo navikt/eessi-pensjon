@@ -19,6 +19,7 @@
     "ep-personoppslag": "git@github.com:navikt/ep-personoppslag",
     "ep-security-sts": "git@github.com:navikt/ep-security-sts",
     "ep-pensjonsinformasjon": "git@github.com:navikt/ep-pensjonsinformasjon",
-    "ep-meta-analyse": "git@github.com:navikt/ep-meta-analyse"
+    "ep-meta-analyse": "git@github.com:navikt/ep-meta-analyse",
+    "ep-routing": "git@github.com:navikt/ep-routing"
   }
 }
