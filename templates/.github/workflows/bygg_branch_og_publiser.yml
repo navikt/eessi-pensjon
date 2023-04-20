@@ -1,0 +1,51 @@
+
+# ******************************************************************************************************************
+#
+# Dette er en auto-generert fil; endringer gjøres i templates/.github/workflows/bygg_branch_og_publiser.yml
+# Kjør deretter ' make generate-files' for oppdatering av workflow hos prosjekter
+#
+# ******************************************************************************************************************
+
+name: Bygg branch og publiser
+
+on:
+  push:
+    branches:
+      - '*'
+      - '*/*'
+      - '!master'
+jobs:
+  bygg_og_publiser:
+    name: 'Bygg branch og publiser image'
+    permissions:
+      contents: "read"
+      id-token: "write"
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Pull repo'
+        uses: actions/checkout@v3
+
+      - name: 'Java'
+        uses: actions/setup-java@v3
+        with:
+          java-version: 17
+          distribution: temurin
+
+      - name: 'Bygger og tester'
+        env:
+          GITHUB_TOKEN: ${{'{{ secrets.GITHUB_TOKEN }}'}}
+        run: |
+          export TZ=CET
+          ./gradlew build --stacktrace
+
+      - name: 'Publiser docker image'
+        uses: nais/docker-build-push@v0
+        id: docker-build-push
+        with:
+          team: eessipensjon
+          project_id: ${{'{{ vars.NAIS_MANAGEMENT_PROJECT_ID }}'}} # required, but is defined as an organization variable
+          identity_provider: ${{ '{{ secrets.NAIS_WORKLOAD_IDENTITY_PROVIDER }}'}} # required, but is defined as an organization secret
+
+      - name: 'Image navn'
+        run: echo "IMAGE=${{'{{ env.DOCKER_METADATA_OUTPUT_TAGS }}'}}"
+
