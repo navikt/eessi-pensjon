@@ -18,10 +18,10 @@ build: ## Run ./gradlew build
 	@meta exec "$(root_dir)script/build.sh" --exclude "eessi-pensjon"
 
 gw: ## Run ./gradlew <target> - (e.g run using make gw clean build)
-	@meta exec "$(root_dir)script/gw.sh $(filter-out $@,$(MAKECMDGOALS))" --exclude "eessi-pensjon,eessi-pensjon-saksbehandling-ui,eessi-pensjon-ui" --parallel
+	@meta exec "$(root_dir)script/gw.sh $(filter-out $@,$(MAKECMDGOALS))" --exclude "eessi-pensjon,eessi-pensjon-saksbehandling-ui" --parallel
 
 upgrade-gradle: ## Upgrade gradle in all projects - usage GRADLEW_VERSION=x.x.x make upgrade-gradle
-	@meta exec "$(root_dir)script/upgrade_gradle.sh" --exclude "eessi-pensjon,eessi-pensjon-saksbehandling-ui,eessi-pensjon-ui"
+	@meta exec "$(root_dir)script/upgrade_gradle.sh" --exclude "eessi-pensjon,eessi-pensjon-saksbehandling-ui"
 	script/upgrade_gradle.sh
 
 upgrade-dependency: ## Upgrade dep in all projects usage DEPENDENCY=group-colon-name make upgrade-dependency
@@ -50,7 +50,7 @@ generate-files: install-template-engine ## Oppdaterer filer fra templates i alle
 	@meta exec "$(root_dir)script/generate_files.sh $(filter-out $@,$(MAKECMDGOALS))" --exclude eessi-pensjon
 
 upgrade-ep-libraries-part-1: ## First (of nine) steps in upgrading the ep-*-libraries dependencies ...
-	@meta exec "./gradlew dependencyUpdates --refresh-dependencies | tail -n1" --parallel --exclude eessi-pensjon,eessi-pensjon-saksbehandling-ui,eessi-pensjon-ui,ep-meta-analyse
+	@meta exec "./gradlew dependencyUpdates --refresh-dependencies | tail -n1" --parallel --exclude eessi-pensjon,eessi-pensjon-saksbehandling-ui,ep-meta-analyse
 	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-logging | tail -n1" --parallel --include-only ep-security-sts,ep-pensjonsinformasjon,ep-eux,ep-kodeverk,ep-personoppslag
 	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-metrics | tail -n1" --parallel --include-only ep-security-sts,ep-pensjonsinformasjon,ep-eux,ep-kodeverk,ep-personoppslag
 
@@ -69,7 +69,7 @@ upgrade-ep-libraries-part-4: ## ... fourth  ...
 
 upgrade-ep-libraries-part-5: ## ... fifth ...
 	$(MAKE) pull
-	@meta exec "./gradlew dependencyUpdates --refresh-dependencies | tail -n1" --parallel --exclude eessi-pensjon,eessi-pensjon-saksbehandling-ui,eessi-pensjon-ui,ep-meta-analyse
+	@meta exec "./gradlew dependencyUpdates --refresh-dependencies | tail -n1" --parallel --exclude eessi-pensjon,eessi-pensjon-saksbehandling-ui,ep-meta-analyse
 	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-pensjonsinformasjon | tail -n1" --parallel --exclude eessi-pensjon,ep-meta-analyse
 	@meta exec "git push" --exclude eessi-pensjon
 	@echo "Vent til app'er er deployet og sjekk at det gikk bra"
