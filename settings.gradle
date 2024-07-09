@@ -1,3 +1,6 @@
+plugins {
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '0.8.0'
+}
 rootProject.name = "eessi-pensjon-metarepo"
 
 includeBuild "eessi-pensjon-begrens-innsyn"
@@ -20,3 +23,5 @@ includeBuild "ep-personoppslag"
 includeBuild "ep-security-sts"
 includeBuild "ep-meta-analyse"
 includeBuild "ep-routing"
+include 'eessi-pensjon-integrationtest'
+
