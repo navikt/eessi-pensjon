@@ -10,3 +10,4 @@ org.pac4j:spring-webmvc-pac4j
 org.skyscreamer:jsonassert
 org.testcontainers:junit-jupiter
 org.testcontainers:testcontainers
+ch.qos.logback:logback-classic
