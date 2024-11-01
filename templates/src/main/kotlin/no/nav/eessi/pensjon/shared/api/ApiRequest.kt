@@ -1,6 +1,10 @@
  package no.nav.eessi.pensjon.shared.api
 
  import com.fasterxml.jackson.annotation.JsonIgnoreProperties
+ import com.fasterxml.jackson.core.JsonParser
+ import com.fasterxml.jackson.databind.DeserializationContext
+ import com.fasterxml.jackson.databind.JsonDeserializer
+ import com.fasterxml.jackson.databind.annotation.JsonDeserialize
  import no.nav.eessi.pensjon.eux.model.BucType
  import no.nav.eessi.pensjon.eux.model.BucType.*
  import no.nav.eessi.pensjon.eux.model.SedType
@@ -8,6 +12,7 @@
  import org.slf4j.LoggerFactory
  import org.springframework.http.HttpStatus
  import org.springframework.web.server.ResponseStatusException
+
 
  class ApiSubject(
      val gjenlevende: SubjectFnr? = null,
@@ -25,6 +30,7 @@
      val vedtakId: String? = null,
      val kravId: String? = null,
      val kravDato: String? = null,   // Brukes bare av P15000 yyyy-MM-dd
+     @JsonDeserialize(using = KravTypeDeserializer::class)
      val kravType: KravType? = null, // Brukes bare av P15000
      val aktoerId: String? = null,
      val fnr: String? = null,
@@ -39,8 +45,9 @@
      val subject: ApiSubject? = null, //P_BUC_02 alle andre seder etter P2100
      //P8000-P_BUC_05
      val referanseTilPerson: ReferanseTilPerson? = null,
-     val gjenny: Boolean = false
-
+     val gjenny: Boolean = false,
+     val sakType: String? = null,
+     val processDefinitionVersion: String? = null //buc version, 4.1, 4.2, 4.3
      ) {
 
      fun toAudit(): String {
@@ -120,3 +127,9 @@
      }
  }
 
+ class KravTypeDeserializer : JsonDeserializer<KravType>() {
+     override fun deserialize(p: JsonParser, ctxt: DeserializationContext?): KravType? {
+         val value = p.text
+         return KravType.fraNavnEllerVerdi(value)
+     }
+ }
