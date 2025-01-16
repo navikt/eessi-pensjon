@@ -32,7 +32,7 @@ jobs:
 
       - name: 'Sjekker at bygget kjører'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{'{{ secrets.GITHUB_TOKEN }}'}}
         run: |
           export TZ=CET
           ./gradlew build --stacktrace
@@ -41,26 +41,26 @@ jobs:
         id: docker-push
         with:
           team: eessipensjon
-          tag: ${{ github.event.repository.name }}
+          tag: ${{'{{ github.event.repository.name }}'}}
           pull: true
-          image_suffix: ${{ env.DATE }}${{ env.COMMIT_HASH }} # optional, default empty
-          project_id: ${{ vars.NAIS_MANAGEMENT_PROJECT_ID }} # required, but is defined as an organization variable
-          identity_provider: ${{ secrets.NAIS_WORKLOAD_IDENTITY_PROVIDER }} # required, but is defined as an organization secret
+          image_suffix: ${{'{{ env.DATE }}'}}${{'{{ env.COMMIT_HASH }}'}} # optional, default empty
+          project_id: ${{'{{ vars.NAIS_MANAGEMENT_PROJECT_ID }}'}} # required, but is defined as an organization variable
+          identity_provider: ${{'{{ secrets.NAIS_WORKLOAD_IDENTITY_PROVIDER }}'}} # required, but is defined as an organization secret
 
       - name: 'Deploy image'
-        run: echo "IMAGE=${{ steps.docker-push.outputs.image }}"
+        run: echo "IMAGE=${{'{{ steps.docker-push.outputs.image }}'}}"
 
       - name: 'Deploy to DEV Q1'
         uses: nais/deploy/actions/deploy@v1
         env:
-          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
+          APIKEY: ${{'{{ secrets.NAIS_DEPLOY_APIKEY }}'}}
           CLUSTER: dev-gcp
           RESOURCE: nais/dev-gcp-q1.yml
-          IMAGE: ${{ steps.docker-push.outputs.image }}
+          IMAGE: ${{'{{ steps.docker-push.outputs.image }}'}}
 
       - name: 'Opprett git tag'
         run: |
-          curl -v -s -X POST https://api.github.com/repos/${{ github.repository }}/git/refs -H "Authorization: token  ${{ secrets.GITHUB_TOKEN }}" -d '{ "ref": "refs/tags/${{ env.DATE }}---${{ env.COMMIT_HASH }}",  "sha": "${{ env.COMMIT_HASH }}" }'
+          curl -v -s -X POST https://api.github.com/repos/${{'{{ github.repository }}'}}/git/refs -H "Authorization: token  {{'${{ secrets.GITHUB_TOKEN }}'}}" -d '{ "ref": "refs/tags/${{'{{ env.DATE }}'}}---${{'{{ env.COMMIT_HASH }}'}}",  "sha": "${{'{{ env.COMMIT_HASH }}'}}" }'
 
       - name: 'Echo Image Name'
-        run: echo "### Image Name ${{ steps.docker-push.outputs.image }}" >> $GITHUB_STEP_SUMMARY
+        run: echo "### Image Name ${{'{{ steps.docker-push.outputs.image }}'}}" >> $GITHUB_STEP_SUMMARY
