@@ -1,4 +1,4 @@
 
-build_jar: "build/libs/eessi-fagmodul.jar"
+build_jar: "build/libs/eessi-pensjon-fagmodul.jar"
 
 ActiveProcessorCount: 4
