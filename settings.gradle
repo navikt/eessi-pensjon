@@ -20,7 +20,6 @@ includeBuild "ep-logging"
 includeBuild "ep-metrics"
 includeBuild "ep-pensjonsinformasjon"
 includeBuild "ep-personoppslag"
-includeBuild "ep-security-sts"
 includeBuild "ep-meta-analyse"
 includeBuild "ep-routing"
 include 'eessi-pensjon-integrationtest'

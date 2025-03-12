@@ -51,8 +51,8 @@ generate-files: install-template-engine ## Oppdaterer filer fra templates i alle
 
 upgrade-ep-libraries-part-1: ## First (of nine) steps in upgrading the ep-*-libraries dependencies ...
 	@meta exec "./gradlew dependencyUpdates --refresh-dependencies | tail -n1" --parallel --exclude eessi-pensjon,eessi-pensjon-saksbehandling-ui,ep-meta-analyse
-	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-logging | tail -n1" --parallel --include-only ep-security-sts,ep-pensjonsinformasjon,ep-eux,ep-kodeverk,ep-personoppslag,ep-routing
-	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-metrics | tail -n1" --parallel --include-only ep-security-sts,ep-pensjonsinformasjon,ep-eux,ep-kodeverk,ep-personoppslag,ep-routing
+	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-logging | tail -n1" --parallel --include-only ep-pensjonsinformasjon,ep-eux,ep-kodeverk,ep-personoppslag,ep-routing
+	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-metrics | tail -n1" --parallel --include-only ep-pensjonsinformasjon,ep-eux,ep-kodeverk,ep-personoppslag,ep-routing
 
 upgrade-ep-libraries-part-2: ## ... second ...
 	$(MAKE) prepush-review
@@ -89,7 +89,6 @@ upgrade-ep-libraries-part-7: ## ... seventh ...
 upgrade-ep-libraries-part-8: ## ... eight ...
 	$(MAKE) pull
 	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-eux | tail -n1"  --parallel --exclude eessi-pensjon,ep-meta-analyse
-	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-security-sts | tail -n1"  --parallel --include-only eessi-pensjon-onprem-proxy
 	@meta exec "git push" --exclude eessi-pensjon
 
 upgrade-ep-libraries-part-9: ## ... ninth and final step.
