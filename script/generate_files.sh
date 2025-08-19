@@ -8,6 +8,11 @@ generate_file() {
     template_file=$3
     out_file=$(echo "$template_file" | sed "s#$template_dir/##" | sed "s#.j2##" )
     out_dir=${out_file%\/*}
+
+    case "$out_file" in
+        *_q1.yml) return ;;
+    esac
+
     if test -f "$out_file" ; then
       echo -n "Generating $out_file ... "
       if test ! -f "$out_dir" ; then
