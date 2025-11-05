@@ -14,6 +14,12 @@ generate_file() {
     esac
 
     if test -f "$out_file" ; then
+      # Check if file has "no-update" marker
+      if grep -q "^# JINJA2_IGNORE$" "$out_file"; then
+        echo "Skipping $out_file (marked as ignore)"
+        return
+      fi
+
       echo -n "Generating $out_file ... "
       if test ! -f "$out_dir" ; then
         mkdir -p "$out_dir"
