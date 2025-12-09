@@ -21,5 +21,4 @@ includeBuild "ep-pensjonsinformasjon"
 includeBuild "ep-personoppslag"
 includeBuild "ep-meta-analyse"
 includeBuild "ep-routing"
-include 'eessi-pensjon-integrationtest'
 
