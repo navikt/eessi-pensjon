@@ -17,6 +17,10 @@
     "ep-personoppslag": "git@github.com:navikt/ep-personoppslag",
     "ep-pensjonsinformasjon": "git@github.com:navikt/ep-pensjonsinformasjon",
     "ep-meta-analyse": "git@github.com:navikt/ep-meta-analyse",
-    "ep-routing": "git@github.com:navikt/ep-routing"
+    "tabell": "git@github.com:navikt/tabell",
+    "fetch-api": "git@github.com:navikt/fetch-api",
+    "land-verktoy": "git@github.com:navikt/land-verktoy",
+    "flagg-ikoner": "git@github.com:navikt/flagg-ikoner",
+    "landvelger": "git@github.com:navikt/landvelger"
   }
 }
