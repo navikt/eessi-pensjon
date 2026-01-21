@@ -1,4 +1,4 @@
-FROM ghcr.io/navikt/baseimages/temurin:21{% if appd is defined %}-appdynamics{% endif %}
+FROM europe-north1-docker.pkg.dev/cgr-nav/pull-through/nav.no/jre:openjdk-21{% if appd is defined %}-appdynamics{% endif %}
 
 COPY init-scripts/ep-jvm-tuning.sh /init-scripts/
 
@@ -9,3 +9,4 @@ ENV APPD_NAME {{ appd.name }}
 ENV APPD_TIER {{ appd.tier }}
 ENV APPD_ENABLED {{ appd.enabled|lower }}
 {% endif %}
+CMD ["-jar","app.jar"]
