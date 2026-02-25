@@ -25,7 +25,7 @@
         fi
 
 	git pull
- 
+
 	if [ "$package" == "flagg-ikoner" ] || [ "$package" == "landvelger" ]; then
 	  # Get and increment the "@navikt/land-verktoy" field (patch bump)
           current_version=$(jq -r '.devDependencies["@navikt/land-verktoy"]' package.json)
@@ -36,7 +36,7 @@
 
           # Update land-verktoy in package.json
           jq --arg newver "$new_version" '.devDependencies["@navikt/land-verktoy"] = $newver' package.json > tmp.json && mv tmp.json package.json
-	
+
         fi
 
 	if [ "$package" == "landvelger" ]; then
@@ -71,7 +71,10 @@
           exit 1
         fi
 
-        npm run build
+        if [ "$package" != "fetch-api" ]; then
+          npm run build
+        fi
+
         npm run dist
 
         git add .
