@@ -34,11 +34,15 @@
 
       current_land_verktoy_version_no_wip="${current_land_verktoy_version%-wip}"
       IFS='.' read -r major minor patch <<< "$current_land_verktoy_version_no_wip"
-      new_patch=$((patch + 1))
-      new_version="$major.$minor.$new_patch"
 
       if [ "$2" = "wip" ]; then
+        new_patch=$((patch + 1))
+        new_version="$major.$minor.$new_patch"
         new_version="${new_version}-wip"
+      else
+        new_minor=$((minor + 1))
+        new_patch=0
+        new_version="$major.$new_minor.$new_patch"
       fi
 
       land_verktoy_peer_dep_range="${current_land_verktoy_peer_dep#*||}"
@@ -62,11 +66,15 @@
 
       current_flagg_ikoner_version_no_wip="${current_flagg_ikoner_version%-wip}"
       IFS='.' read -r major minor patch <<< "$current_flagg_ikoner_version_no_wip"
-      new_patch=$((patch + 1))
-      new_version="$major.$minor.$new_patch"
 
       if [ "$2" = "wip" ]; then
+        new_patch=$((patch + 1))
+        new_version="$major.$minor.$new_patch"
         new_version="${new_version}-wip"
+      else
+        new_minor=$((minor + 1))
+        new_patch=0
+        new_version="$major.$new_minor.$new_patch"
       fi
 
       flagg_ikoner_peer_dep_range="${current_flagg_ikoner_peer_dep#*||}"
@@ -87,11 +95,15 @@
       current_version=$(jq -r '.devDependencies["@navikt/land-verktoy"]' package.json)
       current_version_without_wip="${current_version%-wip}"
       IFS='.' read -r major minor patch <<< "$current_version_without_wip"
-      new_patch=$((patch + 1))
-      new_version="$major.$minor.$new_patch"
 
       if [ "$2" = "wip" ]; then
+        new_patch=$((patch + 1))
+        new_version="$major.$minor.$new_patch"
         new_version="${new_version}-wip"
+      else
+        new_minor=$((minor + 1))
+        new_patch=0
+        new_version="$major.$new_minor.$new_patch"
       fi
 
       echo "Bumping land-verktoy from $current_version to $new_version..."
@@ -106,11 +118,15 @@
       current_version=$(jq -r '.devDependencies["@navikt/flagg-ikoner"]' package.json)
       current_version_without_wip="${current_version%-wip}"
       IFS='.' read -r major minor patch <<< "$current_version_without_wip"
-      new_patch=$((patch + 1))
-      new_version="$major.$minor.$new_patch"
 
       if [ "$2" = "wip" ]; then
+        new_patch=$((patch + 1))
+        new_version="$major.$minor.$new_patch"
         new_version="${new_version}-wip"
+      else
+        new_minor=$((minor + 1))
+        new_patch=0
+        new_version="$major.$new_minor.$new_patch"
       fi
 
       echo "Bumping flagg-ikoner from $current_version to $new_version..."
@@ -124,11 +140,15 @@
     current_version=$(jq -r '.version' package.json)
     current_version_without_wip="${current_version%-wip}"
     IFS='.' read -r major minor patch <<< "$current_version_without_wip"
-    new_patch=$((patch + 1))
-    new_version="$major.$minor.$new_patch"
 
     if [ "$2" = "wip" ]; then
+      new_patch=$((patch + 1))
+      new_version="$major.$minor.$new_patch"
       new_version="${new_version}-wip"
+    else
+      new_minor=$((minor + 1))
+      new_patch=0
+      new_version="$major.$new_minor.$new_patch"
     fi
 
     echo "Bumping version from $current_version to $new_version..."
