@@ -39,10 +39,24 @@
         new_patch=$((patch + 1))
         new_version="$major.$minor.$new_patch"
         new_version="${new_version}-wip"
-      else
+      elif [ "$2" = "major" ]; then
+        new_major=$((major + 1))
+        new_minor=0
+        new_patch=0
+        new_version="$new_major.$new_minor.$new_patch"
+      elif [ "$2" = "minor" ]; then
         new_minor=$((minor + 1))
         new_patch=0
         new_version="$major.$new_minor.$new_patch"
+      else
+        if [[ "$current_version" == *"-wip" ]]; then
+          new_minor=$((minor + 1))
+          new_patch=0
+          new_version="$major.$new_minor.$new_patch"
+        else
+          new_patch=$((patch + 1))
+          new_version="$major.$minor.$new_patch"
+        fi
       fi
 
       land_verktoy_peer_dep_range="${current_land_verktoy_peer_dep#*||}"
@@ -71,10 +85,24 @@
         new_patch=$((patch + 1))
         new_version="$major.$minor.$new_patch"
         new_version="${new_version}-wip"
-      else
+      elif [ "$2" = "major" ]; then
+        new_major=$((major + 1))
+        new_minor=0
+        new_patch=0
+        new_version="$new_major.$new_minor.$new_patch"
+      elif [ "$2" = "minor" ]; then
         new_minor=$((minor + 1))
         new_patch=0
         new_version="$major.$new_minor.$new_patch"
+      else
+        if [[ "$current_version" == *"-wip" ]]; then
+          new_minor=$((minor + 1))
+          new_patch=0
+          new_version="$major.$new_minor.$new_patch"
+        else
+          new_patch=$((patch + 1))
+          new_version="$major.$minor.$new_patch"
+        fi
       fi
 
       flagg_ikoner_peer_dep_range="${current_flagg_ikoner_peer_dep#*||}"
@@ -100,10 +128,24 @@
         new_patch=$((patch + 1))
         new_version="$major.$minor.$new_patch"
         new_version="${new_version}-wip"
-      else
+      elif [ "$2" = "major" ]; then
+        new_major=$((major + 1))
+        new_minor=0
+        new_patch=0
+        new_version="$new_major.$new_minor.$new_patch"
+      elif [ "$2" = "minor" ]; then
         new_minor=$((minor + 1))
         new_patch=0
         new_version="$major.$new_minor.$new_patch"
+      else
+        if [[ "$current_version" == *"-wip" ]]; then
+          new_minor=$((minor + 1))
+          new_patch=0
+          new_version="$major.$new_minor.$new_patch"
+        else
+          new_patch=$((patch + 1))
+          new_version="$major.$minor.$new_patch"
+        fi
       fi
 
       echo "Bumping land-verktoy from $current_version to $new_version..."
@@ -123,10 +165,24 @@
         new_patch=$((patch + 1))
         new_version="$major.$minor.$new_patch"
         new_version="${new_version}-wip"
-      else
+      elif [ "$2" = "major" ]; then
+        new_major=$((major + 1))
+        new_minor=0
+        new_patch=0
+        new_version="$new_major.$new_minor.$new_patch"
+      elif [ "$2" = "minor" ]; then
         new_minor=$((minor + 1))
         new_patch=0
         new_version="$major.$new_minor.$new_patch"
+      else
+        if [[ "$current_version" == *"-wip" ]]; then
+          new_minor=$((minor + 1))
+          new_patch=0
+          new_version="$major.$new_minor.$new_patch"
+        else
+          new_patch=$((patch + 1))
+          new_version="$major.$minor.$new_patch"
+        fi
       fi
 
       echo "Bumping flagg-ikoner from $current_version to $new_version..."
@@ -145,10 +201,24 @@
       new_patch=$((patch + 1))
       new_version="$major.$minor.$new_patch"
       new_version="${new_version}-wip"
-    else
+    elif [ "$2" = "major" ]; then
+      new_major=$((major + 1))
+      new_minor=0
+      new_patch=0
+      new_version="$new_major.$new_minor.$new_patch"
+    elif [ "$2" = "minor" ]; then
       new_minor=$((minor + 1))
       new_patch=0
       new_version="$major.$new_minor.$new_patch"
+    else
+      if [[ "$current_version" == *"-wip" ]]; then
+        new_minor=$((minor + 1))
+        new_patch=0
+        new_version="$major.$new_minor.$new_patch"
+      else
+        new_patch=$((patch + 1))
+        new_version="$major.$minor.$new_patch"
+      fi
     fi
 
     echo "Bumping version from $current_version to $new_version..."
