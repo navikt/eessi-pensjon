@@ -7,3 +7,4 @@ ep-*/
 codemr/
 /.idea/
 !/.idea/scopes/
+/build/
