@@ -51,8 +51,8 @@ generate-files: install-template-engine ## Oppdaterer filer fra templates i alle
 
 upgrade-ep-libraries-part-1: ## First (of nine) steps in upgrading the ep-*-libraries dependencies ...
 	@meta exec "./gradlew dependencyUpdates --refresh-dependencies | tail -n1" --parallel --exclude eessi-pensjon,eessi-pensjon-saksbehandling-ui,ep-meta-analyse
-	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-logging | tail -n1" --parallel --include-only ep-pensjonsinformasjon,ep-eux,ep-kodeverk,ep-personoppslag,ep-routing
-	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-metrics | tail -n1" --parallel --include-only ep-pensjonsinformasjon,ep-eux,ep-kodeverk,ep-personoppslag,ep-routing
+	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-logging | tail -n1" --parallel --include-only ep-eux,ep-kodeverk,ep-personoppslag,ep-routing
+	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-metrics | tail -n1" --parallel --include-only ep-eux,ep-kodeverk,ep-personoppslag,ep-routing
 
 upgrade-ep-libraries-part-2: ## ... second ...
 	$(MAKE) prepush-review
@@ -67,31 +67,24 @@ upgrade-ep-libraries-part-4: ## ... fourth  ...
 	@meta exec "git push" --exclude eessi-pensjon
 	@echo "Vent til app'er er deployet og sjekk at det gikk bra"
 
-upgrade-ep-libraries-part-5: ## ... fifth ...
-	$(MAKE) pull
-	@meta exec "./gradlew dependencyUpdates --refresh-dependencies | tail -n1" --parallel --exclude eessi-pensjon,eessi-pensjon-saksbehandling-ui,ep-meta-analyse
-	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-pensjonsinformasjon | tail -n1" --parallel --exclude eessi-pensjon,ep-meta-analyse
-	@meta exec "git push" --exclude eessi-pensjon
-	@echo "Vent til app'er er deployet og sjekk at det gikk bra"
-
-upgrade-ep-libraries-part-6: ## ... sixth ...
+upgrade-ep-libraries-part-5: ## ... sixth ...
 	$(MAKE) pull
 	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-personoppslag | tail -n1"  --parallel --exclude eessi-pensjon,ep-meta-analyse
 	@meta exec "git push" --exclude eessi-pensjon
 	@echo "Vent til app'er er deployet og sjekk at det gikk bra"
 
-upgrade-ep-libraries-part-7: ## ... seventh ...
+upgrade-ep-libraries-part-6: ## ... seventh ...
 	$(MAKE) pull
 	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-kodeverk | tail -n1"  --parallel --exclude eessi-pensjon,ep-meta-analyse
 	@meta exec "git push" --exclude eessi-pensjon
 	@echo "Vent til app'er er deployet og sjekk at det gikk bra"
 
-upgrade-ep-libraries-part-8: ## ... eight ...
+upgrade-ep-libraries-part-7: ## ... eight ...
 	$(MAKE) pull
 	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-eux | tail -n1"  --parallel --exclude eessi-pensjon,ep-meta-analyse
 	@meta exec "git push" --exclude eessi-pensjon
 
-upgrade-ep-libraries-part-9: ## ... ninth and final step.
+upgrade-ep-libraries-part-8: ## ... ninth and final step.
 	$(MAKE) pull
 	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-routing | tail -n1"  --parallel --exclude eessi-pensjon,ep-meta-analyse
 	@meta exec "git push" --exclude eessi-pensjon
