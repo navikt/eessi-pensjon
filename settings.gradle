@@ -3,8 +3,8 @@ plugins {
 }
 rootProject.name = "eessi-pensjon-metarepo"
 
-includeBuild 'eessi-pensjon-dodsmelding'
 includeBuild "eessi-pensjon-begrens-innsyn"
+includeBuild 'eessi-pensjon-dodsmelding'
 includeBuild "eessi-pensjon-fagmodul"
 includeBuild "eessi-pensjon-journalforing"
 includeBuild "eessi-pensjon-krav-initialisering"
