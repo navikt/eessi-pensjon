@@ -3,6 +3,7 @@ plugins {
 }
 rootProject.name = "eessi-pensjon-metarepo"
 
+includeBuild 'eessi-pensjon-dodsmelding'
 includeBuild "eessi-pensjon-begrens-innsyn"
 includeBuild "eessi-pensjon-fagmodul"
 includeBuild "eessi-pensjon-journalforing"
@@ -20,4 +21,5 @@ includeBuild "ep-metrics"
 includeBuild "ep-personoppslag"
 includeBuild "ep-meta-analyse"
 includeBuild "ep-routing"
+
 

@@ -1,5 +1,6 @@
 {
   "projects": {
+    "eessi-pensjon-dodsmelding": "git@github.com:navikt/eessi-pensjon-dodsmelding.git",
     "eessi-pensjon-begrens-innsyn": "git@github.com:navikt/eessi-pensjon-begrens-innsyn",
     "eessi-pensjon-fagmodul": "git@github.com:navikt/eessi-pensjon-fagmodul",
     "eessi-pensjon-journalforing": "git@github.com:navikt/eessi-pensjon-journalforing",
