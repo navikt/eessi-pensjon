@@ -300,13 +300,14 @@ Several backend services use GCP Storage (S3) for intermediate state and documen
 
 ## Other Repositories in the Meta-Repo
 
-The meta-repo also contains frontend helper packages that are not core to the EP architecture but are used by the UI:
+The meta-repo also contains supporting packages that are not core to the EP architecture:
 
 | Package | Description |
 |---|---|
-| fetch-api | HTTP fetch wrapper library |
-| tabell | Table component library |
-| landvelger | Country selector component |
-| land-verktoy | Country utility library |
-| flagg-ikoner | Flag icon assets |
-| templates / template-data | SED template definitions and data |
+| fetch-api | HTTP fetch wrapper library (UI) |
+| tabell | Table component library (UI) |
+| landvelger | Country selector component (UI) |
+| land-verktoy | Country utility library (UI) |
+| flagg-ikoner | Flag icon assets (UI) |
+| templates | Jinja2 templates for generated files shared across projects (Dockerfile, .gitignore, shared Kotlin source). Used by `make generate-files` |
+| template-data | Per-project YAML data files that feed the Jinja2 templates (e.g. jar path, JVM settings) |
