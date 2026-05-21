@@ -263,13 +263,18 @@ The separation is: **EUX handles generic EESSI infrastructure**, while **EP hand
 
 Key architectural decisions are documented in [docs/adr/](docs/adr/index.md):
 
-- **ADR-0001**: Split API module into API-SBS and API-FSS
-- **ADR-0002**: Delegation of access control
-- **ADR-0003**: Choice of storage for simple data persistence (GCP Storage / Key-Value)
-- **ADR-0005**: Code sharing strategy (ep-* libraries)
-- **ADR-0006**: Single PDL producer app with multiple listeners on same topic
-- **ADR-0008**: Framework for EP listener apps (Kafka consumer pattern)
-- **ADR-0010**: Task routing (oppgaveruting)
+| ADR | Title | Summary |
+|-----|-------|---------|
+| [0001](docs/adr/0001-Splitte-API.md) | Splitte API-modul i API-SBS og API-FSS | Split the API module into separate SBS (self-service) and FSS (full-service) deployments |
+| [0002](docs/adr/0002-Tilgangsstyring.md) | Delegering av tilgangskontroll | Delegation of access control to downstream services |
+| [0003](docs/adr/0003-KeyValueStore.md) | Valg av lagringsmedie for enkel persistering | Choice of storage for simple data persistence (GCP Storage / Key-Value) |
+| [0004](docs/adr/0004-Utviklingshastighet.md) | Økt utviklingshastighet EESSI Pensjon | Measures for increasing development velocity: automation, testing, CI/CD improvements |
+| [0005](docs/adr/0005-Deling_av_kode.md) | Deling av kode | Code sharing strategy via ep-* shared libraries |
+| [0006](docs/adr/0006-PDL-produsent-i-flere-apper.md) | Én PDL-produsent-app med to lyttere på samme topic | Single PDL producer app with multiple listeners on the same Kafka topic |
+| [0007](docs/adr/0007-Korte-ned-tid-rinasaker-kall.md) | Korte ned tid på rinasaker-kall | Reducing response time on the HentRinaSaker call to EUX/RINA (15–30s → faster) |
+| [0008](docs/adr/0008-Rammeverk-for-EP-lytter-apper.md) | Rammeverk for EP lytter-apper | Framework/pattern for EP Kafka listener applications |
+| [0009](docs/adr/0009-inkonsistent-api.md) | Inkonsistent API mellom frontend og backend | Addressing inconsistent API contracts between frontend and backend, especially error handling |
+| [0010](docs/adr/0010-Oppgaveruting.md) | Oppgaveruting | Task routing strategy for oppgave (task) assignment |
 
 ## Pitfalls and Things to Watch Out For
 
