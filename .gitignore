@@ -1,6 +1,11 @@
 eessi-pensjon-*/
 *-eessi-pensjon-*/
 ep-*/
+fetch-api/
+flagg-ikoner/
+land-verktoy/
+landvelger/
+tabell/
 
 .gradle/
 
