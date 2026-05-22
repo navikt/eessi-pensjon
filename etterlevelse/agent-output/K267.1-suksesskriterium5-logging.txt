@@ -1,0 +1,7 @@
+EESSI Pensjon logger relevante hendelser for feilsøking og sikkerhetshåndtering:
+
+- Alle tjenester bruker et felles logging-bibliotek (ep-logging) som sikrer konsistent loggformat med MDC-basert sporbarhet. Hver forespørsel tilordnes en korrelasjons-ID som gjør det mulig å spore hendelser på tvers av tjenester.
+- Loggene inneholder informasjon om hvem (bruker/system) som utførte en handling, hva som ble gjort, og når det skjedde. Saksbehandlerhandlinger i brukergrensesnittet logges via backend-tjenestene som mottar forespørslene.
+- Sensitive personopplysninger (fødselsnummer, aktør-ID) logges kun til sikre logger som bare teamet har tilgang til. Disse forekommer ikke i URL-er, HTTP-headere eller andre steder der de automatisk fanges av plattformen.
+- Access tokens og andre hemmeligheter logges aldri.
+- Loggene sendes til Nav sin sentrale loggplattform og er tilgjengelige for Team ISOC ved sikkerhetshendelser.

@@ -1,0 +1,8 @@
+EESSI Pensjon validerer input og output i alle grensesnitt:
+
+- Alle API-endepunkter som mottar data validerer innkommende forespørsler med typesikre datamodeller (Kotlin data classes med annotasjoner). Ugyldige forespørsler avvises før de når forretningslogikken.
+- Løsningen behandler strukturerte dokumenter (SED-er) som følger fastsatte XML/JSON-skjemaer definert av EU. Innholdet valideres mot disse skjemaene ved mottak.
+- Saksbehandler-grensesnittet bruker forhåndsdefinerte valg og strukturerte skjemafelter fremfor fritekstfelt der det er mulig, noe som begrenser muligheten for ondsinnet input.
+- Løsningen bruker ingen egne SQL-databaser, og er dermed ikke eksponert for SQL-injection. Data mellomlagres i GCP Storage med strukturerte nøkler.
+- Logging håndteres via et felles logging-bibliotek som sørger for at sensitiv informasjon som fødselsnummer og tokens ikke skrives til applikasjonslogger som er tilgjengelige utenfor teamet.
+- Data som sendes videre til eksterne systemer (Dokarkiv, PDL, Nav Oppgave) formateres i henhold til disse systemenes API-spesifikasjoner, slik at EESSI Pensjon ikke utgjør en angrepsvektor for konsumenter.

@@ -1,0 +1,6 @@
+EESSI Pensjon benytter Nav sin standardplattform NAIS på GCP for drift, og arver plattformens backup-mekanismer:
+
+- All kildekode lagres i GitHub og er versjonskontrollert. GitHub sørger for redundans og backup av kodebasen.
+- Applikasjonene har ingen egne SQL-databaser. Mellomlagring skjer i GCP Storage (S3-kompatibelt), som har innebygd redundans og versjonering i norsk region.
+- Kafka-meldinger (SED-hendelser) håndteres av Nav sin Aiven Kafka-plattform som har innebygd replikering.
+- Teamet kan gjenopprette tjenestene ved å deploye på nytt fra kildekoden i GitHub. Siden løsningen ikke har egne databaser med tilstand, er gjenopprettingsprosessen i praksis en re-deploy fra siste fungerende versjon. Kafka-konsumenter vil ved oppstart lese fra siste committede offset og behandle eventuelle ubehandlede meldinger.

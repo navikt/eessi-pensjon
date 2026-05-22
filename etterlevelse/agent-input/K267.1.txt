@@ -1,0 +1,72 @@
+# Hjelp meg å dokumentere: K267.1 Applikasjoner skal ha et forsvarlig sikkerhetsnivå
+
+## Hensikten med kravet
+Alle applikasjoner i Nav skal ha et forsvarlig sikkerhetsnivå som står i forhold til risikoen. Dette innebærer å beskytte
+brukernes data og Navs verdier gjennom tiltak som reduserer risikoen for personvernbrudd, økonomiske tap og omdømmeskade.
+
+Sikkerheten skal ivaretas gjennom hele livssyklusen, i tråd med dokumenterte prinsipper, internkontroll og anerkjente
+metoder for sikker utvikling og drift.
+
+Det enkelte utviklingsteam har ansvar for sikkerheten i egne løsninger. Samtidig skal alle applikasjoner oppfylle et
+definert minimumsnivå for sikkerhet, uavhengig av risikoprofil.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 7 tekster:
+
+Suksesskriterium 1 av 7
+Vi følger med på og håndterer våre sårbarheter
+
+Utfyllende om kriteriet
+Applikasjoner skal holdes oppdatert. Alle sårbarheter skal håndteres – enten ved å rettes (patches), eller ved å vurderes og dokumenteres.
+Kritiske sårbarheter (CVSS-score over 9) skal håndteres innen neste arbeidsdag. Øvrige sårbarheter skal håndteres så fort som mulig, senest innen tre måneder.
+Teamet skal sørge for at de oppdager kjente sårbarheter i egne komponenter og avhengigheter.
+
+Suksesskriterium 2 av 7
+Vi holder våre applikasjoner og avhengigheter oppdatert
+
+Utfyllende om kriteriet
+All tredjepartskode og biblioteker skal holdes oppdatert – også når det ikke er kjente sårbarheter. Applikasjoner skal bygges og deployeres minst hver tredje måned for å sikre at prosessen fungerer, slik at man er forberedt ved sikkerhetshendelser.
+Unngå å legge til unødvendige eller risikofylte avhengigheter.
+
+Suksesskriterium 3 av 7
+Vi validerer input og output
+
+Utfyllende om kriteriet
+Alle grensesnitt skal håndtere input på en trygg måte – også fra kilder vi stoler på. Unngå fritekstfelt der det er mulig. Hvis fritekst benyttes, bør det gjøres kontroll på tillatte tegn. Eventuell filtrering skal skje med å sjekke mot tillatte tegn.
+Vi bruker parameterisert queries mot databaser og output encoding når vi viser data til bruker.
+Applikasjonen har også ansvar for å validere og sikre data som sendes ut, slik at de ikke utgjør en angrepsvektor for konsumenter. Husk at logg er en form for output og skal behandles deretter.
+
+Suksesskriterium 4 av 7
+Vi beskytter og roterer hemmelighetene våre
+
+Utfyllende om kriteriet
+API-nøkler, sertifikater, passord og andre hemmeligheter skal holdes konfidensielle og beskyttes mot uautorisert tilgang. De skal ikke tas ut av kjøremiljøet, lagres lokalt eller deles manuelt. Bruk sikre løsninger for håndtering av hemmeligheter – unngå copy-paste av verdier.
+Begrens statiske hemmeligheter så langt det lar seg gjøre. Bruk i størst mulig grad automatisk genererte og kortvarige nøkler/tokens.
+Hemmeligheter skal roteres jevnlig, minst årlig, for å redusere risiko.
+
+Suksesskriterium 5 av 7
+Våre applikasjoner logger feil og sikkerhetshendelser
+
+Utfyllende om kriteriet
+Applikasjonen skal logge hvem som gjorde hva, når og hvorfra. For eksempel når en applikasjon eller en bruker sendte en søknad.
+Logging er viktig støtte ved sikkerhetshendelser, loggene skal derfor være tilrettelagt og tilgjengelige for Team ISOC.
+Vær kritisk til hva som logges. Hemmeligheter som access tokens skal aldri logges. Dersom det er behov for å logge fødselsnummer eller aktørId, skal dette kun gjøres i logger som kun teamet har tilgang til. Fødselsnummer og aktørId skal heller ikke forekomme i URL, headers eller andre steder der de automatisk logges av plattformen.
+
+Suksesskriterium 6 av 7
+Vi har backup av data og kode
+
+Utfyllende om kriteriet
+Backup håndteres som regel av Navs plattform (Nais og GitHub), men teamet må vurdere om dette dekker egne behov. Brukes andre plattformer, er teamet selv ansvarlig for å sikre både backup og mulighet for gjenoppretting.
+Alle team skal ha en plan for hvordan tjenestene kan gjenopprettes, og bør ha testet at planen fungerer i praksis.
+
+Suksesskriterium 7 av 7
+Vi har tilgangskontroll på alle endepunkter
+
+Utfyllende om kriteriet
+Alle endepunkter skal beskyttes med tilgangskontroll, med mindre det er avklart at funksjonen eller informasjonen skal være offentlig tilgjengelig. On-behalf-of-token skal brukes der det er mulig.
+Bruk riktig autentiseringsløsning for målgruppen: Entra ID for Nav-ansatte, ID-porten for innbyggere og Maskinporten for samarbeidspartnere. Ved bruk av andre løsninger må tilgangskontrollen være grundig vurdert og dokumentert. Applikasjoner for Nav-ansatte skal kreve enten compliant device eller phishing-resistent MFA.
+
+
+
