@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Etterlevelse – EESSI Pensjon – QA</title>
+  <style>
+    :root {
+      --nav-blue: #0067c5;
+      --nav-blue-dark: #005299;
+      --nav-red: #c30000;
+      --nav-green: #06893a;
+      --nav-orange: #ff9100;
+      --nav-gray-100: #f7f7f7;
+      --nav-gray-200: #e9e7e7;
+      --nav-gray-300: #c9c9c9;
+      --nav-gray-600: #6a6a6a;
+      --nav-gray-900: #262626;
+      --nav-bg: #ffffff;
+      --radius: 8px;
+      --shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Source Sans 3", "Source Sans Pro", system-ui, -apple-system, sans-serif;
+      background: var(--nav-gray-100);
+      color: var(--nav-gray-900);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--nav-blue);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    header .subtitle {
+      font-size: 0.875rem;
+      opacity: 0.85;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .header-actions button {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: white;
+      padding: 0.4rem 0.75rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-weight: 500;
+      transition: background 0.15s;
+    }
+
+    .header-actions button:hover {
+      background: rgba(255,255,255,0.25);
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      min-height: calc(100vh - 56px);
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background: var(--nav-bg);
+      border-right: 1px solid var(--nav-gray-200);
+      padding: 1.5rem 0;
+      overflow-y: auto;
+      position: sticky;
+      top: 56px;
+      height: calc(100vh - 56px);
+    }
+
+    .sidebar h2 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--nav-gray-600);
+      padding: 0 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .nav-item {
+      display: block;
+      padding: 0.65rem 1.25rem;
+      cursor: pointer;
+      border-left: 3px solid transparent;
+      transition: all 0.15s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .nav-item:hover { background: var(--nav-gray-100); }
+
+    .nav-item.active {
+      background: #e6f0fa;
+      border-left-color: var(--nav-blue);
+    }
+
+    .nav-item .nav-id {
+      font-weight: 600;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-item .nav-title {
+      font-size: 0.78rem;
+      color: var(--nav-gray-600);
+      margin-top: 0.1rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .nav-item .nav-progress {
+      font-size: 0.7rem;
+      color: var(--nav-gray-300);
+      margin-top: 0.15rem;
+    }
+
+    /* Badges */
+    .badge {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 0.1rem 0.45rem;
+      border-radius: 10px;
+      white-space: nowrap;
+    }
+
+    .badge-yes { background: #cce5d6; color: #06893a; }
+    .badge-partial { background: #fff3cd; color: #6a4e00; }
+    .badge-no { background: #f8d4d4; color: #c30000; }
+    .badge-unanswered { background: #fde8e8; color: #c30000; border: 1px dashed #c30000; }
+
+    /* Main */
+    .main {
+      padding: 2rem 2.5rem;
+      max-width: 960px;
+    }
+
+    .krav-header {
+      margin-bottom: 1.5rem;
+    }
+
+    .krav-header h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    .krav-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--nav-gray-600);
+      flex-wrap: wrap;
+    }
+
+    .krav-meta .badge { font-size: 0.78rem; }
+
+    /* Toolbar */
+    .toolbar {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .toolbar button {
+      background: var(--nav-bg);
+      border: 1px solid var(--nav-gray-300);
+      padding: 0.4rem 0.75rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.8rem;
+      color: var(--nav-gray-900);
+      transition: all 0.15s;
+    }
+
+    .toolbar button:hover {
+      background: var(--nav-gray-100);
+      border-color: var(--nav-blue);
+      color: var(--nav-blue);
+    }
+
+    /* Hensikt */
+    .hensikt {
+      background: var(--nav-bg);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow);
+      border-left: 4px solid var(--nav-blue);
+    }
+
+    .hensikt h3 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--nav-blue);
+      margin-bottom: 0.35rem;
+    }
+
+    .hensikt p { font-size: 0.9rem; }
+
+    /* Criterion card */
+    .criterion {
+      background: var(--nav-bg);
+      border-radius: var(--radius);
+      margin-bottom: 1rem;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      border: 2px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .criterion.unanswered {
+      border-color: #fde8e8;
+    }
+
+    .criterion-header {
+      padding: 0.85rem 1.25rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      user-select: none;
+    }
+
+    .criterion-header:hover { background: var(--nav-gray-100); }
+
+    .criterion-number {
+      background: var(--nav-blue);
+      color: white;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .criterion.unanswered .criterion-number {
+      background: var(--nav-gray-300);
+      color: var(--nav-gray-600);
+    }
+
+    .criterion-title {
+      font-weight: 600;
+      font-size: 0.9rem;
+      flex: 1;
+    }
+
+    .criterion-toggle {
+      font-size: 1rem;
+      color: var(--nav-gray-600);
+      transition: transform 0.2s;
+    }
+
+    .criterion.open .criterion-toggle { transform: rotate(180deg); }
+
+    .criterion-body {
+      display: none;
+      padding: 0 1.25rem 1.25rem;
+      border-top: 1px solid var(--nav-gray-200);
+    }
+
+    .criterion.open .criterion-body { display: block; }
+
+    /* Criterion description (what the portal asks for) */
+    .criterion-description {
+      margin-top: 0.75rem;
+      padding: 0.6rem 0.85rem;
+      background: var(--nav-gray-100);
+      border-radius: 6px;
+      font-size: 0.82rem;
+      color: var(--nav-gray-600);
+      border-left: 3px solid var(--nav-gray-300);
+    }
+
+    .criterion-description h4 {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-bottom: 0.25rem;
+      color: var(--nav-gray-600);
+    }
+
+    /* Answer block — the paste-ready text */
+    .answer {
+      margin-top: 1rem;
+      position: relative;
+    }
+
+    .answer-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.4rem;
+    }
+
+    .answer-header h4 {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--nav-green);
+      font-weight: 700;
+    }
+
+    .answer-header .copy-btn {
+      background: none;
+      border: 1px solid var(--nav-gray-300);
+      border-radius: 4px;
+      padding: 0.25rem 0.6rem;
+      font-size: 0.72rem;
+      cursor: pointer;
+      color: var(--nav-gray-600);
+      transition: all 0.15s;
+    }
+
+    .answer-header .copy-btn:hover {
+      background: var(--nav-green);
+      color: white;
+      border-color: var(--nav-green);
+    }
+
+    .answer-header .copy-btn.copied {
+      background: var(--nav-green);
+      color: white;
+      border-color: var(--nav-green);
+    }
+
+    .answer-text {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      white-space: pre-wrap;
+      padding: 0.85rem 1rem;
+      background: #f0faf4;
+      border: 1px solid #b8e6cc;
+      border-radius: 6px;
+      font-family: inherit;
+    }
+
+    .answer-meta {
+      margin-top: 0.4rem;
+      font-size: 0.72rem;
+      color: var(--nav-gray-600);
+      display: flex;
+      gap: 1rem;
+    }
+
+    /* No answer */
+    .no-answer {
+      margin-top: 1rem;
+      padding: 0.85rem 1rem;
+      background: #fff8e6;
+      border: 1px dashed var(--nav-orange);
+      border-radius: 6px;
+      color: #6a4e00;
+      font-size: 0.85rem;
+    }
+
+    .no-answer strong { display: block; margin-bottom: 0.2rem; }
+
+    /* Open questions */
+    .open-questions {
+      background: var(--nav-bg);
+      border-radius: var(--radius);
+      margin-top: 2rem;
+      padding: 1.25rem 1.5rem;
+      box-shadow: var(--shadow);
+      border-left: 4px solid var(--nav-orange);
+    }
+
+    .open-questions h3 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: #6a4e00;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .open-questions h3 .count {
+      background: var(--nav-orange);
+      color: white;
+      font-size: 0.7rem;
+      padding: 0.1rem 0.45rem;
+      border-radius: 10px;
+    }
+
+    .oq-item {
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--nav-gray-200);
+      font-size: 0.875rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .oq-item:last-child { border-bottom: none; }
+
+    .oq-checkbox {
+      margin-top: 0.15rem;
+      flex-shrink: 0;
+      width: 16px;
+      height: 16px;
+      accent-color: var(--nav-green);
+    }
+
+    .oq-text { flex: 1; }
+
+    .oq-text strong {
+      color: var(--nav-gray-900);
+    }
+
+    .oq-owner {
+      font-size: 0.75rem;
+      color: var(--nav-gray-600);
+      font-style: italic;
+      margin-top: 0.15rem;
+    }
+
+    .oq-item.resolved .oq-text {
+      text-decoration: line-through;
+      opacity: 0.5;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .layout { grid-template-columns: 1fr; }
+      .sidebar {
+        position: static;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--nav-gray-200);
+      }
+      .main { padding: 1.5rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Etterlevelse — EESSI Pensjon</h1>
+      <div class="subtitle">Kvalitetssjekk før innliming i portalen</div>
+    </div>
+    <div class="header-actions">
+      <button onclick="expandAll()">Åpne alle ▾</button>
+      <button onclick="collapseAll()">Lukk alle ▴</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="sidebar">
+      <h2>Krav</h2>
+      <div id="nav-list"></div>
+    </nav>
+    <main class="main" id="content"></main>
+  </div>
+
+  <script>
+    const krav = [
+      {
+        id: "K255.1",
+        title: "Nav skal beskytte brukere med adressebeskyttelse",
+        tema: "Personvern",
+        status: null,
+        hensikt: "Personer som er utsatt for alvorlige trusler mot liv, helse eller frihet kan få adressebeskyttelse. Nav må beskytte informasjon som kan avsløre hvor trusselutsatte brukere har vært, er, eller kan oppholde seg i fremtiden.",
+        criteria: [
+          { num: 1, title: "Vi sjekker at Nav-ansatte har riktig rolle for å få tilgang til brukere med adressebeskyttelse", description: "Alle brukerflater rettet mot veiledere og saksbehandlere i Nav skal sjekke om medarbeideren har tilgang til brukeren. Også fagsystemer som ikke er ment benyttet for brukere med adressebeskyttelse skal sjekke tilgang.", answer: null },
+          { num: 2, title: "Når Nav-ansatte slår opp en bruker med adressebeskyttelse, fremkommer det tydelig at brukeren har et særskilt beskyttelsesbehov", description: "Dersom en Nav-ansatt søker opp en bruker med adressebeskyttelse uten å få tilgang, bør det gis en forklaring på hvorfor tilgangen er avvist. Hvis tilgang gis, bør det markeres tydelig i skjermbildet.", answer: null },
+          { num: 3, title: "Nav skal beskytte brukerens opplysninger også når de lagres på andre brukeres saker", description: "Geolokaliserende opplysninger om brukere med adressebeskyttelse skal ikke være tilgjengelige for Nav-ansatte gjennom oppslag på andre brukeres saker.", answer: null },
+          { num: 4, title: "Vi beskytter brukernes opplysninger også når de fremkommer i sammenstilte oversikter", description: "Oversikter som viser opplysninger om flere brukere samtidig må vurdere om brukere med adressebeskyttelse skal inkluderes, og i så fall hvilke opplysninger.", answer: null },
+          { num: 5, title: "Vi deler ikke adressen til brukere med adressebeskyttelse med eksterne parter", description: "Adresser til brukere med strengt fortrolig adresse skal aldri deles med privatpersoner, private eller offentlige virksomheter. Fortrolig adresse kan deles med offentlige virksomheter.", answer: null },
+          { num: 6, title: "Vi er varsomme ved deling av andre geolokaliserende opplysninger enn adresse", description: "Hvorvidt geolokaliserende opplysninger om brukere med adressebeskyttelse skal deles eksternt må vurderes fra tilfelle til tilfelle.", answer: null },
+          { num: 7, title: "Vi beskytter brukere med adressebeskyttelse i selvbetjeningsløsningene på nav.no", description: "Brukere med adressebeskyttelse skal ha tilgang til de samme digitale tjenestene som andre, men geolokaliserende opplysninger skal ikke deles med fullmektiger.", answer: null },
+          { num: 8, title: "Vi begrenser manuell håndtering av brukernes opplysninger der dette er mulig", description: "Maskinell behandling bør benyttes fremfor manuelle rutiner for brukere med adressebeskyttelse, for å redusere risikoen for informasjon på avveie.", answer: null }
+        ]
+      },
+      {
+        id: "K267.1",
+        title: "Applikasjoner skal ha et forsvarlig sikkerhetsnivå",
+        tema: "Inf.sikkerhet",
+        status: "Ja (delvis)",
+        hensikt: "Alle applikasjoner i Nav skal ha et forsvarlig sikkerhetsnivå som står i forhold til risikoen. Sikkerheten skal ivaretas gjennom hele livssyklusen, i tråd med dokumenterte prinsipper, internkontroll og anerkjente metoder for sikker utvikling og drift.",
+        criteria: [
+          { num: 1, title: "Vi følger med på og håndterer våre sårbarheter", description: "Applikasjoner skal holdes oppdatert. Alle sårbarheter skal håndteres — enten ved å rettes, eller ved å vurderes og dokumenteres. Kritiske sårbarheter (CVSS over 9) skal håndteres innen neste arbeidsdag.", answer: "EESSI Pensjon har automatisert sårbarhetsskanning som en del av byggeprosessen. Alle applikasjoner analyseres mot kjente sårbarhetsdatabaser, og funn rapporteres med alvorlighetsgrad (CVSS-score).\n\nTeamet har etablerte rutiner for oppfølging:\n\n- Kritiske sårbarheter (CVSS over 9) håndteres innen neste arbeidsdag.\n- Øvrige sårbarheter vurderes og utbedres løpende, senest innen tre måneder.\n- Sårbarheter som ikke kan rettes umiddelbart blir risikovurdert og dokumentert med begrunnelse for akseptert risiko.\n- I tillegg til automatisk skanning gjennomfører teamet manuelle kontroller for å fange sårbarheter som ikke dekkes av de automatiserte verktøyene." },
+          { num: 2, title: "Vi holder våre applikasjoner og avhengigheter oppdatert", description: "All tredjepartskode og biblioteker skal holdes oppdatert. Applikasjoner skal bygges og deployeres minst hver tredje måned. Unngå unødvendige eller risikofylte avhengigheter.", answer: "EESSI Pensjon holder alle applikasjoner og avhengigheter oppdatert gjennom følgende tiltak:\n\n- Teamet bruker automatiserte verktøy for å identifisere utdaterte avhengigheter. Rapporter kjøres regelmessig på tvers av alle tjenester.\n- Delte interne biblioteker oppgraderes systematisk i riktig rekkefølge for å ivareta avhengighetskjeden.\n- Alle applikasjoner bygges og deployes kontinuerlig via CI/CD-pipelines. Hver kodeendring utløser automatisk bygg og utrulling, noe som sikrer at prosessen alltid er operativ og at teamet kan reagere raskt ved sikkerhetshendelser.\n- Teamet begrenser bruken av eksterne avhengigheter ved å dele felles funksjonalitet gjennom egne interne biblioteker. Nye avhengigheter vurderes med tanke på vedlikeholdsrisiko og sikkerhetshistorikk før de tas i bruk." },
+          { num: 3, title: "Vi validerer input og output", description: "Alle grensesnitt skal håndtere input på en trygg måte. Bruk parameteriserte queries mot databaser og output encoding. Logg er en form for output.", answer: "EESSI Pensjon validerer input og output i alle grensesnitt:\n\n- Alle API-endepunkter validerer innkommende forespørsler med typesikre datamodeller. Ugyldige forespørsler avvises før de når forretningslogikken.\n- Løsningen behandler strukturerte pensjonsdokumenter (SED-er) som følger fastsatte skjemaer definert av EU. Innholdet valideres mot disse skjemaene ved mottak.\n- Saksbehandlergrensesnittet bruker forhåndsdefinerte valg og strukturerte felter fremfor fritekst der det er mulig, noe som begrenser muligheten for ondsinnet input.\n- Løsningen bruker ingen egne SQL-databaser og er dermed ikke eksponert for SQL-injection.\n- Loggføring sørger for at sensitiv informasjon som fødselsnummer og tokens ikke skrives til logger som er tilgjengelige utenfor teamet. Logg behandles som output og saniteres deretter.\n- Data som sendes videre til andre Nav-systemer formateres i henhold til mottakernes spesifikasjoner, slik at EESSI Pensjon ikke utgjør en angrepsvektor for konsumenter." },
+          { num: 4, title: "Vi beskytter og roterer hemmelighetene våre", description: "API-nøkler, sertifikater og passord skal holdes konfidensielle. Begrens statiske hemmeligheter og bruk kortvarige tokens. Hemmeligheter skal roteres minst årlig.", answer: "EESSI Pensjon bruker utelukkende kortvarige, automatisk genererte tokens for autentisering mellom tjenester. Det finnes ingen statiske API-nøkler eller passord i tjeneste-til-tjeneste-kommunikasjonen.\n\n- Hemmeligheter som kreves av plattformen injiseres automatisk i kjøremiljøet av Nav sin applikasjonsplattform. De lagres aldri i kildekode, i lokale filer eller deles manuelt mellom utviklere.\n- Rotasjon av hemmeligheter håndteres gjennom plattformens automatiske nøkkelhåndtering.\n- Kildekoden sjekkes for utilsiktet innsjekking av hemmeligheter gjennom teamets code review-rutiner.\n- Utviklere har ikke behov for å kopiere hemmeligheter ut av kjøremiljøet, da all konfigurasjon håndteres gjennom plattformens deklarative oppsett." },
+          { num: 5, title: "Våre applikasjoner logger feil og sikkerhetshendelser", description: "Applikasjonen skal logge hvem som gjorde hva, når og hvorfra. Hemmeligheter skal aldri logges. Fødselsnummer skal kun logges i sikre logger.", answer: "EESSI Pensjon logger relevante hendelser for feilsøking og sikkerhetshåndtering:\n\n- Alle tjenester bruker et felles loggbibliotek som sikrer konsistent format og sporbarhet. Hver forespørsel tilordnes en korrelasjons-ID som gjør det mulig å spore hendelser på tvers av tjenester.\n- Loggene inneholder informasjon om hvem (bruker eller system) som utførte en handling, hva som ble gjort, og når det skjedde. Saksbehandlerhandlinger i brukergrensesnittet logges via tjenestene som mottar forespørslene.\n- Sensitive personopplysninger (fødselsnummer, aktør-ID) logges kun til sikre logger som bare teamet har tilgang til. Disse forekommer ikke i URL-er, HTTP-headere eller andre steder der de automatisk fanges av plattformen.\n- Hemmeligheter som tilgangstokens logges aldri.\n- Loggene sendes til Nav sin sentrale loggplattform og er tilrettelagt for Team ISOC ved sikkerhetshendelser." },
+          { num: 6, title: "Vi har backup av data og kode", description: "Backup håndteres som regel av plattformen, men teamet må vurdere om det dekker egne behov. Alle team skal ha en plan for gjenoppretting.", answer: "EESSI Pensjon benytter Nav sin standardplattform for drift og arver plattformens backup-mekanismer:\n\n- All kildekode er versjonskontrollert i GitHub, som sørger for redundans og backup av kodebasen.\n- Applikasjonene har ingen egne SQL-databaser. Mellomlagring skjer i skybasert objektlagring med innebygd redundans og versjonering i norsk region.\n- Meldingshåndtering (hendelsesstrømmer for pensjonsdokumenter) kjører på Nav sin meldingsplattform som har innebygd replikering og lagring.\n- Teamet kan gjenopprette tjenestene ved å deploye på nytt fra kildekoden. Siden løsningen ikke har egne databaser med langtidslagret tilstand, er gjenopprettingsprosessen i praksis en ny utrulling fra siste fungerende versjon. Ubehandlede meldinger i hendelsesstrømmen prosesseres automatisk ved oppstart.\n\nTeamet vurderer at plattformens standardmekanismer dekker behovet for backup og gjenoppretting av EESSI Pensjon." },
+          { num: 7, title: "Vi har tilgangskontroll på alle endepunkter", description: "Alle endepunkter skal beskyttes med tilgangskontroll. On-behalf-of-token skal brukes der det er mulig. Bruk riktig autentiseringsløsning for målgruppen.", answer: "EESSI Pensjon har tilgangskontroll på alle endepunkter:\n\n- Alle API-endepunkter krever gyldig autentiseringstoken. Uautentiserte forespørsler avvises av rammeverket før de når applikasjonskoden.\n- Saksbehandlergrensesnittet krever innlogging via Entra ID (Azure AD). Løsningen er kun tilgjengelig for Nav-ansatte med riktig tilgangsnivå.\n- Tjeneste-til-tjeneste-kommunikasjon viderefører brukerens identitet og tilganger gjennom hele tjenestekjeden der det er mulig (on-behalf-of-mønsteret).\n- Tilgangskontroll for funksjoner som krever spesielle rettigheter (for eksempel tilgang til graderte eller skjermede personer) delegeres til de underliggende fagsystemene og fellesløsningene, i tråd med teamets arkitekturbeslutning om delegert tilgangsstyring.\n- Ingen endepunkter er offentlig tilgjengelige — all trafikk går gjennom Nav sitt interne nettverk og plattformens nettverkssikring." }
+        ]
+      }
+    ];
+
+    // --- Open questions data ---
+    const openQuestions = {
+      "K267.1": [
+        { topic: "Snyk-rutiner", text: "Bekreftes at Snyk CLI kjøres regelmessig (ikke bare ad-hoc) og at teamet har en fast rutine for å følge opp funn.", owner: "Team eessipensjon", resolved: false },
+        { topic: "Secure logs", text: "Bekreftes at fødselsnummer/aktør-ID faktisk kun logges til sikre logger og aldri lekker til standard applikasjonslogger eller URL-er.", owner: "Team eessipensjon", resolved: false },
+        { topic: "ISOC-tilgang", text: "Bekreftes at loggene faktisk er tilrettelagt og tilgjengelige for Team ISOC ved hendelser.", owner: "Team ISOC / plattformteam", resolved: false },
+        { topic: "GCP Storage backup", text: "Bekreftes at GCP Storage-bøttene har versjonering aktivert og at teamet har testet gjenoppretting.", owner: "Team eessipensjon", resolved: false },
+        { topic: "Compliant device / phishing-resistent MFA", text: "Bekreftes at Wonderwall-oppsettet krever enten compliant device eller phishing-resistent MFA for Nav-ansatte.", owner: "NAIS-teamet", resolved: false },
+        { topic: "Rotasjonsfrekvens hemmeligheter", text: "Bekreftes at Azure AD-secrets roteres automatisk og at frekvensen er minst årlig.", owner: "NAIS-teamet / team eessipensjon", resolved: false }
+      ]
+    };
+
+    // --- Helpers ---
+
+    function statusBadge(status) {
+      if (!status) return '<span class="badge badge-unanswered">Ikke besvart</span>';
+      if (status === "Ja") return '<span class="badge badge-yes">Ja</span>';
+      if (status.startsWith("Ja")) return '<span class="badge badge-partial">' + esc(status) + '</span>';
+      if (status.startsWith("Nei")) return '<span class="badge badge-no">' + esc(status) + '</span>';
+      return '<span class="badge">' + esc(status) + '</span>';
+    }
+
+    function esc(s) {
+      return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+    }
+
+    function wordCount(text) {
+      return text ? text.trim().split(/\s+/).length : 0;
+    }
+
+    function charCount(text) {
+      return text ? text.length : 0;
+    }
+
+    function copyText(text, btn) {
+      navigator.clipboard.writeText(text).then(() => {
+        btn.textContent = "✓ Kopiert";
+        btn.classList.add("copied");
+        setTimeout(() => { btn.textContent = "Kopier tekst"; btn.classList.remove("copied"); }, 2000);
+      });
+    }
+
+    // --- Rendering ---
+
+    function renderNav(activeId) {
+      const nav = document.getElementById("nav-list");
+      nav.innerHTML = krav.map(k => {
+        const answered = k.criteria.filter(c => c.answer).length;
+        const total = k.criteria.length;
+        const oq = openQuestions[k.id];
+        const oqCount = oq ? oq.filter(q => !q.resolved).length : 0;
+        return `
+          <a class="nav-item ${k.id === activeId ? 'active' : ''}" data-id="${k.id}">
+            <div class="nav-id">
+              ${k.id}
+              ${statusBadge(k.status)}
+            </div>
+            <div class="nav-title">${esc(k.title)}</div>
+            <div class="nav-progress">${answered}/${total} besvart${oqCount > 0 ? ` · ${oqCount} åpne spm.` : ''}</div>
+          </a>
+        `;
+      }).join("");
+
+      nav.querySelectorAll(".nav-item").forEach(item => {
+        item.addEventListener("click", () => renderKrav(item.dataset.id));
+      });
+    }
+
+    function renderKrav(id) {
+      const k = krav.find(x => x.id === id);
+      if (!k) return;
+      renderNav(id);
+
+      const content = document.getElementById("content");
+      const answeredCount = k.criteria.filter(c => c.answer).length;
+      const totalCount = k.criteria.length;
+
+      content.innerHTML = `
+        <div class="krav-header">
+          <h2>${esc(k.id)} – ${esc(k.title)}</h2>
+          <div class="krav-meta">
+            <span>${esc(k.tema)}</span>
+            <span>·</span>
+            <span><strong>${answeredCount}</strong> av ${totalCount} besvart</span>
+            <span>·</span>
+            ${statusBadge(k.status)}
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <button onclick="expandAll()">Åpne alle</button>
+          <button onclick="collapseAll()">Lukk alle</button>
+          <button onclick="copyAllAnswers('${k.id}')">Kopier alle besvarelser</button>
+        </div>
+
+        <div class="hensikt">
+          <h3>Hensikt med kravet</h3>
+          <p>${esc(k.hensikt)}</p>
+        </div>
+
+        <div id="criteria-list">
+          ${k.criteria.map((c, i) => `
+            <div class="criterion ${c.answer ? '' : 'unanswered'} open" data-idx="${i}">
+              <div class="criterion-header" data-num="${c.num}">
+                <div class="criterion-number">${c.num}</div>
+                <div class="criterion-title">${esc(c.title)}</div>
+                <div class="criterion-toggle">▾</div>
+              </div>
+              <div class="criterion-body">
+                <div class="criterion-description">
+                  <h4>Krav fra portalen</h4>
+                  ${esc(c.description)}
+                </div>
+                ${c.answer
+                  ? `<div class="answer">
+                      <div class="answer-header">
+                        <h4>Vår besvarelse — limes inn i portalen</h4>
+                        <button class="copy-btn" onclick="copyText(krav.find(x=>x.id==='${k.id}').criteria[${i}].answer, this)">Kopier tekst</button>
+                      </div>
+                      <div class="answer-text">${esc(c.answer)}</div>
+                      <div class="answer-meta">
+                        <span>${wordCount(c.answer)} ord</span>
+                        <span>${charCount(c.answer)} tegn</span>
+                      </div>
+                    </div>`
+                  : `<div class="no-answer">
+                      <strong>⚠ Ikke besvart</strong>
+                      Mangler besvarelse. Kjør etterlevelse-agenten for å generere tekst for dette kriteriet.
+                    </div>`
+                }
+              </div>
+            </div>
+          `).join("")}
+        </div>
+
+        ${renderOpenQuestions(k.id)}
+      `;
+
+      content.querySelectorAll(".criterion-header").forEach(header => {
+        header.addEventListener("click", () => {
+          header.parentElement.classList.toggle("open");
+        });
+      });
+
+      window.location.hash = id;
+    }
+
+    function renderOpenQuestions(kravId) {
+      const questions = openQuestions[kravId];
+      if (!questions || questions.length === 0) return "";
+      const unresolved = questions.filter(q => !q.resolved).length;
+      return `
+        <div class="open-questions">
+          <h3>⚠ Åpne spørsmål <span class="count">${unresolved} uløst</span></h3>
+          ${questions.map((q, i) => `
+            <div class="oq-item ${q.resolved ? 'resolved' : ''}">
+              <input type="checkbox" class="oq-checkbox" ${q.resolved ? 'checked' : ''} data-krav="${kravId}" data-idx="${i}" onchange="toggleQuestion('${kravId}', ${i}, this.checked)">
+              <div class="oq-text">
+                <strong>${esc(q.topic)}:</strong> ${esc(q.text)}
+                <div class="oq-owner">→ ${esc(q.owner)}</div>
+              </div>
+            </div>
+          `).join("")}
+        </div>
+      `;
+    }
+
+    function toggleQuestion(kravId, idx, checked) {
+      openQuestions[kravId][idx].resolved = checked;
+      const item = document.querySelector(`.oq-item[data-krav="${kravId}"][data-idx="${idx}"]`) ||
+                   document.querySelectorAll('.oq-item')[idx];
+      if (checked) item?.classList.add('resolved');
+      else item?.classList.remove('resolved');
+      // Update count
+      const unresolved = openQuestions[kravId].filter(q => !q.resolved).length;
+      const countEl = document.querySelector('.open-questions .count');
+      if (countEl) countEl.textContent = `${unresolved} uløst`;
+    }
+
+    function expandAll() {
+      document.querySelectorAll(".criterion").forEach(el => el.classList.add("open"));
+    }
+
+    function collapseAll() {
+      document.querySelectorAll(".criterion").forEach(el => el.classList.remove("open"));
+    }
+
+    function copyAllAnswers(kravId) {
+      const k = krav.find(x => x.id === kravId);
+      if (!k) return;
+      const text = k.criteria
+        .filter(c => c.answer)
+        .map((c, i) => `--- Suksesskriterium ${c.num}: ${c.title} ---\n\n${c.answer}`)
+        .join("\n\n\n");
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.querySelector('.toolbar button:last-child');
+        btn.textContent = "✓ Alle kopiert";
+        setTimeout(() => { btn.textContent = "Kopier alle besvarelser"; }, 2000);
+      });
+    }
+
+    // --- Init ---
+    const initialId = window.location.hash.replace("#", "") || krav[0].id;
+    renderKrav(initialId);
+
+    window.addEventListener("hashchange", () => {
+      const id = window.location.hash.replace("#", "");
+      if (id && krav.find(k => k.id === id)) renderKrav(id);
+    });
+  </script>
+</body>
+</html>
