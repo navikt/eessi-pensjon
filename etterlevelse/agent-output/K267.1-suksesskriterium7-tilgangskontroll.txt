@@ -1,7 +1,7 @@
 EESSI Pensjon har tilgangskontroll på alle endepunkter:
 
-- Alle API-endepunkter krever gyldig Azure AD-token. Uautentiserte forespørsler avvises av rammeverket før de når applikasjonskoden.
-- Saksbehandlergrensesnittet krever innlogging via Azure AD (Entra ID) med Wonderwall-sidecar som håndterer autentiseringsflyten. Løsningen er kun tilgjengelig for Nav-ansatte med riktig tilgangsnivå.
-- Tjeneste-til-tjeneste-kommunikasjon bruker on-behalf-of-tokens der det er mulig, slik at brukerens identitet og tilganger følger med gjennom hele kjeden.
-- Tilgangskontroll for funksjoner som krever spesielle rettigheter (for eksempel tilgang til graderte personer) delegeres til de underliggende fagsystemene og fellesløsningene, i tråd med teamets arkitekturbeslutning om delegert tilgangsstyring.
-- Ingen endepunkter er offentlig tilgjengelige — all trafikk går gjennom Nav sitt interne nettverk og NAIS-plattformens ingress-kontroller.
+- Alle API-endepunkter krever gyldig autentiseringstoken. Uautentiserte forespørsler avvises av rammeverket før de når applikasjonskoden.
+- Saksbehandlergrensesnittet krever innlogging via Entra ID (Azure AD). Løsningen er kun tilgjengelig for Nav-ansatte med riktig tilgangsnivå.
+- Tjeneste-til-tjeneste-kommunikasjon viderefører brukerens identitet og tilganger gjennom hele tjenestekjeden der det er mulig (on-behalf-of-mønsteret).
+- Tilgangskontroll for funksjoner som krever spesielle rettigheter (for eksempel tilgang til graderte eller skjermede personer) delegeres til de underliggende fagsystemene og fellesløsningene, i tråd med teamets arkitekturbeslutning om delegert tilgangsstyring.
+- Ingen endepunkter er offentlig tilgjengelige — all trafikk går gjennom Nav sitt interne nettverk og plattformens nettverkssikring.

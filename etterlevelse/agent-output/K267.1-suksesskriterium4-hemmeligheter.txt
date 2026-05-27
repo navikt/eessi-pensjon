@@ -1,6 +1,6 @@
-EESSI Pensjon bruker utelukkende kortvarige, automatisk genererte tokens for autentisering mellom tjenester:
+EESSI Pensjon bruker utelukkende kortvarige, automatisk genererte tokens for autentisering mellom tjenester. Det finnes ingen statiske API-nøkler eller passord i tjeneste-til-tjeneste-kommunikasjonen.
 
-- All tjeneste-til-tjeneste-kommunikasjon benytter Azure AD OAuth2 med automatisk utstedte og kortvarige tokens (client credentials og on-behalf-of). Det finnes ingen statiske API-nøkler eller passord mellom interne tjenester.
-- Hemmeligheter som kreves av plattformen (Azure AD client secrets, Kafka-sertifikater) injiseres automatisk av NAIS-plattformen i kjøremiljøet. De lagres aldri i kildekode, lokale filer eller deles manuelt mellom utviklere.
-- Rotasjon av Azure AD-hemmeligheter håndteres gjennom NAIS sin automatiske nøkkelhåndtering.
-- Kildekoden sjekkes for utilsiktet innsjekking av hemmeligheter gjennom code review-rutiner.
+- Hemmeligheter som kreves av plattformen injiseres automatisk i kjøremiljøet av Nav sin applikasjonsplattform. De lagres aldri i kildekode, i lokale filer eller deles manuelt mellom utviklere.
+- Rotasjon av hemmeligheter håndteres gjennom plattformens automatiske nøkkelhåndtering.
+- Kildekoden sjekkes for utilsiktet innsjekking av hemmeligheter gjennom teamets code review-rutiner.
+- Utviklere har ikke behov for å kopiere hemmeligheter ut av kjøremiljøet, da all konfigurasjon håndteres gjennom plattformens deklarative oppsett.

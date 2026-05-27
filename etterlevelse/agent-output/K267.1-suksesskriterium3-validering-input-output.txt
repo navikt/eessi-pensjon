@@ -1,8 +1,8 @@
 EESSI Pensjon validerer input og output i alle grensesnitt:
 
-- Alle API-endepunkter som mottar data validerer innkommende forespørsler med typesikre datamodeller (Kotlin data classes med annotasjoner). Ugyldige forespørsler avvises før de når forretningslogikken.
-- Løsningen behandler strukturerte dokumenter (SED-er) som følger fastsatte XML/JSON-skjemaer definert av EU. Innholdet valideres mot disse skjemaene ved mottak.
-- Saksbehandler-grensesnittet bruker forhåndsdefinerte valg og strukturerte skjemafelter fremfor fritekstfelt der det er mulig, noe som begrenser muligheten for ondsinnet input.
-- Løsningen bruker ingen egne SQL-databaser, og er dermed ikke eksponert for SQL-injection. Data mellomlagres i GCP Storage med strukturerte nøkler.
-- Logging håndteres via et felles logging-bibliotek som sørger for at sensitiv informasjon som fødselsnummer og tokens ikke skrives til applikasjonslogger som er tilgjengelige utenfor teamet.
-- Data som sendes videre til eksterne systemer (Dokarkiv, PDL, Nav Oppgave) formateres i henhold til disse systemenes API-spesifikasjoner, slik at EESSI Pensjon ikke utgjør en angrepsvektor for konsumenter.
+- Alle API-endepunkter validerer innkommende forespørsler med typesikre datamodeller. Ugyldige forespørsler avvises før de når forretningslogikken.
+- Løsningen behandler strukturerte pensjonsdokumenter (SED-er) som følger fastsatte skjemaer definert av EU. Innholdet valideres mot disse skjemaene ved mottak.
+- Saksbehandlergrensesnittet bruker forhåndsdefinerte valg og strukturerte felter fremfor fritekst der det er mulig, noe som begrenser muligheten for ondsinnet input.
+- Løsningen bruker ingen egne SQL-databaser og er dermed ikke eksponert for SQL-injection.
+- Loggføring sørger for at sensitiv informasjon som fødselsnummer og tokens ikke skrives til logger som er tilgjengelige utenfor teamet. Logg behandles som output og saniteres deretter.
+- Data som sendes videre til andre Nav-systemer formateres i henhold til mottakernes spesifikasjoner, slik at EESSI Pensjon ikke utgjør en angrepsvektor for konsumenter.

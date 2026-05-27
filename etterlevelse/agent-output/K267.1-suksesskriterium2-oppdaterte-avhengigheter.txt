@@ -1,6 +1,6 @@
 EESSI Pensjon holder alle applikasjoner og avhengigheter oppdatert gjennom følgende tiltak:
 
-- Teamet har automatiserte verktøy for å identifisere utdaterte avhengigheter (Gradle dependency updates-plugin). Rapporter kjøres regelmessig på tvers av alle prosjekter i mono-repoet.
-- Oppdatering av delte biblioteker (ep-eux, ep-logging, ep-metrics, ep-personoppslag, ep-kodeverk) følger en systematisk prosess der bibliotekene oppgraderes i riktig rekkefølge for å ivareta avhengighetskjeden.
-- Alle applikasjoner bygges og deployes kontinuerlig via CI/CD-pipelines. Hver endring trigges automatisk bygg og deploy, noe som sikrer at prosessen alltid er operativ og at teamet er forberedt ved sikkerhetshendelser.
-- Teamet unngår unødvendige avhengigheter ved å dele felles funksjonalitet gjennom egne interne biblioteker fremfor å legge til mange eksterne avhengigheter i hver tjeneste.
+- Teamet bruker automatiserte verktøy for å identifisere utdaterte avhengigheter. Rapporter kjøres regelmessig på tvers av alle tjenester.
+- Delte interne biblioteker oppgraderes systematisk i riktig rekkefølge for å ivareta avhengighetskjeden.
+- Alle applikasjoner bygges og deployes kontinuerlig via CI/CD-pipelines. Hver kodeendring utløser automatisk bygg og utrulling, noe som sikrer at prosessen alltid er operativ og at teamet kan reagere raskt ved sikkerhetshendelser.
+- Teamet begrenser bruken av eksterne avhengigheter ved å dele felles funksjonalitet gjennom egne interne biblioteker. Nye avhengigheter vurderes med tanke på vedlikeholdsrisiko og sikkerhetshistorikk før de tas i bruk.

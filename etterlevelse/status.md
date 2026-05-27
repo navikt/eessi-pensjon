@@ -15,4 +15,4 @@
 
 ---
 
-Sist oppdatert: 2026-05-22
+Sist oppdatert: 2026-05-27

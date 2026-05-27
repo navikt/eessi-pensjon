@@ -1,6 +1,8 @@
-EESSI Pensjon benytter flere mekanismer for å oppdage og håndtere sårbarheter i egne applikasjoner og avhengigheter:
+EESSI Pensjon har automatisert sårbarhetsskanning som en del av byggeprosessen. Alle applikasjoner analyseres mot kjente sårbarhetsdatabaser, og funn rapporteres med alvorlighetsgrad (CVSS-score).
 
-- Alle prosjekter kjører OWASP Dependency-Check som en del av byggeprosessen. Denne analyserer tredjepartsavhengigheter mot kjente sårbarhetsdatabaser (NVD) og rapporterer funn med CVSS-score.
-- Snyk CLI brukes for å verifisere sårbarheter i avhengigheter som ikke fanges av OWASP-sjekken.
-- Teamet har etablerte rutiner for å følge opp varsler fra disse verktøyene. Kritiske sårbarheter (CVSS over 9) prioriteres umiddelbart og håndteres innen neste arbeidsdag. Øvrige sårbarheter vurderes og utbedres løpende, senest innen tre måneder.
-- Sårbarheter som ikke kan rettes umiddelbart blir vurdert og dokumentert med begrunnelse for akseptert risiko.
+Teamet har etablerte rutiner for oppfølging:
+
+- Kritiske sårbarheter (CVSS over 9) håndteres innen neste arbeidsdag.
+- Øvrige sårbarheter vurderes og utbedres løpende, senest innen tre måneder.
+- Sårbarheter som ikke kan rettes umiddelbart blir risikovurdert og dokumentert med begrunnelse for akseptert risiko.
+- I tillegg til automatisk skanning gjennomfører teamet manuelle kontroller for å fange sårbarheter som ikke dekkes av de automatiserte verktøyene.
