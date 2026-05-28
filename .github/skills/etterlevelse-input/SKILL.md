@@ -20,14 +20,33 @@ Tar rå tekst kopiert fra etterlevelse-portalen (https://etterlevelse.ansatt.nav
 Brukeren limer inn rå tekst fra portalen. Teksten inneholder typisk:
 
 - **Kravnavn** og **krav-ID** (f.eks. "K255.1 Nav skal beskytte brukere med adressebeskyttelse")
+- **Tema** — kategorien kravet hører til (f.eks. "Informasjonssikkerhet", "Personvern")
 - **Hensikt** — en beskrivelse av hvorfor kravet finnes
 - **Suksesskriterier** — en liste med kriterier, hvert med en tittel og en utfyllende beskrivelse
 
 Teksten kan komme i mange formater — det viktige er at du identifiserer:
 1. Krav-ID (K<nummer>.<versjon>)
-2. Kravnavn/tittel
-3. Hensikten med kravet
-4. Alle suksesskriterier med tittel og utfyllende beskrivelse
+2. Tema
+3. Kravnavn/tittel
+4. Hensikten med kravet
+5. Alle suksesskriterier med tittel og utfyllende beskrivelse
+
+### Tema
+
+Tema er kategorien kravet tilhører i portalen. Gyldige temaer:
+
+- Personvern
+- Saksbehandling og forvaltningsrett
+- Arkiv og dokumentasjon
+- Elektronisk kommunikasjon
+- Informasjonssikkerhet
+- Interoperabilitet og samhandling
+- Likestilling og ikke-diskriminering
+- Språk
+- Statistikk og styringsinformasjon
+- Økonomi
+
+Tema står typisk i portalen sammen med krav-ID, før eller over kravtittelen. Hvis tema ikke kan utledes fra teksten brukeren gir deg, **spør brukeren** hvilket tema kravet tilhører (vis listen over gyldige temaer).
 
 ## Hva du skal produsere
 
@@ -39,6 +58,8 @@ Filen skal følge dette eksakte formatet:
 
 ```
 # Hjelp meg å dokumentere: K<nummer>.<versjon> <kravnavn>
+
+Tema: <tema>
 
 ## Hensikten med kravet
 <hensiktstekst, ren tekst uten HTML-tags, maks ~120 tegn per linje>

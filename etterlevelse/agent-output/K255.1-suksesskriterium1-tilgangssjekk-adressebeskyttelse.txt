@@ -1,0 +1,7 @@
+EESSI Pensjon sjekker tilgang til brukere med adressebeskyttelse gjennom flere mekanismer:
+
+- Når en pensjonssak (BUC) i EESSI-systemet involverer en person med fortrolig eller strengt fortrolig adresse, oppdages dette automatisk ved mottak eller sending av pensjonsdokumenter. Saken markeres da som sensitiv i RINA, slik at kun saksbehandlere med riktig tilgangsnivå kan åpne den.
+- Saksbehandlergrensesnittet (EESSI Pensjon) arver tilgangsbegrensningene fra RINA — en saksbehandler uten nødvendig rolle vil ikke kunne åpne en sensitiv sak.
+- Tilgangssjekken for adressebeskyttelse delegeres til de underliggende fellesløsningene som EESSI Pensjon integrerer mot. Personoppslag skjer via Nav sin persondataløsning, som håndhever tilgangskontroll basert på graderingsroller.
+
+EESSI Pensjon er ikke et fagsystem som forvalter brukernes saker direkte — det behandler pensjonsdokumenter på vegne av fagsystemet. Tilgangsbegrensningene ivaretas primært av RINA (via EUX-plattformen) og persondataløsningen.

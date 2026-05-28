@@ -93,6 +93,7 @@
     .nav-item .nav-id { font-weight: 600; font-size: 0.83rem; display: flex; align-items: center; gap: 0.4rem; }
     .nav-item .nav-title { font-size: 0.75rem; color: var(--nav-gray-600); margin-top: 0.1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .nav-item .nav-progress { font-size: 0.68rem; color: var(--nav-gray-300); margin-top: 0.1rem; }
+    .nav-tema-heading { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--nav-blue); padding: 0.8rem 1.25rem 0.3rem; }
 
     .badge { display: inline-block; font-size: 0.66rem; font-weight: 600; padding: 0.1rem 0.4rem; border-radius: 10px; white-space: nowrap; }
     .badge-yes { background: #cce5d6; color: #06893a; }
@@ -105,6 +106,7 @@
 
     .krav-header h2 { font-size: 1.3rem; font-weight: 700; }
     .krav-meta { display: flex; align-items: center; gap: 0.6rem; margin-top: 0.4rem; font-size: 0.82rem; color: var(--nav-gray-600); flex-wrap: wrap; }
+    .krav-tema { font-weight: 600; color: var(--nav-blue); }
 
     .toolbar { display: flex; gap: 0.4rem; margin: 1.25rem 0; flex-wrap: wrap; }
     .toolbar button {
@@ -127,7 +129,9 @@
       border-left: 4px solid var(--nav-blue);
     }
     .hensikt h3 { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--nav-blue); margin-bottom: 0.3rem; }
-    .hensikt p { font-size: 0.88rem; }
+    .hensikt p { font-size: 0.88rem; margin-bottom: 0.4rem; }
+    .hensikt ul { font-size: 0.88rem; margin: 0.4rem 0 0.4rem 1.5rem; padding: 0; }
+    .hensikt li { margin-bottom: 0.25rem; }
 
     /* Criterion */
     .criterion {
@@ -195,6 +199,8 @@
     }
     .criterion-description h4 { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 0.25rem; color: var(--nav-gray-600); }
     .criterion-description p { margin: 0 0 0.5em; }
+    .criterion-description ul { margin: 0.4rem 0 0.4rem 1.5rem; padding: 0; }
+    .criterion-description li { margin-bottom: 0.25rem; }
 
     /* Answer */
     .answer { margin-top: 1rem; }
@@ -346,13 +352,14 @@
 
     // --- Data fetching ---
     async function loadData(silent = false) {
-      const [kravRes, qaRes] = await Promise.all([
+      const [kravRes, qaRes, oqRes] = await Promise.all([
         fetch(API + "/api/krav"),
-        fetch(API + "/api/qa-status")
+        fetch(API + "/api/qa-status"),
+        fetch(API + "/api/open-questions")
       ]);
       kravList = await kravRes.json();
       qaStatus = await qaRes.json();
-      openQuestions = parseOpenQuestions();
+      openQuestions = await oqRes.json();
       const id = activeKrav || window.location.hash.replace("#", "") || (kravList[0]?.id);
       if (id) renderKrav(id);
       if (silent) showRefreshToast();
@@ -402,20 +409,6 @@
       renderKrav(kravId);
     }
 
-    function parseOpenQuestions() {
-      // Hardcoded from apne-sporsmal.md — could be served from API in future
-      return {
-        "K267.1": [
-          { topic: "Snyk-rutiner", text: "Bekreftes at Snyk CLI kjøres regelmessig (ikke bare ad-hoc) og at teamet har en fast rutine for å følge opp funn.", owner: "Team eessipensjon" },
-          { topic: "Secure logs", text: "Bekreftes at fødselsnummer/aktør-ID faktisk kun logges til sikre logger og aldri lekker til standard applikasjonslogger eller URL-er.", owner: "Team eessipensjon" },
-          { topic: "ISOC-tilgang", text: "Bekreftes at loggene faktisk er tilrettelagt og tilgjengelige for Team ISOC ved hendelser.", owner: "Team ISOC / plattformteam" },
-          { topic: "GCP Storage backup", text: "Bekreftes at GCP Storage-bøttene har versjonering aktivert og at teamet har testet gjenoppretting.", owner: "Team eessipensjon" },
-          { topic: "Compliant device / phishing-resistent MFA", text: "Bekreftes at Wonderwall-oppsettet krever enten compliant device eller phishing-resistent MFA for Nav-ansatte.", owner: "NAIS-teamet" },
-          { topic: "Rotasjonsfrekvens hemmeligheter", text: "Bekreftes at Azure AD-secrets roteres automatisk og at frekvensen er minst årlig.", owner: "NAIS-teamet / team eessipensjon" }
-        ]
-      };
-    }
-
     // --- Save helpers ---
     async function saveAnswer(filename, content) {
       await fetch(API + "/api/output/" + encodeURIComponent(filename), {
@@ -435,8 +428,43 @@
 
     // --- Rendering ---
     function esc(s) { return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
-    function descHtml(s) { return esc(s).split("\n").map(l => `<p>${l}</p>`).join(""); }
+    function descHtml(s) { return formatText(s); }
     function wordCount(t) { return t ? t.trim().split(/\s+/).length : 0; }
+
+    function formatText(s) {
+      if (!s) return "";
+      // Split on double newlines to get paragraphs/blocks
+      const blocks = s.split(/\n\n+/);
+      let html = "";
+      for (const block of blocks) {
+        const lines = block.split("\n");
+        const bulletLines = lines.filter(l => /^[-–•*]\s/.test(l.trim()));
+        if (bulletLines.length === lines.length) {
+          // Entire block is a list
+          html += "<ul>" + lines.map(l => `<li>${esc(l.trim().replace(/^[-–•*]\s+/, ""))}</li>`).join("") + "</ul>";
+        } else if (bulletLines.length > 0) {
+          // Mixed: render non-bullet as paragraph, then bullets as list
+          let inList = false;
+          for (const line of lines) {
+            const trimmed = line.trim();
+            if (!trimmed) continue;
+            if (/^[-–•*]\s/.test(trimmed)) {
+              if (!inList) { html += "<ul>"; inList = true; }
+              html += `<li>${esc(trimmed.replace(/^[-–•*]\s+/, ""))}</li>`;
+            } else {
+              if (inList) { html += "</ul>"; inList = false; }
+              html += `<p>${esc(trimmed)}</p>`;
+            }
+          }
+          if (inList) html += "</ul>";
+        } else {
+          // Plain text block — join lines with <br> for single newlines
+          const text = lines.map(l => esc(l.trim())).filter(Boolean).join("<br>");
+          if (text) html += `<p>${text}</p>`;
+        }
+      }
+      return html;
+    }
 
     function statusBadge(kravId) {
       const k = kravList.find(x => x.id === kravId);
@@ -453,19 +481,39 @@
 
     function renderNav(activeId) {
       const nav = document.getElementById("nav-list");
-      nav.innerHTML = kravList.map(k => {
-        const answered = k.criteria.filter(c => c.answer).length;
-        const total = k.criteria.length;
-        const qaCount = k.criteria.filter(c => qaStatus[k.id + "-" + c.num]?.done).length;
-        const oq = openQuestions[k.id];
-        const oqCount = oq ? oq.length : 0;
-        return `
-          <div class="nav-item ${k.id === activeId ? 'active' : ''}" onclick="renderKrav('${k.id}')">
-            <div class="nav-id">${k.id} ${statusBadge(k.id)}</div>
-            <div class="nav-title">${esc(k.title)}</div>
-            <div class="nav-progress">${answered}/${total} besvart · ${qaCount}/${total} QA${oqCount ? ' · ' + oqCount + ' åpne spm.' : ''}</div>
-          </div>`;
-      }).join("");
+      // Group by tema
+      const groups = {};
+      for (const k of kravList) {
+        const tema = k.tema || "";
+        if (!groups[tema]) groups[tema] = [];
+        groups[tema].push(k);
+      }
+      // Sorted tema keys, empty string last
+      const temaKeys = Object.keys(groups).sort((a, b) => {
+        if (!a) return 1;
+        if (!b) return -1;
+        return a.localeCompare(b, "no");
+      });
+
+      let html = "";
+      for (const tema of temaKeys) {
+        const heading = tema || "Ukategorisert";
+        html += `<div class="nav-tema-heading">${esc(heading)}</div>`;
+        for (const k of groups[tema]) {
+          const answered = k.criteria.filter(c => c.answer).length;
+          const total = k.criteria.length;
+          const qaCount = k.criteria.filter(c => qaStatus[k.id + "-" + c.num]?.done).length;
+          const oq = openQuestions[k.id];
+          const oqCount = oq ? oq.length : 0;
+          html += `
+            <div class="nav-item ${k.id === activeId ? 'active' : ''}" onclick="renderKrav('${k.id}')">
+              <div class="nav-id">${k.id} ${statusBadge(k.id)}</div>
+              <div class="nav-title">${esc(k.title)}</div>
+              <div class="nav-progress">${answered}/${total} besvart · ${qaCount}/${total} QA${oqCount ? ' · ' + oqCount + ' åpne spm.' : ''}</div>
+            </div>`;
+        }
+      }
+      nav.innerHTML = html;
     }
 
     function renderKrav(id) {
@@ -482,6 +530,7 @@
         <div class="krav-header">
           <h2>${esc(k.id)} – ${esc(k.title)}</h2>
           <div class="krav-meta">
+            ${k.tema ? `<span class="krav-tema">${esc(k.tema)}</span><span>·</span>` : ''}
             <span>${answered} av ${k.criteria.length} besvart</span>
             <span>·</span>
             ${statusBadge(k.id)}
@@ -493,7 +542,7 @@
           <button onclick="markAllQaDone('${k.id}')">Marker alle QA ✓</button>
           <button onclick="resetKravQa('${k.id}')">⟳ Reset QA</button>
         </div>
-        ${k.hensikt ? `<div class="hensikt"><h3>Hensikt med kravet</h3><p>${esc(k.hensikt)}</p></div>` : ''}
+        ${k.hensikt ? `<div class="hensikt"><h3>Hensikt med kravet</h3>${formatText(k.hensikt)}</div>` : ''}
         <div id="criteria-list">
           ${k.criteria.map((c, i) => renderCriterion(k.id, c, i)).join("")}
         </div>

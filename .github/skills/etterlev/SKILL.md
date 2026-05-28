@@ -18,11 +18,19 @@ Denne skillen tar inn en krav-ID og utfører etterlevelsesdokumentasjonen beskre
 
 ## Input
 
-Brukeren oppgir en krav-ID, f.eks.:
+Brukeren kan oppgi en krav-ID direkte, f.eks.:
 - `K255.1`
 - `K267.1`
 
+Hvis brukeren **ikke** oppgir en krav-ID (eller bare skriver `/etterlev` uten argument):
+
+1. List alle tilgjengelige krav fra `etterlevelse/agent-input/`-mappen.
+2. For hvert krav, vis krav-ID og tittel (les første linje i hver `.txt`-fil for tittelen).
+3. **Spør brukeren** (med `ask_user`) hvilket krav de vil dokumentere — vis en liste der de kan velge.
+
 ## Steg
+
+0. **Velg krav.** Hvis krav-ID ikke er oppgitt, list tilgjengelige krav fra `etterlevelse/agent-input/` og la brukeren velge (se "Input" over). Fortsett med valgt krav-ID.
 
 1. **Aktiver riktig agent.** Sørg for at agenten `eessi-pensjon-etterlevelse` er aktiv (`.github/agents/eessi-pensjon-etterlevelse.agent.md`). Alle skriveregler, avgrensninger, kilder og arbeidsflyt er definert der.
 

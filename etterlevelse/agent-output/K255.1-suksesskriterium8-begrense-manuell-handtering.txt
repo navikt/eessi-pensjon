@@ -1,0 +1,7 @@
+EESSI Pensjon har automatisert de fleste prosessene som involverer brukere med adressebeskyttelse:
+
+- Sensitivitetssjekken som oppdager adressebeskyttelse kjøres automatisk ved mottak og sending av alle pensjonsdokumenter. Saksbehandlere trenger ikke manuelt sjekke om en bruker har adressebeskyttelse — systemet gjør dette og markerer saken automatisk.
+- Journalføring av pensjonsdokumenter skjer maskinelt. Dokumenter knyttet til sensitive saker journalføres med riktige tilgangsrestriksjoner automatisk.
+- Oppdatering av personopplysninger i Nav sine registre basert på innkommende pensjonsdokumenter skjer automatisk uten manuell mellomkomst.
+
+Ved å automatisere disse prosessene reduseres antallet Nav-ansatte som eksponeres for opplysninger om brukere med adressebeskyttelse. Manuell behandling er kun nødvendig i tilfeller der den automatiske prosesseringen ikke kan fullføres — for eksempel ved mangelfulle data i dokumentet.

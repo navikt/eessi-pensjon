@@ -27,6 +27,11 @@ function parseInputFile(content) {
   const id = titleMatch[1];
   const title = titleMatch[2];
 
+  // Extract tema
+  let tema = "";
+  const temaLine = lines.find(l => /^Tema:\s*/.test(l));
+  if (temaLine) tema = temaLine.replace(/^Tema:\s*/, "").trim();
+
   // Extract hensikt
   let hensikt = "";
   const hensiktIdx = lines.findIndex(l => l.startsWith("## Hensikten med kravet"));
@@ -58,7 +63,7 @@ function parseInputFile(content) {
     }
   }
 
-  return { id, title, hensikt, criteria };
+  return { id, title, tema, hensikt, criteria };
 }
 
 function getOutputFiles(kravId) {
@@ -93,6 +98,49 @@ function checkAndResetStaleQa(kravId, criteria) {
   return qa;
 }
 
+const OPEN_QUESTIONS_FILE = path.join(BASE, "apne-sporsmal.md");
+
+function parseOpenQuestions() {
+  if (!fs.existsSync(OPEN_QUESTIONS_FILE)) return {};
+  const content = fs.readFileSync(OPEN_QUESTIONS_FILE, "utf-8");
+  const lines = content.split("\n");
+  const result = {};
+  let currentKrav = null;
+
+  for (const line of lines) {
+    // Match krav header: ## K267.1 – ...
+    const kravMatch = line.match(/^##\s+(K\d+\.\d+)/);
+    if (kravMatch) {
+      currentKrav = kravMatch[1];
+      result[currentKrav] = [];
+      continue;
+    }
+    if (!currentKrav) continue;
+    // Match question line: - [ ] **Topic:** Text. Owner.
+    // or: - [x] **Topic:** Text. Owner.
+    const qMatch = line.match(/^-\s*\[([ x])\]\s*\*\*([^*]+)\*\*:?\s*(.+)/);
+    if (qMatch) {
+      const done = qMatch[1] === "x";
+      const topic = qMatch[2].trim();
+      const rest = qMatch[3].trim();
+      // Try to split text and owner (last sentence after last period)
+      const lastDot = rest.lastIndexOf(".");
+      let text = rest;
+      let owner = "";
+      if (lastDot > 0) {
+        const afterDot = rest.substring(lastDot + 1).trim();
+        // Heuristic: owner is typically short (< 60 chars) and after the last period
+        if (afterDot.length > 0 && afterDot.length < 60) {
+          text = rest.substring(0, lastDot + 1).trim();
+          owner = afterDot;
+        }
+      }
+      result[currentKrav].push({ topic, text, owner, done });
+    }
+  }
+  return result;
+}
+
 function buildKravList() {
   if (!fs.existsSync(INPUT_DIR)) return [];
   const files = fs.readdirSync(INPUT_DIR).filter(f => f.endsWith(".txt"));
@@ -113,6 +161,7 @@ function buildKravList() {
     kravList.push({
       id: parsed.id,
       title: parsed.title,
+      tema: parsed.tema || "",
       hensikt: parsed.hensikt,
       criteria
     });
@@ -158,11 +207,19 @@ const server = http.createServer(async (req, res) => {
       const mt = fs.statSync(QA_FILE).mtimeMs;
       if (mt > maxMtime) maxMtime = mt;
     }
+    if (fs.existsSync(OPEN_QUESTIONS_FILE)) {
+      const mt = fs.statSync(OPEN_QUESTIONS_FILE).mtimeMs;
+      if (mt > maxMtime) maxMtime = mt;
+    }
     return sendJson(res, { lastModified: maxMtime });
   }
 
   if (url.pathname === "/api/krav" && req.method === "GET") {
     return sendJson(res, buildKravList());
+  }
+
+  if (url.pathname === "/api/open-questions" && req.method === "GET") {
+    return sendJson(res, parseOpenQuestions());
   }
 
   if (url.pathname === "/api/qa-status" && req.method === "GET") {

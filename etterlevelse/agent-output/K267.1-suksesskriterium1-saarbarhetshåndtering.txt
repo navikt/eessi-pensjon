@@ -6,4 +6,3 @@ Teamet har etablerte rutiner for oppfølging av funn:
 - Øvrige sårbarheter vurderes og utbedres løpende, senest innen tre måneder.
 - Sårbarheter som ikke kan rettes umiddelbart blir risikovurdert og dokumentert med begrunnelse for akseptert risiko.
 - I tillegg til automatisk skanning gjennomfører teamet manuelle kontroller for å fange sårbarheter som ikke dekkes av verktøyene.
-- Legger til et punkt til her

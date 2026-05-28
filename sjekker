@@ -1,0 +1,226 @@
+
+m kriteriet
+Alle brukerflater rettet mot veiledere og saksbehandlere i Nav skal sjekke om medarbeideren har tilgang til brukeren. Følgende tilganger skal sjekkes:
+
+For brukere med fortrolig adresse: 0000-GA-Fortrolig_Adresse
+
+For brukere med strengt fortrolig adresse: 0000-GA-Strengt_Fortrolig_Adresse
+
+For brukere med strengt fortrolig adresse utland: 0000-GA-Strengt_Fortrolig_Adresse
+
+ 
+
+Også fagsystemer som ikke er ment benyttet for brukere med adressebeskyttelse skal sjekke tilgang. Dette er fordi en bruker kan tildeles adressebeskyttelse etter at den får en sak i fagsystemet.
+
+Oppgi status på suksesskriOppgi status på suksesskriOppgi status på suksesskriOppgi status på suksesskriOppgi statkritOppgi statusnt?Oppgi status på suksesskrininOppgi status eriOppgi status på av-Oppgi status pÃpOppgi status på suksesskriOpplseOppgi status på suksesskriOppgi status på sOppgi status på sukseehoOppgi status på suksesskriOppgi status på suksesskriOppgi status på suksesskriOppgi status p en Nav-ansatt søker opp en bruker med adressebeskyttelse uten å få tilgang, bør det ikke returneres et tomt resultat men heller gis en forklaring på hvorfor tilgangen er avvist. For eksempel: "Du har ikke tilgang til brukere med strengt fortrolig adresse". Dette gjør det mulig for den ansatte å for eksempel sende oppgaven videre til en enhet med tilgang til brukeren.
+
+ 
+
+Hvis en Nav-ansatt får tilgang til en bruker med adressebeskyttelse, bør dette markeres tydelig i skjermbildet, for eksempel med uthevning, farge, ikon eller lignende. Dette gjør den ansatte ekstra oppmerksom på at opplysningene må behandles med spesiell varsomhet.
+
+Oppgi status på suksesskriteriet
+
+Ikke påbegynt
+
+Under arbeid
+
+Oppfylt
+
+Ikke oppfylt
+
+Ikke relevant
+Hvorfor er ikke kriteriet relevant?
+
+
+Redigering
+
+Forhåndsvisning
+Suksesskriterium 3 av 8
+
+Nav skal beskytte brukerens opplysninger også når de lagres på andre brukeres saker
+
+Utfyllende om kriteriet
+Geolokaliserende opplysninger om brukere med adressebeskyttelse skal ikke være tilgjengelige for Nav-ansatte gjennom oppslag på andre brukeres saker.
+
+ 
+
+I enkelte fagsystemer kan opplysninger om én bruker være relevante for en annen brukers sak, og blir derfor registrert der. Dette er særlig vanlig innen familieområdet i Nav, men kan også forekomme i saker som involverer samhandlere.
+
+Situasjoner som krever særlig oppmerksomhet:
+
+Flere brukere på samme sak (f.eks. bidragssaker).
+
+Saker med avhengighet til hverandre (f.eks. foreldre- og pensjonsopptjeningssaker).
+
+Barn registrert som saksopplysning på en forelders eller fosterforelders sak.
+
+Brukerdata lagret i en sak knyttet til en lege eller arbeidsgiver.
+
+Oppgi status på suksesskriteriet
+
+Ikke påbegynt
+
+Under arbeid
+
+Oppfylt
+
+Ikke oppfylt
+
+Ikke relevant
+Hvorfor er ikke kriteriet relevant?
+
+
+Redigering
+
+Forhåndsvisning
+Suksesskriterium 4 av 8
+
+Vi beskytter brukernes opplysninger også når de fremkommer i sammenstilte oversikter
+
+Utfyllende om kriteriet
+Noen fagområder har skjermbilder eller rapporter som viser opplysninger om flere brukere samtidig. Eksempler på dette inkluderer:
+
+Deltakere på et spesifikt kurs eller tiltak
+
+Brukere med ytelser som skal revurderes
+
+Brukere med hjelpemidler som er klare for ettersyn
+
+ 
+
+Dersom slike oversikter skal være tilgjengelige for Nav-ansatte som ikke har tilgangene spesifisert i suksesskriterium 1, må det vurderes om det er riktig å inkludere brukere med adressebeskyttelse – og i så fall hvilke opplysninger. Valgt løsning skal dokumenteres.
+
+Det må også sikres at uvedkommende ikke har tilgang til oversiktene.
+
+Oppgi status på suksesskriteriet
+
+Ikke påbegynt
+
+Under arbeid
+
+Oppfylt
+
+Ikke oppfylt
+
+Ikke relevant
+Hvorfor er ikke kriteriet relevant?
+
+
+Redigering
+
+Forhåndsvisning
+Suksesskriterium 5 av 8
+
+Vi deler ikke adressen til brukere med adressebeskyttelse med eksterne parter
+
+Utfyllende om kriteriet
+Adresser til brukere med strengt fortrolig adresse og strengt fortrolig adresse utland skal aldri deles med privatpersoner, private virksomheter eller offentlige virksomheter. Brukere med strengt fortrolig adresse har ikke en registrert adresse i PDL, kun en postboks hos Kripos. Brukere med strengt fortrolig adresse utland kan derimot ha adresseopplysninger i PDL, som ikke skal deles ut av Nav.
+
+ 
+
+Adresser til brukere med fortrolig adresse kan deles med offentlige virksomheter, men ikke med privatpersoner eller private virksomheter
+
+Oppgi status på suksesskriteriet
+
+Ikke påbegynt
+
+Under arbeid
+
+Oppfylt
+
+Ikke oppfylt
+
+Ikke relevant
+Hvorfor er ikke kriteriet relevant?
+
+
+Redigering
+
+Forhåndsvisning
+Suksesskriterium 6 av 8
+
+Vi er varsomme ved deling av andre geolokaliserende opplysninger enn adresse
+
+Utfyllende om kriteriet
+Nav behandler geolokaliserende opplysninger om ordinære brukere, og noen av disse opplysningene deles med eksterne aktører etter lovhjemmel eller samtykke. Hvorvidt geolokaliserende opplysninger om brukere med adressebeskyttelse skal deles eksternt, og isåfall hvordan, må vurderes fra tilfelle til tilfelle. Det må gjøres en helhetsvurdering der risikoen for informasjon på avveie veies opp mot brukerens rettigheter og Navs lovpålagte plikter. Sikkerhetsseksjonen i Nav kan bistå i vurderingen.
+
+ 
+
+Spørsmål å vurdere og dokumentere ved deling med eksterne:
+
+Hvilke geolokaliserende opplysninger deler vi, og med hvem?
+
+Kan vi skjerme den geolokaliserende delen av datasettet fra deling, enten for alle brukere eller bare for de med adressebeskyttelse?
+
+Kan vi redusere mengden personidentifiserende informasjon, for eksempel ved å anonymisere eller fjerne navn og fødselsnummer på aktuelle brukere?
+
+Kan vi begrense hvem hos mottakeren som får tilgang?
+
+Må delingen skje skriftlig, eller kan manuelle rutiner som en telefonsamtale være nok?
+
+Oppgi status på suksesskriteriet
+
+Ikke påbegynt
+
+Under arbeid
+
+Oppfylt
+
+Ikke oppfylt
+
+Ikke relevant
+Hvorfor er ikke kriteriet relevant?
+
+
+Redigering
+
+Forhåndsvisning
+Suksesskriterium 7 av 8
+
+Vi beskytter brukere med adressebeskyttelse i selvbetjeningsløsningene på nav.no
+
+Utfyllende om kriteriet
+Brukere med adressebeskyttelse skal, så langt det er mulig, ha tilgang til de samme digitale tjenestene som andre. Ifølge Kripos' veileder er ikke adressebeskyttelse til hinder for å få innsyn i egne opplysninger. Risikoen med selvbetjeningsløsninger oppstår ved visning av brukerens opplysninger til andre.
+
+ 
+
+Navs gjeldende vurdering er at geolokaliserende opplysninger ikke skal deles med en fullmektig dersom fullmaktsgiver har adressebeskyttelse. Derfor kan brukere med adressebeskyttelse ikke opprette digital fullmakt via nav.no. Dersom geolokaliserende opplysninger skal deles med en brukers verge eller foresatt gjennom Navs selvbetjeningsløsninger, må dette dokumenteres i en risikovurdering.
+
+Oppgi status på suksesskriteriet
+
+Ikke påbegynt
+
+Under arbeid
+
+Oppfylt
+
+Ikke oppfylt
+
+Ikke relevant
+Hvorfor er ikke kriteriet relevant?
+
+
+Redigering
+
+Forhåndsvisning
+Suksesskriterium 8 av 8
+
+Vi begrenser manuell håndtering av brukernes opplysninger der dette er mulig
+
+Utfyllende om kriteriet
+Dersom fagsystemet har mulighet for automatisk behandling, bør dette gjøres fremfor å benytte manuelle rutiner for denne gruppen brukere. Maskinell behandling reduserer sannsynligheten for informasjon på avveie og gir totalt sett færre øyne på saken.
+
+Oppgi status på suksesskriteriet
+
+Ikke påbegynt
+
+Under arbeid
+
+Oppfylt
+
+Ikke oppfylt
+
+Ikke relevant
+Hvorfor er ikke kriteriet relevant?
+
+

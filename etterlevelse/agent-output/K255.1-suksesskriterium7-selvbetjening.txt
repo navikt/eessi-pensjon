@@ -1,0 +1,3 @@
+EESSI Pensjon er ikke en selvbetjeningsløsning på nav.no. Løsningen er et internt saksbehandlerverktøy som kun benyttes av Nav-ansatte for å behandle grensekryssende pensjonssaker.
+
+Brukere (innbyggere) har ingen direkte tilgang til EESSI Pensjon — verken med eller uten adressebeskyttelse. Kriteriet om beskyttelse i selvbetjeningsløsninger er derfor ikke relevant for EESSI Pensjon.

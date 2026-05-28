@@ -12,6 +12,7 @@
 | Kravid | Tittel | Tema | Ant. SK | Status |
 |--------|--------|------|---------|--------|
 | K267.1 | Applikasjoner skal ha et forsvarlig sikkerhetsnivå | Inf.sikkerhet | 7 | Ja (delvis) |
+| K255.1 | Nav skal beskytte brukere med adressebeskyttelse | Inf.sikkerhet | 8 | Ja (delvis) |
 
 ---
 

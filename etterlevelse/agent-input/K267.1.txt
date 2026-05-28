@@ -1,5 +1,7 @@
 # Hjelp meg å dokumentere: K267.1 Applikasjoner skal ha et forsvarlig sikkerhetsnivå
 
+Tema: Informasjonssikkerhet
+
 ## Hensikten med kravet
 Alle applikasjoner i Nav skal ha et forsvarlig sikkerhetsnivå som står i forhold til risikoen. Dette innebærer å beskytte
 brukernes data og Navs verdier gjennom tiltak som reduserer risikoen for personvernbrudd, økonomiske tap og omdømmeskade.

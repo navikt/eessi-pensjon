@@ -1,9 +1,11 @@
 # Hjelp meg å dokumentere: K255.1 Nav skal beskytte brukere med adressebeskyttelse
 
+Tema: Informasjonssikkerhet
+
 ## Hensikten med kravet
 Personer som er utsatt for alvorlige trusler mot liv, helse eller frihet kan få adressebeskyttelse (adressesperre). Den
 strengeste formen er "strengt fortrolig adresse" (kode 6). Forskjellige typer adressebeskyttelse er beskrevet i
-PDL-dokumentasjonen for opplysningstypen Adressebeskyttelse.
+PDL-dokumentasjonen for opplysningstypen Adressebeskyttelse, se lenke under "kilder".
 
 Nav må beskytte informasjon som kan avsløre hvor trusselutsatte brukere har vært, er, eller kan oppholde seg i fremtiden.
 Dette kalles "geolokaliserende opplysninger" og inkluderer (ikke uttømmende):
