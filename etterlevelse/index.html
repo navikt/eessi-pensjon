@@ -33,7 +33,7 @@
     header {
       background: var(--nav-blue);
       color: white;
-      padding: 1rem 2rem;
+      padding: 0.85rem 2rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -43,171 +43,81 @@
       z-index: 100;
     }
 
-    header h1 {
-      font-size: 1.25rem;
-      font-weight: 600;
-    }
+    header h1 { font-size: 1.15rem; font-weight: 600; }
+    header .subtitle { font-size: 0.8rem; opacity: 0.85; }
 
-    header .subtitle {
-      font-size: 0.875rem;
-      opacity: 0.85;
-    }
-
-    .header-actions {
-      display: flex;
-      gap: 0.5rem;
-    }
-
+    .header-actions { display: flex; gap: 0.5rem; }
     .header-actions button {
       background: rgba(255,255,255,0.15);
       border: 1px solid rgba(255,255,255,0.3);
       color: white;
-      padding: 0.4rem 0.75rem;
+      padding: 0.35rem 0.7rem;
       border-radius: 4px;
       cursor: pointer;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 500;
-      transition: background 0.15s;
     }
+    .header-actions button:hover { background: rgba(255,255,255,0.25); }
 
-    .header-actions button:hover {
-      background: rgba(255,255,255,0.25);
-    }
-
-    .layout {
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      min-height: calc(100vh - 56px);
-    }
+    .layout { display: grid; grid-template-columns: 280px 1fr; min-height: calc(100vh - 52px); }
 
     /* Sidebar */
     .sidebar {
       background: var(--nav-bg);
       border-right: 1px solid var(--nav-gray-200);
-      padding: 1.5rem 0;
+      padding: 1.25rem 0;
       overflow-y: auto;
       position: sticky;
-      top: 56px;
-      height: calc(100vh - 56px);
+      top: 52px;
+      height: calc(100vh - 52px);
     }
 
     .sidebar h2 {
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       text-transform: uppercase;
       letter-spacing: 0.05em;
       color: var(--nav-gray-600);
       padding: 0 1.25rem;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.6rem;
     }
 
     .nav-item {
       display: block;
-      padding: 0.65rem 1.25rem;
+      padding: 0.6rem 1.25rem;
       cursor: pointer;
       border-left: 3px solid transparent;
-      transition: all 0.15s ease;
-      text-decoration: none;
-      color: inherit;
+      transition: all 0.12s ease;
     }
-
     .nav-item:hover { background: var(--nav-gray-100); }
+    .nav-item.active { background: #e6f0fa; border-left-color: var(--nav-blue); }
+    .nav-item .nav-id { font-weight: 600; font-size: 0.83rem; display: flex; align-items: center; gap: 0.4rem; }
+    .nav-item .nav-title { font-size: 0.75rem; color: var(--nav-gray-600); margin-top: 0.1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .nav-item .nav-progress { font-size: 0.68rem; color: var(--nav-gray-300); margin-top: 0.1rem; }
 
-    .nav-item.active {
-      background: #e6f0fa;
-      border-left-color: var(--nav-blue);
-    }
-
-    .nav-item .nav-id {
-      font-weight: 600;
-      font-size: 0.85rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .nav-item .nav-title {
-      font-size: 0.78rem;
-      color: var(--nav-gray-600);
-      margin-top: 0.1rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .nav-item .nav-progress {
-      font-size: 0.7rem;
-      color: var(--nav-gray-300);
-      margin-top: 0.15rem;
-    }
-
-    /* Badges */
-    .badge {
-      display: inline-block;
-      font-size: 0.68rem;
-      font-weight: 600;
-      padding: 0.1rem 0.45rem;
-      border-radius: 10px;
-      white-space: nowrap;
-    }
-
+    .badge { display: inline-block; font-size: 0.66rem; font-weight: 600; padding: 0.1rem 0.4rem; border-radius: 10px; white-space: nowrap; }
     .badge-yes { background: #cce5d6; color: #06893a; }
     .badge-partial { background: #fff3cd; color: #6a4e00; }
-    .badge-no { background: #f8d4d4; color: #c30000; }
     .badge-unanswered { background: #fde8e8; color: #c30000; border: 1px dashed #c30000; }
+    .badge-qa { background: #e0f0ff; color: #0067c5; }
 
     /* Main */
-    .main {
-      padding: 2rem 2.5rem;
-      max-width: 960px;
-    }
+    .main { padding: 1.75rem 2.5rem; max-width: 960px; }
 
-    .krav-header {
-      margin-bottom: 1.5rem;
-    }
+    .krav-header h2 { font-size: 1.3rem; font-weight: 700; }
+    .krav-meta { display: flex; align-items: center; gap: 0.6rem; margin-top: 0.4rem; font-size: 0.82rem; color: var(--nav-gray-600); flex-wrap: wrap; }
 
-    .krav-header h2 {
-      font-size: 1.4rem;
-      font-weight: 700;
-    }
-
-    .krav-meta {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-top: 0.5rem;
-      font-size: 0.85rem;
-      color: var(--nav-gray-600);
-      flex-wrap: wrap;
-    }
-
-    .krav-meta .badge { font-size: 0.78rem; }
-
-    /* Toolbar */
-    .toolbar {
-      display: flex;
-      gap: 0.5rem;
-      margin-bottom: 1.5rem;
-      flex-wrap: wrap;
-    }
-
+    .toolbar { display: flex; gap: 0.4rem; margin: 1.25rem 0; flex-wrap: wrap; }
     .toolbar button {
       background: var(--nav-bg);
       border: 1px solid var(--nav-gray-300);
-      padding: 0.4rem 0.75rem;
+      padding: 0.35rem 0.65rem;
       border-radius: 4px;
       cursor: pointer;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: var(--nav-gray-900);
-      transition: all 0.15s;
     }
+    .toolbar button:hover { border-color: var(--nav-blue); color: var(--nav-blue); }
 
-    .toolbar button:hover {
-      background: var(--nav-gray-100);
-      border-color: var(--nav-blue);
-      color: var(--nav-blue);
-    }
-
-    /* Hensikt */
     .hensikt {
       background: var(--nav-bg);
       border-radius: var(--radius);
@@ -216,18 +126,10 @@
       box-shadow: var(--shadow);
       border-left: 4px solid var(--nav-blue);
     }
+    .hensikt h3 { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--nav-blue); margin-bottom: 0.3rem; }
+    .hensikt p { font-size: 0.88rem; }
 
-    .hensikt h3 {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-      color: var(--nav-blue);
-      margin-bottom: 0.35rem;
-    }
-
-    .hensikt p { font-size: 0.9rem; }
-
-    /* Criterion card */
+    /* Criterion */
     .criterion {
       background: var(--nav-bg);
       border-radius: var(--radius);
@@ -235,66 +137,53 @@
       box-shadow: var(--shadow);
       overflow: hidden;
       border: 2px solid transparent;
-      transition: border-color 0.2s;
     }
-
-    .criterion.unanswered {
-      border-color: #fde8e8;
-    }
+    .criterion.unanswered { border-color: #fde8e8; }
+    .criterion.qa-done { border-color: #cce5d6; }
 
     .criterion-header {
-      padding: 0.85rem 1.25rem;
+      padding: 0.75rem 1.25rem;
       cursor: pointer;
       display: flex;
       align-items: center;
       gap: 0.6rem;
       user-select: none;
     }
-
     .criterion-header:hover { background: var(--nav-gray-100); }
 
     .criterion-number {
       background: var(--nav-blue);
       color: white;
-      width: 26px;
-      height: 26px;
+      width: 24px; height: 24px;
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.75rem;
-      font-weight: 700;
-      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.72rem; font-weight: 700; flex-shrink: 0;
+    }
+    .criterion.unanswered .criterion-number { background: var(--nav-gray-300); color: var(--nav-gray-600); }
+    .criterion.qa-done .criterion-number { background: var(--nav-green); }
+    .criterion.stale { border-color: #ffe0b2; }
+    .criterion.stale .criterion-number { background: var(--nav-orange); }
+
+    .badge-stale { background: #fff3cd; color: #6a4e00; border: 1px solid var(--nav-orange); }
+
+    .stale-warning {
+      margin-top: 0.75rem;
+      padding: 0.5rem 0.75rem;
+      background: #fff8e6;
+      border: 1px solid #ffe0b2;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      color: #6a4e00;
+      font-weight: 500;
     }
 
-    .criterion.unanswered .criterion-number {
-      background: var(--nav-gray-300);
-      color: var(--nav-gray-600);
-    }
-
-    .criterion-title {
-      font-weight: 600;
-      font-size: 0.9rem;
-      flex: 1;
-    }
-
-    .criterion-toggle {
-      font-size: 1rem;
-      color: var(--nav-gray-600);
-      transition: transform 0.2s;
-    }
-
+    .criterion-title { font-weight: 600; font-size: 0.88rem; flex: 1; }
+    .criterion-toggle { font-size: 1rem; color: var(--nav-gray-600); transition: transform 0.2s; }
     .criterion.open .criterion-toggle { transform: rotate(180deg); }
 
-    .criterion-body {
-      display: none;
-      padding: 0 1.25rem 1.25rem;
-      border-top: 1px solid var(--nav-gray-200);
-    }
-
+    .criterion-body { display: none; padding: 0 1.25rem 1.25rem; border-top: 1px solid var(--nav-gray-200); }
     .criterion.open .criterion-body { display: block; }
 
-    /* Criterion description (what the portal asks for) */
     .criterion-description {
       margin-top: 0.75rem;
       padding: 0.6rem 0.85rem;
@@ -304,90 +193,82 @@
       color: var(--nav-gray-600);
       border-left: 3px solid var(--nav-gray-300);
     }
+    .criterion-description h4 { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 0.25rem; color: var(--nav-gray-600); }
+    .criterion-description p { margin: 0 0 0.5em; }
 
-    .criterion-description h4 {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-      margin-bottom: 0.25rem;
-      color: var(--nav-gray-600);
-    }
+    /* Answer */
+    .answer { margin-top: 1rem; }
+    .answer-toolbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem; flex-wrap: wrap; gap: 0.4rem; }
+    .answer-toolbar h4 { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--nav-green); font-weight: 700; }
+    .answer-toolbar .btns { display: flex; gap: 0.35rem; }
 
-    /* Answer block — the paste-ready text */
-    .answer {
-      margin-top: 1rem;
-      position: relative;
-    }
-
-    .answer-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 0.4rem;
-    }
-
-    .answer-header h4 {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-      color: var(--nav-green);
-      font-weight: 700;
-    }
-
-    .answer-header .copy-btn {
-      background: none;
+    .btn-sm {
       border: 1px solid var(--nav-gray-300);
       border-radius: 4px;
-      padding: 0.25rem 0.6rem;
-      font-size: 0.72rem;
+      padding: 0.2rem 0.55rem;
+      font-size: 0.7rem;
       cursor: pointer;
+      background: white;
       color: var(--nav-gray-600);
-      transition: all 0.15s;
+      transition: all 0.12s;
     }
-
-    .answer-header .copy-btn:hover {
-      background: var(--nav-green);
-      color: white;
-      border-color: var(--nav-green);
-    }
-
-    .answer-header .copy-btn.copied {
-      background: var(--nav-green);
-      color: white;
-      border-color: var(--nav-green);
-    }
+    .btn-sm:hover { border-color: var(--nav-blue); color: var(--nav-blue); }
+    .btn-sm.save { border-color: var(--nav-green); color: var(--nav-green); font-weight: 600; }
+    .btn-sm.save:hover { background: var(--nav-green); color: white; }
+    .btn-sm.saved { background: var(--nav-green); color: white; border-color: var(--nav-green); }
+    .btn-sm.copy.copied { background: var(--nav-blue); color: white; border-color: var(--nav-blue); }
 
     .answer-text {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       line-height: 1.7;
       white-space: pre-wrap;
-      padding: 0.85rem 1rem;
+      padding: 0.75rem 0.9rem;
       background: #f0faf4;
       border: 1px solid #b8e6cc;
       border-radius: 6px;
+    }
+
+    .answer-edit {
+      width: 100%;
+      min-height: 160px;
+      font-size: 0.88rem;
+      line-height: 1.7;
+      padding: 0.75rem 0.9rem;
+      border: 2px solid var(--nav-blue);
+      border-radius: 6px;
       font-family: inherit;
+      resize: vertical;
+      background: #fafeff;
     }
+    .answer-edit:focus { outline: none; border-color: var(--nav-blue-dark); }
 
-    .answer-meta {
-      margin-top: 0.4rem;
-      font-size: 0.72rem;
-      color: var(--nav-gray-600);
+    .answer-meta { margin-top: 0.3rem; font-size: 0.7rem; color: var(--nav-gray-600); display: flex; gap: 0.75rem; }
+
+    /* QA status */
+    .qa-bar {
+      margin-top: 0.75rem;
+      padding: 0.5rem 0.75rem;
+      background: var(--nav-gray-100);
+      border-radius: 6px;
       display: flex;
-      gap: 1rem;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.8rem;
     }
+    .qa-bar label { display: flex; align-items: center; gap: 0.35rem; cursor: pointer; font-weight: 500; }
+    .qa-bar input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--nav-green); }
+    .qa-bar .qa-timestamp { font-size: 0.7rem; color: var(--nav-gray-600); }
 
-    /* No answer */
     .no-answer {
       margin-top: 1rem;
-      padding: 0.85rem 1rem;
+      padding: 0.75rem 1rem;
       background: #fff8e6;
       border: 1px dashed var(--nav-orange);
       border-radius: 6px;
       color: #6a4e00;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
     }
-
-    .no-answer strong { display: block; margin-bottom: 0.2rem; }
+    .no-answer strong { display: block; margin-bottom: 0.15rem; }
 
     /* Open questions */
     .open-questions {
@@ -398,73 +279,35 @@
       box-shadow: var(--shadow);
       border-left: 4px solid var(--nav-orange);
     }
-
-    .open-questions h3 {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-      color: #6a4e00;
-      margin-bottom: 0.75rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .open-questions h3 .count {
-      background: var(--nav-orange);
-      color: white;
-      font-size: 0.7rem;
-      padding: 0.1rem 0.45rem;
-      border-radius: 10px;
-    }
-
-    .oq-item {
-      padding: 0.6rem 0;
-      border-bottom: 1px solid var(--nav-gray-200);
-      font-size: 0.875rem;
-      display: flex;
-      align-items: flex-start;
-      gap: 0.5rem;
-    }
-
+    .open-questions h3 { font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.03em; color: #6a4e00; margin-bottom: 0.6rem; display: flex; align-items: center; gap: 0.4rem; }
+    .open-questions h3 .count { background: var(--nav-orange); color: white; font-size: 0.68rem; padding: 0.1rem 0.4rem; border-radius: 10px; }
+    .oq-item { padding: 0.5rem 0; border-bottom: 1px solid var(--nav-gray-200); font-size: 0.82rem; display: flex; align-items: flex-start; gap: 0.4rem; }
     .oq-item:last-child { border-bottom: none; }
+    .oq-owner { font-size: 0.72rem; color: var(--nav-gray-600); font-style: italic; margin-top: 0.1rem; }
 
-    .oq-checkbox {
-      margin-top: 0.15rem;
-      flex-shrink: 0;
-      width: 16px;
-      height: 16px;
-      accent-color: var(--nav-green);
+    .refresh-toast {
+      position: fixed;
+      top: 62px;
+      left: 50%;
+      transform: translateX(-50%) translateY(-100px);
+      background: var(--nav-green);
+      color: white;
+      padding: 0.5rem 1.2rem;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+      z-index: 200;
+    }
+    .refresh-toast.show {
+      transform: translateX(-50%) translateY(0);
     }
 
-    .oq-text { flex: 1; }
-
-    .oq-text strong {
-      color: var(--nav-gray-900);
-    }
-
-    .oq-owner {
-      font-size: 0.75rem;
-      color: var(--nav-gray-600);
-      font-style: italic;
-      margin-top: 0.15rem;
-    }
-
-    .oq-item.resolved .oq-text {
-      text-decoration: line-through;
-      opacity: 0.5;
-    }
-
-    /* Responsive */
     @media (max-width: 768px) {
       .layout { grid-template-columns: 1fr; }
-      .sidebar {
-        position: static;
-        height: auto;
-        border-right: none;
-        border-bottom: 1px solid var(--nav-gray-200);
-      }
-      .main { padding: 1.5rem 1rem; }
+      .sidebar { position: static; height: auto; border-right: none; border-bottom: 1px solid var(--nav-gray-200); }
+      .main { padding: 1.25rem 1rem; }
     }
   </style>
 </head>
@@ -472,272 +315,369 @@
   <header>
     <div>
       <h1>Etterlevelse — EESSI Pensjon</h1>
-      <div class="subtitle">Kvalitetssjekk før innliming i portalen</div>
+      <div class="subtitle">Kvalitetssjekk og redigering</div>
     </div>
     <div class="header-actions">
-      <button onclick="expandAll()">Åpne alle ▾</button>
-      <button onclick="collapseAll()">Lukk alle ▴</button>
+      <button onclick="manualRefresh()" title="Hent siste data fra disk">↻ Oppdater</button>
+      <button onclick="expandAll()">Åpne alle</button>
+      <button onclick="collapseAll()">Lukk alle</button>
     </div>
   </header>
-
+  <div id="refresh-toast" class="refresh-toast">✓ Oppdatert med nye endringer</div>
   <div class="layout">
     <nav class="sidebar">
       <h2>Krav</h2>
       <div id="nav-list"></div>
     </nav>
-    <main class="main" id="content"></main>
+    <main class="main" id="content">
+      <p style="color:var(--nav-gray-600)">Laster data…</p>
+    </main>
   </div>
 
   <script>
-    const krav = [
-      {
-        id: "K255.1",
-        title: "Nav skal beskytte brukere med adressebeskyttelse",
-        tema: "Personvern",
-        status: null,
-        hensikt: "Personer som er utsatt for alvorlige trusler mot liv, helse eller frihet kan få adressebeskyttelse. Nav må beskytte informasjon som kan avsløre hvor trusselutsatte brukere har vært, er, eller kan oppholde seg i fremtiden.",
-        criteria: [
-          { num: 1, title: "Vi sjekker at Nav-ansatte har riktig rolle for å få tilgang til brukere med adressebeskyttelse", description: "Alle brukerflater rettet mot veiledere og saksbehandlere i Nav skal sjekke om medarbeideren har tilgang til brukeren.\nFølgende tilganger skal sjekkes:\n- For brukere med fortrolig adresse: 0000-GA-Fortrolig_Adresse\n- For brukere med strengt fortrolig adresse: 0000-GA-Strengt_Fortrolig_Adresse\n- For brukere med strengt fortrolig adresse utland: 0000-GA-Strengt_Fortrolig_Adresse\n\nOgså fagsystemer som ikke er ment benyttet for brukere med adressebeskyttelse skal sjekke tilgang. Dette er fordi en bruker kan tildeles adressebeskyttelse etter at den får en sak i fagsystemet.", answer: null },
-          { num: 2, title: "Når Nav-ansatte slår opp en bruker med adressebeskyttelse, fremkommer det tydelig at brukeren har et særskilt beskyttelsesbehov", description: "Det er ikke hemmelig at en person har adressebeskyttelse.\n\nDersom en Nav-ansatt søker opp en bruker med adressebeskyttelse uten å få tilgang, bør det ikke returneres et tomt resultat men heller gis en forklaring på hvorfor tilgangen er avvist. For eksempel: \"Du har ikke tilgang til brukere med strengt fortrolig adresse\". Dette gjør det mulig for den ansatte å for eksempel sende oppgaven videre til en enhet med tilgang til brukeren.\n\nHvis en Nav-ansatt får tilgang til en bruker med adressebeskyttelse, bør dette markeres tydelig i skjermbildet, for eksempel med uthevning, farge, ikon eller lignende. Dette gjør den ansatte ekstra oppmerksom på at opplysningene må behandles med spesiell varsomhet.", answer: null },
-          { num: 3, title: "Nav skal beskytte brukerens opplysninger også når de lagres på andre brukeres saker", description: "Geolokaliserende opplysninger om brukere med adressebeskyttelse skal ikke være tilgjengelige for Nav-ansatte gjennom oppslag på andre brukeres saker.\n\nI enkelte fagsystemer kan opplysninger om én bruker være relevante for en annen brukers sak, og blir derfor registrert der. Dette er særlig vanlig innen familieområdet i Nav, men kan også forekomme i saker som involverer samhandlere.\n\nSituasjoner som krever særlig oppmerksomhet:\n- Flere brukere på samme sak (f.eks. bidragssaker).\n- Saker med avhengighet til hverandre (f.eks. foreldre- og pensjonsopptjeningssaker).\n- Barn registrert som saksopplysning på en forelders eller fosterforelders sak.\n- Brukerdata lagret i en sak knyttet til en lege eller arbeidsgiver.", answer: null },
-          { num: 4, title: "Vi beskytter brukernes opplysninger også når de fremkommer i sammenstilte oversikter", description: "Noen fagområder har skjermbilder eller rapporter som viser opplysninger om flere brukere samtidig. Eksempler på dette inkluderer:\n- Deltakere på et spesifikt kurs eller tiltak\n- Brukere med ytelser som skal revurderes\n- Brukere med hjelpemidler som er klare for ettersyn\n\nDersom slike oversikter skal være tilgjengelige for Nav-ansatte som ikke har tilgangene spesifisert i suksesskriterium 1, må det vurderes om det er riktig å inkludere brukere med adressebeskyttelse – og i så fall hvilke opplysninger. Valgt løsning skal dokumenteres.\n\nDet må også sikres at uvedkommende ikke har tilgang til oversiktene.", answer: null },
-          { num: 5, title: "Vi deler ikke adressen til brukere med adressebeskyttelse med eksterne parter", description: "Adresser til brukere med strengt fortrolig adresse og strengt fortrolig adresse utland skal aldri deles med privatpersoner, private virksomheter eller offentlige virksomheter. Brukere med strengt fortrolig adresse har ikke en registrert adresse i PDL, kun en postboks hos Kripos. Brukere med strengt fortrolig adresse utland kan derimot ha adresseopplysninger i PDL, som ikke skal deles ut av Nav.\n\nAdresser til brukere med fortrolig adresse kan deles med offentlige virksomheter, men ikke med privatpersoner eller private virksomheter.", answer: null },
-          { num: 6, title: "Vi er varsomme ved deling av andre geolokaliserende opplysninger enn adresse", description: "Nav behandler geolokaliserende opplysninger om ordinære brukere, og noen av disse opplysningene deles med eksterne aktører etter lovhjemmel eller samtykke. Hvorvidt geolokaliserende opplysninger om brukere med adressebeskyttelse skal deles eksternt, og isåfall hvordan, må vurderes fra tilfelle til tilfelle. Det må gjøres en helhetsvurdering der risikoen for informasjon på avveie veies opp mot brukerens rettigheter og Navs lovpålagte plikter.\n\nSpørsmål å vurdere og dokumentere ved deling med eksterne:\n- Hvilke geolokaliserende opplysninger deler vi, og med hvem?\n- Kan vi skjerme den geolokaliserende delen av datasettet fra deling?\n- Kan vi redusere mengden personidentifiserende informasjon?\n- Kan vi begrense hvem hos mottakeren som får tilgang?\n- Må delingen skje skriftlig, eller kan manuelle rutiner som en telefonsamtale være nok?", answer: null },
-          { num: 7, title: "Vi beskytter brukere med adressebeskyttelse i selvbetjeningsløsningene på nav.no", description: "Brukere med adressebeskyttelse skal, så langt det er mulig, ha tilgang til de samme digitale tjenestene som andre. Ifølge Kripos' veileder er ikke adressebeskyttelse til hinder for å få innsyn i egne opplysninger. Risikoen med selvbetjeningsløsninger oppstår ved visning av brukerens opplysninger til andre.\n\nNavs gjeldende vurdering er at geolokaliserende opplysninger ikke skal deles med en fullmektig dersom fullmaktsgiver har adressebeskyttelse. Derfor kan brukere med adressebeskyttelse ikke opprette digital fullmakt via nav.no. Dersom geolokaliserende opplysninger skal deles med en brukers verge eller foresatt gjennom Navs selvbetjeningsløsninger, må dette dokumenteres i en risikovurdering.", answer: null },
-          { num: 8, title: "Vi begrenser manuell håndtering av brukernes opplysninger der dette er mulig", description: "Dersom fagsystemet har mulighet for automatisk behandling, bør dette gjøres fremfor å benytte manuelle rutiner for denne gruppen brukere. Maskinell behandling reduserer sannsynligheten for informasjon på avveie og gir totalt sett færre øyne på saken.", answer: null }
-        ]
-      },
-      {
-        id: "K267.1",
-        title: "Applikasjoner skal ha et forsvarlig sikkerhetsnivå",
-        tema: "Inf.sikkerhet",
-        status: "Ja (delvis)",
-        hensikt: "Alle applikasjoner i Nav skal ha et forsvarlig sikkerhetsnivå som står i forhold til risikoen. Sikkerheten skal ivaretas gjennom hele livssyklusen, i tråd med dokumenterte prinsipper, internkontroll og anerkjente metoder for sikker utvikling og drift.",
-        criteria: [
-          { num: 1, title: "Vi følger med på og håndterer våre sårbarheter", description: "Applikasjoner skal holdes oppdatert. Alle sårbarheter skal håndteres – enten ved å rettes (patches), eller ved å vurderes og dokumenteres.\nKritiske sårbarheter (CVSS-score over 9) skal håndteres innen neste arbeidsdag. Øvrige sårbarheter skal håndteres så fort som mulig, senest innen tre måneder.\nTeamet skal sørge for at de oppdager kjente sårbarheter i egne komponenter og avhengigheter.", answer: "EESSI Pensjon har automatisert sårbarhetsskanning som en del av byggeprosessen. Alle applikasjoner analyseres mot kjente sårbarhetsdatabaser, og funn rapporteres med alvorlighetsgrad (CVSS-score).\n\nTeamet har etablerte rutiner for oppfølging:\n\n- Kritiske sårbarheter (CVSS over 9) håndteres innen neste arbeidsdag.\n- Øvrige sårbarheter vurderes og utbedres løpende, senest innen tre måneder.\n- Sårbarheter som ikke kan rettes umiddelbart blir risikovurdert og dokumentert med begrunnelse for akseptert risiko.\n- I tillegg til automatisk skanning gjennomfører teamet manuelle kontroller for å fange sårbarheter som ikke dekkes av de automatiserte verktøyene." },
-          { num: 2, title: "Vi holder våre applikasjoner og avhengigheter oppdatert", description: "All tredjepartskode og biblioteker skal holdes oppdatert – også når det ikke er kjente sårbarheter. Applikasjoner skal bygges og deployeres minst hver tredje måned for å sikre at prosessen fungerer, slik at man er forberedt ved sikkerhetshendelser.\nUnngå å legge til unødvendige eller risikofylte avhengigheter.", answer: "EESSI Pensjon holder alle applikasjoner og avhengigheter oppdatert gjennom følgende tiltak:\n\n- Teamet bruker automatiserte verktøy for å identifisere utdaterte avhengigheter. Rapporter kjøres regelmessig på tvers av alle tjenester.\n- Delte interne biblioteker oppgraderes systematisk i riktig rekkefølge for å ivareta avhengighetskjeden.\n- Alle applikasjoner bygges og deployes kontinuerlig via CI/CD-pipelines. Hver kodeendring utløser automatisk bygg og utrulling, noe som sikrer at prosessen alltid er operativ og at teamet kan reagere raskt ved sikkerhetshendelser.\n- Teamet begrenser bruken av eksterne avhengigheter ved å dele felles funksjonalitet gjennom egne interne biblioteker. Nye avhengigheter vurderes med tanke på vedlikeholdsrisiko og sikkerhetshistorikk før de tas i bruk." },
-          { num: 3, title: "Vi validerer input og output", description: "Alle grensesnitt skal håndtere input på en trygg måte – også fra kilder vi stoler på. Unngå fritekstfelt der det er mulig. Hvis fritekst benyttes, bør det gjøres kontroll på tillatte tegn. Eventuell filtrering skal skje med å sjekke mot tillatte tegn.\nVi bruker parameterisert queries mot databaser og output encoding når vi viser data til bruker.\nApplikasjonen har også ansvar for å validere og sikre data som sendes ut, slik at de ikke utgjør en angrepsvektor for konsumenter. Husk at logg er en form for output og skal behandles deretter.", answer: "EESSI Pensjon validerer input og output i alle grensesnitt:\n\n- Alle API-endepunkter validerer innkommende forespørsler med typesikre datamodeller. Ugyldige forespørsler avvises før de når forretningslogikken.\n- Løsningen behandler strukturerte pensjonsdokumenter (SED-er) som følger fastsatte skjemaer definert av EU. Innholdet valideres mot disse skjemaene ved mottak.\n- Saksbehandlergrensesnittet bruker forhåndsdefinerte valg og strukturerte felter fremfor fritekst der det er mulig, noe som begrenser muligheten for ondsinnet input.\n- Løsningen bruker ingen egne SQL-databaser og er dermed ikke eksponert for SQL-injection.\n- Loggføring sørger for at sensitiv informasjon som fødselsnummer og tokens ikke skrives til logger som er tilgjengelige utenfor teamet. Logg behandles som output og saniteres deretter.\n- Data som sendes videre til andre Nav-systemer formateres i henhold til mottakernes spesifikasjoner, slik at EESSI Pensjon ikke utgjør en angrepsvektor for konsumenter." },
-          { num: 4, title: "Vi beskytter og roterer hemmelighetene våre", description: "API-nøkler, sertifikater, passord og andre hemmeligheter skal holdes konfidensielle og beskyttes mot uautorisert tilgang. De skal ikke tas ut av kjøremiljøet, lagres lokalt eller deles manuelt. Bruk sikre løsninger for håndtering av hemmeligheter – unngå copy-paste av verdier.\nBegrens statiske hemmeligheter så langt det lar seg gjøre. Bruk i størst mulig grad automatisk genererte og kortvarige nøkler/tokens.\nHemmeligheter skal roteres jevnlig, minst årlig, for å redusere risiko.", answer: "EESSI Pensjon bruker utelukkende kortvarige, automatisk genererte tokens for autentisering mellom tjenester. Det finnes ingen statiske API-nøkler eller passord i tjeneste-til-tjeneste-kommunikasjonen.\n\n- Hemmeligheter som kreves av plattformen injiseres automatisk i kjøremiljøet av Nav sin applikasjonsplattform. De lagres aldri i kildekode, i lokale filer eller deles manuelt mellom utviklere.\n- Rotasjon av hemmeligheter håndteres gjennom plattformens automatiske nøkkelhåndtering.\n- Kildekoden sjekkes for utilsiktet innsjekking av hemmeligheter gjennom teamets code review-rutiner.\n- Utviklere har ikke behov for å kopiere hemmeligheter ut av kjøremiljøet, da all konfigurasjon håndteres gjennom plattformens deklarative oppsett." },
-          { num: 5, title: "Våre applikasjoner logger feil og sikkerhetshendelser", description: "Applikasjonen skal logge hvem som gjorde hva, når og hvorfra. For eksempel når en applikasjon eller en bruker sendte en søknad.\nLogging er viktig støtte ved sikkerhetshendelser, loggene skal derfor være tilrettelagt og tilgjengelige for Team ISOC.\nVær kritisk til hva som logges. Hemmeligheter som access tokens skal aldri logges. Dersom det er behov for å logge fødselsnummer eller aktørId, skal dette kun gjøres i logger som kun teamet har tilgang til. Fødselsnummer og aktørId skal heller ikke forekomme i URL, headers eller andre steder der de automatisk logges av plattformen.", answer: "EESSI Pensjon logger relevante hendelser for feilsøking og sikkerhetshåndtering:\n\n- Alle tjenester bruker et felles loggbibliotek som sikrer konsistent format og sporbarhet. Hver forespørsel tilordnes en korrelasjons-ID som gjør det mulig å spore hendelser på tvers av tjenester.\n- Loggene inneholder informasjon om hvem (bruker eller system) som utførte en handling, hva som ble gjort, og når det skjedde. Saksbehandlerhandlinger i brukergrensesnittet logges via tjenestene som mottar forespørslene.\n- Sensitive personopplysninger (fødselsnummer, aktør-ID) logges kun til sikre logger som bare teamet har tilgang til. Disse forekommer ikke i URL-er, HTTP-headere eller andre steder der de automatisk fanges av plattformen.\n- Hemmeligheter som tilgangstokens logges aldri.\n- Loggene sendes til Nav sin sentrale loggplattform og er tilrettelagt for Team ISOC ved sikkerhetshendelser." },
-          { num: 6, title: "Vi har backup av data og kode", description: "Backup håndteres som regel av Navs plattform (Nais og GitHub), men teamet må vurdere om dette dekker egne behov. Brukes andre plattformer, er teamet selv ansvarlig for å sikre både backup og mulighet for gjenoppretting.\nAlle team skal ha en plan for hvordan tjenestene kan gjenopprettes, og bør ha testet at planen fungerer i praksis.", answer: "EESSI Pensjon benytter Nav sin standardplattform for drift og arver plattformens backup-mekanismer:\n\n- All kildekode er versjonskontrollert i GitHub, som sørger for redundans og backup av kodebasen.\n- Applikasjonene har ingen egne SQL-databaser. Mellomlagring skjer i skybasert objektlagring med innebygd redundans og versjonering i norsk region.\n- Meldingshåndtering (hendelsesstrømmer for pensjonsdokumenter) kjører på Nav sin meldingsplattform som har innebygd replikering og lagring.\n- Teamet kan gjenopprette tjenestene ved å deploye på nytt fra kildekoden. Siden løsningen ikke har egne databaser med langtidslagret tilstand, er gjenopprettingsprosessen i praksis en ny utrulling fra siste fungerende versjon. Ubehandlede meldinger i hendelsesstrømmen prosesseres automatisk ved oppstart.\n\nTeamet vurderer at plattformens standardmekanismer dekker behovet for backup og gjenoppretting av EESSI Pensjon." },
-          { num: 7, title: "Vi har tilgangskontroll på alle endepunkter", description: "Alle endepunkter skal beskyttes med tilgangskontroll, med mindre det er avklart at funksjonen eller informasjonen skal være offentlig tilgjengelig. On-behalf-of-token skal brukes der det er mulig.\nBruk riktig autentiseringsløsning for målgruppen: Entra ID for Nav-ansatte, ID-porten for innbyggere og Maskinporten for samarbeidspartnere. Ved bruk av andre løsninger må tilgangskontrollen være grundig vurdert og dokumentert. Applikasjoner for Nav-ansatte skal kreve enten compliant device eller phishing-resistent MFA.", answer: "EESSI Pensjon har tilgangskontroll på alle endepunkter:\n\n- Alle API-endepunkter krever gyldig autentiseringstoken. Uautentiserte forespørsler avvises av rammeverket før de når applikasjonskoden.\n- Saksbehandlergrensesnittet krever innlogging via Entra ID (Azure AD). Løsningen er kun tilgjengelig for Nav-ansatte med riktig tilgangsnivå.\n- Tjeneste-til-tjeneste-kommunikasjon viderefører brukerens identitet og tilganger gjennom hele tjenestekjeden der det er mulig (on-behalf-of-mønsteret).\n- Tilgangskontroll for funksjoner som krever spesielle rettigheter (for eksempel tilgang til graderte eller skjermede personer) delegeres til de underliggende fagsystemene og fellesløsningene, i tråd med teamets arkitekturbeslutning om delegert tilgangsstyring.\n- Ingen endepunkter er offentlig tilgjengelige — all trafikk går gjennom Nav sitt interne nettverk og plattformens nettverkssikring." }
-        ]
+    const API = "";
+    let kravList = [];
+    let qaStatus = {};
+    let openQuestions = {};
+    let activeKrav = null;
+    let lastModified = 0;
+    let pollInterval = null;
+    let isEditing = false;
+
+    // --- Data fetching ---
+    async function loadData(silent = false) {
+      const [kravRes, qaRes] = await Promise.all([
+        fetch(API + "/api/krav"),
+        fetch(API + "/api/qa-status")
+      ]);
+      kravList = await kravRes.json();
+      qaStatus = await qaRes.json();
+      openQuestions = parseOpenQuestions();
+      const id = activeKrav || window.location.hash.replace("#", "") || (kravList[0]?.id);
+      if (id) renderKrav(id);
+      if (silent) showRefreshToast();
+    }
+
+    async function checkForUpdates() {
+      if (isEditing) return;
+      try {
+        const res = await fetch(API + "/api/last-modified");
+        const { lastModified: newMtime } = await res.json();
+        if (lastModified && newMtime > lastModified) {
+          lastModified = newMtime;
+          await loadData(true);
+        } else if (!lastModified) {
+          lastModified = newMtime;
+        }
+      } catch (e) { /* ignore network errors during polling */ }
+    }
+
+    function showRefreshToast() {
+      const toast = document.getElementById("refresh-toast");
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 3000);
+    }
+
+    function manualRefresh() {
+      lastModified = 0;
+      loadData(false);
+    }
+
+    function startPolling() {
+      pollInterval = setInterval(checkForUpdates, 5000);
+    }
+
+    async function resetAllQa() {
+      // Not used — reset is per krav now
+    }
+
+    async function resetKravQa(kravId) {
+      const k = kravList.find(x => x.id === kravId);
+      if (!k) return;
+      if (!confirm(`Nullstill QA-status for ${kravId}?`)) return;
+      for (const c of k.criteria) {
+        delete qaStatus[kravId + "-" + c.num];
       }
-    ];
-
-    // --- Open questions data ---
-    const openQuestions = {
-      "K267.1": [
-        { topic: "Snyk-rutiner", text: "Bekreftes at Snyk CLI kjøres regelmessig (ikke bare ad-hoc) og at teamet har en fast rutine for å følge opp funn.", owner: "Team eessipensjon", resolved: false },
-        { topic: "Secure logs", text: "Bekreftes at fødselsnummer/aktør-ID faktisk kun logges til sikre logger og aldri lekker til standard applikasjonslogger eller URL-er.", owner: "Team eessipensjon", resolved: false },
-        { topic: "ISOC-tilgang", text: "Bekreftes at loggene faktisk er tilrettelagt og tilgjengelige for Team ISOC ved hendelser.", owner: "Team ISOC / plattformteam", resolved: false },
-        { topic: "GCP Storage backup", text: "Bekreftes at GCP Storage-bøttene har versjonering aktivert og at teamet har testet gjenoppretting.", owner: "Team eessipensjon", resolved: false },
-        { topic: "Compliant device / phishing-resistent MFA", text: "Bekreftes at Wonderwall-oppsettet krever enten compliant device eller phishing-resistent MFA for Nav-ansatte.", owner: "NAIS-teamet", resolved: false },
-        { topic: "Rotasjonsfrekvens hemmeligheter", text: "Bekreftes at Azure AD-secrets roteres automatisk og at frekvensen er minst årlig.", owner: "NAIS-teamet / team eessipensjon", resolved: false }
-      ]
-    };
-
-    // --- Helpers ---
-
-    function statusBadge(status) {
-      if (!status) return '<span class="badge badge-unanswered">Ikke besvart</span>';
-      if (status === "Ja") return '<span class="badge badge-yes">Ja</span>';
-      if (status.startsWith("Ja")) return '<span class="badge badge-partial">' + esc(status) + '</span>';
-      if (status.startsWith("Nei")) return '<span class="badge badge-no">' + esc(status) + '</span>';
-      return '<span class="badge">' + esc(status) + '</span>';
+      await saveQaStatus();
+      renderKrav(kravId);
     }
 
-    function esc(s) {
-      return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+    function parseOpenQuestions() {
+      // Hardcoded from apne-sporsmal.md — could be served from API in future
+      return {
+        "K267.1": [
+          { topic: "Snyk-rutiner", text: "Bekreftes at Snyk CLI kjøres regelmessig (ikke bare ad-hoc) og at teamet har en fast rutine for å følge opp funn.", owner: "Team eessipensjon" },
+          { topic: "Secure logs", text: "Bekreftes at fødselsnummer/aktør-ID faktisk kun logges til sikre logger og aldri lekker til standard applikasjonslogger eller URL-er.", owner: "Team eessipensjon" },
+          { topic: "ISOC-tilgang", text: "Bekreftes at loggene faktisk er tilrettelagt og tilgjengelige for Team ISOC ved hendelser.", owner: "Team ISOC / plattformteam" },
+          { topic: "GCP Storage backup", text: "Bekreftes at GCP Storage-bøttene har versjonering aktivert og at teamet har testet gjenoppretting.", owner: "Team eessipensjon" },
+          { topic: "Compliant device / phishing-resistent MFA", text: "Bekreftes at Wonderwall-oppsettet krever enten compliant device eller phishing-resistent MFA for Nav-ansatte.", owner: "NAIS-teamet" },
+          { topic: "Rotasjonsfrekvens hemmeligheter", text: "Bekreftes at Azure AD-secrets roteres automatisk og at frekvensen er minst årlig.", owner: "NAIS-teamet / team eessipensjon" }
+        ]
+      };
     }
 
-    function descriptionHtml(s) {
-      return esc(s).split(/\n/).map(line => `<p style="margin:0 0 0.5em">${line}</p>`).join("");
+    // --- Save helpers ---
+    async function saveAnswer(filename, content) {
+      await fetch(API + "/api/output/" + encodeURIComponent(filename), {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ content })
+      });
     }
 
-    function wordCount(text) {
-      return text ? text.trim().split(/\s+/).length : 0;
-    }
-
-    function charCount(text) {
-      return text ? text.length : 0;
-    }
-
-    function copyText(text, btn) {
-      navigator.clipboard.writeText(text).then(() => {
-        btn.textContent = "✓ Kopiert";
-        btn.classList.add("copied");
-        setTimeout(() => { btn.textContent = "Kopier tekst"; btn.classList.remove("copied"); }, 2000);
+    async function saveQaStatus() {
+      await fetch(API + "/api/qa-status", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(qaStatus)
       });
     }
 
     // --- Rendering ---
+    function esc(s) { return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+    function descHtml(s) { return esc(s).split("\n").map(l => `<p>${l}</p>`).join(""); }
+    function wordCount(t) { return t ? t.trim().split(/\s+/).length : 0; }
+
+    function statusBadge(kravId) {
+      const k = kravList.find(x => x.id === kravId);
+      if (!k) return "";
+      const answered = k.criteria.filter(c => c.answer).length;
+      if (answered === 0) return '<span class="badge badge-unanswered">Ikke besvart</span>';
+      const hasStale = k.criteria.some(c => qaStatus[kravId + "-" + c.num]?.stale && !qaStatus[kravId + "-" + c.num]?.done);
+      if (hasStale) return '<span class="badge badge-stale">⟳ Ny QA kreves</span>';
+      const allQa = k.criteria.every(c => !c.answer || qaStatus[kravId + "-" + c.num]?.done);
+      if (allQa && answered > 0) return '<span class="badge badge-yes">QA ferdig</span>';
+      if (answered === k.criteria.length) return '<span class="badge badge-partial">Besvart</span>';
+      return '<span class="badge badge-partial">' + answered + '/' + k.criteria.length + '</span>';
+    }
 
     function renderNav(activeId) {
       const nav = document.getElementById("nav-list");
-      nav.innerHTML = krav.map(k => {
+      nav.innerHTML = kravList.map(k => {
         const answered = k.criteria.filter(c => c.answer).length;
         const total = k.criteria.length;
+        const qaCount = k.criteria.filter(c => qaStatus[k.id + "-" + c.num]?.done).length;
         const oq = openQuestions[k.id];
-        const oqCount = oq ? oq.filter(q => !q.resolved).length : 0;
+        const oqCount = oq ? oq.length : 0;
         return `
-          <a class="nav-item ${k.id === activeId ? 'active' : ''}" data-id="${k.id}">
-            <div class="nav-id">
-              ${k.id}
-              ${statusBadge(k.status)}
-            </div>
+          <div class="nav-item ${k.id === activeId ? 'active' : ''}" onclick="renderKrav('${k.id}')">
+            <div class="nav-id">${k.id} ${statusBadge(k.id)}</div>
             <div class="nav-title">${esc(k.title)}</div>
-            <div class="nav-progress">${answered}/${total} besvart${oqCount > 0 ? ` · ${oqCount} åpne spm.` : ''}</div>
-          </a>
-        `;
+            <div class="nav-progress">${answered}/${total} besvart · ${qaCount}/${total} QA${oqCount ? ' · ' + oqCount + ' åpne spm.' : ''}</div>
+          </div>`;
       }).join("");
-
-      nav.querySelectorAll(".nav-item").forEach(item => {
-        item.addEventListener("click", () => renderKrav(item.dataset.id));
-      });
     }
 
     function renderKrav(id) {
-      const k = krav.find(x => x.id === id);
+      activeKrav = id;
+      const k = kravList.find(x => x.id === id);
       if (!k) return;
       renderNav(id);
+      window.location.hash = id;
 
       const content = document.getElementById("content");
-      const answeredCount = k.criteria.filter(c => c.answer).length;
-      const totalCount = k.criteria.length;
+      const answered = k.criteria.filter(c => c.answer).length;
 
       content.innerHTML = `
         <div class="krav-header">
           <h2>${esc(k.id)} – ${esc(k.title)}</h2>
           <div class="krav-meta">
-            <span>${esc(k.tema)}</span>
+            <span>${answered} av ${k.criteria.length} besvart</span>
             <span>·</span>
-            <span><strong>${answeredCount}</strong> av ${totalCount} besvart</span>
-            <span>·</span>
-            ${statusBadge(k.status)}
+            ${statusBadge(k.id)}
           </div>
         </div>
-
         <div class="toolbar">
           <button onclick="expandAll()">Åpne alle</button>
           <button onclick="collapseAll()">Lukk alle</button>
-          <button onclick="copyAllAnswers('${k.id}')">Kopier alle besvarelser</button>
+          <button onclick="markAllQaDone('${k.id}')">Marker alle QA ✓</button>
+          <button onclick="resetKravQa('${k.id}')">⟳ Reset QA</button>
         </div>
-
-        <div class="hensikt">
-          <h3>Hensikt med kravet</h3>
-          <p>${esc(k.hensikt)}</p>
-        </div>
-
+        ${k.hensikt ? `<div class="hensikt"><h3>Hensikt med kravet</h3><p>${esc(k.hensikt)}</p></div>` : ''}
         <div id="criteria-list">
-          ${k.criteria.map((c, i) => `
-            <div class="criterion ${c.answer ? '' : 'unanswered'} open" data-idx="${i}">
-              <div class="criterion-header" data-num="${c.num}">
-                <div class="criterion-number">${c.num}</div>
-                <div class="criterion-title">${esc(c.title)}</div>
-                <div class="criterion-toggle">▾</div>
-              </div>
-              <div class="criterion-body">
-                <div class="criterion-description">
-                  <h4>Krav fra portalen</h4>
-                  ${descriptionHtml(c.description)}
-                </div>
-                ${c.answer
-                  ? `<div class="answer">
-                      <div class="answer-header">
-                        <h4>Vår besvarelse — limes inn i portalen</h4>
-                        <button class="copy-btn" onclick="copyText(krav.find(x=>x.id==='${k.id}').criteria[${i}].answer, this)">Kopier tekst</button>
-                      </div>
-                      <div class="answer-text">${esc(c.answer)}</div>
-                      <div class="answer-meta">
-                        <span>${wordCount(c.answer)} ord</span>
-                        <span>${charCount(c.answer)} tegn</span>
-                      </div>
-                    </div>`
-                  : `<div class="no-answer">
-                      <strong>⚠ Ikke besvart</strong>
-                      Mangler besvarelse. Kjør etterlevelse-agenten for å generere tekst for dette kriteriet.
-                    </div>`
-                }
-              </div>
-            </div>
-          `).join("")}
+          ${k.criteria.map((c, i) => renderCriterion(k.id, c, i)).join("")}
         </div>
-
         ${renderOpenQuestions(k.id)}
       `;
 
-      content.querySelectorAll(".criterion-header").forEach(header => {
-        header.addEventListener("click", () => {
-          header.parentElement.classList.toggle("open");
-        });
+      content.querySelectorAll(".criterion-header").forEach(h => {
+        h.addEventListener("click", () => h.parentElement.classList.toggle("open"));
       });
+    }
 
-      window.location.hash = id;
+    function renderCriterion(kravId, c, idx) {
+      const qa = qaStatus[kravId + "-" + c.num] || {};
+      const hasAnswer = !!c.answer;
+      const isStale = qa.stale && !qa.done;
+      const qaClass = qa.done ? "qa-done" : (isStale ? "stale" : (!hasAnswer ? "unanswered" : ""));
+      const filename = c.filename || `${kravId}-suksesskriterium${c.num}-unnamed.txt`;
+
+      return `
+        <div class="criterion ${qaClass} open" data-krav="${kravId}" data-num="${c.num}">
+          <div class="criterion-header">
+            <div class="criterion-number">${c.num}</div>
+            <div class="criterion-title">${esc(c.title)}</div>
+            ${qa.done ? '<span class="badge badge-yes">QA ✓</span>' : ''}
+            ${isStale ? '<span class="badge badge-stale">⟳ Ny QA kreves</span>' : ''}
+            <div class="criterion-toggle">▾</div>
+          </div>
+          <div class="criterion-body">
+            ${isStale ? `<div class="stale-warning">⚠ Teksten er regenerert etter forrige QA. Les gjennom og marker QA på nytt.</div>` : ''}
+            <div class="criterion-description">
+              <h4>Krav fra portalen</h4>
+              ${descHtml(c.description)}
+            </div>
+            ${hasAnswer ? `
+              <div class="answer" id="answer-${kravId}-${c.num}">
+                <div class="answer-toolbar">
+                  <h4>Vår besvarelse — limes inn i portalen</h4>
+                  <div class="btns">
+                    <button class="btn-sm" onclick="startEdit('${kravId}', ${c.num}, ${idx})">Rediger</button>
+                    <button class="btn-sm copy" onclick="copyAnswer('${kravId}', ${c.num}, this)">Kopier</button>
+                  </div>
+                </div>
+                <div class="answer-text">${esc(c.answer)}</div>
+                <div class="answer-meta">
+                  <span>${wordCount(c.answer)} ord</span>
+                  <span>${c.answer.length} tegn</span>
+                  <span>Fil: ${esc(filename)}</span>
+                </div>
+              </div>
+            ` : `
+              <div class="no-answer">
+                <strong>⚠ Ikke besvart</strong>
+                Mangler besvarelse. Kjør etterlevelse-agenten for å generere tekst.
+              </div>
+            `}
+            <div class="qa-bar">
+              <label>
+                <input type="checkbox" ${qa.done ? 'checked' : ''} onchange="toggleQa('${kravId}', ${c.num}, this.checked)">
+                QA godkjent
+              </label>
+              ${qa.timestamp ? `<span class="qa-timestamp">Sist: ${qa.timestamp}</span>` : ''}
+              ${qa.edited ? `<span class="badge badge-qa">Redigert</span>` : ''}
+              ${isStale ? `<span class="qa-timestamp">${esc(qa.staleReason || 'Regenerert')}</span>` : ''}
+            </div>
+          </div>
+        </div>`;
     }
 
     function renderOpenQuestions(kravId) {
       const questions = openQuestions[kravId];
       if (!questions || questions.length === 0) return "";
-      const unresolved = questions.filter(q => !q.resolved).length;
       return `
         <div class="open-questions">
-          <h3>⚠ Åpne spørsmål <span class="count">${unresolved} uløst</span></h3>
-          ${questions.map((q, i) => `
-            <div class="oq-item ${q.resolved ? 'resolved' : ''}">
-              <input type="checkbox" class="oq-checkbox" ${q.resolved ? 'checked' : ''} data-krav="${kravId}" data-idx="${i}" onchange="toggleQuestion('${kravId}', ${i}, this.checked)">
-              <div class="oq-text">
+          <h3>⚠ Åpne spørsmål <span class="count">${questions.length}</span></h3>
+          ${questions.map(q => `
+            <div class="oq-item">
+              <div>
                 <strong>${esc(q.topic)}:</strong> ${esc(q.text)}
                 <div class="oq-owner">→ ${esc(q.owner)}</div>
               </div>
             </div>
           `).join("")}
+        </div>`;
+    }
+
+    // --- Actions ---
+
+    function startEdit(kravId, num, idx) {
+      isEditing = true;
+      const k = kravList.find(x => x.id === kravId);
+      const c = k.criteria[idx];
+      const container = document.getElementById(`answer-${kravId}-${num}`);
+      const filename = c.filename || `${kravId}-suksesskriterium${num}-unnamed.txt`;
+
+      container.innerHTML = `
+        <div class="answer-toolbar">
+          <h4>Redigerer — ${esc(filename)}</h4>
+          <div class="btns">
+            <button class="btn-sm save" onclick="saveEdit('${kravId}', ${num}, ${idx})">Lagre</button>
+            <button class="btn-sm" onclick="cancelEdit('${kravId}')">Avbryt</button>
+          </div>
         </div>
+        <textarea class="answer-edit" id="edit-textarea-${kravId}-${num}">${esc(c.answer)}</textarea>
+        <div class="answer-meta"><span>Fil: ${esc(filename)}</span></div>
       `;
+      const ta = document.getElementById(`edit-textarea-${kravId}-${num}`);
+      ta.style.height = ta.scrollHeight + "px";
+      ta.focus();
     }
 
-    function toggleQuestion(kravId, idx, checked) {
-      openQuestions[kravId][idx].resolved = checked;
-      const item = document.querySelector(`.oq-item[data-krav="${kravId}"][data-idx="${idx}"]`) ||
-                   document.querySelectorAll('.oq-item')[idx];
-      if (checked) item?.classList.add('resolved');
-      else item?.classList.remove('resolved');
-      // Update count
-      const unresolved = openQuestions[kravId].filter(q => !q.resolved).length;
-      const countEl = document.querySelector('.open-questions .count');
-      if (countEl) countEl.textContent = `${unresolved} uløst`;
+    async function saveEdit(kravId, num, idx) {
+      const ta = document.getElementById(`edit-textarea-${kravId}-${num}`);
+      const content = ta.value;
+      const k = kravList.find(x => x.id === kravId);
+      const c = k.criteria[idx];
+      const filename = c.filename || `${kravId}-suksesskriterium${num}-unnamed.txt`;
+
+      await saveAnswer(filename, content);
+      c.answer = content;
+
+      // Mark as edited in QA status
+      if (!qaStatus[kravId + "-" + num]) qaStatus[kravId + "-" + num] = {};
+      qaStatus[kravId + "-" + num].edited = true;
+      qaStatus[kravId + "-" + num].editTimestamp = new Date().toLocaleString("no-NO");
+      await saveQaStatus();
+
+      isEditing = false;
+      renderKrav(kravId);
     }
 
-    function expandAll() {
-      document.querySelectorAll(".criterion").forEach(el => el.classList.add("open"));
+    function cancelEdit(kravId) {
+      isEditing = false;
+      renderKrav(kravId);
     }
 
-    function collapseAll() {
-      document.querySelectorAll(".criterion").forEach(el => el.classList.remove("open"));
+    async function toggleQa(kravId, num, checked) {
+      const key = kravId + "-" + num;
+      if (!qaStatus[key]) qaStatus[key] = {};
+      qaStatus[key].done = checked;
+      qaStatus[key].timestamp = checked ? new Date().toLocaleString("no-NO") : null;
+      qaStatus[key].qaAt = checked ? Date.now() : null;
+      if (checked) qaStatus[key].stale = false;
+      await saveQaStatus();
+      renderKrav(kravId);
     }
 
-    function copyAllAnswers(kravId) {
-      const k = krav.find(x => x.id === kravId);
-      if (!k) return;
-      const text = k.criteria
-        .filter(c => c.answer)
-        .map((c, i) => `--- Suksesskriterium ${c.num}: ${c.title} ---\n\n${c.answer}`)
-        .join("\n\n\n");
-      navigator.clipboard.writeText(text).then(() => {
-        const btn = document.querySelector('.toolbar button:last-child');
-        btn.textContent = "✓ Alle kopiert";
-        setTimeout(() => { btn.textContent = "Kopier alle besvarelser"; }, 2000);
+    async function markAllQaDone(kravId) {
+      const k = kravList.find(x => x.id === kravId);
+      const now = new Date().toLocaleString("no-NO");
+      const nowMs = Date.now();
+      for (const c of k.criteria) {
+        if (c.answer) {
+          const key = kravId + "-" + c.num;
+          if (!qaStatus[key]) qaStatus[key] = {};
+          qaStatus[key].done = true;
+          qaStatus[key].timestamp = now;
+          qaStatus[key].qaAt = nowMs;
+          qaStatus[key].stale = false;
+        }
+      }
+      await saveQaStatus();
+      renderKrav(kravId);
+    }
+
+    function copyAnswer(kravId, num, btn) {
+      const k = kravList.find(x => x.id === kravId);
+      const c = k.criteria.find(x => x.num === num);
+      navigator.clipboard.writeText(c.answer).then(() => {
+        btn.textContent = "✓ Kopiert";
+        btn.classList.add("copied");
+        setTimeout(() => { btn.textContent = "Kopier"; btn.classList.remove("copied"); }, 1500);
       });
     }
 
-    // --- Init ---
-    const initialId = window.location.hash.replace("#", "") || krav[0].id;
-    renderKrav(initialId);
+    function expandAll() { document.querySelectorAll(".criterion").forEach(el => el.classList.add("open")); }
+    function collapseAll() { document.querySelectorAll(".criterion").forEach(el => el.classList.remove("open")); }
 
     window.addEventListener("hashchange", () => {
       const id = window.location.hash.replace("#", "");
-      if (id && krav.find(k => k.id === id)) renderKrav(id);
+      if (id && kravList.find(k => k.id === id)) renderKrav(id);
     });
+
+    loadData();
+    startPolling();
   </script>
 </body>
 </html>

@@ -2,5 +2,5 @@ EESSI Pensjon holder alle applikasjoner og avhengigheter oppdatert gjennom følg
 
 - Teamet bruker automatiserte verktøy for å identifisere utdaterte avhengigheter. Rapporter kjøres regelmessig på tvers av alle tjenester.
 - Delte interne biblioteker oppgraderes systematisk i riktig rekkefølge for å ivareta avhengighetskjeden.
-- Alle applikasjoner bygges og deployes kontinuerlig via CI/CD-pipelines. Hver kodeendring utløser automatisk bygg og utrulling, noe som sikrer at prosessen alltid er operativ og at teamet kan reagere raskt ved sikkerhetshendelser.
-- Teamet begrenser bruken av eksterne avhengigheter ved å dele felles funksjonalitet gjennom egne interne biblioteker. Nye avhengigheter vurderes med tanke på vedlikeholdsrisiko og sikkerhetshistorikk før de tas i bruk.
+- Alle applikasjoner bygges og deployes kontinuerlig via CI/CD-pipelines. Hver kodeendring utløser automatisk bygg og utrulling. Kravet om bygg og deploy minst hver tredje måned er godt ivaretatt — teamet deployer betydelig oftere enn dette.
+- Teamet begrenser bruken av eksterne avhengigheter ved å dele felles funksjonalitet gjennom egne interne biblioteker. Nye avhengigheter vurderes med tanke på vedlikeholdsrisiko, sikkerhetshistorikk og faktisk behov før de tas i bruk. Unødvendige avhengigheter fjernes ved opprydding.

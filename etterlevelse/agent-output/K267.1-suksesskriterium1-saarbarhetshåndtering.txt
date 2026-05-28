@@ -1,8 +1,9 @@
-EESSI Pensjon har automatisert sårbarhetsskanning som en del av byggeprosessen. Alle applikasjoner analyseres mot kjente sårbarhetsdatabaser, og funn rapporteres med alvorlighetsgrad (CVSS-score).
+EESSI Pensjon har automatisert sårbarhetsskanning som kjører ved hvert bygg. Alle applikasjoner og deres avhengigheter analyseres mot kjente sårbarhetsdatabaser, og funn rapporteres med alvorlighetsgrad (CVSS-score). I tillegg overvåkes sikkerhetsrådgivninger fra avhengighetsregistre løpende, slik at teamet varsles om nye sårbarheter også mellom bygg.
 
-Teamet har etablerte rutiner for oppfølging:
+Teamet har etablerte rutiner for oppfølging av funn:
 
 - Kritiske sårbarheter (CVSS over 9) håndteres innen neste arbeidsdag.
 - Øvrige sårbarheter vurderes og utbedres løpende, senest innen tre måneder.
 - Sårbarheter som ikke kan rettes umiddelbart blir risikovurdert og dokumentert med begrunnelse for akseptert risiko.
-- I tillegg til automatisk skanning gjennomfører teamet manuelle kontroller for å fange sårbarheter som ikke dekkes av de automatiserte verktøyene.
+- I tillegg til automatisk skanning gjennomfører teamet manuelle kontroller for å fange sårbarheter som ikke dekkes av verktøyene.
+- Legger til et punkt til her

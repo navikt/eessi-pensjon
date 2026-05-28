@@ -1,7 +1,7 @@
-EESSI Pensjon logger relevante hendelser for feilsøking og sikkerhetshåndtering:
+EESSI Pensjon logger relevante hendelser for feilsøking og sikkerhetshåndtering. Loggene dekker hvem som gjorde hva, når og hvorfra:
 
 - Alle tjenester bruker et felles loggbibliotek som sikrer konsistent format og sporbarhet. Hver forespørsel tilordnes en korrelasjons-ID som gjør det mulig å spore hendelser på tvers av tjenester.
-- Loggene inneholder informasjon om hvem (bruker eller system) som utførte en handling, hva som ble gjort, og når det skjedde. Saksbehandlerhandlinger i brukergrensesnittet logges via tjenestene som mottar forespørslene.
+- Saksbehandlerhandlinger logges med brukeridentitet, tidspunkt og hvilken operasjon som ble utført. Systemhandlinger (automatiserte prosesser) logges med tjeneste-identitet og opprinnelse.
 - Sensitive personopplysninger (fødselsnummer, aktør-ID) logges kun til sikre logger som bare teamet har tilgang til. Disse forekommer ikke i URL-er, HTTP-headere eller andre steder der de automatisk fanges av plattformen.
 - Hemmeligheter som tilgangstokens logges aldri.
 - Loggene sendes til Nav sin sentrale loggplattform og er tilrettelagt for Team ISOC ved sikkerhetshendelser.

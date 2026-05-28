@@ -1,0 +1,209 @@
+const http = require("http");
+const fs = require("fs");
+const path = require("path");
+
+const PORT = 3333;
+const BASE = __dirname;
+const INPUT_DIR = path.join(BASE, "agent-input");
+const OUTPUT_DIR = path.join(BASE, "agent-output");
+const QA_FILE = path.join(BASE, "qa-status.json");
+
+// --- Helpers ---
+
+function readJson(filepath, fallback) {
+  try { return JSON.parse(fs.readFileSync(filepath, "utf-8")); }
+  catch { return fallback; }
+}
+
+function writeJson(filepath, data) {
+  fs.writeFileSync(filepath, JSON.stringify(data, null, 2), "utf-8");
+}
+
+function parseInputFile(content) {
+  const lines = content.split("\n");
+  const titleMatch = lines[0]?.match(/^#\s*Hjelp meg å dokumentere:\s*(\S+)\s+(.+)/);
+  if (!titleMatch) return null;
+
+  const id = titleMatch[1];
+  const title = titleMatch[2];
+
+  // Extract hensikt
+  let hensikt = "";
+  const hensiktIdx = lines.findIndex(l => l.startsWith("## Hensikten med kravet"));
+  const oppgaveIdx = lines.findIndex(l => l.startsWith("## Oppgave til AI"));
+  if (hensiktIdx >= 0 && oppgaveIdx >= 0) {
+    hensikt = lines.slice(hensiktIdx + 1, oppgaveIdx).join("\n").trim();
+  }
+
+  // Extract criteria
+  const criteria = [];
+  const criteriaRegex = /^Suksesskriterium (\d+) av (\d+)/;
+  for (let i = 0; i < lines.length; i++) {
+    const m = lines[i].match(criteriaRegex);
+    if (m) {
+      const num = parseInt(m[1]);
+      const criterionTitle = lines[i + 1]?.trim() || "";
+      // Find "Utfyllende om kriteriet" section
+      let description = "";
+      if (i + 3 < lines.length && lines[i + 2]?.trim() === "" && lines[i + 3]?.startsWith("Utfyllende om kriteriet")) {
+        const descStart = i + 4;
+        const descLines = [];
+        for (let j = descStart; j < lines.length; j++) {
+          if (lines[j].match(criteriaRegex) || lines[j].startsWith("## ")) break;
+          descLines.push(lines[j]);
+        }
+        description = descLines.join("\n").trim();
+      }
+      criteria.push({ num, title: criterionTitle, description });
+    }
+  }
+
+  return { id, title, hensikt, criteria };
+}
+
+function getOutputFiles(kravId) {
+  if (!fs.existsSync(OUTPUT_DIR)) return {};
+  const files = fs.readdirSync(OUTPUT_DIR).filter(f => f.startsWith(kravId + "-"));
+  const result = {};
+  for (const f of files) {
+    const content = fs.readFileSync(path.join(OUTPUT_DIR, f), "utf-8");
+    const mtime = fs.statSync(path.join(OUTPUT_DIR, f)).mtimeMs;
+    const m = f.match(/suksesskriterium(\d+)/);
+    if (m) result[parseInt(m[1])] = { filename: f, content, mtime };
+  }
+  return result;
+}
+
+function checkAndResetStaleQa(kravId, criteria) {
+  const qa = readJson(QA_FILE, {});
+  let changed = false;
+  for (const c of criteria) {
+    const key = kravId + "-" + c.num;
+    const entry = qa[key];
+    if (!entry || !entry.done) continue;
+    // If the file was modified after QA was marked, reset QA
+    if (c.mtime && entry.qaAt && c.mtime > entry.qaAt) {
+      entry.done = false;
+      entry.stale = true;
+      entry.staleReason = "Fil endret etter QA (" + new Date(c.mtime).toLocaleString("no-NO") + ")";
+      changed = true;
+    }
+  }
+  if (changed) writeJson(QA_FILE, qa);
+  return qa;
+}
+
+function buildKravList() {
+  if (!fs.existsSync(INPUT_DIR)) return [];
+  const files = fs.readdirSync(INPUT_DIR).filter(f => f.endsWith(".txt"));
+  const kravList = [];
+  for (const f of files) {
+    const content = fs.readFileSync(path.join(INPUT_DIR, f), "utf-8");
+    const parsed = parseInputFile(content);
+    if (!parsed) continue;
+    const outputs = getOutputFiles(parsed.id);
+    const criteria = parsed.criteria.map(c => ({
+      ...c,
+      answer: outputs[c.num]?.content || null,
+      filename: outputs[c.num]?.filename || null,
+      mtime: outputs[c.num]?.mtime || null
+    }));
+    // Check if any QA is stale due to file changes
+    checkAndResetStaleQa(parsed.id, criteria);
+    kravList.push({
+      id: parsed.id,
+      title: parsed.title,
+      hensikt: parsed.hensikt,
+      criteria
+    });
+  }
+  return kravList.sort((a, b) => a.id.localeCompare(b.id));
+}
+
+// --- HTTP Server ---
+
+function sendJson(res, data, status = 200) {
+  res.writeHead(status, { "Content-Type": "application/json" });
+  res.end(JSON.stringify(data));
+}
+
+function readBody(req) {
+  return new Promise((resolve) => {
+    let body = "";
+    req.on("data", chunk => body += chunk);
+    req.on("end", () => resolve(body));
+  });
+}
+
+const server = http.createServer(async (req, res) => {
+  const url = new URL(req.url, `http://localhost:${PORT}`);
+
+  // CORS
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET, PUT, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  if (req.method === "OPTIONS") { res.writeHead(204); res.end(); return; }
+
+  // API routes
+  if (url.pathname === "/api/last-modified" && req.method === "GET") {
+    // Returns max mtime across all output files + qa-status for efficient polling
+    let maxMtime = 0;
+    if (fs.existsSync(OUTPUT_DIR)) {
+      for (const f of fs.readdirSync(OUTPUT_DIR)) {
+        const mt = fs.statSync(path.join(OUTPUT_DIR, f)).mtimeMs;
+        if (mt > maxMtime) maxMtime = mt;
+      }
+    }
+    if (fs.existsSync(QA_FILE)) {
+      const mt = fs.statSync(QA_FILE).mtimeMs;
+      if (mt > maxMtime) maxMtime = mt;
+    }
+    return sendJson(res, { lastModified: maxMtime });
+  }
+
+  if (url.pathname === "/api/krav" && req.method === "GET") {
+    return sendJson(res, buildKravList());
+  }
+
+  if (url.pathname === "/api/qa-status" && req.method === "GET") {
+    return sendJson(res, readJson(QA_FILE, {}));
+  }
+
+  if (url.pathname === "/api/qa-status" && req.method === "PUT") {
+    const body = await readBody(req);
+    writeJson(QA_FILE, JSON.parse(body));
+    return sendJson(res, { ok: true });
+  }
+
+  if (url.pathname.startsWith("/api/output/") && req.method === "PUT") {
+    const filename = decodeURIComponent(url.pathname.replace("/api/output/", ""));
+    if (!filename || filename.includes("..") || filename.includes("/")) {
+      return sendJson(res, { error: "Invalid filename" }, 400);
+    }
+    const body = await readBody(req);
+    const { content } = JSON.parse(body);
+    if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+    fs.writeFileSync(path.join(OUTPUT_DIR, filename), content, "utf-8");
+    return sendJson(res, { ok: true, filename });
+  }
+
+  // Serve static files
+  let filePath = url.pathname === "/" ? "/index.html" : url.pathname;
+  filePath = path.join(BASE, filePath);
+  if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
+    const ext = path.extname(filePath);
+    const mimeTypes = { ".html": "text/html", ".js": "application/javascript", ".css": "text/css", ".json": "application/json" };
+    res.writeHead(200, { "Content-Type": mimeTypes[ext] || "text/plain" });
+    res.end(fs.readFileSync(filePath));
+  } else {
+    res.writeHead(404);
+    res.end("Not found");
+  }
+});
+
+server.listen(PORT, () => {
+  console.log(`\n  Etterlevelse QA-server kjører på: http://localhost:${PORT}\n`);
+  console.log(`  Leser input fra:  ${INPUT_DIR}`);
+  console.log(`  Leser/skriver output: ${OUTPUT_DIR}`);
+  console.log(`  QA-status lagres i:   ${QA_FILE}\n`);
+});

@@ -1,6 +1,6 @@
 EESSI Pensjon bruker utelukkende kortvarige, automatisk genererte tokens for autentisering mellom tjenester. Det finnes ingen statiske API-nøkler eller passord i tjeneste-til-tjeneste-kommunikasjonen.
 
-- Hemmeligheter som kreves av plattformen injiseres automatisk i kjøremiljøet av Nav sin applikasjonsplattform. De lagres aldri i kildekode, i lokale filer eller deles manuelt mellom utviklere.
-- Rotasjon av hemmeligheter håndteres gjennom plattformens automatiske nøkkelhåndtering.
+- Hemmeligheter som kreves av plattformen injiseres automatisk i kjøremiljøet av Nav sin applikasjonsplattform. De tas aldri ut av kjøremiljøet, lagres ikke i kildekode eller lokale filer, og deles ikke manuelt mellom utviklere.
+- Utviklere har ikke behov for å kopiere hemmeligheter — all konfigurasjon håndteres gjennom plattformens deklarative oppsett. Copy-paste av hemmelige verdier forekommer ikke i teamets arbeidsprosesser.
+- Rotasjon av hemmeligheter håndteres gjennom plattformens automatiske nøkkelhåndtering. Frekvensen er minst årlig.
 - Kildekoden sjekkes for utilsiktet innsjekking av hemmeligheter gjennom teamets code review-rutiner.
-- Utviklere har ikke behov for å kopiere hemmeligheter ut av kjøremiljøet, da all konfigurasjon håndteres gjennom plattformens deklarative oppsett.
