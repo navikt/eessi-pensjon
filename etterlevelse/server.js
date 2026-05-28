@@ -141,6 +141,34 @@ function parseOpenQuestions() {
   return result;
 }
 
+function toggleOpenQuestion(kravId, index, done) {
+  if (!fs.existsSync(OPEN_QUESTIONS_FILE)) return;
+  const content = fs.readFileSync(OPEN_QUESTIONS_FILE, "utf-8");
+  const lines = content.split("\n");
+  let currentKrav = null;
+  let questionIdx = -1;
+
+  for (let i = 0; i < lines.length; i++) {
+    const kravMatch = lines[i].match(/^##\s+(K\d+\.\d+)/);
+    if (kravMatch) {
+      currentKrav = kravMatch[1];
+      questionIdx = -1;
+      continue;
+    }
+    if (currentKrav !== kravId) continue;
+    const qMatch = lines[i].match(/^-\s*\[([ x])\]\s*/);
+    if (qMatch) {
+      questionIdx++;
+      if (questionIdx === index) {
+        const mark = done ? "x" : " ";
+        lines[i] = lines[i].replace(/^-\s*\[([ x])\]/, `- [${mark}]`);
+        break;
+      }
+    }
+  }
+  fs.writeFileSync(OPEN_QUESTIONS_FILE, lines.join("\n"), "utf-8");
+}
+
 function buildKravList() {
   if (!fs.existsSync(INPUT_DIR)) return [];
   const files = fs.readdirSync(INPUT_DIR).filter(f => f.endsWith(".txt"));
@@ -220,6 +248,13 @@ const server = http.createServer(async (req, res) => {
 
   if (url.pathname === "/api/open-questions" && req.method === "GET") {
     return sendJson(res, parseOpenQuestions());
+  }
+
+  if (url.pathname === "/api/open-questions" && req.method === "PUT") {
+    const body = await readBody(req);
+    const { kravId, index, done } = JSON.parse(body);
+    toggleOpenQuestion(kravId, index, done);
+    return sendJson(res, { ok: true });
   }
 
   if (url.pathname === "/api/qa-status" && req.method === "GET") {

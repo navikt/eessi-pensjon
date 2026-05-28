@@ -287,8 +287,11 @@
     }
     .open-questions h3 { font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.03em; color: #6a4e00; margin-bottom: 0.6rem; display: flex; align-items: center; gap: 0.4rem; }
     .open-questions h3 .count { background: var(--nav-orange); color: white; font-size: 0.68rem; padding: 0.1rem 0.4rem; border-radius: 10px; }
-    .oq-item { padding: 0.5rem 0; border-bottom: 1px solid var(--nav-gray-200); font-size: 0.82rem; display: flex; align-items: flex-start; gap: 0.4rem; }
+    .oq-item { padding: 0.5rem 0; border-bottom: 1px solid var(--nav-gray-200); font-size: 0.82rem; display: flex; align-items: flex-start; gap: 0.5rem; }
     .oq-item:last-child { border-bottom: none; }
+    .oq-item.oq-done { opacity: 0.55; }
+    .oq-item.oq-done .oq-text { text-decoration: line-through; }
+    .oq-item input[type="checkbox"] { margin-top: 0.2rem; cursor: pointer; accent-color: var(--nav-green); }
     .oq-owner { font-size: 0.72rem; color: var(--nav-gray-600); font-style: italic; margin-top: 0.1rem; }
 
     .refresh-toast {
@@ -349,6 +352,7 @@
     let lastModified = 0;
     let pollInterval = null;
     let isEditing = false;
+    let suppressNextPoll = false;
 
     // --- Data fetching ---
     async function loadData(silent = false) {
@@ -372,6 +376,10 @@
         const { lastModified: newMtime } = await res.json();
         if (lastModified && newMtime > lastModified) {
           lastModified = newMtime;
+          if (suppressNextPoll) {
+            suppressNextPoll = false;
+            return;
+          }
           await loadData(true);
         } else if (!lastModified) {
           lastModified = newMtime;
@@ -504,7 +512,7 @@
           const total = k.criteria.length;
           const qaCount = k.criteria.filter(c => qaStatus[k.id + "-" + c.num]?.done).length;
           const oq = openQuestions[k.id];
-          const oqCount = oq ? oq.length : 0;
+          const oqCount = oq ? oq.filter(q => !q.done).length : 0;
           html += `
             <div class="nav-item ${k.id === activeId ? 'active' : ''}" onclick="renderKrav('${k.id}')">
               <div class="nav-id">${k.id} ${statusBadge(k.id)}</div>
@@ -614,13 +622,15 @@
     function renderOpenQuestions(kravId) {
       const questions = openQuestions[kravId];
       if (!questions || questions.length === 0) return "";
+      const openCount = questions.filter(q => !q.done).length;
       return `
         <div class="open-questions">
-          <h3>⚠ Åpne spørsmål <span class="count">${questions.length}</span></h3>
-          ${questions.map(q => `
-            <div class="oq-item">
+          <h3>⚠ Åpne spørsmål <span class="count">${openCount}/${questions.length}</span></h3>
+          ${questions.map((q, i) => `
+            <div class="oq-item ${q.done ? 'oq-done' : ''}">
+              <input type="checkbox" ${q.done ? 'checked' : ''} onchange="toggleOq('${kravId}', ${i}, this.checked)" />
               <div>
-                <strong>${esc(q.topic)}:</strong> ${esc(q.text)}
+                <span class="oq-text"><strong>${esc(q.topic)}:</strong> ${esc(q.text)}</span>
                 <div class="oq-owner">→ ${esc(q.owner)}</div>
               </div>
             </div>
@@ -687,6 +697,22 @@
       if (checked) qaStatus[key].stale = false;
       await saveQaStatus();
       renderKrav(kravId);
+    }
+
+    async function toggleOq(kravId, index, checked) {
+      suppressNextPoll = true;
+      await fetch(API + "/api/open-questions", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ kravId, index, done: checked })
+      });
+      openQuestions[kravId][index].done = checked;
+      // Update only the OQ section + nav, without re-rendering all criteria
+      const oqContainer = document.querySelector('.open-questions');
+      if (oqContainer) {
+        oqContainer.outerHTML = renderOpenQuestions(kravId);
+      }
+      renderNav(kravId);
     }
 
     async function markAllQaDone(kravId) {
