@@ -5,3 +5,4 @@ EESSI Pensjon sjekker tilgang til brukere med adressebeskyttelse gjennom flere m
 - Tilgangssjekken for adressebeskyttelse delegeres til de underliggende fellesløsningene som EESSI Pensjon integrerer mot. Personoppslag skjer via Nav sin persondataløsning, som håndhever tilgangskontroll basert på graderingsroller.
 
 EESSI Pensjon er ikke et fagsystem som forvalter brukernes saker direkte — det behandler pensjonsdokumenter på vegne av fagsystemet. Tilgangsbegrensningene ivaretas primært av RINA (via EUX-plattformen) og persondataløsningen.
+test
