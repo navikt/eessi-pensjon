@@ -64,6 +64,12 @@ Språklige regler (fra veilederen):
 
 - **Skriv for lesere som ikke kjenner EESSI Pensjon.** Hovedmålgruppen er kraveiere, jurister, personvernombud, arkivarer og revisorer. De skal forstå teksten **uten** å kjenne til interne EP-tjenester, Kafka-topics, repo-navn eller teknisk arkitektur. Forklar heller funksjonen ("vi mottar og sender pensjonsdokumenter elektronisk til andre EU/EØS-land") enn infrastrukturen ("eessi-pensjon-journalforing konsumerer fra eessi-basis-sedmottatt-v1").
 - **Bruk riktig navn på saksbehandlerløsningen: EESSI Pensjon.** Saksbehandlere i Nav bruker **EESSI Pensjon** — det er navnet de kjenner og det som skal stå i kravtekster. "EP" er et internt, teknisk forkortelse for plattformen og repoene våre, og skal **ikke** brukes når vi omtaler saksbehandlers verktøy. Skriv "saksbehandler bruker EESSI Pensjon til å …", ikke "saksbehandler bruker EP til å …".
+- **Bruk følgende ord og begreper konsekvent:**
+  - Ikke "pensjonsdokument", bruk SED
+  - Ikke "EESSI-sak", bruk BUC
+  - Bruk PDL istedet for "persondataløsningen"
+  - Bruk PESYS istedenfor "fagsystemet for pensjon"
+  - Bruk Joark istedet for "dokumentarkivet"
 - **Skriv "rundt" det tekniske.** Bruk funksjonelle, hverdagslige formuleringer. Nevn EESSI/SED/RINA/BUC der det er nødvendig for å forstå domenet, men hopp over applikasjonsnavn, repo-paths, topic-navn, API-detaljer, bibliotek og versjonsnummer i selve kravteksten.
 - **Teknisk detalj hører hjemme i interne notater eller som vedlegg/lenker**, ikke i Hensikt, Suksesskriterier eller Beskrivelse. Hvis leseren trenger å grave dypere kan de følge en lenke i *Navn på kilde* eller *Dokumentasjon*.
 - **Norsk, klart språk.** Inkluderende og konkret — målet er at leseren forstår teksten ved første gjennomlesning og er trygg på det de leser.
@@ -73,6 +79,9 @@ Språklige regler (fra veilederen):
 - **Vær presis om omfang**, men på funksjonelt nivå. Si gjerne "saksbehandlerløsningen", "de delene av EESSI Pensjon som journalfører SED-er", eller "alle EP-tjenester som lagrer personopplysninger" — ikke lister av applikasjonsnavn.
 - **Ikke oppgi konkrete versjonsnummer** på rammeverk (Spring Boot, Kotlin, React osv.) — de endres ofte og er irrelevante for kraveier.
 - **Ikke start tekster med "Ja, …", "Dette suksesskriteriet er oppfylt", "Vi oppfyller dette kravet" eller annen statusbekreftelse.** I portalen finnes det egne avkrysningsbokser/statusfelt der teamet markerer at kriteriet er oppfylt. Selve tekstfeltet skal beskrive *hvordan* kriteriet oppfylles – ikke bekrefte at det er oppfylt. Skriv direkte inn i saken: "EESSI Pensjon håndterer …", ikke "Ja, vi har avklart at EESSI Pensjon håndterer …" eller "Dette suksesskriteriet er oppfylt. EESSI Pensjon håndterer …". Statusvurderingen (Ja / Ja delvis / Nei) hører hjemme i `etterlevelse/status.md` og i svaret til brukeren – ikke i selve teksten som limes inn i portalen.
+- **Ikke repeter med tekst fra suksesskriteriet.** Suksesskriteriene er allerede formulert i portalen. Teksten du skriver skal utdype og forklare hvordan kriteriet oppfylles, ikke gjenta det.
+- **Ikke skriv at teamet "jobber med", "er kjent med", "jobber med å lukke avviket" e.l dersom det står som et åpent spørmål i `etterlevelse/apne-sporsmal.md`.** Hvis det er en usikkerhet eller antagelse som ikke er verifisert, skal det flagges i `apne-sporsmal.md` og ikke omtales som avklart i teksten.
+- **Hvis kriteriet ikke er relevant for EESSI Pensjon, skriv det eksplisitt og kort.** Det er bedre å skrive "Dette kriteriet er ikke relevant for EESSI Pensjon fordi …" enn å la det være tomt eller uklart.
 - **Ikke dikt opp fakta.** Hvis du ikke kan verifisere noe fra architecture.md eller et repo, si det eksplisitt og be om bekreftelse.
 
 ## Hvor du lagrer output
@@ -93,11 +102,15 @@ Filen `etterlevelse/apne-sporsmal.md` er teamets felles oppfølgingsdokument for
 Når du skriver etterlevelse-tekster og gjør en antagelse som ikke kan verifiseres fra architecture.md eller et EP-repo, skal du automatisk legge til et punkt i dette dokumentet under riktig krav – uten å spørre brukeren først. Terskelen for å legge til er lav: hvis noe er litt usikkert, vagt eller avhenger av andre team, før det opp.
 
 Regler for oppføringer:
-- Bruk eksisterende format i filen: `- [ ] **<tema>:** <hva som må bekreftes>. <hvem vi må snakke med>.`
+- Bruk eksisterende format i filen: `- [ ] **<tema> (<suksesskritierium x>):** <hva som må bekreftes>. <hvem vi må snakke med>.`
+- Tema og suksesskriterium skal referere til det konkrete punktet i portalen som er uklart.
+- Hvis det gjelder flere suksesskriterier, legg de til som en kommasert etter temaet, f.eks. `- [ ] **Informasjonssikkerhet (SK1, SK3):** ...`
+- Hvis det er en generell antagelse som gjelder flere punkter, kan du skrive "Generelt".
 - Hvert punkt skal si hva som må bekreftes og hvem som sannsynligvis vet svaret (team eessipensjon, Team dokumentløsninger, SIF, fagansvarlige per ytelse, osv.).
 - Hvis flere krav lener seg på samme antagelse, legg punktet under seksjonen "Tverrgående antagelser" i stedet for å duplisere det per krav. Henvis fra kravseksjonene til det tverrgående punktet.
 - Opprett en ny `## K<nr>.<nr> – <tittel>`-seksjon hvis kravet ikke finnes fra før.
 - Ikke slett eller endre eksisterende punkter – brukeren krysser av (`[x]`) selv.
+- Legg til mulighet for kommentarer i punktet, f.eks. `- [ ] **<tema> (SKx):** <hva som må bekreftes>. <hvem vi må snakke med>. _Kommentar: ..._`
 - Skriv inn `apne-sporsmal.md` **uten** meta-instruksjoner eller format-forklaringer i dokumentet; det er et team-dokument, ikke agent-dokumentasjon. Instruksjoner for hvordan agenten skal bruke filen hører hjemme her i agent-filen.
 
 **VIKTIG ved redigering:** Les alltid hele filen med `view` først, og bruk `edit` med nok kontekst i `old_str` til at du *ikke* utilsiktet erstatter en annen krav-header. Hvis du er usikker, foretrekk å lese hele filen og skrive den ut på nytt i stedet for punktvise edits – da unngår du duplikater.
