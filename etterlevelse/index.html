@@ -368,6 +368,7 @@
     let lastModified = 0;
     let pollInterval = null;
     let isEditing = false;
+    let editingContext = null; // { kravId, num, idx }
     let suppressNextPoll = false;
     let accordionState = {}; // { "kravId-num": true/false }
 
@@ -726,8 +727,24 @@
 
     // --- Actions ---
 
+    function saveEditInProgress() {
+      if (!isEditing || !editingContext) return;
+      const { kravId, num, idx } = editingContext;
+      const ta = document.getElementById(`edit-textarea-${kravId}-${num}`);
+      if (!ta) return;
+      const k = kravList.find(x => x.id === kravId);
+      if (k && k.criteria[idx]) k.criteria[idx].answer = ta.value;
+    }
+
+    function restoreEditIfNeeded() {
+      if (!isEditing || !editingContext) return;
+      const { kravId, num, idx } = editingContext;
+      startEdit(kravId, num, idx);
+    }
+
     function startEdit(kravId, num, idx) {
       isEditing = true;
+      editingContext = { kravId, num, idx };
       const k = kravList.find(x => x.id === kravId);
       const c = k.criteria[idx];
       const container = document.getElementById(`answer-${kravId}-${num}`);
@@ -766,11 +783,13 @@
       await saveQaStatus();
 
       isEditing = false;
+      editingContext = null;
       renderKrav(kravId);
     }
 
     function cancelEdit(kravId) {
       isEditing = false;
+      editingContext = null;
       renderKrav(kravId);
     }
 
@@ -783,9 +802,10 @@
       qaStatus[key].qaAt = Date.now();
       if (isQaDone(status)) qaStatus[key].stale = false;
       await saveQaStatus();
-      // Update just the criterion and nav without full re-render
       saveAccordionState();
+      saveEditInProgress();
       renderKrav(kravId);
+      restoreEditIfNeeded();
     }
 
     async function toggleOq(kravId, index, checked) {
