@@ -1,8 +1,8 @@
-EESSI Pensjon behandler pensjonsdokumenter som kan inneholde geolokaliserende opplysninger utover adresse — for eksempel opplysninger om arbeidsgiver, trygdetilhørighet i bestemte land, eller bostedshistorikk.
+EESSI Pensjon behandler SED-er som kan inneholde geolokaliserende opplysninger utover adresse — for eksempel opplysninger om arbeidsgiver, trygdetilhørighet i bestemte land, eller bostedshistorikk.
 
 Deling av slike opplysninger med andre EU/EØS-lands trygdemyndigheter gjennom EESSI-rammeverket er lovpålagt og nødvendig for å behandle grensekryssende pensjonsrettigheter. Teamets vurdering er:
 
-- Opplysningene som deles via pensjonsdokumenter er begrenset til det som er nødvendig for den aktuelle pensjonssaken og følger standardiserte EU-skjemaer. EESSI Pensjon kan ikke selektivt fjerne enkeltfelter fra disse skjemaene — innholdet er definert av EU-forordningen.
+- Opplysningene som deles via SED-er er begrenset til det som er nødvendig for den aktuelle pensjonssaken og følger standardiserte EU-skjemaer. EESSI Pensjon kan ikke selektivt fjerne enkeltfelter fra disse skjemaene — innholdet er definert av EU-forordningen.
 - For brukere med adressebeskyttelse der en pensjonssak likevel må behandles gjennom EESSI, vil saksbehandleren være oppmerksom på sensitivitetsmarkeringen og kan vurdere om spesielle hensyn må tas før dokumentet sendes.
 - EESSI Pensjon deler ingen geolokaliserende opplysninger med privatpersoner, private virksomheter eller andre mottakere utover trygdemyndighetene i EU/EØS-land.
 

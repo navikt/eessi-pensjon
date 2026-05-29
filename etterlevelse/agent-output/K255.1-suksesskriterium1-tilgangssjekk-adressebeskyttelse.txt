@@ -1,7 +1,7 @@
 EESSI Pensjon beskytter tilgangen til brukere med adressebeskyttelse gjennom flere lag:
 
-- Når et pensjonsdokument (SED) sendes eller mottas, sjekkes automatisk alle norske personnumre i dokumentet mot persondataløsningen (PDL). Dersom noen av personene har strengt fortrolig adresse eller strengt fortrolig adresse utland, markeres hele EESSI-saken (BUC) som sensitiv i RINA.
-- En saksbehandler uten riktig tilgangsnivå kan ikke åpne en sensitiv EESSI-sak — RINA håndhever denne begrensningen.
-- Personoppslag som EESSI Pensjon gjør mot Nav sine fellesløsninger (persondataløsningen, fagsystemet for pensjon, dokumentarkivet) benytter on-behalf-of-token der det er mulig, slik at tilgangskontrollen i disse systemene håndheves med saksbehandlerens identitet.
+- Når en SED sendes eller mottas, sjekkes automatisk alle norske personnumre i dokumentet mot PDL. Dersom noen av personene har strengt fortrolig adresse eller strengt fortrolig adresse utland, markeres hele BUC-en som sensitiv i RINA.
+- En saksbehandler uten riktig tilgangsnivå kan ikke åpne en sensitiv BUC — RINA håndhever denne begrensningen.
+- Personoppslag som EESSI Pensjon gjør mot Nav sine fellesløsninger (PDL, PESYS, Joark) benytter on-behalf-of-token der det er mulig, slik at tilgangskontrollen i disse systemene håndheves med saksbehandlerens identitet.
 
-EESSI Pensjon forvalter ikke egne brukersaker — det behandler pensjonsdokumenter som utveksles med andre EU/EØS-land. Tilgangskontrollen for adressebeskyttelse håndheves primært av RINA (via EUX-plattformen) og persondataløsningen. EESSI Pensjon sin rolle er å sørge for at saker som involverer adressebeskyttede personer blir korrekt identifisert og merket.
+EESSI Pensjon forvalter ikke egne brukersaker — det behandler SED-er som utveksles med andre EU/EØS-land. Tilgangskontrollen for adressebeskyttelse håndheves primært av RINA (via EUX-plattformen) og PDL. EESSI Pensjon sin rolle er å sørge for at saker som involverer adressebeskyttede personer blir korrekt identifisert og merket.

@@ -43,12 +43,12 @@
   },
   "K255.1-8": {
     "done": true,
-    "timestamp": "29.5.2026, 19:09:39",
-    "qaAt": 1780074579574,
+    "timestamp": "29.5.2026, 19:42:00",
+    "qaAt": 1780076520099,
     "stale": false,
     "edited": true,
     "editTimestamp": "29.5.2026, 14:22:45",
-    "staleReason": "Fil endret etter QA (29.5.2026, 14:22:45)",
+    "staleReason": "Fil endret etter QA (29.5.2026, 19:34:05)",
     "status": "oppfylt"
   }
 }
