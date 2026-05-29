@@ -1,8 +1,6 @@
-EESSI Pensjon utveksler pensjonsdokumenter (SED-er) med trygdemyndigheter i andre EU/EØS-land gjennom det regulerte EESSI-rammeverket. Denne utvekslingen er lovpålagt og skjer mellom offentlige institusjoner.
+EESSI Pensjon utveksler SED-er med trygdemyndigheter i andre EU/EØS-land. Denne utvekslingen er lovpålagt og skjer mellom offentlige institusjoner.
 
 - Ved forhåndsutfylling av pensjonsdokumenter sjekker EESSI Pensjon om personen har adressebeskyttelse. For brukere med fortrolig eller strengt fortrolig adresse utelates adresseopplysninger — adressefeltet i dokumentet blir tomt.
-- Brukere med strengt fortrolig adresse har ikke en registrert adresse i persondataløsningen (kun en postboks hos Kripos), så det finnes i praksis ingen adresse å hente.
-- For brukere med strengt fortrolig adresse utland, som kan ha adresseopplysninger i persondataløsningen, er det en kjent problemstilling at den gjeldende adressefiltreringen ikke fanger opp denne graderingen. Teamet er kjent med dette og arbeider med å lukke avviket.
-- EESSI Pensjon deler ikke opplysninger med privatpersoner eller private virksomheter. All deling skjer innenfor det offentlige EESSI-samarbeidet mellom trygdemyndigheter.
+*- For brukere med strengt fortrolig adresse utland, som kan ha adresseopplysninger i persondataløsningen, er det en kjent problemstilling at den gjeldende adressefiltreringen ikke fanger opp denne graderingen. Teamet er kjent med dette og arbeider med å lukke avviket.*
+- EESSI Pensjon deler ikke opplysninger med privatpersoner eller private virksomheter. All deling skjer innenfor EESSI-samarbeidet mellom trygdemyndigheter.
 
-Teamet har ikke identifisert scenarier der EESSI Pensjon deler adresseopplysninger med eksterne parter utover det som er regulert av EESSI-rammeverket.
