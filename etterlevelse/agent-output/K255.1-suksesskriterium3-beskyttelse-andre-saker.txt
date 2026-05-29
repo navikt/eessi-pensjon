@@ -1,6 +1,7 @@
-EESSI Pensjon behandler pensjonsdokumenter (SED-er) som kan inneholde opplysninger om flere personer — typisk forsørgede, ektefeller eller barn. Når en av disse personene har adressebeskyttelse, gjelder følgende:
+EESSI Pensjon behandler pensjonsdokumenter (SED-er) som kan inneholde opplysninger om flere personer — typisk ektefelle, barn eller andre forsørgede. Når en av disse personene har adressebeskyttelse, gjelder følgende:
 
-- Den automatiske sensitivitetssjekken som kjøres ved mottak og sending av dokumenter, sjekker alle norske identiteter som forekommer i dokumentet — ikke bare hovedpersonen. Dersom noen av personene har fortrolig eller strengt fortrolig adresse, markeres hele saken som sensitiv.
-- Dette sikrer at opplysninger om en adressebeskyttet person ikke blir tilgjengelige for saksbehandlere uten riktig rolle, selv om personen kun er nevnt som en relatert part i en annen brukers pensjonssak.
+- Den automatiske sensitivitetssjekken sjekker alle norske personnumre som forekommer i dokumentet — ikke bare hovedpersonen på saken. Dersom noen av personene har strengt fortrolig adresse, markeres hele EESSI-saken som sensitiv.
+- Sjekken gjøres også mot alle andre dokumenter i samme sak, ikke bare det nye dokumentet. Dette sikrer at en person som er nevnt i et tidligere dokument i saken også fanges opp.
+- Opplysninger om en adressebeskyttet person blir dermed ikke tilgjengelige for saksbehandlere uten riktig rolle, selv om personen kun er nevnt som en relatert part i en annen brukers pensjonssak.
 
 EESSI Pensjon har ingen egne databaser med personopplysninger som lagres på tvers av saker. Pensjonsdokumentene journalføres i Nav sitt sentrale dokumentarkiv, som har egen tilgangskontroll for graderte dokumenter.

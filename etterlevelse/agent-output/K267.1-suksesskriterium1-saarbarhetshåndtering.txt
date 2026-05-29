@@ -1,8 +1,13 @@
-EESSI Pensjon har automatisert sårbarhetsskanning som kjører ved hvert bygg. Alle applikasjoner og deres avhengigheter analyseres mot kjente sårbarhetsdatabaser, og funn rapporteres med alvorlighetsgrad (CVSS-score). I tillegg overvåkes sikkerhetsrådgivninger fra avhengighetsregistre løpende, slik at teamet varsles om nye sårbarheter også mellom bygg.
+EESSI Pensjon benytter flere lag med sårbarhetsskanning:
 
-Teamet har etablerte rutiner for oppfølging av funn:
+- Container-images skannes automatisk ved bygging og publisering til Nav sin plattform. Plattformens skanner identifiserer kjente sårbarheter i base-image og systembiblioteker.
+- Frontend-applikasjonen overvåkes av Dependabot, som automatisk foreslår oppgraderinger av npm-pakker ved kjente sårbarheter.
+- Backend-tjenestene overvåkes gjennom Gradle-avhengighetsanalyse og manuelle gjennomganger mot offentlige sårbarhetsdatabaser.
+- Teamet mottar varsler om nye sårbarheter fortløpende og følger opp funn aktivt.
+
+Rutiner for oppfølging:
 
 - Kritiske sårbarheter (CVSS over 9) håndteres innen neste arbeidsdag.
 - Øvrige sårbarheter vurderes og utbedres løpende, senest innen tre måneder.
-- Sårbarheter som ikke kan rettes umiddelbart blir risikovurdert og dokumentert med begrunnelse for akseptert risiko.
-- I tillegg til automatisk skanning gjennomfører teamet manuelle kontroller for å fange sårbarheter som ikke dekkes av verktøyene.
+- Sårbarheter som ikke kan rettes umiddelbart blir risikovurdert og dokumentert med begrunnelse for akseptert restrisiko.
+- Teamet gjennomfører jevnlig manuelle gjennomganger for å fange opp sårbarheter som automatiske verktøy ikke dekker.

@@ -1,7 +1,7 @@
-EESSI Pensjon har tilgangskontroll på alle endepunkter. Ingen endepunkter er offentlig tilgjengelige.
+EESSI Pensjon har tilgangskontroll på alle endepunkter — ingen endepunkter er offentlig tilgjengelige:
 
-- Alle API-endepunkter krever gyldig autentiseringstoken. Uautentiserte forespørsler avvises av rammeverket før de når applikasjonskoden.
-- Saksbehandlergrensesnittet krever innlogging via Entra ID for Nav-ansatte. Løsningen er kun tilgjengelig for ansatte med riktig tilgangsnivå.
-- Tjeneste-til-tjeneste-kommunikasjon viderefører brukerens identitet og tilganger gjennom hele tjenestekjeden der det er mulig (on-behalf-of-mønsteret).
-- Tilgangskontroll for funksjoner som krever spesielle rettigheter (for eksempel tilgang til graderte eller skjermede personer) delegeres til de underliggende fagsystemene og fellesløsningene, i tråd med teamets arkitekturbeslutning om delegert tilgangsstyring.
-- All trafikk går gjennom Nav sitt interne nettverk og plattformens nettverkssikring. Kravet om compliant device eller phishing-resistent MFA for Nav-ansatte ivaretas av plattformens autentiseringsløsning.
+- Alle API-endepunkter krever gyldig autentiseringstoken. Uautentiserte forespørsler avvises før de når applikasjonskoden.
+- Saksbehandlergrensesnittet krever innlogging via Entra ID for Nav-ansatte. Løsningen er kun tilgjengelig for ansatte med riktig tilgangsnivå og riktig AD-gruppemedlemskap (pensjon og uføre).
+- Tjeneste-til-tjeneste-kommunikasjon bruker on-behalf-of-token der det er mulig, slik at brukerens identitet og tilganger følger hele tjenestekjeden.
+- Tilgangskontroll for funksjoner som krever spesielle rettigheter (for eksempel tilgang til graderte eller skjermede personer) delegeres til de underliggende fagsystemene og fellesløsningene som eier tilgangspolicyen. Dette er en bevisst arkitekturbeslutning: EESSI Pensjon videresender brukerens identitet til systemene som eier dataene, og disse håndhever tilgangsreglene.
+- All trafikk mellom tjenestene går gjennom Nav sitt interne nettverk med plattformens nettverkspolicyer (eksplisitte tilgangsregler mellom tjenester).

@@ -1,8 +1,7 @@
-EESSI Pensjon sjekker tilgang til brukere med adressebeskyttelse gjennom flere mekanismer:
+EESSI Pensjon beskytter tilgangen til brukere med adressebeskyttelse gjennom flere lag:
 
-- Når en pensjonssak (BUC) i EESSI-systemet involverer en person med fortrolig eller strengt fortrolig adresse, oppdages dette automatisk ved mottak eller sending av pensjonsdokumenter. Saken markeres da som sensitiv i RINA, slik at kun saksbehandlere med riktig tilgangsnivå kan åpne den.
-- Saksbehandlergrensesnittet (EESSI Pensjon) arver tilgangsbegrensningene fra RINA — en saksbehandler uten nødvendig rolle vil ikke kunne åpne en sensitiv sak.
-- Tilgangssjekken for adressebeskyttelse delegeres til de underliggende fellesløsningene som EESSI Pensjon integrerer mot. Personoppslag skjer via Nav sin persondataløsning, som håndhever tilgangskontroll basert på graderingsroller.
+- Når et pensjonsdokument (SED) sendes eller mottas, sjekkes automatisk alle norske personnumre i dokumentet mot persondataløsningen (PDL). Dersom noen av personene har strengt fortrolig adresse eller strengt fortrolig adresse utland, markeres hele EESSI-saken (BUC) som sensitiv i RINA.
+- En saksbehandler uten riktig tilgangsnivå kan ikke åpne en sensitiv EESSI-sak — RINA håndhever denne begrensningen.
+- Personoppslag som EESSI Pensjon gjør mot Nav sine fellesløsninger (persondataløsningen, fagsystemet for pensjon, dokumentarkivet) benytter on-behalf-of-token der det er mulig, slik at tilgangskontrollen i disse systemene håndheves med saksbehandlerens identitet.
 
-EESSI Pensjon er ikke et fagsystem som forvalter brukernes saker direkte — det behandler pensjonsdokumenter på vegne av fagsystemet. Tilgangsbegrensningene ivaretas primært av RINA (via EUX-plattformen) og persondataløsningen.
-test
+EESSI Pensjon forvalter ikke egne brukersaker — det behandler pensjonsdokumenter som utveksles med andre EU/EØS-land. Tilgangskontrollen for adressebeskyttelse håndheves primært av RINA (via EUX-plattformen) og persondataløsningen. EESSI Pensjon sin rolle er å sørge for at saker som involverer adressebeskyttede personer blir korrekt identifisert og merket.

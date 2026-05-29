@@ -1,8 +1,8 @@
-EESSI Pensjon validerer input og output i alle grensesnitt — også data fra interne systemer vi stoler på:
+EESSI Pensjon validerer input og output i alle grensesnitt — også fra interne systemer og andre Nav-løsninger:
 
 - Alle API-endepunkter validerer innkommende forespørsler med typesikre datamodeller. Ugyldige forespørsler avvises før de når forretningslogikken.
-- Løsningen behandler strukturerte pensjonsdokumenter (SED-er) som følger fastsatte skjemaer definert av EU. Innholdet valideres mot disse skjemaene ved mottak, uavhengig av avsender.
-- Saksbehandlergrensesnittet bruker forhåndsdefinerte valg og strukturerte felter fremfor fritekst der det er mulig, noe som begrenser muligheten for ondsinnet input. Der fritekst tillates, gjøres kontroll på innhold.
+- Pensjonsdokumenter (SED-er) følger fastsatte skjemaer definert av EU. Innholdet valideres mot disse skjemaene, uavhengig av hvilken institusjon som sendte dokumentet.
+- Saksbehandlergrensesnittet bruker i hovedsak forhåndsdefinerte valg og strukturerte felter (nedtrekkslister, avkrysningsbokser, radioknapper). Der fritekst tillates — typisk for supplerende informasjonsfelt i pensjonsdokumenter — begrenses lengden, og innholdet valideres mot dokumentskjemaets tillatte struktur på tjenersiden før det sendes videre.
 - Løsningen bruker ingen egne SQL-databaser og er dermed ikke eksponert for SQL-injection.
-- Loggføring sørger for at sensitiv informasjon som fødselsnummer og tokens ikke skrives til logger som er tilgjengelige utenfor teamet. Logg behandles som output og saniteres deretter.
 - Data som sendes videre til andre Nav-systemer formateres i henhold til mottakernes spesifikasjoner, slik at EESSI Pensjon ikke utgjør en angrepsvektor for konsumenter.
+- Loggføring behandles som output: sensitiv informasjon som fødselsnummer og tokens skrives aldri til logger som er tilgjengelige utenfor teamet, og forekommer ikke i URL-er eller HTTP-headere.

@@ -1,7 +1,7 @@
-EESSI Pensjon benytter Nav sin standardplattform for drift og arver plattformens backup-mekanismer:
+EESSI Pensjon benytter Nav sin standardplattform for drift og arver plattformens backup- og redundansmekanismer:
 
-- All kildekode er versjonskontrollert i GitHub, som sørger for redundans og backup av kodebasen.
-- Applikasjonene har ingen egne SQL-databaser. Mellomlagring skjer i skybasert objektlagring med innebygd redundans og versjonering i norsk region.
-- Meldingshåndtering (hendelsesstrømmer for pensjonsdokumenter) kjører på Nav sin meldingsplattform som har innebygd replikering og lagring.
+- All kildekode er versjonskontrollert i GitHub med distribuert redundans.
+- Applikasjonene har ingen egne SQL-databaser. Mellomlagring skjer i skybasert objektlagring (GCP Storage) med innebygd redundans, levetidsregler og versjonering, i norsk region.
+- Hendelsesstrømmene (meldinger om pensjonsdokumenter) kjører på Nav sin meldingsplattform med innebygd replikering og konfigurerbar lagringstid.
 
-Teamet har en dokumentert gjenopprettingsplan: tjenestene gjenopprettes ved re-deploy fra kildekoden. Siden løsningen ikke har egne databaser med langtidslagret tilstand, er gjenopprettingen i praksis en ny utrulling fra siste fungerende versjon. Ubehandlede meldinger i hendelsesstrømmen prosesseres automatisk ved oppstart. Teamet vurderer at plattformens standardmekanismer dekker behovet, og har ikke identifisert behov for egne backup-løsninger utover det plattformen tilbyr.
+Teamet har en gjenopprettingsplan. Tjenestene gjenopprettes ved re-deploy fra kildekode — siden løsningen ikke har egne databaser med langtidslagret tilstand, er gjenopprettingen i praksis en ny utrulling fra siste fungerende versjon. Ubehandlede meldinger i hendelsesstrømmen prosesseres automatisk ved oppstart. Teamet verifiserer at gjenopprettingen fungerer gjennom regelmessige deployments.

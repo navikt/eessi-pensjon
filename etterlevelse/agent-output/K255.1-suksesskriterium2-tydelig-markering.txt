@@ -1,6 +1,6 @@
 Når en saksbehandler i EESSI Pensjon åpner en sak som involverer en person med adressebeskyttelse, markeres dette i systemet:
 
-- Pensjonssaker (BUC-er) som involverer personer med kode 6 eller kode 7 blir automatisk merket som sensitive. Denne markeringen er synlig for saksbehandlere som har tilgang, slik at de er oppmerksomme på at opplysningene krever spesiell varsomhet.
-- Dersom en saksbehandler forsøker å åpne en sensitiv sak uten riktig tilgangsnivå, avvises forespørselen med en forklaring — det returneres ikke et tomt resultat.
+- EESSI-saker (BUC-er) som involverer personer med strengt fortrolig adresse markeres automatisk som sensitive. Denne markeringen er synlig for saksbehandlere som har tilgang, slik at de er oppmerksomme på at opplysningene må behandles med spesiell varsomhet.
+- Dersom en saksbehandler forsøker å åpne en sensitiv sak uten riktig tilgangsnivå, avvises tilgangen av RINA — det returneres ikke et tomt resultat. Saksbehandleren får informasjon om at saken er begrenset.
 
-Markeringen av sensitive saker skjer automatisk og krever ingen manuell handling fra saksbehandler.
+Markeringen av sensitive saker skjer automatisk og krever ingen manuell handling fra saksbehandler. Den automatiske sjekken kjøres ved hvert nytt dokument som sendes eller mottas, slik at også personer som får adressebeskyttelse etter at saken ble opprettet, fanges opp.

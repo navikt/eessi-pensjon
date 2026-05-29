@@ -16,4 +16,4 @@
 
 ---
 
-Sist oppdatert: 2026-05-28
+Sist oppdatert: 2026-05-29

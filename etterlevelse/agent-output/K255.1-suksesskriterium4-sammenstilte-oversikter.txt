@@ -1,6 +1,7 @@
-EESSI Pensjon har et saksbehandlergrensesnitt som viser oversikter over pågående pensjonssaker (BUC-er). Disse oversiktene kan potensielt inneholde saker som involverer brukere med adressebeskyttelse.
+EESSI Pensjon har et saksbehandlergrensesnitt som viser oversikter over pågående EESSI-saker. Disse oversiktene kan inneholde saker som involverer brukere med adressebeskyttelse.
 
-- Saker som er markert som sensitive i RINA er kun synlige for saksbehandlere med riktig tilgangsnivå. I oversiktslister filtreres sensitive saker bort for saksbehandlere som ikke har nødvendig rolle.
-- EESSI Pensjon viser ikke adresser eller andre geolokaliserende opplysninger i oversiktslister — oversiktene inneholder kun saksinformasjon (sakstype, status, dato).
+- Oversiktene hentes fra RINA via EUX-plattformen. Saker markert som sensitive filtreres av RINA basert på saksbehandlerens tilgangsnivå.
+- EESSI Pensjon viser ikke adresser eller andre geolokaliserende opplysninger i saksoversikter — oversiktene inneholder kun saksinformasjon som sakstype, status og dato.
+- Tilgangskontrollen i saksoversiktene håndheves av RINA/EUX-plattformen, som EESSI Pensjon arver etterlevelsen fra.
 
 Dersom fremtidige endringer i saksbehandlergrensesnittet introduserer nye oversiktsvisninger som viser personopplysninger om flere brukere samtidig, vil teamet vurdere behovet for ytterligere filtrering av brukere med adressebeskyttelse.
