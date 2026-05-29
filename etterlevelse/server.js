@@ -116,26 +116,38 @@ function parseOpenQuestions() {
       continue;
     }
     if (!currentKrav) continue;
-    // Match question line: - [ ] **Topic:** Text. Owner.
+    // Match question line: - [ ] **Topic:** Text. Owner. _Kommentar: ..._
     // or: - [x] **Topic:** Text. Owner.
     const qMatch = line.match(/^-\s*\[([ x])\]\s*\*\*([^*]+)\*\*:?\s*(.+)/);
     if (qMatch) {
       const done = qMatch[1] === "x";
       const topic = qMatch[2].trim();
-      const rest = qMatch[3].trim();
-      // Try to split text and owner (last sentence after last period)
-      const lastDot = rest.lastIndexOf(".");
+      let rest = qMatch[3].trim();
+
+      // Extract comment if present: _Kommentar: ..._
+      let comment = "";
+      const commentMatch = rest.match(/\s*_Kommentar:\s*(.+?)_\s*$/);
+      if (commentMatch) {
+        comment = commentMatch[1].trim();
+        rest = rest.substring(0, rest.length - commentMatch[0].length).trim();
+      }
+
+      // Try to split text and owner (last sentence before trailing period)
+      // Format: "Description text. Owner team." — owner is last sentence
       let text = rest;
       let owner = "";
+      // Strip trailing period for analysis
+      const stripped = rest.endsWith(".") ? rest.slice(0, -1).trim() : rest;
+      const lastDot = stripped.lastIndexOf(".");
       if (lastDot > 0) {
-        const afterDot = rest.substring(lastDot + 1).trim();
-        // Heuristic: owner is typically short (< 60 chars) and after the last period
-        if (afterDot.length > 0 && afterDot.length < 60) {
-          text = rest.substring(0, lastDot + 1).trim();
-          owner = afterDot;
+        const candidate = stripped.substring(lastDot + 1).trim();
+        // Heuristic: owner is typically short (< 60 chars), starts with uppercase or "team"
+        if (candidate.length > 0 && candidate.length < 60) {
+          text = stripped.substring(0, lastDot + 1).trim();
+          owner = candidate;
         }
       }
-      result[currentKrav].push({ topic, text, owner, done });
+      result[currentKrav].push({ topic, text, owner, done, comment });
     }
   }
   return result;
@@ -162,6 +174,38 @@ function toggleOpenQuestion(kravId, index, done) {
       if (questionIdx === index) {
         const mark = done ? "x" : " ";
         lines[i] = lines[i].replace(/^-\s*\[([ x])\]/, `- [${mark}]`);
+        break;
+      }
+    }
+  }
+  fs.writeFileSync(OPEN_QUESTIONS_FILE, lines.join("\n"), "utf-8");
+}
+
+function updateOpenQuestionComment(kravId, index, comment) {
+  if (!fs.existsSync(OPEN_QUESTIONS_FILE)) return;
+  const content = fs.readFileSync(OPEN_QUESTIONS_FILE, "utf-8");
+  const lines = content.split("\n");
+  let currentKrav = null;
+  let questionIdx = -1;
+
+  for (let i = 0; i < lines.length; i++) {
+    const kravMatch = lines[i].match(/^##\s+(K\d+\.\d+)/);
+    if (kravMatch) {
+      currentKrav = kravMatch[1];
+      questionIdx = -1;
+      continue;
+    }
+    if (currentKrav !== kravId) continue;
+    const qMatch = lines[i].match(/^-\s*\[([ x])\]\s*/);
+    if (qMatch) {
+      questionIdx++;
+      if (questionIdx === index) {
+        // Remove existing comment if any
+        lines[i] = lines[i].replace(/\s*_Kommentar:\s*.+?_\s*$/, "");
+        // Add new comment if non-empty
+        if (comment && comment.trim()) {
+          lines[i] = lines[i].trimEnd() + " _Kommentar: " + comment.trim() + "_";
+        }
         break;
       }
     }
@@ -254,6 +298,13 @@ const server = http.createServer(async (req, res) => {
     const body = await readBody(req);
     const { kravId, index, done } = JSON.parse(body);
     toggleOpenQuestion(kravId, index, done);
+    return sendJson(res, { ok: true });
+  }
+
+  if (url.pathname === "/api/open-questions/comment" && req.method === "PUT") {
+    const body = await readBody(req);
+    const { kravId, index, comment } = JSON.parse(body);
+    updateOpenQuestionComment(kravId, index, comment);
     return sendJson(res, { ok: true });
   }
 
