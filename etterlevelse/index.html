@@ -385,8 +385,8 @@
     .git-btn-push:hover { background: var(--nav-blue-dark); }
     .git-btn-push:disabled { background: var(--nav-gray-300); cursor: not-allowed; }
     .git-btn-cancel { background: var(--nav-gray-200); color: #333; }
-    .git-select-actions { font-size: 0.75rem; margin-bottom: 0.5rem; }
-    .git-select-actions button { background: none; border: none; color: var(--nav-blue); cursor: pointer; font-size: 0.75rem; text-decoration: underline; }
+    .git-select-actions { font-size: 0.8rem; margin-bottom: 0.5rem; }
+    .git-select-actions label { display: flex; align-items: center; gap: 0.4rem; cursor: pointer; }
     .git-msg { padding: 0.6rem; border-radius: 5px; font-size: 0.85rem; margin-bottom: 0.75rem; }
     .git-msg-ok { background: #e8f5e9; color: #1b5e20; }
     .git-msg-err { background: #fce4ec; color: #b71c1c; }
@@ -997,7 +997,11 @@
         const res = await fetch(API + "/api/git/pull", { method: "POST" });
         const data = await res.json();
         if (data.ok) {
-          showGitToast("✓ Pull OK: " + (data.output || "Oppdatert"), "ok");
+          const msg = data.output || "Oppdatert";
+          const short = msg.includes("Already up to date") ? "Already up to date" :
+                        msg.includes("Fast-forward") ? "Oppdatert med nye endringer" :
+                        msg.split("\n")[0].substring(0, 60);
+          showGitToast("✓ Pull OK: " + short, "ok");
           manualRefresh();
         } else {
           showGitToast("✗ Pull feilet: " + data.error, "err");
@@ -1035,8 +1039,7 @@
 
         body.innerHTML = `
           <div class="git-select-actions">
-            <button onclick="gitSelectAll(true)">Velg alle</button>
-            <button onclick="gitSelectAll(false)">Velg ingen</button>
+            <label><input type="checkbox" checked onchange="gitSelectAll(this.checked)"> Velg alle</label>
           </div>
           <ul class="git-file-list">${filesHtml}</ul>
           <label style="font-size:0.78rem;font-weight:600;display:block;margin-bottom:0.3rem;">Commit-melding:</label>
