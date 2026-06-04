@@ -9,7 +9,7 @@
   },
   "K255.1-1": {
     "edited": true,
-    "editTimestamp": "4.6.2026, 13:12:21"
+    "editTimestamp": "4.6.2026, 13:38:24"
   },
   "K255.1-2": {
     "edited": true,
@@ -34,21 +34,21 @@
   "K255.1-7": {
     "edited": true,
     "editTimestamp": "29.5.2026, 14:12:19",
-    "done": true,
+    "done": false,
     "timestamp": "29.5.2026, 19:09:18",
     "qaAt": 1780074558482,
-    "stale": false,
-    "staleReason": "Fil endret etter QA (29.5.2026, 14:33:30)",
+    "stale": true,
+    "staleReason": "Fil endret etter QA (4.6.2026, 13:34:51)",
     "status": "ikke-relevant"
   },
   "K255.1-8": {
-    "done": true,
+    "done": false,
     "timestamp": "29.5.2026, 19:42:00",
     "qaAt": 1780076520099,
-    "stale": false,
+    "stale": true,
     "edited": true,
     "editTimestamp": "29.5.2026, 14:22:45",
-    "staleReason": "Fil endret etter QA (29.5.2026, 19:34:05)",
+    "staleReason": "Fil endret etter QA (4.6.2026, 13:34:51)",
     "status": "oppfylt"
   }
 }
