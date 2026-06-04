@@ -328,12 +328,68 @@
     .refresh-toast.show {
       transform: translateX(-50%) translateY(0);
     }
+    .refresh-toast.toast-err {
+      background: var(--nav-red);
+    }
 
     @media (max-width: 768px) {
       .layout { grid-template-columns: 1fr; }
       .sidebar { position: static; height: auto; border-right: none; border-bottom: 1px solid var(--nav-gray-200); }
       .main { padding: 1.25rem 1rem; }
     }
+
+    .sep-v { width: 1px; height: 1.2rem; background: rgba(255,255,255,0.3); margin: 0 0.25rem; }
+
+    /* Git modal */
+    .git-modal-overlay {
+      position: fixed; inset: 0; z-index: 9999;
+      background: rgba(0,0,0,0.5);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .git-modal {
+      background: #fff; border-radius: 10px; width: 560px; max-width: 92vw;
+      max-height: 80vh; display: flex; flex-direction: column;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+    }
+    .git-modal-header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 1.25rem; border-bottom: 1px solid var(--nav-gray-200);
+    }
+    .git-modal-header h3 { margin: 0; font-size: 1.05rem; }
+    .git-modal-close { background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--nav-gray-600); }
+    .git-modal-body { padding: 1.25rem; overflow-y: auto; flex: 1; }
+    .git-file-list { list-style: none; padding: 0; margin: 0 0 1rem 0; }
+    .git-file-list li {
+      display: flex; align-items: center; gap: 0.5rem;
+      padding: 0.35rem 0; font-size: 0.82rem; font-family: monospace;
+      border-bottom: 1px solid var(--nav-gray-100);
+    }
+    .git-file-list li label { flex: 1; min-width: 0; overflow-wrap: break-word; word-break: break-all; cursor: pointer; }
+    .git-file-list li input[type="checkbox"] { flex-shrink: 0; }
+    .git-file-list .git-status {
+      display: inline-block; width: 1.4rem; text-align: center; flex-shrink: 0;
+      font-weight: 700; font-size: 0.75rem; border-radius: 3px; padding: 1px 2px;
+    }
+    .git-status-M { color: var(--nav-orange); }
+    .git-status-A, .git-status-question { color: var(--nav-green); }
+    .git-status-D { color: var(--nav-red); }
+    .git-commit-input {
+      width: 100%; padding: 0.5rem 0.7rem; font-size: 0.85rem;
+      border: 1px solid var(--nav-gray-300); border-radius: 5px;
+      font-family: inherit; margin-bottom: 0.75rem;
+    }
+    .git-commit-input:focus { outline: none; border-color: var(--nav-blue); }
+    .git-btn-row { display: flex; gap: 0.5rem; justify-content: flex-end; }
+    .git-btn-row button { padding: 0.45rem 1rem; border-radius: 5px; font-size: 0.85rem; font-weight: 600; cursor: pointer; border: none; }
+    .git-btn-push { background: var(--nav-blue); color: #fff; }
+    .git-btn-push:hover { background: var(--nav-blue-dark); }
+    .git-btn-push:disabled { background: var(--nav-gray-300); cursor: not-allowed; }
+    .git-btn-cancel { background: var(--nav-gray-200); color: #333; }
+    .git-select-actions { font-size: 0.75rem; margin-bottom: 0.5rem; }
+    .git-select-actions button { background: none; border: none; color: var(--nav-blue); cursor: pointer; font-size: 0.75rem; text-decoration: underline; }
+    .git-msg { padding: 0.6rem; border-radius: 5px; font-size: 0.85rem; margin-bottom: 0.75rem; }
+    .git-msg-ok { background: #e8f5e9; color: #1b5e20; }
+    .git-msg-err { background: #fce4ec; color: #b71c1c; }
   </style>
 </head>
 <body>
@@ -343,12 +399,28 @@
       <div class="subtitle">Kvalitetssjekk og redigering</div>
     </div>
     <div class="header-actions">
+      <button id="git-pull-btn" onclick="gitPull()" title="Hent siste fra GitHub">⬇ Pull</button>
+      <button onclick="gitPushDialog()" title="Push endringer til GitHub">⬆ Push</button>
+      <span class="sep-v"></span>
       <button onclick="manualRefresh()" title="Hent siste data fra disk">↻ Oppdater</button>
       <button onclick="expandAll()">Åpne alle</button>
       <button onclick="collapseAll()">Lukk alle</button>
     </div>
   </header>
   <div id="refresh-toast" class="refresh-toast">✓ Oppdatert med nye endringer</div>
+
+  <!-- Git Push Modal -->
+  <div id="git-modal-overlay" class="git-modal-overlay" style="display:none" onclick="closeGitModal(event)">
+    <div class="git-modal" onclick="event.stopPropagation()">
+      <div class="git-modal-header">
+        <h3>Push til GitHub</h3>
+        <button class="git-modal-close" onclick="closeGitModal()">&times;</button>
+      </div>
+      <div class="git-modal-body" id="git-modal-body">
+        <p>Laster endrede filer…</p>
+      </div>
+    </div>
+  </div>
   <div class="layout">
     <nav class="sidebar">
       <h2>Krav</h2>
@@ -914,6 +986,121 @@
 
     loadData();
     startPolling();
+
+    // --- Git integration ---
+
+    async function gitPull() {
+      const btn = document.getElementById("git-pull-btn");
+      btn.disabled = true;
+      btn.textContent = "⏳ Henter…";
+      try {
+        const res = await fetch(API + "/api/git/pull", { method: "POST" });
+        const data = await res.json();
+        if (data.ok) {
+          showGitToast("✓ Pull OK: " + (data.output || "Oppdatert"), "ok");
+          manualRefresh();
+        } else {
+          showGitToast("✗ Pull feilet: " + data.error, "err");
+        }
+      } catch (e) {
+        showGitToast("✗ Nettverksfeil ved pull", "err");
+      } finally {
+        btn.disabled = false;
+        btn.textContent = "⬇ Pull";
+      }
+    }
+
+    async function gitPushDialog() {
+      const overlay = document.getElementById("git-modal-overlay");
+      const body = document.getElementById("git-modal-body");
+      overlay.style.display = "flex";
+      body.innerHTML = "<p>Henter endrede filer…</p>";
+
+      try {
+        const res = await fetch(API + "/api/git/status");
+        const data = await res.json();
+        if (data.error) { body.innerHTML = `<div class="git-msg git-msg-err">${esc(data.error)}</div>`; return; }
+        if (!data.files.length) {
+          body.innerHTML = `<div class="git-msg git-msg-ok">Ingen endringer i etterlevelse/ å pushe.</div>
+            <div class="git-btn-row"><button class="git-btn-cancel" onclick="closeGitModal()">Lukk</button></div>`;
+          return;
+        }
+
+        const filesHtml = data.files.map((f, i) => `
+          <li>
+            <input type="checkbox" id="git-f-${i}" value="${esc(f.file)}" checked>
+            <span class="git-status git-status-${f.status === '?' ? 'question' : f.status}">${esc(f.status)}</span>
+            <label for="git-f-${i}">${esc(f.file)}</label>
+          </li>`).join("");
+
+        body.innerHTML = `
+          <div class="git-select-actions">
+            <button onclick="gitSelectAll(true)">Velg alle</button>
+            <button onclick="gitSelectAll(false)">Velg ingen</button>
+          </div>
+          <ul class="git-file-list">${filesHtml}</ul>
+          <label style="font-size:0.78rem;font-weight:600;display:block;margin-bottom:0.3rem;">Commit-melding:</label>
+          <input class="git-commit-input" id="git-commit-msg" value="d - Oppdater etterlevelse-dokumentasjon">
+          <div class="git-btn-row">
+            <button class="git-btn-cancel" onclick="closeGitModal()">Avbryt</button>
+            <button class="git-btn-push" id="git-push-btn" onclick="gitPush()">Push</button>
+          </div>`;
+      } catch (e) {
+        body.innerHTML = `<div class="git-msg git-msg-err">Kunne ikke hente status: ${esc(e.message)}</div>`;
+      }
+    }
+
+    function gitSelectAll(checked) {
+      document.querySelectorAll(".git-file-list input[type=checkbox]").forEach(cb => cb.checked = checked);
+    }
+
+    async function gitPush() {
+      const checkboxes = document.querySelectorAll(".git-file-list input[type=checkbox]:checked");
+      const files = Array.from(checkboxes).map(cb => cb.value);
+      const message = document.getElementById("git-commit-msg").value.trim();
+      const btn = document.getElementById("git-push-btn");
+      const body = document.getElementById("git-modal-body");
+
+      if (!files.length) { alert("Velg minst én fil."); return; }
+      if (!message) { alert("Skriv en commit-melding."); return; }
+
+      btn.disabled = true;
+      btn.textContent = "Pusher…";
+
+      try {
+        const res = await fetch(API + "/api/git/push", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ files, message })
+        });
+        const data = await res.json();
+        if (data.ok) {
+          body.innerHTML = `
+            <div class="git-msg git-msg-ok">✓ Pushet ${data.committedFiles.length} fil(er) til <b>${esc(data.branch)}</b></div>
+            <ul class="git-file-list">${data.committedFiles.map(f => `<li style="border:none"><span class="git-status git-status-A">✓</span>${esc(f)}</li>`).join("")}</ul>
+            <div class="git-btn-row"><button class="git-btn-cancel" onclick="closeGitModal()">Lukk</button></div>`;
+        } else {
+          body.innerHTML = `
+            <div class="git-msg git-msg-err">✗ Push feilet: ${esc(data.error)}</div>
+            <div class="git-btn-row"><button class="git-btn-cancel" onclick="closeGitModal()">Lukk</button></div>`;
+        }
+      } catch (e) {
+        body.innerHTML = `<div class="git-msg git-msg-err">Nettverksfeil: ${esc(e.message)}</div>
+          <div class="git-btn-row"><button class="git-btn-cancel" onclick="closeGitModal()">Lukk</button></div>`;
+      }
+    }
+
+    function closeGitModal(event) {
+      if (event && event.target !== event.currentTarget) return;
+      document.getElementById("git-modal-overlay").style.display = "none";
+    }
+
+    function showGitToast(msg, type) {
+      const toast = document.getElementById("refresh-toast");
+      toast.textContent = msg;
+      toast.className = "refresh-toast show" + (type === "err" ? " toast-err" : "");
+      setTimeout(() => { toast.className = "refresh-toast"; toast.textContent = "✓ Oppdatert med nye endringer"; }, 4000);
+    }
   </script>
 </body>
 </html>

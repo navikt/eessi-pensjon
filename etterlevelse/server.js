@@ -261,7 +261,7 @@ const server = http.createServer(async (req, res) => {
 
   // CORS
   res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "GET, PUT, OPTIONS");
+  res.setHeader("Access-Control-Allow-Methods", "GET, PUT, POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
   if (req.method === "OPTIONS") { res.writeHead(204); res.end(); return; }
 
@@ -328,6 +328,62 @@ const server = http.createServer(async (req, res) => {
     if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
     fs.writeFileSync(path.join(OUTPUT_DIR, filename), content, "utf-8");
     return sendJson(res, { ok: true, filename });
+  }
+
+  // --- Git operations (locked to etterlevelse/ folder) ---
+
+  if (url.pathname === "/api/git/status" && req.method === "GET") {
+    const { execSync } = require("child_process");
+    const repoRoot = path.resolve(BASE, "..");
+    try {
+      const raw = execSync("git status --porcelain -- etterlevelse/", { cwd: repoRoot, encoding: "utf-8" });
+      const files = raw.trim().split("\n").filter(Boolean).map(line => {
+        const m = line.match(/^([ MADRCU?!]{1,2})\s(.+)$/);
+        return m ? { status: m[1].trim(), file: m[2] } : { status: "?", file: line.trim() };
+      });
+      return sendJson(res, { files });
+    } catch (e) {
+      return sendJson(res, { error: e.message }, 500);
+    }
+  }
+
+  if (url.pathname === "/api/git/pull" && req.method === "POST") {
+    const { execSync } = require("child_process");
+    const repoRoot = path.resolve(BASE, "..");
+    try {
+      const branch = execSync("git rev-parse --abbrev-ref HEAD", { cwd: repoRoot, encoding: "utf-8" }).trim();
+      const output = execSync("git pull", { cwd: repoRoot, encoding: "utf-8", timeout: 30000 });
+      return sendJson(res, { ok: true, output: output.trim(), branch });
+    } catch (e) {
+      return sendJson(res, { error: e.stderr || e.message }, 500);
+    }
+  }
+
+  if (url.pathname === "/api/git/push" && req.method === "POST") {
+    const { execSync } = require("child_process");
+    const repoRoot = path.resolve(BASE, "..");
+    const body = await readBody(req);
+    const { files, message } = JSON.parse(body);
+
+    // Validate: only allow files under etterlevelse/
+    if (!files || !files.length) return sendJson(res, { error: "No files selected" }, 400);
+    const invalidFiles = files.filter(f => !f.startsWith("etterlevelse/") || f.includes(".."));
+    if (invalidFiles.length) return sendJson(res, { error: "Files outside etterlevelse/ not allowed: " + invalidFiles.join(", ") }, 403);
+    if (!message || !message.trim()) return sendJson(res, { error: "Commit message required" }, 400);
+
+    try {
+      // Stage selected files (use -- to prevent flag injection)
+      const filePaths = files.map(f => f.replace(/'/g, "'\\''"));
+      execSync("git add -- " + filePaths.map(f => `'${f}'`).join(" "), { cwd: repoRoot, encoding: "utf-8" });
+      // Commit (use env var for message to avoid shell injection)
+      execSync("git commit -m \"$COMMIT_MSG\"", { cwd: repoRoot, encoding: "utf-8", env: { ...process.env, COMMIT_MSG: message.trim() }, shell: "/bin/sh" });
+      // Push
+      const branch = execSync("git rev-parse --abbrev-ref HEAD", { cwd: repoRoot, encoding: "utf-8" }).trim();
+      execSync(`git push origin ${branch}`, { cwd: repoRoot, encoding: "utf-8", timeout: 30000 });
+      return sendJson(res, { ok: true, branch, committedFiles: files });
+    } catch (e) {
+      return sendJson(res, { error: e.stderr || e.message }, 500);
+    }
   }
 
   // Serve static files
