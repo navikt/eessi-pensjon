@@ -420,4 +420,14 @@ server.listen(PORT, () => {
   console.log(`  Leser input fra:  ${INPUT_DIR}`);
   console.log(`  Leser/skriver output: ${OUTPUT_DIR}`);
   console.log(`  QA-status lagres i:   ${QA_FILE}\n`);
+
+  // Auto-pull on startup
+  const repoRoot = path.resolve(BASE, "..");
+  try {
+    console.log("  ⬇ Henter siste fra GitHub…");
+    const output = execFileSync("git", ["pull"], { cwd: repoRoot, encoding: "utf-8", timeout: 30000 }).trim();
+    console.log(`  ✓ ${output}\n`);
+  } catch (e) {
+    console.log(`  ⚠ Pull feilet: ${(e.stderr || e.message).trim()}\n`);
+  }
 });
