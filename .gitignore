@@ -13,3 +13,5 @@ codemr/
 /.idea/
 !/.idea/scopes/
 /build/
+
+etterlevelse/agent-input/raw.txt

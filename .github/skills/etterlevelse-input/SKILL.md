@@ -17,7 +17,23 @@ Tar rå tekst kopiert fra etterlevelse-portalen (https://etterlevelse.ansatt.nav
 
 ## Hva brukeren gir deg
 
-Brukeren limer inn rå tekst fra portalen. Teksten inneholder typisk:
+Brukeren gir deg tekst fra portalen på én av to måter:
+
+### Alternativ A: Fil (anbefalt)
+
+Brukeren kjører paste-scriptet fra prosjektroten:
+```bash
+etterlevelse/script/paste.sh
+```
+Dette skriver clipboard til `etterlevelse/agent-input/raw.txt`. Deretter ber de deg prosessere filen. **Bruk denne metoden når linjeskift er viktig** — chat-grensesnittet kan strippe linjeskift fra innlimt tekst.
+
+### Alternativ B: Direkte i chatten
+
+Brukeren limer inn teksten direkte i meldingen. **OBS:** Chat-grensesnittet kan fjerne linjeskift, slik at all tekst fremstår som én sammenhengende blokk. Se regel 2 for hvordan dette håndteres.
+
+### Innholdet
+
+Teksten inneholder typisk:
 
 - **Kravnavn** og **krav-ID** (f.eks. "K255.1 Nav skal beskytte brukere med adressebeskyttelse")
 - **Tema** — kategorien kravet hører til (f.eks. "Informasjonssikkerhet", "Personvern")
@@ -62,7 +78,7 @@ Filen skal følge dette eksakte formatet:
 Tema: <tema>
 
 ## Hensikten med kravet
-<hensiktstekst, ren tekst uten HTML-tags, maks ~120 tegn per linje>
+<hensiktstekst, ren tekst uten HTML-tags, behold originale linjeskift>
 
 ## Oppgave til AI
 Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
@@ -86,23 +102,26 @@ Utfyllende om kriteriet
 
 ## Regler
 
-1. **Strip HTML.** Fjern alle HTML-tags (`<p>`, `<ul>`, `<li>`, `<br>`, `&nbsp;` osv.) fra portalteksten. Behold ren tekst med linjeskift og bindestrek-lister der det passer.
-2. **Behold innholdet intakt.** Ikke omformuler, forkorte eller endre meningsinnholdet i hensikt eller suksesskriterier. Du er en formaterer, ikke en redaktør.
-3. **Identifiser krav-ID korrekt.** Krav-IDen er på formen K<tall>.<tall>. Finn den i teksten brukeren gir deg. Hvis den ikke er eksplisitt, spør brukeren.
-4. **Tell suksesskriterier.** Sett riktig N (antall suksesskriterier) i "du skal lage N tekster:"-linjen.
-5. **En tom linje** mellom hvert suksesskriterium (mellom utfyllende tekst og neste "Suksesskriterium X av N").
-6. **Filen skal ende med en tom linje.**
-7. **Ikke skriv noe annet enn filen.** Ingen markdown-headers i selve filen utover de som er spesifisert i formatet.
-8. **Oppgave-teksten** er alltid: `Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...`
-9. **Hvis filen allerede eksisterer**, spør brukeren om den skal overskrives.
+1. **Strip HTML.** Fjern alle HTML-tags (`<p>`, `<ul>`, `<li>`, `<br>`, `&nbsp;` osv.) fra portalteksten. Behold ren tekst med bindestrek-lister der det passer.
+2. **Behold linjeskift fra originalteksten.** Enkle linjeskift i kildeteksten skal beholdes som enkle linjeskift. Doble linjeskift markerer nye avsnitt. Ikke legg inn kunstig linjebryting (f.eks. ved 80 eller 120 tegn). **Fil-input (alternativ A):** Linjeskift i filen er autoritative — behold dem nøyaktig. **Chat-input (alternativ B):** Chat-grensesnittet stripper ofte linjeskift. Hvis teksten mangler linjeskift, be brukeren bruke fil-metoden i stedet, eller inferer avsnitt forsiktig fra kontekst (nye seksjoner i portalen er typisk egne avsnitt). Listelementer (fra `<li>`/`•` i portalen) konverteres alltid til bindestrek-lister på egne linjer.
+3. **Behold innholdet intakt.** Ikke omformuler, forkorte eller endre meningsinnholdet i hensikt eller suksesskriterier. Du er en formaterer, ikke en redaktør.
+4. **Identifiser krav-ID korrekt.** Krav-IDen er på formen K<tall>.<tall>. Finn den i teksten brukeren gir deg. Hvis den ikke er eksplisitt, spør brukeren.
+5. **Tell suksesskriterier.** Sett riktig N (antall suksesskriterier) i "du skal lage N tekster:"-linjen.
+6. **En tom linje** mellom hvert suksesskriterium (mellom utfyllende tekst og neste "Suksesskriterium X av N").
+7. **Filen skal ende med en tom linje.**
+8. **Ikke skriv noe annet enn filen.** Ingen markdown-headers i selve filen utover de som er spesifisert i formatet.
+9. **Oppgave-teksten** er alltid: `Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...`
+10. **Hvis filen allerede eksisterer**, spør brukeren om den skal overskrives.
 
 ## Steg
 
-1. **Parse input.** Les brukerens tekst og identifiser krav-ID, kravnavn, hensikt og suksesskriterier.
-2. **Valider.** Bekreft at du har funnet minst krav-ID og ett suksesskriterium. Hvis noe mangler, spør brukeren.
-3. **Formater.** Bygg filen etter formatet over.
-4. **Skriv til disk.** Lagre filen som `etterlevelse/agent-input/K<nummer>.<versjon>.txt`.
-5. **Bekreft.** Si til brukeren hva som ble opprettet: filnavn, kravnavn, og antall suksesskriterier.
+1. **Sjekk input-metode.** Hvis `etterlevelse/agent-input/raw.txt` eksisterer, les den med `view`-verktøyet. Hvis teksten er limt direkte i chatten uten linjeskift, be brukeren kjøre `etterlevelse/script/paste.sh` først.
+2. **Parse input.** Les teksten og identifiser krav-ID, kravnavn, hensikt og suksesskriterier.
+3. **Valider.** Bekreft at du har funnet minst krav-ID og ett suksesskriterium. Hvis noe mangler, spør brukeren.
+4. **Formater.** Bygg filen etter formatet over.
+5. **Skriv til disk.** Lagre filen som `etterlevelse/agent-input/K<nummer>.<versjon>.txt`.
+6. **Rydd opp.** Slett `etterlevelse/agent-input/raw.txt` hvis den eksisterer.
+7. **Bekreft.** Si til brukeren hva som ble opprettet: filnavn, kravnavn, og antall suksesskriterier.
 
 ## Eksempel
 
