@@ -1,4 +1,4 @@
-EESSI Pensjon beskytter tilgangen til brukere med adressebeskyttelse gjennom flere lag: 
+EESSI Pensjon beskytter tilgangen til brukere med adressebeskyttelse gjennom flere lag: hallo
 
 - Når en SED sendes eller mottas, sjekkes automatisk alle norske personnumre i dokumentet mot PDL. Dersom noen av personene har strengt fortrolig adresse eller strengt fortrolig adresse utland, markeres hele BUC-en som sensitiv i RINA.
 - En saksbehandler uten riktig tilgangsnivå kan ikke åpne en sensitiv BUC — RINA håndhever denne begrensningen.
