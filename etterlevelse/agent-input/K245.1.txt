@@ -1,0 +1,88 @@
+# Hjelp meg å dokumentere: K245.1 Krav til risikovurdering for applikasjoner, systemer og plattformer
+
+Tema: Informasjonssikkerhet
+
+## Hensikten med kravet
+Når applikasjoner, systemer eller plattformer tas i bruk eller utvikles, må sikkerheten vurderes.
+I en slik vurdering vil det være naturlig å inkludere både tilsiktede og utilsiktede hendelser. Dette kan gjøres i samme verktøy.
+
+Disse kravene skal bidra til å sikre at applikasjoner, systemer og plattformer som tas i bruk, utvikles etter prinsippene for innebygd sikkerhet. Det betyr at sikkerhet vurderes og implementeres gjennom hele livssyklusen, fra design og utvikling til drift og avvikling.
+
+Kravene gjelder for alle løsninger, uansett om de ligger i egne lokaler (on-prem), er hybride eller ligger i ekstern sky. Kravene gjelder også for SaaS (programvare som tjeneste i sky) eller andre programvarer fra en leverandør.
+
+Den som har fått delegert ansvar for risiko, har en forpliktelse til å stå til rette for og gjøre rede for risikobildet. Den ansvarlige skal kartlegge risiko, fastsette nødvendige tiltak og følge dem opp. Høye risiko som ikke kan håndteres må løftes.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 5 tekster:
+
+Suksesskriterium 1 av 5
+Vi har gjennomført verdivurdering av systemet, applikasjonen eller plattformen, og informert Seksjon for helhetlig sikkerhet og beredskap
+
+Utfyllende om kriteriet
+Risikoansvarlig er identifisert, og systemet er beskrevet med en oversikt over hva det understøtter og gir tilgang til, dets avhengigheter, og kritikalitet for NAV. Verdivurderingen er gjennomført ved bruk av verdivurderingsmalen.
+
+Verdivurderingen er lagret i Sharepoint med tilgangsstyring, og lenken er delt med Seksjon for helhetlig sikkerhet og beredskap (HSB) (se suksesskriterium 5). Selve verdivurderingsdokumentet skal ikke sendes via e-post. HSB vil gi tilbakemelding på verdivurderingen.
+
+Kontaktpersoner i HSB:
+Muhammad Juned Akhtar
+Erlend Hokholt
+Julie Nyborg Aasland
+Dagfinn Stokke Haaland
+
+Suksesskriterium 2 av 5
+Vi har gjennomført trusselmodellering
+
+Utfyllende om kriteriet
+System applikasjon eller plattform er tegnet ved hjelp av dataflytdiagram (DFD).
+
+Sårbarheter i systemet er identifisert ved bruk av én eller flere av følgende metoder (veiledning Security Playbook):
+- STRIPED (som er basert STRIDE) oppsummerer viktigste sårbarhetene i et informasjonssystem
+- Sårbarhetstrær
+- Liste med spørsmål
+
+En oversikt over identifiserte sårbarheter er utarbeidet, sammen med en plan for håndtering av dem.
+
+De med ansvaret for risiko er informert, og vi har inkludert relevante roller og kompetanse i arbeidet.
+
+"Startdokumentasjon" og "Trusselmodellering" i malen er fylt ut.
+
+Team AppSec kan kontaktes ved behov for fasilitering av trusselmodellering.
+
+Suksesskriterium 3 av 5
+Vi har gjennomført sikkerhetsrisikovurdering (Dette suksesskriteriet gjelder kun for systemer som verdivurderes som Svært Høy eller Høy. Ta kontakt og avstem med HSB)
+
+Utfyllende om kriteriet
+Hvis systemet verdivurderes som Høy eller Svært Høy for NAV, skal sikkerhetsrisikovurdering gjennomføres i henhold til malen.
+
+Sikkerhetsrisikovurderingen skal inneholde:
+- identifikasjon av risikohendelser (disse basert på trusselmodellering, se suksesskriterium 2)
+- vurdering av sannsynligheten og konsekvense for hver risikohendelse
+- identifiserte tiltak for å håndtere risiko
+- vurdering av risikonivå etter gjennomføring av tiltak (restrisiko)
+
+Fyll ut minimum "Startdokumentasjon" og "Trusselmodellering" og "Risikovurdering" i malen.
+
+Suksesskriterium 4 av 5
+Vi har rutiner for oppdatering av vurderinger
+
+Utfyllende om kriteriet
+Minst én gang i året, eller ved større endringer skal vurderingene oppdateres.
+
+Eksempeler på endringer kan være oppdatering eller endring av funksjonalitet, endring i eksisterende barrierer, eller oppdatert trusselvurdering fra Nav.
+
+Suksesskriterium 5 av 5
+Vurderingene og andre systemdokumentasjoner er lagret på et trygt sted.
+
+Utfyllende om kriteriet
+De med ansvaret for risiko er ansvarlig for at verdi-, trussel- og risikovurderingen lagres på et sikkert sted.
+
+Dersom vurderingene omfatter skjermingsverdige verdier, skal dokumentene beskyttes i samsvar med kravene i sikkerhetsloven.
+Det kan være nødvendig å lagre sikkerhetsrisikovurderingen i Nasjonalt Begrenset Plattform (NBP).
+
+Seksjon for helhetlig sikkerhet og beredskap (HSB) skal varsles dersom en kompromittering, skadeverk, uønsket endring eller bortfall av systemet kan skade Navs evne til å utbetale uføretrygd eller alderspensjon. HSB vil vurdere om system/informasjon er skjermingsverdig etter sikkerhetsloven.
+
+Krav, føringer og veiledning for lagring og arkivering av sikkerhetsrisikovurderinger er under utarbeidelse og vil bli publisert når de er ferdigstilt. Inntilvidere anbefales Sharepoint med tilgangsstyring for vurderinger som ikke trenger å ligge i NBP.
+
+Ved spørsmål om dette punktet, ta kontakt med HSB.

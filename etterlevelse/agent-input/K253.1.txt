@@ -1,0 +1,58 @@
+# Hjelp meg å dokumentere: K253.1 Visning av personopplysninger skal skrives til oppslagslogg (Arcsight)
+
+Tema: Informasjonssikkerhet
+
+## Hensikten med kravet
+Nav må kunne dokumentere hvilke personer som har hatt tilgang til brukernes opplysninger. Dette skal gjøres ved at fagsystemene logger visning av personopplysninger til Arcsight. Loggene brukes blant annet til å lage innsynsrapporter til brukere og ledere, samt til proaktiv loggkontroll.
+
+NB: Nav har flere forskjellige typer auditlogger og løsninger. Dette kravet treffer kun visning av personopplysninger til Nav-ansatte gjennom fagsystemene, og ikke auditlogging av endringer på lagrede data.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 6 tekster:
+
+Suksesskriterium 1 av 6
+Når en brukers personopplysninger vises i vårt fagsystem, blir dette logget til oppslagsloggen
+
+Utfyllende om kriteriet
+Visning av brukernes opplysninger i fagsystemene skal skrives til oppslagsloggen.
+
+Det finnes noen unntak fra kravet, se suksesskriterium 3.
+
+Suksesskriterium 2 av 6
+Vi logger kun når vi vet at personopplysninger er vist frem
+
+Utfyllende om kriteriet
+Oppslagsloggene skal dokumentere hvilke Nav-ansatte som har hatt tilgang til brukerdata. Derfor skal loggene kun inneholde hendelser som dokumenterer visning av informasjon. Det skal for eksempel ikke logges ved henting av data for tilgangskontroll eller maskinell behandling, eller når en Nav-ansatt får tilgang avvist.
+
+Det kan oppstå tekniske feil som medfører at data i enkeltstående tilfeller ikke returneres fra backend til frontend. Det er ikke nødvendig å ta høyde for dette i loggingen.
+
+Suksesskriterium 3 av 6
+Vi logger ikke når en bruker "dukker opp" i et liste eller i en annen brukers sak
+
+Utfyllende om kriteriet
+Når mengden personopplysninger som vises om en bruker er begrenset, og ikke stammer fra et direkte oppslag på brukeren, skal det ikke logges til Arcsight. Eksempler på slike situasjoner er:
+- Brukerens navn vises i en annen brukers sak, for eksempel som familiemedlem eller verge.
+- Brukerens vises i en liste over deltakere på arbeidsmarkedstiltak.
+- Brukerens fødselsnummer vises i en oppgave på oppgavebenken til den ansattes Nav-enhet.
+
+Dersom disse situasjonene skrives til oppslagsloggen, blir de oppfattet som ordinære oppslag og blir inkludert i brukerens innsynsrapporter. Dette gir et misvisende bilde av hva den ansatte har sett og gjort, og det er urimelig å forvente at den ansatte kan forklare dette i ettertid. Fagsystemene skal derfor kun logge når den ansatte utfører en handling som tilgjengeliggjør ytterligere personopplysninger om brukeren, for eksempel ved å åpne brukerens sak.
+
+Suksesskriterium 4 av 6
+Vi logger ikke mer enn nødvendig
+
+Utfyllende om kriteriet
+For å redusere loggvolumet bør én handling i et fagsystem som hovedregel resultere i én logglinje. Eksempler på handlinger er at en Nav-ansatt gjør oppslag på bruker eller navigerer til en ny fane eller skjermbilde i fagsystemet. Det er kun behov for å logge handlinger som gir den ansatte tilgang til nye personopplysniger om brukeren.
+
+Suksesskriterium 5 av 6
+Vi har avklart med Team Auditlogging Arcsight hvorvidt fagsystemet skal inkluderes i innsynsrapportene til innbyggere og ledere
+
+Utfyllende om kriteriet
+De fleste fagsystemer skal inkluderes i innsynsrapportene til innbyggere og ledere. Det må avklares med Team Auditlogging Arcsight hvilke rapporter systemet skal inkluderes i, og hvordan systemet skal navngis og beskrives i rapporten.
+
+Suksesskriterium 6 av 6
+Team Auditlogging Arcsight har bekreftet at loggene er mottatt på rett format i produksjon
+
+Utfyllende om kriteriet
+Les om loggformat i Security Playbook. Format kan verifiseres i samarbeid med Team Auditlogging Arcsight på teamets slack-kanal.
