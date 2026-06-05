@@ -70,6 +70,7 @@ Språklige regler (fra veilederen):
   - Bruk PDL istedet for "persondataløsningen"
   - Bruk PESYS istedenfor "fagsystemet for pensjon"
   - Bruk Joark istedet for "dokumentarkivet"
+  - Begrepet "pensjonskoordinering med EU/EØS" blir ikke helt riktig, bruk heller "utveksling av trygdeopplysninger mellom EU/EØS-land" eller lignende.
   - **Ikke bruk forklarende parenteser som "EESSI-sak (BUC)" eller "trygdedokument (SED)".** Skriv bare "BUC" og "SED" direkte. Begrepene er allerede kjent for målgruppen og trenger ikke forklaring i parentes.
 - **Skriv "rundt" det tekniske.** Bruk funksjonelle, hverdagslige formuleringer. Nevn EESSI/SED/RINA/BUC der det er nødvendig for å forstå domenet, men hopp over applikasjonsnavn, repo-paths, topic-navn, API-detaljer, bibliotek og versjonsnummer i selve kravteksten.
 - **Teknisk detalj hører hjemme i interne notater eller som vedlegg/lenker**, ikke i Hensikt, Suksesskriterier eller Beskrivelse. Hvis leseren trenger å grave dypere kan de følge en lenke i *Navn på kilde* eller *Dokumentasjon*.
