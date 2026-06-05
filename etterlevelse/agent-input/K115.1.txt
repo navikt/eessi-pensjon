@@ -1,0 +1,81 @@
+# Hjelp meg å dokumentere: K115.1 Behandling som benytter automatisering oppfyller vilkårene for dette
+
+Tema: Personvern
+
+## Hensikten med kravet
+Automatiserte behandlinger kan resultere i avgjørelser som effektiviserer behandlingen, men uansvarlig bruk kan medføre stor risiko for den registrertes personvern. Helautomatiserte løsninger kan derfor ikke uten videre benyttes. Slik behandling er unntaksvis tillatt når en rekke vilkår er oppfylt. Vilkårene gir plikter for Nav og rettigheter for registrerte som skal bidra til å sikre ansvarlig utvikling og forvaltning av automatiserte løsninger.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 7 tekster:
+
+Suksesskriterium 1 av 7
+Vi har vurdert om behandlingen er helautomatisk og dokument dette i Behandlingskatalogen.
+
+Utfyllende om kriteriet
+Når behandlingen er helautomatisk, må alle suksesskriteriene i dette kravet fylles ut. Om behandlingen innebærer automatisering skal også dokumenteres i Behandlingskatalogen før behandlingen settes i gang.
+
+En avgjørelse er helautomatisk når behandlingen av personopplysningene foretas maskinelt, uten at en saksbehandler har vært involvert i behandlingen, påvirket eller endret avgjørelsen. Ulike delprosesser kan være helautomatisk uten at behandlingen i sin helhet er helautomatisk. Hva som er en enkelt behandling, henger sammen med hva som er formålet med behandlingen.
+
+Aktuelle momenter å vurdere for å avgjøre om en behandling er helautomatisk:
+- om all behandling er forhåndsprogrammert
+- om resultatet av behandlingen er uavhengig av menneskelig inngripen
+
+Eksempler på helautomatiske behandlinger:
+- automatisk innvilgelse av foreldrepenger (selv om veiledning i forkant kan være manuell)
+- søknad som sendes på papir som deretter registreres inn i systemet av saksbehandler før den går helautomatisk gjennom regelmotoren uten saksbehandlers involvering
+
+Eksempler som ikke er helautomatiske behandlinger:
+- beslutningsstøtte til saksbehandler, det vil si systemer som kun er til støtte for en saksbehandling som blir utført helt eller delvis manuelt
+
+Suksesskriterium 2 av 7
+Vi har vurdert om regelverket for selve behandlingen egner seg for automatisering.
+
+Utfyllende om kriteriet
+For å avgjøre om regelverket egner seg til automatisering må regelverket tolkes. Det må avklares om det er mulig å utlede rettsregler som lar seg programmere, slik at en maskin kan treffe avgjørelser hvor resultatet er entydig.
+
+Automatiseringsbestemmelsen i Nav-loven inneholder et forbud mot å automatisere skjønnsmessige vilkår. Utgangspunktet er at avgjørelsen ikke kan bygge på skjønnsmessige vilkår i lov eller forskrift. Skjønnsmessige vilkår betyr at lovteksten inneholder ord eller uttrykk som ikke har konkret og entydig betydning eller innhold. Eksempler på skjønnsmessige vilkår er «nødvendig», «forsvarlig» og «rimelig».
+
+Nav kan likevel automatisere skjønnsmessige vilkår dersom avgjørelsen er utvilsom. Dette betyr at det skjønnsmessige vilkåret for eksempel etter fast og langvarig forvaltningspraksis kan omdefineres til faste kriterier som enten alltid er oppfylt eller ikke. Det vil være opp til fageier å vurdere om et skjønnsmessig vilkår kan automatiseres eller ikke.
+
+Suksesskriterium 3 av 7
+Løsningen sikrer at likt faktagrunnlag gir likt resultat uavhengig av om behandlingen skjer manuelt eller helautomatisk.
+
+Utfyllende om kriteriet
+Et viktig prinsipp for å sikre brukernes rettssikkerhet er likebehandling. Utgangspunktet er at vi i den manuelle saksbehandlingen ikke kan prøve vilkårene på en annen måte enn den automatiske saksbehandlingen. Dette er fordi vi da ville lagt opp til en systematisk forskjellsbehandling mellom automatisk og manuell saksbehandling. Like saker skal behandles likt, uavhengig av om de blir behandlet automatisk eller manuelt.
+
+Vilkårene skal prøves likt enten saken blir behandlet helautomatisk, delautomatisk eller helmanuelt.
+
+Suksesskriterium 4 av 7
+Vi har vurdert om datakilden er god nok til at løsningen kan legge den til grunn for å vurdere om et vilkår er oppfylt eller ikke.
+
+Utfyllende om kriteriet
+Når en avgjørelse treffes uten at en fysisk saksbehandler ser på saken, stilles det ekstra strenge krav til at faktaopplysningene som avgjørelsen bygger på er korrekte fordi dette vil være forhåndsdefinert for alle saker. Hvis hele eller deler av saken behandles manuelt må de samme opplysningene legges til grunn. Det må derfor defineres hvilke opplysningskilder/registre som har god nok kvalitet til å legges til grunn som faktagrunnlag. Hvis datakvaliteten er for lav, så kan det tilsi manuell vurdering.
+
+Suksesskriterium 5 av 7
+Vi har gjort vurderinger/analyser for å sikre at den automatiserte behandlingen ikke vektlegger utenforliggende hensyn eller fører til diskriminering.
+
+Utfyllende om kriteriet
+Opplysninger det spørres om i søknadsdialog og informasjon som innhentes fra registre for vektlegging i avgjørelsen, må være relevante for å vurdere retten til ytelsen/tjenesten.
+
+Suksesskriterium 6 av 7
+Den automatiserte avgjørelsen kan overprøves manuelt.
+
+Utfyllende om kriteriet
+Alle automatiserte avgjørelser skal kunne overprøves manuelt, uavhengig av om de er enkeltvedtak eller ikke. For enkeltvedtak ivaretas retten av forvaltningslovens regler om klage, ettersom klager behandles manuelt.
+
+Avgjørelser som ikke er enkeltvedtak, er ikke underlagt klagereglene i forvaltningsloven, og den registrerte skal ha rett til manuell overprøving av avgjørelser.
+
+Suksesskriterium 7 av 7
+Vi har dokumentert den helautomatiske behandlingen i løsningen.
+
+Utfyllende om kriteriet
+Der løsningen fatter helautomatiske avgjørelser skal følgende dokumenteres:
+- hvilke datatyper eller opplysningstyper som anvendes
+- fra hvilke kilder datatypene innhentes fra (for eksempel fra søknad, Aa-reg, PDL, inntektsmelding)
+- hvilke behandlingsregler som er utledet av rettsreglene og som er styrende for vedtakene/resultatet
+- hvordan vilkårene prøves i løsningen
+- endelig resultat (vedtak) av prosesseringene
+- hvilke endringer som er gjort av systemet på bakgrunn av vedtatte lover og forskrifter og andre politiske vedtak
+

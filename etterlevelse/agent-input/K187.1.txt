@@ -1,0 +1,41 @@
+# Hjelp meg å dokumentere: K187.1 Den registrerte skal ha tilstrekkelig informasjon om behandlingen når Nav fatter automatiske avgjørelser
+
+Tema: Personvern
+
+## Hensikten med kravet
+Åpenhet og gjennomsiktighet er et viktig prinsipp i personvernforordningen, og særlig viktig når Nav fatter helautomatiske avgjørelser uten at en saksbehandler har vurdert saken. Det stilles større krav til hvilken informasjon brukeren skal få om behandlingen enn ved manuelle avgjørelser. Informasjonsplikten skal sikre at den registrerte forstår hvordan personopplysninger blir behandlet, hvilke konsekvenser behandlingen kan ha, hvilke rettigheter bruker har og hvordan rettighetene kan tas i bruk. Disse kravene kommer i tillegg til den vanlige informasjonen Nav skal gi om behandling av personopplysninger.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 3 tekster:
+
+Suksesskriterium 1 av 3
+Vi har informert den registrerte om at vi treffer helautomatiske avgjørelser.
+
+Utfyllende om kriteriet
+Når Nav treffer helautomatiske avgjørelser krever personvernforordningen at personen får informasjon om at deres personopplysninger blir behandlet i en helautomatisk avgjørelse uten involvering av en manuell saksbehandler.
+
+Her må bruker av den digitale tjenesten eller løsningen i forkant av at vedkommende sender inn søknad, få informasjon om at Nav behandler og fatter et automatisk vedtak. Dersom noen av sakene går til manuell behandling, må vi også opplyse om hvilke tilfeller som går ut til manuell behandling.
+
+I personvernerklæringen på nav.no (åpner i en ny fane) er det gitt overordnet og generell informasjon om automatisering.
+
+Suksesskriterium 2 av 3
+Vi har informert den registrerte om den underliggende logikken i den automatiserte behandlingen.
+
+Utfyllende om kriteriet
+Når personopplysninger inngår i en helautomatisk behandling, har personen rett til å få relevant informasjon om hvilken logikk som er integrert i løsningen. Det vil si en forklaring av eller begrunnelse for de regler den helautomatiserte avgjørelsen vil følge for å komme frem til en avgjørelse.
+
+Informasjon som gis om den underliggende logikken skal ikke være en kompleks redegjørelse av algoritmen som er benyttet, men informasjonen skal gjøre det mulig for bruker å forstå hvordan dataprosessen fungerer og sikre at vedkommende forstår hvordan behandlingen av personopplysninger er gjennomført. Den generelle informasjonen om den underliggende logikken vil ikke erstatte plikten Nav har til å begrunne avgjørelser konkret i vedtak.
+
+Det bør informeres om følgende:
+- Hvilke rettsregler som er bygget inn i løsningen, hvordan disse vurderes og når de vurderes.
+- En beskrivelse av om momenter i vurderingen vektes ulikt. Dette kan for eksempel illustreres med en enkel tegning av løsningen som lettere kan vise flyten av opplysninger og når de ulike prosessene skjer (trinnvis beskrivelse av hvordan løsningen fungerer).
+- Hvilke personopplysninger som innhentes, hvor de hentes fra og hvorfor disse personopplysningene innhentes og brukes.
+
+Suksesskriterium 3 av 3
+Vi har informert den registrerte om betydningen og de forventede konsekvensene av en slik automatisk behandling.
+
+Utfyllende om kriteriet
+Her bør det informeres om hvilket resultat den helautomatiske behandlingen medfører for personen og lenkes til personvernerklæringen på nav.no for å vise til de personvernrettighetene personen har som registrert, som for eksempel rett til innsyn, retting av feil og klage.
+

@@ -1,0 +1,80 @@
+# Hjelp meg å dokumentere: K188.1 Behandling som benytter profilering oppfyller vilkårene for dette
+
+Tema: Personvern
+
+## Hensikten med kravet
+Profilering kan utgjøre en stor risiko for den registrertes personvern. Derfor er det flere bestemmelser i personvernforordningen som regulerer bruken av profilering for å beskytte den enkelte mot negative konsekvenser som diskriminering og forskjellsbehandling.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 4 tekster:
+
+Suksesskriterium 1 av 4
+Vi har vurdert om behandlingen innebærer en profilering av bruker og dokumentert dette i Behandlingskatalogen.
+
+Utfyllende om kriteriet
+Med profilering menes å generere nye opplysninger om en person på bakgrunn av statistisk eller opplysninger om andre personer, for deretter å kunne si noe om den enkelte. Man kan på den måten gjøre antagelser om en person sin adferd, preferanser eller behov basert på opplysninger om lignende personer. Profiler kan for eksempel brukes for å analysere eller forutse arbeidsprestasjoner, økonomisk situasjon, helse, interesser eller oppførsel.
+
+For at en behandling av personopplysninger skal omfattes av personvernforordningens definisjon av profilering, må den skje gjennom kombinasjon av manuelle og automatiske steg eller helautomatiserte virkemidler, og ha som formål å predikere egenskaper ved personen og personens preferanser.
+
+Profileringen består dermed av tre elementer:
+- Behandlingen innebærer bruk av personopplysninger.
+- Profileringen er en automatisert behandling som bygger på ulike analyser, maskinlæring, statistikk o.l
+- Formålet med behandlingen av disse personopplysningene er å utlede eller evaluere personlige aspekter ved en fysisk person.
+
+Profilering er ofte en del av en automatisert behandling. Profilering som inngår i en helautomatisk beslutningsprosess må i tillegg oppfylle vilkårene for automatisering.
+
+Et eksempel: Dersom man gjennom en automatisert behandling vurderer bistandsbehovet til en bruker fullt ut og plasserer vedkommende i en gruppe har vi foretatt en profilering. Dersom profileringen er en del av en beslutningsstøtte hvor saksbehandler har en reell mulighet til å overprøve resultatet, så er det en delautomatisk prosess.
+
+Om behandlingen innebærer profilering skal også dokumenteres i Behandlingskatalogen før behandlingen settes i gang.
+
+Suksesskriterium 2 av 4
+Vi har vurdert om det underliggende regelverket åpner for profilering.
+
+Utfyllende om kriteriet
+Hvorvidt Nav har anledning til å drive med profilering avhenger av hvor tydelig det underliggende regelverket er. Dette vil variere ut fra hvilket område det er snakk om. Fageier må vurdere om og i hvilken grad det underliggende regelverket åpner for profilering.
+
+Jo mer inngripende behandlingen er, jo mer tydelig lovhjemmel kreves det. Derfor må det vurderes både hvor inngripende selve behandlingen er og om vi har handlingsrom i aktuell lovhjemmel. Det må videre tas stilling til om behandlingen er nødvendig og proporsjonal.
+
+Suksesskriterium 3 av 4
+Vi har gjort vurderinger/analyser for å sikre at profileringen ikke vektlegger utenforliggende hensyn eller fører til diskriminering.
+
+Utfyllende om kriteriet
+Det må gjøres tilstrekkelige analyser for å skape klarhet i hvordan bruk av profilering vil slå ut for de registrerte, både for enkeltpersoner og grupper av personer. Ved profilering kan det være en risiko for utilsiktet diskriminering eller forskjellsbehandling. Dette innebærer blant annet at profileringen må være forklarbar, forsvarlig og rettferdig. Utgangspunktet for rettferdighetsvurderingen må være hva lovgiver har ment. Noen ganger legger regelverket opp til en saklig forskjellsbehandling.
+
+Suksesskriterium 4 av 4
+Vi har vurdert om det er andre særskilte krav som særlige rettigheter til den enkelte som må ivaretas ved bruk av profilering.
+
+Utfyllende om kriteriet
+Alle de øvrige kravene etter personvernforordningen må alltid være oppfylt, slik som krav til behandlingsgrunnlag, krav til informasjonsplikt, innsynsrett krav til personvernkonsekvensvurdering mv. For profilering vil det på noen punkter kunne være aktuelt med skjerpede krav.
+
+Her er en oversikt over forhold som må vurderes nærmere for å se om det er behov for ytterligere tiltak som følge av den konkrete profileringen:
+
+Formålsbegrensning - Opplysningene som benyttes i utarbeidelse av profil kan være opplysninger opprinnelig innhentet til et annet formål
+- Det må være lovlig adgang til å gjenbruke opplysningene til profileringsformål (lovhjemlet gjenbruk eller gjenbruk innenfor samme formål).
+- Profil utarbeidet om en person til et formål kan ikke gjenbrukes til et annet formål (uforenlig bruk av profilen). Dette for å unngå at en person får «merkelapper» som gir grunnlag for ulovlig diskriminering, forskjellbehandling på sviktende grunnlag i en annen kontekst.
+
+Dataminimering
+- Det må kunne begrunnes hvorfor det er nødvendig å benytte de aktuelle personopplysningene og hvorfor ikke aggregerte pseudonyme eller anonyme opplysninger gjør nytten.
+- Ved utarbeidelse av profil må det kun tas i bruk opplysninger som er nyttige sett i forhold til hva profilen skal brukes til etterpå.
+
+Riktighet
+- Det må gis tydelig informasjon om hvilken type opplysninger som er/vil bli benyttet i profileringen, slik at brukere har anledning til å korrigere/oppdatere sine personopplysninger.
+- Det må utarbeides rutiner for å sikre at informasjonsgrunnlaget som brukes i utarbeidelse av profil, er oppdatert og riktig.
+
+Lagringsbegrensning
+- Det må avklares hvor lenge både versjoner av en modell og en utledet profil skal oppbevares.
+- Det må utarbeides skriftlige rutiner for bruk, hvordan forebygge uberettiget gjenbruk og enten avlevering eller kassering av modeller og profiler.
+
+Rett til informasjon
+- Det må informeres om at det utarbeides profil, formål, opplysningstyper som inngår i profilen, kilder, hvordan profilen benyttes i saksbehandlingen mv., samt hvilke rettigheter den enkelte har ved bruk av profilering.
+
+Rett til å protestere
+- Det må tas stilling om og på hvilken måte rett til innsigelser foreligger ved bruk av profilering og hvordan slike krav eventuelt skal effektueres. Flere tilleggskrav gjelder for at retten til å protestere kommer til anvendelse.
+- Vurderingen krever en interesseavveiing der det er bruk av profilering som eventuelt må vurderes opp mot de særlige interesser den enkelte påberoper seg.
+
+Internkontroll/ansvarlighet
+- Som behandlingsansvarlig plikter vi å gjennomføre egnede tekniske og organisatoriske tiltak for å sikre og påvise at alle behandlingen utføres i samsvar med krav til personvern. Slike tiltak skal gjennomgås på nytt og skal oppdateres ved behov.
+- Ved bruk av profilering er det særlig viktig at både grunnlaget for og selve modellen er korrekt. Falske positive og skjulte bias kan ha store konsekvenser for bruker. Logikken i slutningene må derfor vurderes nøye, og slik vurdering må gjentas med passende mellomrom.
+

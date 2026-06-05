@@ -1,0 +1,32 @@
+# Hjelp meg å dokumentere: K109.1 Fødselsnummer og andre identifikasjonsmidler skal bare brukes der det er nødvendig for å oppnå sikker identifisering
+
+Tema: Personvern
+
+## Hensikten med kravet
+Bruk av fødselsnummer og andre identifikasjonsmidler (som eksempelvis d-nummer, fingeravtrykk, ansiktsgjenkjenning og andre biometriske data) er effektivt for å forhindre forveksling og vil dermed sikre kvalitet på personopplysningene. Samtidig muliggjør de en sikker identifisering på tvers av systemer, og det legger til rette for enkel sammenstilling av personopplysninger fra forskjellige registre. Derfor må slik entydig identifisering være nødvendig for at vi kan bruke det.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 2 tekster:
+
+Suksesskriterium 1 av 2
+Vi har avklart at det er nødvendig og saklig å bruke fødselsnummer.
+
+Utfyllende om kriteriet
+Fødselsnummer regnes ikke som særlig kategori av personopplysninger, men det er likevel klare grenser for bruken av det. Vi kan bruke fødselsnummer der det er nødvendig for å skille enkeltmennesker fra hverandre på en sikker måte. I noen tilfeller vil det ikke være nødvendig å bruke fødselsnummer. Det kan for eksempel brukes fødselsdato, kundenummer, ansattnummer e.l.
+
+I tillegg til at det skal være nødvendig å bruke fødselsnummer skal det også være en saklig grunn. Nav vil i de fleste tilfeller ha saklig behov for å bruke fødselsnummer, eksempelvis for å kunne utbetale rett ytelse til rett person eller koble data fra ulike kilder til en bestemt person.
+
+De samme vilkårene gjelder for bruk av andre entydige identifikasjonsmidler enn fødselsnummer.
+
+Suksesskriterium 2 av 2
+Vi har gjennomført tiltak for å sikre at fødselsnummer bare er tilgjengelig for mottakeren hvis de sendes i usikrede kommunikasjonskanaler.
+
+Utfyllende om kriteriet
+Når fødselsnummer sendes, skal det ikke være tilgjengelig for andre enn mottakeren.
+
+Bruk lukket konvolutt hvis dere sender fødselsnummer i et brev. Fødselsnummeret skal ikke være synlig i konvoluttvinduet eller være skrevet på utsiden av konvolutten.
+
+Alminnelig usikret e-post eller annen ukryptert internettkommunikasjon (for eksempel bruk av sms, apper mv.) gir ikke tilfredsstillende informasjonssikkerhet.
+
