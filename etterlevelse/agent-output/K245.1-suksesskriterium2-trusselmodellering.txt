@@ -1,0 +1,1 @@
+EESSI Pensjon har en dokumentert arkitekturoversikt med dataflytdiagram som viser alle integrasjoner, hendelsesstrømmer og datalagre. Arkitekturdokumentasjonen vedlikeholdes i versjonskontroll og oppdateres ved endringer i løsningen.

@@ -27,3 +27,11 @@
 - [ ] **Innsynsrapporter (SK5):** Avklares med Team Auditlogging Arcsight om EESSI Pensjon skal inkluderes i innsynsrapportene til innbyggere og ledere, og hvordan løsningen skal navngis og beskrives i rapporten. Team eessipensjon / Team Auditlogging Arcsight.
 - [ ] **Formatbekreftelse (SK6):** Bekreftes med Team Auditlogging Arcsight at oppslagsloggene fra EESSI Pensjon er mottatt på riktig format i produksjon. Team eessipensjon / Team Auditlogging Arcsight.
 - [ ] **Logging fra saksbehandling-api (SK1):** Avklares om saksbehandling-api eksponerer personopplysninger direkte til frontend som burde vært logget til oppslagsloggen, eller om all personvisning går via fagmodul (som allerede logger). Team eessipensjon.
+
+## K245.1 – Krav til risikovurdering for applikasjoner, systemer og plattformer
+
+- [ ] **Verdivurdering (SK1):** Bekreftes om det er gjennomført en formell verdivurdering av EESSI Pensjon etter verdivurderingsmalen, og om lenken er delt med HSB. Team eessipensjon.
+- [ ] **Trusselmodellering (SK2):** Bekreftes om det er gjennomført en formell trusselmodellering (DFD + STRIPED/STRIDE) etter sikkerhetsmalen, utover den eksisterende arkitekturdokumentasjonen. Team eessipensjon / Team AppSec.
+- [ ] **Sikkerhetsrisikovurdering (SK3):** Avhenger av SK1 — dersom verdien er Høy eller Svært Høy, skal en sikkerhetsrisikovurdering gjennomføres. Bekreftes om dette er gjort. Team eessipensjon / HSB.
+- [ ] **Rutiner for oppdatering (SK4):** Bekreftes om teamet har en formell rutine (f.eks. årshjul eller som del av sprint-review) for å vurdere om sikkerhetsassessmentene er oppdaterte. Team eessipensjon.
+- [ ] **Lagring (SK5):** Bekreftes hvor eventuelle verdi-, trussel- og risikovurderinger er lagret, og om lenke er delt med HSB. Team eessipensjon.

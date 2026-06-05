@@ -1,0 +1,1 @@
+Team eessipensjon utvikler og drifter EESSI Pensjon kontinuerlig. Arkitekturdokumentasjonen oppdateres ved endringer i løsningen. Større endringer (nye integrasjoner, endret dataflyt, nye personopplysningskategorier) bør trigge gjennomgang av eksisterende vurderinger.

@@ -1,0 +1,1 @@
+Arkitekturdokumentasjon og teknisk systembeskrivelse ligger i versjonskontrollert GitHub-repo med tilgangsstyring. Eventuelle verdi-, trussel- og risikovurderinger som inneholder sensitiv informasjon skal lagres i Sharepoint med tilgangsstyring, og lenke deles med HSB.

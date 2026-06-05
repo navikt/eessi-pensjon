@@ -1,0 +1,1 @@
+EESSI Pensjon er en saksbehandlerløsning for elektronisk utveksling av SED med EU/EØS-land. Løsningen behandler personopplysninger (fødselsnummer, navn, adresser, pensjonsdata) og integrerer med PDL, PESYS, Joark, Nav Oppgave og EUX-plattformen. Løsningen kjører på NAIS (GCP) og har ingen egne databaser, men mellomlagrer dokumenter og tilstand i GCP Storage.
