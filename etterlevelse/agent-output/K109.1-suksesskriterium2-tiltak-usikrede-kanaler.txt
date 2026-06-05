@@ -1,0 +1,7 @@
+EESSI Pensjon sender ikke fødselsnummer over usikrede kommunikasjonskanaler. All kommunikasjon skjer over krypterte kanaler:
+
+- SED-er som inneholder fødselsnummer utveksles via RINA-nettverket, som er et lukket og kryptert samhandlingsnettverk mellom EU/EØS-landenes trygdemyndigheter.
+- Intern kommunikasjon mellom EESSI Pensjon sine tjenester og andre Nav-systemer (PDL, PESYS, Joark) skjer over krypterte forbindelser med tokenstyrt tilgang innenfor Nav sin skyplattform.
+- Saksbehandlergrensesnittet er kun tilgjengelig for autentiserte Nav-ansatte med riktig rolle, via sikker innlogging med flerfaktorautentisering.
+
+EESSI Pensjon sender ikke brev, e-post eller SMS til brukere. Slik kommunikasjon håndteres av fagsystemene.

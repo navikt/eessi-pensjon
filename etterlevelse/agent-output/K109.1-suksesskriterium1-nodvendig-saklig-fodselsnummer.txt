@@ -1,0 +1,5 @@
+EESSI Pensjon behandler fødselsnummer og d-nummer fordi sikker identifisering er en forutsetning for utveksling av trygdeopplysninger med EU/EØS-land. Hver SED som sendes eller mottas må knyttes til riktig person i Nav sine systemer. Uten fødselsnummer er det ikke mulig å skille personer fra hverandre med tilstrekkelig sikkerhet i et internasjonalt samarbeid der likelydende navn er vanlig.
+
+Fødselsnummer brukes til oppslag mot PDL, PESYS og Joark for å hente persondata, pensjonshistorikk og arkiverte dokumenter. Dette er nødvendig for korrekt saksbehandling av BUC-er og for at automatiserte prosesser som journalføring og oppgaveoppretting treffer riktig person og riktig pensjonssak.
+
+Nav har saklig behov for bruk av fødselsnummer i EESSI Pensjon: formålet er å sikre korrekt ytelsesbehandling og forvekslingsfri dokumentutveksling med andre lands trygdemyndigheter. D-nummer brukes tilsvarende for personer uten norsk fødselsnummer.
