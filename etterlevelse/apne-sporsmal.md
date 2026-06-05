@@ -21,3 +21,9 @@
 - [ ] **Sammenstilte oversikter (SK4):** Bekreftes at saksoversikter i saksbehandlergrensesnittet faktisk filtrerer bort sensitive saker for saksbehandlere uten riktig rolle, og ikke bare skjuler innholdet. Team eessipensjon.
 - [ ] **Deling av adresse (SK5) — BEKREFTET AVVIK:** Koden i PrefillPDLAdresse sjekker kun FORTROLIG og STRENGT_FORTROLIG — men IKKE STRENGT_FORTROLIG_UTLAND. Brukere med strengt fortrolig adresse utland kan ha adresse i PDL som i dag forhåndsutfylles i utgående SED-er. Avviket bør lukkes. Team eessipensjon.
 - [ ] **Geolokaliserende opplysninger (SK6):** Kartlegges hvilke felter i SED-er som kan inneholde geolokaliserende opplysninger utover adresse (f.eks. arbeidsgiver, trygdetilhørighet), og om det er mulig/ønskelig å utelate disse for adressebeskyttede brukere. Team eessipensjon / faggruppe pensjon.
+
+## K253.1 – Visning av personopplysninger skal skrives til oppslagslogg (Arcsight)
+
+- [ ] **Innsynsrapporter (SK5):** Avklares med Team Auditlogging Arcsight om EESSI Pensjon skal inkluderes i innsynsrapportene til innbyggere og ledere, og hvordan løsningen skal navngis og beskrives i rapporten. Team eessipensjon / Team Auditlogging Arcsight.
+- [ ] **Formatbekreftelse (SK6):** Bekreftes med Team Auditlogging Arcsight at oppslagsloggene fra EESSI Pensjon er mottatt på riktig format i produksjon. Team eessipensjon / Team Auditlogging Arcsight.
+- [ ] **Logging fra saksbehandling-api (SK1):** Avklares om saksbehandling-api eksponerer personopplysninger direkte til frontend som burde vært logget til oppslagsloggen, eller om all personvisning går via fagmodul (som allerede logger). Team eessipensjon.

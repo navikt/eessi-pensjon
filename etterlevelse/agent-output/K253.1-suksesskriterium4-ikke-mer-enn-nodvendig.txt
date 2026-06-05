@@ -1,0 +1,1 @@
+EESSI Pensjon logger én logglinje per handling som tilgjengeliggjør nye personopplysninger for saksbehandler. Navigering innenfor en allerede åpnet BUC som ikke henter nye personopplysninger genererer ikke ekstra logglinjer.

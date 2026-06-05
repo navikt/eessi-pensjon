@@ -13,7 +13,8 @@
 |--------|--------|------|---------|--------|
 | K267.1 | Applikasjoner skal ha et forsvarlig sikkerhetsnivå | Inf.sikkerhet | 7 | Ja (delvis) |
 | K255.1 | Nav skal beskytte brukere med adressebeskyttelse | Inf.sikkerhet | 8 | Ja (delvis) |
+| K253.1 | Visning av personopplysninger skal skrives til oppslagslogg (Arcsight) | Inf.sikkerhet | 6 | Ja (delvis) |
 
 ---
 
-Sist oppdatert: 2026-05-29
+Sist oppdatert: 2026-06-05

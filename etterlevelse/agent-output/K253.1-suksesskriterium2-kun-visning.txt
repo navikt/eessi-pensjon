@@ -1,0 +1,3 @@
+Loggingen skjer kun i tjenestene som betjener saksbehandlergrensesnittet — altså når persondata faktisk returneres til skjermen.
+
+Bakgrunnstjenester som behandler EESSI-hendelser maskinelt (journalføring, oppgaveoppretting, kravinitialisering) logger ikke til oppslagsloggen. Avviste forespørsler (tilgangskontroll) logges heller ikke.

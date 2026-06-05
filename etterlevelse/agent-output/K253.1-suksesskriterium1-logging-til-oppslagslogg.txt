@@ -1,0 +1,3 @@
+EESSI Pensjon logger til oppslagsloggen (Arcsight) når saksbehandler viser personopplysninger. Loggingen dekker alle handlinger der saksbehandler aktivt henter persondata — som å slå opp en person, åpne en BUC, vise en SED eller åpne vedlegg.
+
+Hver loggmelding inneholder saksbehandlerens NAVident, hvilken handling som ble utført, og identifikatoren til personen det ble gjort oppslag på.

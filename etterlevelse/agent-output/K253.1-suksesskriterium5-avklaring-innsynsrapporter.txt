@@ -1,0 +1,1 @@
+EESSI Pensjon logger oppslag til Arcsight med deviceVendor="EESSI" og deviceProduct="EESSI-PENSJON". 

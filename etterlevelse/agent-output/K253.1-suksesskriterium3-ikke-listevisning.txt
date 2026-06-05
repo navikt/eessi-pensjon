@@ -1,0 +1,3 @@
+EESSI Pensjon har ikke listevisninger der brukeres personopplysninger dukker opp tilfeldig (oppgavebenker, deltakerlister e.l.). Saksbehandler navigerer alltid aktivt til en spesifikk BUC for å se personopplysninger.
+
+Innenfor en BUC kan det forekomme referanser til andre personer (f.eks. familiemedlemmer i en SED). Disse genererer ikke egne oppslag i oppslagsloggen — kun den aktive handlingen logges.
