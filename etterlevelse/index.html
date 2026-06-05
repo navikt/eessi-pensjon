@@ -93,7 +93,16 @@
     .nav-item .nav-id { font-weight: 600; font-size: 0.83rem; display: flex; align-items: center; gap: 0.4rem; }
     .nav-item .nav-title { font-size: 0.75rem; color: var(--nav-gray-600); margin-top: 0.1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .nav-item .nav-progress { font-size: 0.68rem; color: var(--nav-gray-300); margin-top: 0.1rem; }
-    .nav-tema-heading { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--nav-blue); padding: 0.8rem 1.25rem 0.3rem; }
+    .nav-tema-heading {
+      font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;
+      color: var(--nav-blue); padding: 0.8rem 1.25rem 0.3rem;
+      display: flex; align-items: center; justify-content: space-between;
+      cursor: pointer; user-select: none;
+    }
+    .nav-tema-heading:hover { color: var(--nav-blue-dark); }
+    .nav-tema-toggle { font-size: 0.65rem; transition: transform 0.2s; display: inline-block; }
+    .nav-tema-group.collapsed .nav-tema-toggle { transform: rotate(-90deg); }
+    .nav-tema-group.collapsed .nav-tema-items { display: none; }
 
     .badge { display: inline-block; font-size: 0.66rem; font-weight: 600; padding: 0.1rem 0.4rem; border-radius: 10px; white-space: nowrap; }
     .badge-yes { background: #cce5d6; color: #06893a; }
@@ -443,6 +452,7 @@
     let editingContext = null; // { kravId, num, idx }
     let suppressNextPoll = false;
     let accordionState = {}; // { "kravId-num": true/false }
+    let temaCollapseState = {}; // { "tema": true/false } — true = collapsed
 
     const QA_OPTIONS = [
       { value: "ikke-pabegynt", label: "Ikke påbegynt" },
@@ -634,7 +644,13 @@
       let html = "";
       for (const tema of temaKeys) {
         const heading = tema || "Ukategorisert";
-        html += `<div class="nav-tema-heading">${esc(heading)}</div>`;
+        const collapsed = temaCollapseState[tema] === true;
+        html += `<div class="nav-tema-group${collapsed ? ' collapsed' : ''}" data-tema="${esc(tema)}">`;
+        html += `<div class="nav-tema-heading" onclick="toggleTema('${esc(tema).replace(/'/g, "\\'")}')">
+          <span>${esc(heading)}</span>
+          <span class="nav-tema-toggle">▼</span>
+        </div>`;
+        html += `<div class="nav-tema-items">`;
         for (const k of groups[tema]) {
           const answered = k.criteria.filter(c => c.answer).length;
           const total = k.criteria.length;
@@ -648,8 +664,14 @@
               <div class="nav-progress">${answered}/${total} besvart · ${qaCount}/${total} QA${oqCount ? ' · ' + oqCount + ' åpne spm.' : ''}</div>
             </div>`;
         }
+        html += `</div></div>`;
       }
       nav.innerHTML = html;
+    }
+
+    function toggleTema(tema) {
+      temaCollapseState[tema] = !temaCollapseState[tema];
+      renderNav(activeKrav);
     }
 
     function renderKrav(id) {
