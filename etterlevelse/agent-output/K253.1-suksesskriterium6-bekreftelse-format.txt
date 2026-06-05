@@ -1,1 +1,1 @@
-EESSI Pensjon sender oppslagslogger i CEF-format til Arcsight.
+EESSI Pensjon sender oppslagslogger i CEF-format til Arcsight..
