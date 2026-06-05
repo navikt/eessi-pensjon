@@ -1,0 +1,1 @@
+Dette kriteriet er ikke relevant for EESSI Pensjon fordi løsningen ikke fatter helautomatiske avgjørelser. Informasjon om underliggende logikk i automatiserte vedtak er et ansvar for fagsystemene som fatter slike vedtak.

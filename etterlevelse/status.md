@@ -12,6 +12,9 @@
 | Kravid | Tittel | Tema | Ant. SK | Status |
 |--------|--------|------|---------|--------|
 | K109.1 | Fødselsnummer og andre identifikasjonsmidler skal bare brukes der det er nødvendig for å oppnå sikker identifisering | Personvern | 2 | Ja |
+| K115.1 | Behandling som benytter automatisering oppfyller vilkårene for dette | Personvern | 7 | Ja (delvis) |
+| K187.1 | Den registrerte skal ha tilstrekkelig informasjon om behandlingen når Nav fatter automatiske avgjørelser | Personvern | 3 | Ja (delvis) |
+| K188.1 | Behandling som benytter profilering oppfyller vilkårene for dette | Personvern | 4 | Ja |
 | K267.1 | Applikasjoner skal ha et forsvarlig sikkerhetsnivå | Inf.sikkerhet | 7 | Ja (delvis) |
 | K255.1 | Nav skal beskytte brukere med adressebeskyttelse | Inf.sikkerhet | 8 | Ja (delvis) |
 | K245.1 | Krav til risikovurdering for applikasjoner, systemer og plattformer | Inf.sikkerhet | 5 | Ja (delvis) |

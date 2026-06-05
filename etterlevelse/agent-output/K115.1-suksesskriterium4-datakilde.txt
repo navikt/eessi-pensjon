@@ -1,0 +1,1 @@
+EESSI Pensjon henter personopplysninger fra PDL, pensjonsdata fra PESYS, og SED-innhold fra RINA via EUX-plattformen. Disse er autoritative kilder innenfor sine respektive domener. Når automatisk personidentifisering ikke kan gjøres med tilstrekkelig sikkerhet (f.eks. ved manglende eller motstridende opplysninger), opprettes en oppgave for manuell vurdering.

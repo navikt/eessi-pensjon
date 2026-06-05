@@ -1,0 +1,1 @@
+De automatiserte prosessene i EESSI Pensjon behandler alle SED-er og personer likt basert på BUC-type, SED-type og personidentifikator. Ingen opplysninger om kjønn, etnisitet, nasjonalitet eller andre beskyttede kjennetegn brukes som beslutningsgrunnlag i den automatiserte behandlingen.

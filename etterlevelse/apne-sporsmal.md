@@ -35,3 +35,13 @@
 - [ ] **Sikkerhetsrisikovurdering (SK3):** Avhenger av SK1 — dersom verdien er Høy eller Svært Høy, skal en sikkerhetsrisikovurdering gjennomføres. Bekreftes om dette er gjort. Team eessipensjon / HSB.
 - [ ] **Rutiner for oppdatering (SK4):** Bekreftes om teamet har en formell rutine (f.eks. årshjul eller som del av sprint-review) for å vurdere om sikkerhetsassessmentene er oppdaterte. Team eessipensjon.
 - [ ] **Lagring (SK5):** Bekreftes hvor eventuelle verdi-, trussel- og risikovurderinger er lagret, og om lenke er delt med HSB. Team eessipensjon.
+
+## K115.1 – Behandling som benytter automatisering oppfyller vilkårene for dette
+
+- [ ] **Behandlingskatalogen (SK1):** Bekreftes at EESSI Pensjon sine automatiserte behandlingsaktiviteter er dokumentert i Behandlingskatalogen. Team eessipensjon / personvernrådgiver.
+- [ ] **Kravinitialisering (SK1):** Avklares om kravinitialisering (der EESSI Pensjon automatisk sender krav til PESYS basert på mottatt SED) betraktes som del av en helautomatisk avgjørelseskjede, eller om det kun er en administrativ videresending. Team eessipensjon / PESYS-teamet.
+- [ ] **Dødsmelding (SK1):** Avklares om automatisk utsendelse av H070 SED ved dødsfall (uten saksbehandlers involvering) kan betraktes som en helautomatisk avgjørelse, gitt at den utløser prosesser i andre lands trygdemyndigheter. Team eessipensjon / juridisk.
+
+## K187.1 – Den registrerte skal ha tilstrekkelig informasjon om behandlingen når Nav fatter automatiske avgjørelser
+
+- [ ] **Avhengighet av K115.1 (SK1, SK2, SK3):** Vurderingen av K187.1 bygger på konklusjonen i K115.1 om at EESSI Pensjon ikke fatter helautomatiske avgjørelser. Dersom kravinitialisering eller dødsmelding reklassifiseres som del av en helautomatisk avgjørelseskjede, vil informasjonsplikten i K187.1 også gjelde for EESSI Pensjon. Se åpne spørsmål under K115.1.

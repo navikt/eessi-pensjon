@@ -1,0 +1,1 @@
+Alle automatiserte handlinger i EESSI Pensjon kan overprøves manuelt av saksbehandler. Journalføring kan korrigeres, oppgaver kan omfordeles, og krav som er initiert i PESYS kan behandles manuelt i fagsystemet. Saker som krever manuell vurdering rutes automatisk til saksbehandler via oppgavesystemet.

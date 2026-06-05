@@ -1,0 +1,1 @@
+De automatiserte prosessene i EESSI Pensjon er deterministiske: samme SED med samme persondata gir alltid samme resultat for journalføring, oppgaveruting og kravinitialisering. Saker som ikke kan behandles automatisk (f.eks. manglende personmatch eller ukjent BUC-type) rutes konsekvent til manuell saksbehandling via oppgavesystemet.
