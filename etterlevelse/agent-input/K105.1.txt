@@ -1,0 +1,42 @@
+# Hjelp meg å dokumentere: K105.1 Det må tilrettelegges for dataportabilitet av personopplysninger
+
+Tema: Personvern
+
+## Hensikten med kravet
+Formålet med dataportabilitet er å fremme konkurranse og legge til rette for nye tjenester. Rettigheten styrker brukerens kontroll over egne opplysninger og til å få dem utlevert.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 2 tekster:
+
+Suksesskriterium 1 av 2
+Vi har vurdert om dataportabilitet av personopplysninger er aktuelt.
+
+Utfyllende om kriteriet
+Retten til dataportabilitet innebærer at den registrerte på visse vilkår har rett til å få utlevert eller overført sine personopplysninger i et strukturert format. Dette gir personen muligheten til å lagre egne personopplysninger på en privat enhet til videre og personlig bruk, eller flytte, kopiere eller overføre opplysninger om seg til en annen virksomhet. Det må avklares om behandlingen gir rett til dataportabilitet av hele eller deler av personopplysningene som behandles.
+
+Vilkår som må være oppfylt for at rettigheten gjør seg gjeldende:
+- Retten gjelder kun for opplysninger som behandles etter behandlingsgrunnlagene samtykke eller avtale. Det innebærer at opplysninger NAV behandler for å utøve offentlig myndighet, for eksempel treffe enkeltvedtak, ikke omfattes av retten til dataportabilitet. Tilbyr Nav digitale tjenester som er basert på samtykke og som ikke er del av offentlig myndighetsutøvelse (for eksempel tilbud om tjenester til enkeltpersoner til bruk til eget formål), så må det legges til rette for kompatible formater som muliggjør dataportabilitet.
+- Retten til dataportabilitet gjelder kun opplysninger som den enkelte selv har gitt til Nav.
+- Personopplysninger som ikke er samlet inn direkte fra den enkelte er ikke omfattet av denne retten. Dette gjelder blant annet opplysninger basert på den enkeltes aktive bruk av en tjeneste, slik som analyser og profiler.
+- Retten kan bare utøves såfremt den ikke krenker andre individers rettigheter eller friheter. Hvis datasettet den enkelte ønsker utlevert og overført til en virksomhet også inneholder opplysninger om andre personer, må disse som hovedregel skilles ut før utlevering. Unntak gjelder for eksempel for kontaktlister og epostkorrespondanse.
+
+Suksesskriterium 2 av 2
+Vi har funksjonalitet for utlevering av personopplysninger hvis vilkårene for dataportabilitet er oppfylt.
+
+Utfyllende om kriteriet
+I tilfeller der vilkårene for dataportabilitet er oppfylt, skal det etableres rutine for fremgangsmåte og tilrettelegges for dataportabilitet av personopplysningene det gjelder. Den registrerte har rett til å motta personopplysningene om seg selv på en strukturert, kompatibel og maskinlesbar form. Det vil si i et format som er kjent og i vanlig bruk.
+
+Dersom dere utleverer opplysningene direkte til den registrerte, må dere sørge for at dataene utleveres til rette vedkommende. Dere kan kreve ytterligere opplysninger som er nødvendige for å kunne bekrefte vedkommendes identitet. Opplysningene må formidles i en sikker kommunikasjonskanal.
+
+Den registrerte har rett til å kreve at Nav overfører personopplysningene direkte til en annen virksomhet når det er teknisk mulig, det vil si fra et IT-system til et annet. Opplysningene må formidles i en sikker kommunikasjonskanal. Dere må kunne dokumentere at den registrerte har fremsatt kravet.
+
+Det er ingen plikt for eventuelle mottakere å ta imot opplysningene som den registrerte krever flyttet, verken direkte fra personen selv eller fra Nav. Nav har heller ikke ansvar for om videre bruk av opplysningene er lovlig hos den andre virksomheten.
+
+Selv om personopplysningene utleveres, kan Nav fortsatt behandle og oppbevare personopplysningene hvis vi har lovlig behandlingsgrunnlag for det. Dataportabilitet innebærer derfor ingen automatisk sletting av opplysningene.
+
+Frist
+
+Nav har plikt til å vurdere, utføre og gi tilbakemelding på en forespørsel om rettigheten fra bruker uten ugrunnet opphold og senest innen en måned etter at den ble mottatt.
+

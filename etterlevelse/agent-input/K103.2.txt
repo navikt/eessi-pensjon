@@ -1,0 +1,61 @@
+# Hjelp meg å dokumentere: K103.2 Personopplysninger skal kunne rettes
+
+Tema: Personvern
+
+## Hensikten med kravet
+Nav må opptre i samsvar med personvernprinsippet om riktighet. Det betyr at alle opplysninger som Nav behandler må ha god kvalitet, være korrekte og eventuelt oppdaterte. Dette er særlig viktig i saksbehandling, der feil i personopplysninger kan føre til at vedtak fattes på uriktig grunnlag.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 3 tekster:
+
+Suksesskriterium 1 av 3
+Vi har vurdert om det er behov for å etablere tiltak for å sikre at personopplysningene vi behandler er korrekte og oppdaterte.
+
+Utfyllende om kriteriet
+Nav har ansvar for å påse at personopplysninger som behandles er korrekte og om nødvendig tilstrekkelig oppdaterte. Det vurderes ut fra hva som er formålet med behandlingen av opplysningene.
+
+For å sikre riktighet må det vurderes behov for tiltak. Eksempler på tiltak kan være:
+- Registrerte selv kontrollerer egne personopplysninger, feks via en selvbetjeningsportal eller dialogløsning, og med muligheter til enten selv å rette eller melde om feil eller mangler.
+- Automatiske forespørsler sendes til den registrerte om å bekrefte eller oppdatere sine personopplysninger.
+- Automatisk validering av opplysningene ved innsamling av opplysninger som kan knyttes til en enkeltperson.
+- Etablere rutiner for å sørge for at registre med personopplysninger holdes oppdaterte.
+- Rutiner og funksjonalitet for å sikre at personopplysninger som er uriktige, straks rettes ev. slettes
+
+Suksesskriterium 2 av 3
+Vi har rutiner og funksjonalitet for å rette og supplere personopplysninger i løsningen.
+
+Utfyllende om kriteriet
+Den registrerte har rett til å få rettet opp eller supplert mangelfulle personopplysninger så raskt som mulig. Nav har også et selvstendig ansvar for å sørge for at opplysningene er korrekte. Vi må derfor etablere rutiner og funksjonalitet for å gjenfinne personopplysninger i løsningen og rette eller supplere dem.
+
+Vi har en retningslinje som dekker retting, sletting og begrensning (åpner i en ny fane) for saksbehandling i fagsystemene. Hvis ikke behandlingen dekkes av denne, må det etableres egne rutiner for håndtering av krav om retting.
+
+Det er mulig å rette personopplysninger i løsningen
+
+Registrerte må kunne sannsynliggjøre at personopplysningene er uriktige og hva som er korrekt. Selv om det dreier seg om en rettighet for den registrerte, så har Nav også på selvstendig grunnlag en plikt til å rette og komplementere hvis vi oppdager feil og ufullstendigheter.
+
+Et eksempel: Feil tiltaksarrangør, feil fastlege eller feil helseinstitusjon erstattes av riktige opplysninger.
+
+Det er mulig å supplere personopplysninger i løsningen
+
+I mange tilfeller er retting ved korrigering ikke praktisk mulig, eller opplysningene er korrekte men gir et uriktig eller mangelfullt inntrykk. Da kan registrerte kreve at opplysningene suppleres med nye, korrekte opplysninger. På denne måten kan andre som leser opplysningene, for eksempel saksbehandleren, få et riktig bilde av situasjonen.
+
+Et eksempel: Ved skjønnsmessige vurderinger av registrerte, slik som personlige egenskaper eller funksjonsevne, vil det være korrekt med supplering. Mener man vurderingen er feil, kan man kreve å få registrert sin mening om hva som er riktig. Dette bør registreres tydelig og på samme sted som de opprinnelige opplysningene slik at andre som leser dem, får et riktig inntrykk.
+
+Frist
+
+Nav har plikt til å vurdere, utføre og gi tilbakemelding på en forespørsel om rettigheten fra den registrerte uten ugrunnet opphold og senest innen en måned etter at den ble mottatt.
+
+Suksesskriterium 3 av 3
+Vi har varslet mottaker vi har utlevert personopplysningene til om rettingen.
+
+Utfyllende om kriteriet
+Vi må varsle enhver mottaker som har fått utlevert personopplysninger om enhver retting.
+
+En slik varsling skal fungere som en orientering om at eventuelle andre behandlingsansvarlige også må vurdere om det foreligger en plikt til å rette personopplysningene hos seg. Formålet er å minimere skadevirkningene for den registrerte. De typiske tilfellene vil være der Nav gjør rettelser i for eksempel Aa-registeret eller opplysninger om pensjonsytelser som overføres til andre behandlingsansvarlige eller som disse har tilgang til.
+
+Vi kan unnlate å varsle mottaker dersom dette viser seg å være umulig eller innebærer en uforholdsmessig stor innsats.
+
+Den behandlingsansvarlige skal underrette den registrerte om nevnte mottakere dersom den registrerte anmoder om det.
+

@@ -1,0 +1,51 @@
+# Hjelp meg å dokumentere: K104.1 Personopplysninger skal kunne slettes
+
+Tema: Personvern
+
+## Hensikten med kravet
+Nav må opptre i samsvar med personvernprinsippene om riktighet og lagringsbegrensning. Retten til å slette øker brukerens kontroll med egne opplysninger og sikrer at opplysninger ikke lagres for lenge. Retten kan virke som en sikkerhetsventil for å reparere tilfeller der opplysninger blir behandlet ulovlig.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 2 tekster:
+
+Suksesskriterium 1 av 2
+Vi har rutiner og funksjonalitet for å slette personopplysninger i løsningen.
+
+Utfyllende om kriteriet
+Den registrerte har i enkelte tilfeller rett til å kreve at egne personopplysninger slettes så raskt som mulig. Nav har også et selvstendig ansvar for at vi ikke lagrer opplysningene ulovlig. Selve vurderingen av om noe skal slettes gjøres ikke av teamet, men av en egen enhet i Nav. Teamet må etablere rutiner og funksjonalitet for å gjenfinne personopplysninger i løsningen og slette disse dersom vilkårene for dette er oppfylt.
+
+Vi har en retningslinje som dekker retting, sletting og begrensning (åpner i en ny fane) for saksbehandling i fagsystemene. Hvis ikke behandlingen dekkes av denne, må det etableres egne rutiner for håntering av krav om sletting.
+
+Tilfeller det kan være aktuelt å slette personopplysninger
+
+I fem situasjoner kan vi være forpliktet til å slette personopplysninger. Dette gjelder når:
+- Opplysningene ikke lenger er nødvendige for formålet.
+- Et samtykke er trukket tilbake, med mindre det kan identifiseres et alternativt behandlingsgrunnlag.
+- En bruker protesterer mot behandlingen.
+- Opplysninger er behandlet ulovlig.
+- Vi er rettslig forpliktet til å slette opplysningene, eksempelvis opptak gjort ved kameraovervåking hvor man er rettslig forpliktet til å slette opptak etter angitte frister i egen forskrift.
+
+Et eksempel: Inntektsmelding for bruker A feilsendt fra arbeidsgiver da personopplysningene omhandlet bruker B. Behandlingen av opplysningene er da verken nødvendig for formålet eller lovlig og personopplysningene må slettes.
+
+Begrensninger for sletting
+
+Som offentlig virksomhet er vi pålagt å behandle og arkivere en del personopplysninger. Retten til sletting er derfor begrenset for våre brukere. I to viktige tilfeller har vi derfor ikke mulighet til å slette:
+- Når en behandling av personopplysninger er nødvendig for å utøve offentlig myndighet, kan personen ikke kreve sletting. De aller fleste behandlinger i Nav skjer nettopp for å utøve offentlig myndighet som er pålagt oss etter f.eks. folketrygdloven eller lov om arbeidsmarkedstiltak.
+- Personen kan heller ikke kreve personopplysninger slettet dersom vi er rettslig forpliktet til å oppbevare dem. Arkivloven pålegger oss å arkivere en del personopplysninger.
+
+Frist
+
+Nav har plikt til å vurdere, utføre og gi tilbakemelding på en forespørsel om rettigheten fra den registrerte uten ugrunnet opphold og senest innen en måned etter at den ble mottatt.
+
+Suksesskriterium 2 av 2
+Vi har varslet mottaker vi har utlevert personopplysningene til om slettingen.
+
+Utfyllende om kriteriet
+Vi må varsle enhver mottaker som har fått utlevert personopplysninger om enhver sletting. For eksempel sletting i sentrale registerdata som utleveres til andre samarbeidspartnere.
+
+Vi kan unnlate å varsle mottaker dersom dette viser seg å være umulig eller innebærer en uforholdsmessig stor innsats.
+
+Den behandlingsansvarlige skal underrette den registrerte om nevnte mottakere dersom den registrerte anmoder om det.
+
