@@ -13,7 +13,13 @@
   },
   "K255.1-2": {
     "edited": true,
-    "editTimestamp": "29.5.2026, 13:36:24"
+    "editTimestamp": "5.6.2026, 10:42:29",
+    "status": "under-arbeid",
+    "done": false,
+    "timestamp": "5.6.2026, 10:50:42",
+    "qaAt": 1780649442431,
+    "stale": true,
+    "staleReason": "Fil endret etter QA (9.6.2026, 13:10:37)"
   },
   "K255.1-3": {
     "edited": true,

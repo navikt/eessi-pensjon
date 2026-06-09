@@ -5,5 +5,5 @@ Når en saksbehandler i EESSI Pensjon åpner en sak som involverer en person med
 
 Markeringen av sensitive saker skjer automatisk og krever ingen manuell handling fra saksbehandler. Den automatiske sjekken kjøres ved hvert nytt dokument som sendes eller mottas, slik at også personer som får adressebeskyttelse etter at saken ble opprettet, fanges opp. 
 
-Oppfølging: 1 Sjekk at kode6 saker faktisk markeres i EP
+Oppfølging: Kode 6 saker skal markeres i EP
 2. Kan feilmelding endres til en fornuftig melding om at saken er skjermet.
