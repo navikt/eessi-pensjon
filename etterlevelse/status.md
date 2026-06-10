@@ -11,6 +11,9 @@
 
 | Kravid | Tittel | Tema | Ant. SK | Status |
 |--------|--------|------|---------|--------|
+| K103.2 | Personopplysninger skal kunne rettes | Personvern | 3 | Ja |
+| K104.1 | Personopplysninger skal kunne slettes | Personvern | 2 | Ja |
+| K105.1 | Det må tilrettelegges for dataportabilitet av personopplysninger | Personvern | 2 | Ja |
 | K109.1 | Fødselsnummer og andre identifikasjonsmidler skal bare brukes der det er nødvendig for å oppnå sikker identifisering | Personvern | 2 | Ja |
 | K115.1 | Behandling som benytter automatisering oppfyller vilkårene for dette | Personvern | 7 | Ja (delvis) |
 | K187.1 | Den registrerte skal ha tilstrekkelig informasjon om behandlingen når Nav fatter automatiske avgjørelser | Personvern | 3 | Ja (delvis) |
@@ -22,4 +25,4 @@
 
 ---
 
-Sist oppdatert: 2026-06-05
+Sist oppdatert: 2026-06-10

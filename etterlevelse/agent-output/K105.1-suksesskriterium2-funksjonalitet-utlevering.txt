@@ -1,0 +1,3 @@
+Vilkårene for dataportabilitet er ikke oppfylt for EESSI Pensjon, fordi behandlingen er basert på offentlig myndighetsutøvelse og ikke på samtykke eller avtale. Det er derfor ikke etablert egen funksjonalitet for utlevering eller overføring av personopplysninger etter reglene om dataportabilitet.
+
+Dersom en registrert fremsetter krav om dataportabilitet, vil Nav sin sentrale innsynsenhet vurdere forespørselen og avslå den med hjemmel i at behandlingsgrunnlaget ikke gir rett til dataportabilitet. EESSI Pensjon har ikke behov for egne rutiner eller tekniske løsninger for dette utover å henvise til Nav sin etablerte prosess for håndtering av rettighetsforespørsler.

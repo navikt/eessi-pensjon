@@ -45,3 +45,18 @@
 ## K187.1 – Den registrerte skal ha tilstrekkelig informasjon om behandlingen når Nav fatter automatiske avgjørelser
 
 - [x] **Avhengighet av K115.1 (SK1, SK2, SK3):** Vurderingen av K187.1 bygger på konklusjonen i K115.1 om at EESSI Pensjon ikke fatter helautomatiske avgjørelser. Dersom kravinitialisering eller dødsmelding reklassifiseres som del av en helautomatisk avgjørelseskjede, vil informasjonsplikten i K187.1 også gjelde for EESSI Pensjon. Se åpne spørsmål under K115.1.
+
+## K104.1 – Personopplysninger skal kunne slettes
+
+- [ ] **Mellomlagring i GCP Storage (SK1):** Bekreftes om GCP Storage-bøttene har automatiske livssyklusregler (retention/lifecycle policies) som sletter mellomlagrede SED-dokumenter etter en definert periode, og hva denne perioden er. Team eessipensjon.
+- [ ] **Prosedyre for sletting (SK1):** Avklares om teamet har en dokumentert prosedyre for å håndtere en forespørsel om sletting fra Nav sin sletteenhet — herunder hvordan man identifiserer og fjerner data knyttet til en bestemt person fra GCP Storage. Team eessipensjon.
+- [ ] **EESSI-mekanisme for varsling (SK2):** Bekreftes hvilken konkret mekanisme i EESSI-regelverket som benyttes for å varsle mottakerlandet om at personopplysninger i en tidligere sendt SED skal slettes. Team eessipensjon / faggruppe pensjon.
+
+## K105.1 – Det må tilrettelegges for dataportabilitet av personopplysninger
+
+- [ ] **Håndtering av forespørsler (SK2):** Bekreftes at Nav sin sentrale innsyns-/rettighetsenhet håndterer eventuelle forespørsler om dataportabilitet, og at EESSI Pensjon ikke trenger en egen prosedyre utover å henvise videre. Team eessipensjon / Nav personvern.
+
+## K103.2 – Personopplysninger skal kunne rettes
+
+- [ ] **Korrigering av sendte SED-er (SK2, SK3):** Bekreftes hvilken konkret prosedyre som gjelder i EESSI-regelverket for å korrigere feilaktige opplysninger i en allerede sendt SED — om det sendes en ny SED, eller om det håndteres via meldingsutveksling i BUC-en. Team eessipensjon / faggruppe pensjon.
+- [ ] **Varsling via PDL (SK3):** Bekreftes at PDL har egne mekanismer for å videreformidle rettinger til sine konsumenter, slik at EESSI Pensjon ikke har et selvstendig ansvar for å varsle andre Nav-systemer om rettinger mottatt fra utlandet. Team eessipensjon / PDL-teamet.

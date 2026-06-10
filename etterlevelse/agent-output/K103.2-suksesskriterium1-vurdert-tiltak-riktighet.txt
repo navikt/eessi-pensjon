@@ -1,0 +1,10 @@
+EESSI Pensjon er ikke et register over personopplysninger. Løsningen henter persondata fra autoritative kilder (PDL og PESYS) ved behov, og lagrer ikke egne kopier av personopplysninger utover det som inngår i SED-er under utveksling.
+
+For å sikre at opplysningene som brukes i SED-er er korrekte, er følgende tiltak etablert:
+
+- Personopplysninger hentes alltid direkte fra PDL (Folkeregisteret) ved forhåndsutfylling av SED-er. Saksbehandler ser dermed oppdaterte opplysninger fra kilden.
+- Pensjonsdata hentes fra PESYS ved forhåndsutfylling. PESYS er autoritativ kilde for vedtaksdata og ytelsesbeløp.
+- Når EESSI Pensjon mottar SED-er fra andre land med oppdaterte personopplysninger (adresser, utenlandske ID-er), sendes disse videre til PDL slik at registeret holdes oppdatert.
+- Saksbehandler kan kontrollere og korrigere forhåndsutfylte opplysninger i SED-en før den sendes, via saksbehandlergrensesnittet i EESSI Pensjon.
+
+EESSI Pensjon eier ikke personregistrene og har ikke selvstendig ansvar for at opplysningene i PDL eller PESYS er korrekte — det ansvaret ligger hos de respektive registreierne. Løsningens tiltak er rettet mot å bruke oppdaterte data fra kildene og gi saksbehandler mulighet til å oppdage og korrigere feil før utsendelse.

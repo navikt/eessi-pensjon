@@ -122,6 +122,7 @@ Utfyllende om kriteriet
 5. **Skriv til disk.** Lagre filen som `etterlevelse/agent-input/K<nummer>.<versjon>.txt`.
 6. **Rydd opp.** Slett `etterlevelse/agent-input/raw.txt` hvis den eksisterer.
 7. **Bekreft.** Si til brukeren hva som ble opprettet: filnavn, kravnavn, og antall suksesskriterier.
+8.  **Minne om komprimering.** Avslutt alltid med: "✅ Ferdig. Kjør `/compact` nå før neste krav.
 
 ## Eksempel
 

@@ -1,0 +1,8 @@
+EESSI Pensjon utleverer personopplysninger til trygdemyndigheter i andre EU/EØS-land gjennom SED-er. Dersom personopplysninger i en sendt SED viser seg å være uriktige, håndteres varsling av mottaker gjennom EESSI-regelverkets mekanismer:
+
+- Saksbehandler kan sende en ny eller korrigert SED til mottakerlandet via RINA med oppdaterte opplysninger. Dette fungerer som varsling om at tidligere utleverte opplysninger var feilaktige.
+- For opplysninger som EESSI Pensjon videreformidler til PDL (mottatt fra utlandet), er det PDL som autoritativt register som har ansvar for eventuell videre varsling til andre konsumenter av registeret.
+
+EESSI Pensjon utleverer ikke personopplysninger til andre Nav-interne mottakere utover det som skjer gjennom journalføring i Joark. Joark og PDL har egne mekanismer for å reflektere rettinger til sine konsumenter.
+
+Varslingsplikten ved retting ivaretas dermed gjennom EESSI-samarbeidets formelle kommunikasjonskanaler (nye/korrigerte SED-er) og gjennom kildesystemenes egne oppdateringsmekanismer.

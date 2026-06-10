@@ -1,0 +1,7 @@
+EESSI Pensjon utleverer personopplysninger til andre lands trygdemyndigheter gjennom SED-er sendt via EESSI-samarbeidet. Dersom personopplysninger i en sendt SED må slettes, skjer varsling til mottakerlandets institusjon gjennom EESSI-regelverkets egne mekanismer for kommunikasjon mellom trygdemyndigheter.
+
+Personopplysninger mottatt fra utlandet som skrives til PDL videreformidles til andre Nav-systemer gjennom PDL sine egne distribusjonsmekansimer. Ved sletting i PDL er det PDL som ivaretar varsling av sine konsumenter.
+
+Journalførte dokumenter i Joark er underlagt arkivlovens bestemmelser og slettes normalt ikke. Dersom sletting likevel gjennomføres i Joark, ivaretas varsling av dokumentløsningenes egne rutiner.
+
+Teamet kan på forespørsel opplyse den registrerte om hvilke mottakere som har fått utlevert personopplysninger gjennom EESSI Pensjon.

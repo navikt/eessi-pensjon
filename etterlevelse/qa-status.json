@@ -71,6 +71,7 @@
   },
   "K109.1-1": {
     "edited": true,
+<<<<<<< Updated upstream
     "editTimestamp": "5.6.2026, 14:52:09",
     "status": "oppfylt",
     "done": true,
@@ -196,5 +197,12 @@
     "timestamp": "10.6.2026, 09:29:54",
     "qaAt": 1781076594063,
     "stale": false
+=======
+    "editTimestamp": "5.6.2026, 14:52:09"
+  },
+  "K188.1-1": {
+    "edited": true,
+    "editTimestamp": "8.6.2026, 09:18:06"
+>>>>>>> Stashed changes
   }
 }

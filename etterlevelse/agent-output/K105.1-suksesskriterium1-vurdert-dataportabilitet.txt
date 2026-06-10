@@ -1,0 +1,5 @@
+EESSI Pensjon behandler personopplysninger utelukkende som ledd i offentlig myndighetsutøvelse — nærmere bestemt koordinering av trygdeytelser mellom EU/EØS-land etter trygdeforordningen. Behandlingsgrunnlaget er ikke samtykke eller avtale.
+
+Retten til dataportabilitet gjelder kun der behandlingen er basert på samtykke eller avtale. Siden EESSI Pensjon sin behandling er hjemlet i offentlig myndighetsutøvelse, er dataportabilitet ikke aktuelt for personopplysningene som behandles i løsningen.
+
+I tillegg samler ikke EESSI Pensjon inn personopplysninger direkte fra den registrerte. Opplysningene hentes fra andre Nav-systemer (PESYS, PDL) eller mottas fra utenlandske trygdemyndigheter via EESSI-samarbeidet. Den registrerte «gir» altså ikke opplysningene til EESSI Pensjon selv, noe som ytterligere utelukker dataportabilitet.

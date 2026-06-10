@@ -1,0 +1,5 @@
+EESSI Pensjon har ingen egne persondataregistre eller SQL-databaser. Personopplysninger som behandles i løsningen hentes ved behov fra autoritative kilder (PDL og PESYS), og lagres permanent i Nav sine fellesløsninger — Joark for journalførte dokumenter og PDL for persondata mottatt fra utlandet. Sletting i disse systemene styres av fellesløsningenes egne rutiner og retningslinjer.
+
+EESSI Pensjon benytter GCP Storage for midlertidig mellomlagring av SED-dokumenter under behandling. Denne mellomlagringen er operasjonell og har begrenset levetid. Ved et eventuelt krav om sletting kan teamet identifisere og fjerne data knyttet til en bestemt person fra mellomlagringen.
+
+Selve vurderingen av om personopplysninger skal slettes gjøres av en egen enhet i Nav, ikke av teamet. Teamets ansvar er å kunne gjennomføre slettingen teknisk når vilkårene er oppfylt. De fleste personopplysninger EESSI Pensjon behandler er knyttet til utøvelse av offentlig myndighet etter trygdeforordningen, og er i tillegg arkivpliktige etter arkivloven. Retten til sletting er derfor sterkt begrenset for data som behandles i denne løsningen.

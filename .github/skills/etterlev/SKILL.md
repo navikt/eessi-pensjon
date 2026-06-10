@@ -43,7 +43,7 @@ Hvis brukeren **ikke** oppgir en krav-ID (eller bare skriver `/etterlev` uten ar
    - Hvis brukeren velger å avbryte, avslutt skillen.
    - Hvis brukeren velger å overskrive, **ta vare på innholdet i de eksisterende filene** i minnet (for diff-oppsummering til slutt), og fortsett.
 
-3. **Finn agent-input-filen.** Les filen `etterlevelse/agent-input/<krav-ID>.txt` (f.eks. `etterlevelse/agent-input/K255.1.txt`). Hvis filen ikke finnes, si fra til brukeren og foreslå å bruke `/create-etterlevelse-prompt` først.
+3. **Finn agent-input-filen.** Les filen `etterlevelse/agent-input/<krav-ID>.txt` (f.eks. `etterlevelse/agent-input/K255.1.txt`). Hvis filen ikke finnes, si fra til brukeren og foreslå å bruke `/etterlevelse-input` først.
 
 4. **Utfør oppgaven i filen.** Filen inneholder en komplett prompt med:
    - Kravnavn og hensikt
