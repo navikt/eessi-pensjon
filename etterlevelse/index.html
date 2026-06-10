@@ -103,6 +103,8 @@
     .nav-tema-toggle { font-size: 0.65rem; transition: transform 0.2s; display: inline-block; }
     .nav-tema-group.collapsed .nav-tema-toggle { transform: rotate(-90deg); }
     .nav-tema-group.collapsed .nav-tema-items { display: none; }
+    .nav-tema-count { font-size: 0.65rem; font-weight: 400; color: var(--nav-gray-600); margin-left: 0.3rem; }
+    .nav-tema-empty { padding: 0.4rem 1.25rem; font-size: 0.75rem; color: var(--nav-gray-300); font-style: italic; }
 
     .badge { display: inline-block; font-size: 0.66rem; font-weight: 600; padding: 0.1rem 0.4rem; border-radius: 10px; white-space: nowrap; }
     .badge-yes { background: #cce5d6; color: #06893a; }
@@ -445,6 +447,16 @@
     let kravList = [];
     let qaStatus = {};
     let openQuestions = {};
+    const temaTotals = {
+      "Arkiv og dokumentasjon": 15,
+      "Elektronisk kommunikasjon": 6,
+      "Informasjonssikkerhet": 4,
+      "Likestilling og ikke-diskriminering": 3,
+      "Personvern": 19,
+      "Saksbehandling og forvaltningsrett": 3,
+      "Språk": 1,
+      "Statistikk og styringsinformasjon": 1
+    };
     let activeKrav = null;
     let lastModified = 0;
     let pollInterval = null;
@@ -627,17 +639,28 @@
 
     function renderNav(activeId) {
       const nav = document.getElementById("nav-list");
-      // Group by tema
+      // Group kravList by tema
       const groups = {};
       for (const k of kravList) {
         const tema = k.tema || "";
         if (!groups[tema]) groups[tema] = [];
         groups[tema].push(k);
       }
-      // Sorted tema keys, empty string last
+
+      // Merge with all known temas from tema.txt so every tema gets a heading
+      const allTemaNames = Object.keys(temaTotals);
+      for (const name of allTemaNames) {
+        if (!groups[name]) groups[name] = [];
+      }
+      // Also include any kravs with unknown/empty tema
+      if (groups[""] && groups[""].length > 0 && !groups["Ukategorisert"]) {
+        groups["Ukategorisert"] = groups[""];
+        delete groups[""];
+      }
+
       const temaKeys = Object.keys(groups).sort((a, b) => {
-        if (!a) return 1;
-        if (!b) return -1;
+        if (!a || a === "Ukategorisert") return 1;
+        if (!b || b === "Ukategorisert") return -1;
         return a.localeCompare(b, "no");
       });
 
@@ -645,15 +668,26 @@
       for (const tema of temaKeys) {
         const heading = tema || "Ukategorisert";
         const collapsed = temaCollapseState[tema] === true;
+        const kravs = groups[tema] || [];
+        const total = temaTotals[tema] || null;
+        // "besvart" = kravs that have at least one answered criterion
+        const answered = kravs.filter(k => k.criteria.some(c => c.answer)).length;
+        const countLabel = total !== null
+          ? `<span class="nav-tema-count">(${answered} av ${total})</span>`
+          : (kravs.length > 0 ? `<span class="nav-tema-count">(${answered})</span>` : "");
+
         html += `<div class="nav-tema-group${collapsed ? ' collapsed' : ''}" data-tema="${esc(tema)}">`;
         html += `<div class="nav-tema-heading" onclick="toggleTema('${esc(tema).replace(/'/g, "\\'")}')">
-          <span>${esc(heading)}</span>
+          <span>${esc(heading)}${countLabel}</span>
           <span class="nav-tema-toggle">▼</span>
         </div>`;
         html += `<div class="nav-tema-items">`;
-        for (const k of groups[tema]) {
-          const answered = k.criteria.filter(c => c.answer).length;
-          const total = k.criteria.length;
+        if (kravs.length === 0) {
+          html += `<div class="nav-tema-empty">Ingen krav dokumentert ennå</div>`;
+        }
+        for (const k of kravs) {
+          const answeredCrit = k.criteria.filter(c => c.answer).length;
+          const totalCrit = k.criteria.length;
           const qaCount = k.criteria.filter(c => qaStatus[k.id + "-" + c.num]?.done).length;
           const oq = openQuestions[k.id];
           const oqCount = oq ? oq.filter(q => !q.done).length : 0;
@@ -661,7 +695,7 @@
             <div class="nav-item ${k.id === activeId ? 'active' : ''}" onclick="renderKrav('${k.id}')">
               <div class="nav-id">${k.id} ${statusBadge(k.id)}</div>
               <div class="nav-title">${esc(k.title)}</div>
-              <div class="nav-progress">${answered}/${total} besvart · ${qaCount}/${total} QA${oqCount ? ' · ' + oqCount + ' åpne spm.' : ''}</div>
+              <div class="nav-progress">${answeredCrit}/${totalCrit} besvart · ${qaCount}/${totalCrit} QA${oqCount ? ' · ' + oqCount + ' åpne spm.' : ''}</div>
             </div>`;
         }
         html += `</div></div>`;

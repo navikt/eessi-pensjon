@@ -1,0 +1,73 @@
+# Hjelp meg å dokumentere: K108.2 Den registrerte skal informeres om hvordan Nav behandler personopplysninger
+
+Tema: Personvern
+
+## Hensikten med kravet
+Informasjonsplikten skal sikre at den registrerte forstår hvordan personopplysninger blir behandlet, hvilke konsekvenser behandlingen kan ha, hvilke rettigheter registrerte har og hvordan rettighetene kan tas i bruk og dermed mulighet til kontroll over egne personopplysninger. Åpenhet og gjennomsiktighet er et viktig personvernprinsipp i forordningen, og for å imøtekomme dette prinsippet må informasjonen være lett tilgjengelig for den som opplysningene gjelder.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 3 tekster:
+
+Suksesskriterium 1 av 3
+Vi har vurdert hvilken informasjon vi må gi om behandlingen av personopplysninger og når informasjon må gis til den registrerte
+
+Utfyllende om kriteriet
+Vi har plikt til å informere den registrerte om hvordan vi behandler personopplysningene. Informasjonen skal gis senest når personopplysningene samles inn.
+
+Den registrerte har rett til å få informasjon om:
+- hvem som er behandlingsansvarlig og kontaktinformasjon
+- kontaktinformasjon til personvernombudet
+- hva som er behandlingsgrunnlaget og formålet med behandlingen. Ved bruk av berettiget interesse som behandlingsgrunnlag må det informeres særskilt om interesseavveiningen.
+- hvem personopplysningene utleveres eller overføres til. Dette gjelder både hvem Nav utleverer til og hvem som er databehandlere for behandlingen av personopplysningene.
+- om det brukes automatisk behandling og/eller profilering, og nærmere informasjon om dette
+- om personopplysningene viderebehandles til andre formål, for eksempel til statistikkformål eller kontrollformål
+- om det foreligger et lovfestet krav om å gi personopplysningene, om den registrerte har plikt til å gi personopplysningene og om mulige konsekvenser dersom registrerte ikke gjør det
+- hvor lenge personopplysningene lagres eller hva som påvirker lagringstiden
+- om det overføres personopplysninger til tredjeland og med hvilke garantier som gjelder ved overføringen
+- hvilke rettigheter den registrerte har: retten til innsyn, retting og sletting mv.
+- klagemuligheter til Datatilsynet
+
+Det er ikke nødvendig å gi informasjon når:
+- den registrerte allerede har mottatt informasjonen
+
+Suksesskriterium 2 av 3
+Vi har avklart hvilken informasjon vi skal gi til den registrerte når vi innhenter personopplysninger fra andre kilder enn den registrerte selv
+
+Utfyllende om kriteriet
+Vi må informere den registrerte når personopplysningene samles inn fra andre enn den registrerte selv, for eksempel fra andre offentlige virksomheter, arbeidsgiver, helsepersonell mm. Kravene til informasjon er de samme som gjelder når opplysningene innhentes fra den registrerte selv, men det skal i tillegg gis informasjon om:
+- hvilke kategorier av personopplysninger som innhentes fra andre
+- hvilke kilder informasjonen innhentes fra, for eksempel Folkeregisteret, arbeidsgiver, pensjonskasser
+
+Vi bør gi informasjonen om innhenting fra andre kilder samtidig som vi gir informasjon når vi innhenter personopplysninger fra den registrerte.
+
+Dersom det ikke er mulig å gi informasjonen om eksterne kilder på samme tidspunkt som når personopplysninger samles inn fra registrerte, må det informeres særskilt på et senere tidspunkt. Informasjonen må gis innen rimelig tid etter at opplysningene er hentet inn og senest innen en måned. Jo mer inngripende behandlingen av personopplysninger kan være, desto raskere må vi gi informasjon. Dette er viktig for at den registrerte kan utøve rettighetene sine på en meningsfull måte. Hver situasjon må derfor vurderes konkret. Der det ikke lages funksjonalitet i løsningen for å informere den registrerte digitalt, må det utarbeides rutiner for veileder/saksbehandler slik at informasjonsplikten blir ivaretatt.
+
+Det er ikke nødvendig å gi informasjon når:
+- den registrerte allerede har fått informasjon om at opplysningene vil innhentes fra andre, for eksempel i søknadsdialogen
+- innsamlingen eller utleveringen har en uttrykkelig hjemmel i lov eller forskrift og denne inneholder egnede tiltak for å verne den enkeltes interesser
+- personopplysningene må holdes konfidensielle som følge av lovbestemt taushetsplikt
+- det er umulig å gi informasjonen eller det vil innebære en uforholdsmessig stor innsats å gi informasjonen
+- informasjon vil sannsynligvis umuliggjøre eller i alvorlig grad hindre at målene med behandlingen nås
+
+For de to siste tilfellene må vi ha på plass passende tiltak for å verne registrertes rettigheter, friheter og interesser. Det betyr at informasjonen bør kunne gis generelt for eksempel i personvernerklæringen på nav.no.
+
+I tillegg inneholder personopplysningsloven en del andre unntak fra informasjonsplikten. Det er opplysninger som:
+- er av betydning for Norges utenrikspolitiske eller nasjonale forsvars- og sikkerhetsinteresser som kan unntas etter offentlighetsloven
+- det er påkrevd å hemmeligholde av hensyn til forebygging, etterforskning, avsløring og rettslig forfølgning av straffbare handlinger
+- det må anses utilrådelig at den registrerte får kjennskap til av hensyn til vedkommendes helse eller forholdet til personer som står vedkommende nært
+- er underlagt lovpålagt taushetsplikt
+- utelukkende finnes i tekst som er utarbeidet for internt saksforberedelse, ikke utlevert til andre, så langt det er nødvendig å nekte innsyn for å sikre forsvarlige interne avgjørelsesprosesser
+- det vil være i strid med åpenbare og grunnleggende private eller offentlige interesser å informere om
+
+Dersom ett av unntakene er oppfylt, skal det dokumenteres her og med henvisning til hvilket unntak som gjelder.
+
+Suksesskriterium 3 av 3
+Vi har avklart hvordan informasjonen skal gis til den registrerte
+
+Utfyllende om kriteriet
+Informasjonen som skal gis skal være presis, lett tilgjengelig, klart tydelig språk og enkel å forstå. Dette gjelder særlig for informasjon som er rettet mot barn. Hvordan den skal gis kan løses på ulike måter og gjennom ulike informasjonskanaler. Fordi informasjonen samlet kan bli omfattende, kan informasjonen gis lagvis for å kunne forene med at kravet til at informasjonen skal være kort. Det vil si at den viktigste informasjonen oppsummeres først (nivå 1), og så at det er mulig å klikke seg videre i mer detaljert informasjon (nivå 2 og eventuelt nivå 3) ved at det for eksempel brukes nedtrekksmenyer.
+
+Når det gjelder generell informasjon om Navs behandling av personopplysninger, kan det vises til personvernerklæringen på nav.no som gjelder for alle. Der informeres det om kontaktopplysninger til behandlingsansvarlig og personvernombud, registrertes rettigheter og retten til å klage til Datatilsynet. Ser dere behov for å oppdateres den generelle informasjon i personvernerklæringen? Send forslag til nav.juridisk.avdeling@nav.no
+

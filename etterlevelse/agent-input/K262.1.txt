@@ -1,0 +1,51 @@
+# Hjelp meg å dokumentere: K262.1 Det må tilrettelegges for at den registrerte kan protestere mot behandling av personopplysninger
+
+Tema: Personvern
+
+## Hensikten med kravet
+Retten til å protestere er en rettighet som innebærer at den registrerte i noen sammenhenger har rett til å få stanset behandling av egne opplysninger. For behandling av personopplysninger hvor behandlingen har et behandlingsgrunnlag gir rettigheten den registrerte større kontroll over egne personopplysninger ved å kunne stanse behandlingen.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 3 tekster:
+
+Suksesskriterium 1 av 3
+Vi har vurdert om rettigheten er aktuell for vår behandling av personopplysninger.
+
+Utfyllende om kriteriet
+Retten til å protestere innebærer at den registrerte på visse vilkår kan motsette seg behandlingen av egne personopplysninger.
+
+Retten til å protestere er kun aktuell dersom den registrerte er i en særlig situasjon og behandlingsgrunnlaget for behandlingen er enten
+- artikkel 6 (1) bokstav e (utføre en oppgave i allmennhetens interesse eller for å utøve offentlig myndighet), eller
+- artikkel 6 (1) bokstav f (berettiget interesse).
+
+Profilering med grunnlag i disse bestemmelsene er omfattet.
+
+Et eksempel på utøvelse av offentlig myndighet, kan være at den registrerte av ulike årsaker ikke ønsker å være gjenstand for profilering i forbindelse med vurdering av en tjeneste eller ytelse hos Nav.
+
+Protesten fra den registrerte må være knyttet til "vedkommendes særlige situasjon" og ha tilknytning til den registrerte selv. Det stilles ikke strenge krav til begrunnelsen, men generelle innvendinger er vanligvis ikke tilstrekkelig. Det må gjøres en konkret vurdering i hvert enkelt tilfelle. Eksempler på særlig situasjon kan inkludere personlige forhold som helseproblemer, spesifikke vanskeligheter som behandlingen kan medføre for den enkelte, eller situasjoner der behandlingen kan true den enkeltes sikkerhet eller privatliv på en måte som går utover det vanlige.
+
+Retten til å protestere gjelder ikke hvis
+- Nav kan begrunne (påvise) at det foreligger tungtveiende grunner som må gå foran den registrertes interesser, rettigheter og friheter
+- Nav trenger å behandle personopplysningene for å gjøre gjeldende, fastslå eller forsvare et rettskrav
+- formålet med behandlingen er vitenskapelig eller historisk forskning eller statistikk, og behandlingen er nødvendig for å utføre en oppgave i allmennhetens interesse. Nav må da kunne begrunne hvorfor dette er nyttig for samfunnet.
+
+Suksesskriterium 2 av 3
+Vi har rutiner og funksjonalitet i løsningen for å stanse behandling av personopplysninger.
+
+Utfyllende om kriteriet
+Dersom vilkårene for å protestere er til stede, så kan Nav ikke lenger behandle personopplysningene og behandlingen må avsluttes. Det må etableres rutiner og funksjonalitet i løsningen for å stanse bruken av personopplysninger og eventuelt om opplysningene også skal slettes dersom vilkårene for det foreligger.
+
+Fremsetting av krav og frist for behandling
+
+Det er ingen formkrav til hvordan den registrerte skal fremme kravet. Kravet kan fremsettes enten muntlig eller skriftlig. Den registrerte må derimot begrunne protesten med informasjon om forhold som er knyttet til sin særlige situasjon, slik at Nav kan vurdere om vilkårene for det er til stede.
+
+Kravet skal behandles uten ugrunnet opphold og senest innen en måned fra Nav mottok kravet. Hvis behovet beskrevet i kravet er omfattende eller komplisert, kan vi forlenge svarfristen med ytterligere to måneder. Varsel om forlengelse må gjøres innen en måned etter at Nav mottok kravet og det må gis en begrunnelse for behovet for forlengelsen.
+
+Suksesskriterium 3 av 3
+Vi har informert den registrerte om retten til å protestere i tilfeller rettigheten er aktuell.
+
+Utfyllende om kriteriet
+Det foreligger en særskilt informasjonsplikt på de områder hvor rettigheten kan være aktuell. Den registrerte skal gjøres uttrykkelig oppmerksom på sin rett til å protestere. Hen skal informeres om denne rettigheten på en klar måte atskilt fra annen informasjon senest ved første kommunikasjon med Nav.
+

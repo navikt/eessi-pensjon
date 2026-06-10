@@ -1,0 +1,44 @@
+# Hjelp meg å dokumentere: K113.2 Den registrerte har krav på innsyn i hvilke personopplysninger Nav har registrert
+
+Tema: Personvern
+
+## Hensikten med kravet
+Retten til innsyn gjør at den registrerte kan kontrollere om personopplysningene er riktige, og om Nav behandler personopplysningene på lovlig måte. Innsynsretten gir den registrerte mulighet til å kreve at uriktige eller overflødige opplysninger blir rettet eller slettet. Åpenhet og gjennomsiktighet er et viktig prinsipp i forordningen. Merk at det er forskjell på innsyn etter forvaltningsloven, offentleglova og personopplysningsloven. Disse rettighetene bør sees i sammenheng.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 2 tekster:
+
+Suksesskriterium 1 av 2
+Vi har laget rutine for behandling av innsynsforespørsler, inkludert gjenfinning og uttrekk i løsningen.
+
+Utfyllende om kriteriet
+Som hovedregel har den registrerte rett til innsyn i egne personopplysninger. Informasjon om hvordan den registrerte kan gå frem for å be om innsyn, fremgår av personvernerklæringen på nav.no.
+
+Nav Kontaktsenter behandler innsynsforespørsler, se servicerutiner på navet.
+
+Nav har egne retningslinjer for logginnsyn og håndtering av ansattes innsyn i egne opplysninger.
+
+Innsynsretten gir ikke nødvendigvis noen rett til å få utlevert fullstendige dokumenter. Det er selve personopplysningene som er gjenstand for innsynsretten. Det skal være mulig å gi en kopi av opplysningene. Kommer henvendelsen elektronisk til Nav, skal kopien også være elektronisk og i et vanlig filformat.
+
+Hvordan gi innsyn - hva må teamene gjøre?
+
+Teamene må ha gode rutiner for hvordan innsyn skal håndteres. Disse rutinene gjelder for alle løsninger som inneholder personopplysninger og må inneholde:
+- Hvordan Nav Kontaktsenter skal få beskjed om nye løsninger som inneholder personopplysninger teamet utvikler, slik at Nav Kontaktsenter kan håndtere brukerhenvendelser. Send e-post til nav.kontaktsenter.styringsenhet@nav.no, med emne K113.2 Innsyn.
+- Hvordan teamet skal håndtere innsynsforespørsler når disse mottas fra Nav Kontaktsenter.
+- Hvordan teamet skal finne igjen og hente ut personopplysninger i løsningen.
+- Hvordan den registrerte skal få en kopi av alle sine personopplysninger, også elektroniske spor, metadata og eventuelle personprofiler man er tildelt.
+- Hvordan teamet gir innsyn så raskt som mulig og senest innen en måned etter at innsynsforespørselen ble mottatt.
+- Ved utlevering av personopplysningene skal det samtidig gis informasjon om hva personopplysningene er blitt brukt til. Denne informasjonen er sammenfallende med informasjonen som skal gis når vi innhenter personopplysningene.
+
+Suksesskriterium 2 av 2
+Vi har avklart hvilke personopplysninger som kan gis ved elektronisk innsyn i løsningen.
+
+Utfyllende om kriteriet
+Det stilles ingen krav til elektroniske innsynstjenester, men Nav bør i størst mulig grad tilrettelegge for det.
+
+Den registrerte kan logge seg inn på nav.no og se hvilke personopplysninger Nav har registrert i ulike registre, for eksempel PDL, Kontakt- og reservasjonsregisteret og Aa-registeret. I tillegg kan man se dokumentene i saken sin.
+
+Vi bør alltid ta stilling til om vi kan legge flere av opplysningene på nav.no. Elektronisk innsyn må imidlertid ikke gå på bekostning av andre personers rettigheter, eller på bekostning av sikkerheten i de informasjonssystemene som behandler opplysningene.
+

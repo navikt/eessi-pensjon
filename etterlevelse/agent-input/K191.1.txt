@@ -1,0 +1,42 @@
+# Hjelp meg å dokumentere: K191.1 Lagringstid skal være avklart for alle personopplysninger Nav behandler
+
+Tema: Personvern
+
+## Hensikten med kravet
+Personopplysninger skal ikke lagres lengre enn det som er nødvendig for formålene som personopplysningene behandles for. Det må først fastsettes hva som er nødvendig lagringstid for det aktuelle formålet eller formålene om det er flere formål. Deretter må det avklares om det er andre formål som tilsier et lengre lagringsbehov. Det kan for eksempel være behov som følger av andre fagområder etaten forvalter, eller arkivformål i allmennhetens interesse iht arkivloven.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 3 tekster:
+
+Suksesskriterium 1 av 3
+Vi har avklart hva som er lagringsbehovet for Navs egne formål og dokumentert lagringstid og begrunnelse i Behandlingskatalogen og i eget skjema på Confluence.
+
+Utfyllende om kriteriet
+Det må avklares hvor lenge Nav trenger de aktuelle personopplysningene for å ivareta både etatens og den registrertes interesser.
+
+Behovene vil typisk følge av krav og vilkår i det enkelte stønadskapittel, bestemmelser om frister for fremsettelse av krav i ettertid, bestemmelser om foreldelse, erstatningsrettslige vurderinger, krav til oppbevaring som følger av økonomireglementet mv.
+
+Vurderingene for lagringsbehov gjøres typisk per fagområde/formål. I tillegg er det viktig å være klar over at det også kan være behov for tilgang til de aktuelle opplysningene til andre formål som først oppstår på et senere tidspunkt, som for eksempel retten til pensjon som blant annet baserer seg på tidligere mottatte ytelser.
+
+Det er utarbeidet et skjema for å dokumentere begrunnelsen for fastsatt lagringstid. Skjemaet har en rekke spørsmål som kan være til hjelp for å avklare hva som påvirker lagringstiden og skal lagres under mappe for egen avdeling under 'Lagringstider' på Confluence. Fastsatt lagringstid for det aktuelle formålet skal i tillegg være registrert i Behandlingskatalogen, og det skal settes inn lenke til begrunnelsen i det ovennevnte skjemaet.
+
+Ved etterfølgende endret vurdering av lagringstid må både registreringene i Behandlingskatalogen og begrunnelsene som lagres på Confluence, oppdateres.
+
+Suksesskriterium 2 av 3
+Vi har avklart hva som skal skje med personopplysningene etter at lagringsbehovet for Navs formål er passert/opphørt og dokumentert dette i eget skjema på Confluence.
+
+Utfyllende om kriteriet
+Selv om lagringstiden på Navs hånd er oppfylt, kan det være andre regelverk som medfører lengre lagringstid.
+
+Arkivplikten er et slikt eksempel. Arkivplikten favner vidt og mye av den dokumentasjon vi skaper i Nav er arkiv. Utgangspunktet er at ingen arkivdokumenter kan kasseres (slettes) uten at det foreligger et kassasjonsvedtak fra Arkivverket, eller at kassasjonen er tillatt fordi det fremgår av bestemmelsene i arkivloven eller tilhørende forskrifter. Dette innebærer at personopplysningene i disse arkivdokumentene heller ikke kan kasseres (slettes) hvis dokumentene skal bevares. Det som er definert som bevaringsverdig skal avleveres til Arkivverket når Nav ikke lengre har behov for disse selv.
+
+Hvorvidt opplysningene skal kasseres eller avleveres, fremgår som regel av vedtak fra Arkivverket og dokumenteres i skjemaet i confluence nevnt under suksesskriterium 1.
+
+Suksesskriterium 3 av 3
+Vi har etablert tekniske løsninger for rutinemessig sletting og andre nødvendige rutiner for oppfølging av fastsatt lagringstid.
+
+Utfyllende om kriteriet
+Teamene må avklare hvordan avlevering og kassering skal gjennomføres i praksis for eget fagområde. Både organisatoriske og tekniske forhold må vurderes da det høyst sannsynlig vil være behov for justeringer av både rutiner og gjøre tilpasninger i systemløsningene som benyttes innen fagområde for å kunne iverksette regelmessig kassering (sletting).
+

@@ -1,0 +1,56 @@
+# Hjelp meg å dokumentere: K116.1 Behandling av personopplysninger må kunne begrenses
+
+Tema: Personvern
+
+## Hensikten med kravet
+Rettigheten kan virke som en sikkerhetsventil for å reparere tilfeller der opplysninger ikke er korrekte eller der de blir behandlet ulovlig.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 2 tekster:
+
+Suksesskriterium 1 av 2
+Vi har rutiner og funksjonalitet i løsningen for å begrense bruken av personopplysninger.
+
+Utfyllende om kriteriet
+Den registrerte kan i noen tilfeller kreve at behandling av sine personopplysninger begrenses til kun lagring (oppbevaring) av opplysningene. Det betyr at når behandlingen av personopplysninger er begrenset, skal vi lagre opplysningene, men ikke bruke dem til noe.
+
+Dette gjelder tilfeller der personen:
+
+- hevder at opplysningene ikke er korrekte og ber om at opplysningene rettes eller slettes. I perioden hvor Nav vurderer om dette er riktig eller ikke, kan den registrerte kreve at behandlingen stanses inntil det er avklart.
+- har brukt sin rett til å protestere mot Navs behandling av personopplysninger og inntil Nav har fått avgjort dette kravet skal behandlingen av opplysningene midlertidig begrenses.
+- ber om begrensning fremfor sletting av opplysningene, i tilfeller hvor Nav har behandlet personopplysningene ulovlig.
+- ber om forlenget oppbevaringstid fordi personen trenger opplysningene for å fastslå, gjøre gjeldende eller forsvare et rettskrav. Dette vil kun gjelde der opplysningene ellers skal slettes fordi Nav ikke lenger trenger å lagre opplysningene til sitt formål.
+
+Rett til begrensning gjelder ikke når formålet er bruk av personopplysningene til arkivformål i allmennhetens interesser, vitenskapelig eller historisk forskning eller til statistiske formål.
+
+Hvordan begrense behandlingen
+
+Begrensning av behandlingen kan skje på forskjellig måter. Det kan være:
+
+- Opplysningene som det gjelder merkes i løsningen med tydelig angivelse av at opplysningene ikke kan brukes til viderebehandling eller utleveres.
+- Opplysningene som det gjelder gjøres utilgjengelig (skjermes/sperres i løsningen) for de som har tilgang til opplysningene. Det er da viktig at opplysningene merkes på en eller annen måte og med begrunnelsen for hvorfor opplysningene ikke lenger er tilgjengelig.
+- Opplysningene flyttes midlertidig over til et annet IT-system eller lagringssted.
+- Offentlige opplysninger som er publisert på et nettsted fjernes.
+
+Eventuell pågående saksbehandling og annen bruk av opplysningene må stanses. Den registrerte skal alltid ha beskjed før en begrensning heves.
+
+Vi har en retningslinje som dekker retting, sletting og begrensning for saksbehandling i fagsystemene. Hvis ikke behandlingen dekkes av denne, må det etableres egne rutiner for håndtering av krav om begrensning.
+
+Frist
+
+Krav om begrensning skal behandles uten ugrunnet opphold og senest innen en måned fra Nav mottok kravet. Det er Juridisk avdeling som vurderer selve kravet om begrensning.
+
+Hvis behovet er omfattende eller komplisert, kan vi forlenge svarfristen med ytterligere to måneder. Varsel om forlengelse må gjøres innen en måned etter at Nav mottok kravet og det må gis en begrunnelse for behovet for forlengelsen.
+
+Suksesskriterium 2 av 2
+Vi har varslet mottaker vi har utlevert personopplysningene til om begrensningen.
+
+Utfyllende om kriteriet
+Vi må varsle enhver mottaker som har fått utlevert personopplysninger om enhver begrensning. Det må etableres rutiner for varsling, eksempelvis ved at det er funksjonalitet i løsningen for å varsle mottaker direkte, eller ved at mottaker varsles manuelt.
+
+Vi kan unnlate å varsle mottaker dersom dette viser seg å være umulig eller innebærer en uforholdsmessig stor innsats.
+
+I tillegg må vi underrette den registrerte om nevnte mottakere dersom den registrerte anmoder om det.
+
