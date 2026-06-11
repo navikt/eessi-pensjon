@@ -6,7 +6,6 @@
 #
 # Forutsetninger (settes som repo-/org-secrets):
 #   COPILOT_CLI_TOKEN          - token med GitHub Copilot-tilgang (brukes av Copilot CLI)
-#   EP_ETTERLEVELSE_KILDE_TOKEN - token med lesetilgang til navikt/eessi-pensjon (henter krav-kildene)
 #
 # ******************************************************************************************************************
 
@@ -40,7 +39,7 @@ jobs:
 
       - name: 'Hent etterlevelse-kilder fra meta-repo'
         env:
-          GH_TOKEN: ${{'{{ secrets.EP_ETTERLEVELSE_KILDE_TOKEN }}'}}
+          GH_TOKEN: ${{'{{ secrets.GITHUB_TOKEN }}'}}
           META_REPO: navikt/eessi-pensjon
           META_REF: ${{'{{ github.event.inputs.meta_ref }}'}}
         run: |
