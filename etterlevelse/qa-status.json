@@ -1,9 +1,9 @@
 {
   "K188.1-1": {
-    "status": "under-arbeid",
-    "done": true,
-    "timestamp": "12.6.2026, 11:26:20",
-    "qaAt": 1781256380145,
+    "status": "ikke-pabegynt",
+    "done": false,
+    "timestamp": "12.6.2026, 11:27:52",
+    "qaAt": 1781256472118,
     "stale": false
   }
 }
