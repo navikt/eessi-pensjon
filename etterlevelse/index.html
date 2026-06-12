@@ -499,8 +499,13 @@
       kravList = await kravRes.json();
       qaStatus = await qaRes.json();
       openQuestions = await oqRes.json();
-      const id = activeKrav || window.location.hash.replace("#", "") || (kravList[0]?.id);
-      if (id) renderKrav(id);
+      const id = activeKrav || window.location.hash.replace("#", "");
+      if (id) {
+        renderKrav(id);
+      } else {
+        renderNav(null);
+        document.getElementById("content").innerHTML = `<p style="color:var(--nav-gray-600);padding:2rem">Velg et krav fra menyen.</p>`;
+      }
       if (silent) showRefreshToast();
     }
 
@@ -667,7 +672,7 @@
       let html = "";
       for (const tema of temaKeys) {
         const heading = tema || "Ukategorisert";
-        const collapsed = temaCollapseState[tema] === true;
+        const collapsed = temaCollapseState[tema] !== false;
         const kravs = groups[tema] || [];
         const total = temaTotals[tema] || null;
         // "besvart" = kravs that have at least one answered criterion
@@ -704,7 +709,9 @@
     }
 
     function toggleTema(tema) {
-      temaCollapseState[tema] = !temaCollapseState[tema];
+      // Default is collapsed (undefined → true), so toggle means: if currently collapsed, set to open (false), else collapse (true)
+      const currentlyCollapsed = temaCollapseState[tema] !== false;
+      temaCollapseState[tema] = !currentlyCollapsed;
       renderNav(activeKrav);
     }
 
@@ -713,6 +720,9 @@
       activeKrav = id;
       const k = kravList.find(x => x.id === id);
       if (!k) return;
+      // Ensure the tema containing this krav is open
+      const tema = k.tema || "Ukategorisert";
+      temaCollapseState[tema] = false;
       renderNav(id);
       window.location.hash = id;
 
