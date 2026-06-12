@@ -355,8 +355,11 @@ const server = http.createServer(async (req, res) => {
     const repoRoot = path.resolve(BASE, "..");
     try {
       const branch = execFileSync("git", ["rev-parse", "--abbrev-ref", "HEAD"], { cwd: repoRoot, encoding: "utf-8" }).trim();
+      const stashOut = execFileSync("git", ["stash", "push", "-m", "qa-viewer-pre-pull"], { cwd: repoRoot, encoding: "utf-8" }).trim();
+      const stashed = !stashOut.includes("No local changes to save");
       const output = execFileSync("git", ["pull"], { cwd: repoRoot, encoding: "utf-8", timeout: 30000 });
-      return sendJson(res, { ok: true, output: output.trim(), branch });
+      if (stashed) execFileSync("git", ["stash", "pop"], { cwd: repoRoot, encoding: "utf-8" });
+      return sendJson(res, { ok: true, output: output.trim(), branch, stashed });
     } catch (e) {
       return sendJson(res, { error: e.stderr || e.message }, 500);
     }
@@ -384,6 +387,11 @@ const server = http.createServer(async (req, res) => {
     }
 
     try {
+      // Stash local changes, pull latest, then pop stash before pushing
+      const stashOut = execFileSync("git", ["stash", "push", "-m", "qa-viewer-pre-push"], { cwd: repoRoot, encoding: "utf-8" }).trim();
+      const stashed = !stashOut.includes("No local changes to save");
+      execFileSync("git", ["pull"], { cwd: repoRoot, encoding: "utf-8", timeout: 30000 });
+      if (stashed) execFileSync("git", ["stash", "pop"], { cwd: repoRoot, encoding: "utf-8" });
       // Stage selected files
       execFileSync("git", ["add", "--", ...files], { cwd: repoRoot, encoding: "utf-8" });
       // Commit
