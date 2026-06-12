@@ -709,9 +709,19 @@
     }
 
     function toggleTema(tema) {
-      // Default is collapsed (undefined → true), so toggle means: if currently collapsed, set to open (false), else collapse (true)
       const currentlyCollapsed = temaCollapseState[tema] !== false;
       temaCollapseState[tema] = !currentlyCollapsed;
+      const nowCollapsed = !currentlyCollapsed;
+      // If collapsing the tema that contains the active krav, clear main content
+      if (nowCollapsed && activeKrav) {
+        const activeK = kravList.find(k => k.id === activeKrav);
+        const activeTema = activeK?.tema || "Ukategorisert";
+        if (activeTema === tema || (!activeK?.tema && tema === "Ukategorisert")) {
+          activeKrav = null;
+          window.location.hash = "";
+          document.getElementById("content").innerHTML = `<p style="color:var(--nav-gray-600);padding:2rem">Velg et krav fra menyen.</p>`;
+        }
+      }
       renderNav(activeKrav);
     }
 
