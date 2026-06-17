@@ -1,0 +1,30 @@
+# Hjelp meg å dokumentere: K231.1 Språket i løsningen er klart, korrekt og brukertilpasset
+
+Tema: Språk
+
+## Hensikten med kravet
+Statens innbyggerundersøkelse viser at én av tre voksne innbyggere har problemer med å forstå tekster fra det offentlige. Som offentlig organ har Nav fra 1. januar 2022 derfor fått en lovfestet plikt til å bruke et språk som er lett å forstå, korrekt og brukertilpasset (§ 9 i språkloven). Dette betegnes gjerne som klarspråk. Vi har også plikt til å følge den offisielle rettskrivningen for bokmål og nynorsk (§ 10 i språkloven). Plikten til å bruke klarspråk gjelder publikumsrettet informasjon og informasjon til enkeltpersoner. «Informasjon» omfatter både tekster, bilde- og videoinnhold, digitale tjenester og selvbetjeningsløsninger. Vi sier at en tekst er skrevet i klarspråk når mottakerne finner informasjonen de trenger, forstår den, og kan bruke den til å gjøre det de kom for.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 3 tekster:
+
+Suksesskriterium 1 av 3
+Vi har vært bevisste på målgruppens behov og forutsetninger, og latt det være styrende for hvordan vi skriver
+
+Utfyllende om kriteriet
+Klarspråk handler om måten vi skriver på, men det handler like mye om måten vi tenker på når vi skriver. Klarspråk handler aller mest om å være bevisst på hvilke forutsetninger og behov leseren har, og så la det være styrende for hvordan vi skriver.
+
+Suksesskriterium 2 av 3
+Vi har brukertestet løsningen, så vi vet at målgruppen forstår språket, finner fram i løsningen, og får løst oppgaven de kom for
+
+Utfyllende om kriteriet
+Siden klarspråk ikke er en objektiv størrelse, vil brukertesting være en nødvendig del av alt arbeid med å lage innhold som er språklig tilgjengelig, funksjonelt, relevant og nyttig for de som skal bruke det.
+
+Suksesskriterium 3 av 3
+Vi har tatt kontakt med fagansvarlig for klarspråk i Nav hvis vi har konkrete språkspørsmål, eller hvis det er noe vi ønsker å diskutere nærmere
+
+Utfyllende om kriteriet
+Ta gjerne kontakt med oss hvis dere har spørsmål eller ønsker å diskutere språkfaglige problemstillinger i digitale løsninger.
+

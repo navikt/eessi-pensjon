@@ -1,0 +1,42 @@
+# Hjelp meg å dokumentere: K272.1 Dokumentasjonen må kunne vedlikehaldast
+
+Tema: Arkiv og dokumentasjon
+
+## Hensikten med kravet
+Når teknologi, format eller system endrar seg, må organet sørgje for at dokumentasjonen ikkje går tapt. Dette kan til dømes vere:
+
+- Flytting til nye lagringsmedium (datamigrering).
+- Konvertering til nye digitale format.
+- Bruk av nye applikasjonar eller standardar for strukturering og utveksling av informasjon.
+
+Kva tiltak som er naudsynte, avheng mellom anna av løysingane og teknologi som blir brukt.
+
+Sjølv om ein ikkje skal vedlikehalde informasjon i systemet sitt enno, er det viktig å tenkje gjennom val ein gjer ved utvikling, som kan påvirke behov og løysingar for vedlikehald fram i tid.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 3 tekster:
+
+Suksesskriterium 1 av 3
+Vi sikrar at informasjon fortsett å vere leseleg etter vedlikehaldet
+
+Utfyllende om kriteriet
+Kvaliteten på informasjonen skal ikkje bli dårlegare når han blir konvertert til nye format.
+
+Dette inneber at:
+- Informasjon som tidlegare var leseleg for menneske framleis skal vere leseleg for menneske.
+- Informasjon som var lagra i eit maskinleseleg format framleis skal vere maskinleseleg. Til dømes skal strukturerte format som XML ikkje konverterast til PDF eller bilete ved vedlikehald.
+
+Suksesskriterium 2 av 3
+Vi sikrar at metadata blir bevart
+
+Utfyllende om kriteriet
+Metadata som viser opphav og korleis dokumentasjonen har blitt behandla, skal ikkje gå tapt eller tape seg ved flytting til nye system.
+
+Suksesskriterium 3 av 3
+Vi sikrar at eigenskapar for søk og samanstilling oppretthaldast
+
+Utfyllende om kriteriet
+Eigenskapar som mogleggjer søk, kopling og samanstilling, skal oppretthaldast etter vedlikehald.
+

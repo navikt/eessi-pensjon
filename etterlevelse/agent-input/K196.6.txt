@@ -1,0 +1,42 @@
+# Hjelp meg å dokumentere: K196.6 Løsningen oppfyller alle A- og AA-krav i WCAG 2.1
+
+Tema: Likestilling og ikke-diskriminering
+
+## Hensikten med kravet
+Ikt-løsninger i Norge skal være universelt utformet. Dette gjelder nettløsninger, apper og automater. Både private og offentlige virksomheter, lag og organisasjoner må følge regelverket.
+
+Per i dag er dette alle A- og AA-krav som er definert i Web Content Accessibility Guidelines 2.1 på nivå A og AA.
+
+Selv om loven per i dag ikke omfatter interne systemer, har vi i Nav valgt å stille de samme kravene til våre internsystemer, for å sikre at de kan brukes av alle våre kollegaer. Det utredes for tiden om lovverket skal utvides også til disse systemene.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 3 tekster:
+
+Suksesskriterium 1 av 3
+Løsningen oppfyller WCAG 2.1 nivå A og AA.
+
+Utfyllende om kriteriet
+Kravene i WCAG-spesifikasjonen er delt inn i 3 nivåer. Nivå A er det laveste og mest grunnleggende nivået. Nivå AA er det midterste nivået og stiller langt flere krav enn nivå A. For å oppfylle dette kriteriet (og lovpålagte minumumskrav) må løsningen oppfylle alle krav på både A- og AA-nivå.
+
+Suksesskriterium 2 av 3
+Anbefaling: Dere kjører automatiserte uu-tester som en del av løsningens byggeprosess
+
+Utfyllende om kriteriet
+Vi anbefaler å legge inn automatiserte uu-tester i løsningens byggeprosess. På denne måten kan dere oppdage og rette enkelte uu-feil svært tidlig. Dette er ikke et lovkrav i seg selv, men kan spare dere for mye etterarbeid senere i prosessen.
+
+Se eksempel på oppsett for linting, enhetstester og ende-til-ende-tester på https://github.com/navikt/uu-testing.
+
+Suksesskriterium 3 av 3
+Dere dokumenterer uu-feil på https://a11y-statement.nav.no/
+
+Utfyllende om kriteriet
+Dere legger inn feil dere har funnet på NAVs interne løsning https://a11y-statement.nav.no/ ("a11y-løsningen"). Her samles alle uu-brudd i NAVs løsninger.
+
+A11y-løsningen er grunnlaget for tilgjengelighetserklæringen for nav.no, som er en lovpålagt erklæring som må oppdateres minst én gang i året. Dette gjør fagmiljøet for universell utforming.
+
+Hvis dere har en tjeneste som ligger utenfor nav.no, må dere i tillegg lage og oppdatere deres egen erklæring på uustatus.no, se krav K157.
+
+Dette suksesskriteriet er ikke pålagt for interne flater.
+

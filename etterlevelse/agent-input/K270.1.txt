@@ -1,0 +1,62 @@
+# Hjelp meg å dokumentere: K270.1 Systemet skal oppfylle grunnleggjande arkivkrav
+
+Tema: Arkiv og dokumentasjon
+
+## Hensikten med kravet
+Arkivlova stiller krav til korleis informasjonssystem skal utformast for å forvalte dokumentasjonen som arkiv.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 5 tekster:
+
+Suksesskriterium 1 av 5
+Dokumentasjonen har informasjon om kor han kjem frå og kva han heng saman med
+
+Utfyllende om kriteriet
+Systemet skal lagre informasjon som viser opphav og samanheng for dokumentasjonen.
+
+Døme på informasjon som bør lagrast:
+
+- Kven dokumentasjonen gjeld (som til dømes fødselsnummer til brukar).
+- Kva kontekst dokumentasjonen oppstår i (som til dømes saksnummer).
+- Beskrivande informasjon om dokumentasjonen. Dette kan i praksis vere beskrivande tabell- eller feltnamn eller tittel.
+- Tidspunkt for oppretting og endring.
+- Kva system eller register dokumentasjonen er henta frå.
+
+Beskriv korleis systemet lagrar informasjon som viser opphav og samanheng.
+
+Suksesskriterium 2 av 5
+Vi vernar dokumentasjonen mot ikkje-autoriserte endringar
+
+Utfyllende om kriteriet
+Etter at dokumentasjon er lagra i eit system, skal han frysast. Det betyr at dokumentasjonen og viktige metadata, som er naudsynte for å sikre autentisitet, integritet og kontekst, ikkje skal kunne endrast av uautoriserte brukarar.
+
+Beskriv korleis metadata og dokumentasjon blir verna mot endring.
+
+Suksesskriterium 3 av 5
+Vi sporar endringar
+
+Utfyllende om kriteriet
+Alle endringar skal sporast, anten i databasen eller i eit auditloggsystem.
+
+Det skal vere tydeleg kven som har gjort endringar, og kva endring dei har gjort og kva tidspunkt det er gjort på.
+
+Beskriv korleis endringar blir spora i systemet.
+
+Suksesskriterium 4 av 5
+Det er enkelt å finne og hente ut dokumentasjon
+
+Utfyllende om kriteriet
+Systemet skal gjere det enkelt å finne og hente ut dokumentasjon, både til eige bruk i Nav og for innsyn frå andre etter offentleglova, forvaltningslova eller anna lov.
+
+Beskriv korleis dokumentasjon kan bli funnen og henta ut.
+
+Suksesskriterium 5 av 5
+Vi lagrar dokumentasjonen på ein måte som ikkje avgrensar framtidig nytte
+
+Utfyllende om kriteriet
+Dokumentasjonen skal lagrast i format som sikrar at han kan bevarast over tid og nyttast i framtida.
+
+Beskriv korleis dette er løyst i systemet.
+

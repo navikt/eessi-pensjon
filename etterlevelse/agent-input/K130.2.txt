@@ -1,0 +1,32 @@
+# Hjelp meg å dokumentere: K130.2 Dokumentasjonen og databasen er lagret i Norge
+
+Tema: Arkiv og dokumentasjon
+
+## Hensikten med kravet
+Dokumentasjonen skal være beskyttet mot å gå tapt eller bli utilgjengelig som følge av lagring i utlandet, og de skal være underlagt norsk lovgivning og forvaltning.
+
+Arkivverket skal føre tilsyn med arkiv og databaser for offentlige organ. Arkivene og databasene skal være lagret i Norge, slik at de er underlagt norsk jurisdiksjon.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 1 tekster:
+
+Suksesskriterium 1 av 1
+Dokumentasjonens database er i Norge
+
+Utfyllende om kriteriet
+Databasen med dokumentasjon som er arkivpliktig, skal befinne seg i Norge.
+
+Kravet om lagring i Norge handler ikke om det er adgang til å benytte skytjenester for en løsning. Adgangen til å bruke skytjenster må vurderes ut fra andre etterlevelseskrav som f.eks. personvern/GDPR, sikkerhet etc.
+
+Informasjonssystem som benytter skytjenester, skal sikre at dokumentasjonen blir lagret i Norge.
+
+Kravet om lagring i Norge kan oppfylles ved at det gjennomføres daglig backup til databaser i Norge.
+
+Informasjonssystem som benytter NAVs felles backup løsning for dataene som de skal dokumentere (arkivere), vil gjennom backup-en oppfylle kravene til lagring i Norge.
+
+Nye løsninger for backup skal også oppfylle disse kravene før de tas i bruk.
+
+Et informasjonssystem kan benytte Joark eller P360 for lagring av f.eks. dialoger, brev og notater. Teamene kan basere seg på at Joark eller P360 vil oppfylle kravene til lagring i Norge for denne delen av dokumentasjonen.
+

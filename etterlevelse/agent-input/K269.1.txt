@@ -1,0 +1,42 @@
+# Hjelp meg å dokumentere: K269.1 Team skal avklare korleis deira data og dokumentasjon skal forvaltast
+
+Tema: Arkiv og dokumentasjon
+
+## Hensikten med kravet
+Teamet skal sikre at data og dokumentasjon som vi må ta vare på for ettertida blir tatt vare på, og at vi ikkje slettar ting vi skal ta vare på.
+
+For å vite korleis data og dokumentasjon skal behandlast må vi fyrst avgjere om det skal forvaltast som arkiv eller ikke arkiv.
+
+Dette må teama gjere sjølv, det er dei som kjenner kva data dei har.
+
+Data som ikkje skal forvaltast som arkiv må teamet og Nav kunne leve med at blir sletta.
+
+Vurderinga gjeld data som teamet/systemet produserer og lagrer sjølv i sitt system. Anna dokumentasjon som kjeldekode, systemdokumentasjon og viktige beslutninger skal vurderast knytta til dei systema dei ligg lagra i.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 1 tekster:
+
+Suksesskriterium 1 av 1
+Vi har avklart om våre data og dokumentasjon skal forvaltast som arkiv
+
+Utfyllende om kriteriet
+Data og dokumentasjon skal forvaltast som arkiv dersom han:
+
+- stadfestar korleis organet har handsama saker, løyst oppgåver eller handtert andre viktige forhold ved verksemda,
+
+eller
+
+- kan tene som bevis for rettar og plikter til privatpersonar eller andre private rettssubjekt.
+
+Døme på data og dokumentasjon som skal forvaltast som arkiv er:
+- Vedtak og vilkårsvurderinger
+- Registeropplysningar som brukast i sakshandsaminga
+- Dialog og korrespondanse med brukar og andre parter
+
+Døme på data og dokumentasjon som ikke skal forvaltast som arkiv:
+- Arbeidsversjonar/kladder av dokumenter fram til dei er ferdigstilte
+- Data som ikkje er grunnlag for rettar og plikter i sakshandsaminga
+
+Om dokumentasjonen ikkje skal forvaltast som arkiv, skal de grunngi kvifor her. De kan òg skrive «Ikke relevant» på resten av krava om arkiv og dokumentasjon.

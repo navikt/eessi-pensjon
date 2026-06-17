@@ -1,0 +1,7 @@
+# Preutfylte svar fra portalen: K251.1
+
+Suksesskriterium 1: Vi har vurdert om barn blir direkte eller indirekte berørt av systemet
+Løsningen formidler trygdeinformasjon mellom Nav og trygdeinstitusjoner i EØS, CH og UK. I saker om barnepensjon sendes/mottas trygdeinformasjon på lik linje med voksne gjenlevende.
+
+Suksesskriterium 2: Vi har gjort en vurdering av hva som er barnets beste og dokumentert vurderingen
+Selve behandlingen av barnepensjon gjøres i Gjenny. Vi formidler kun informasjon.

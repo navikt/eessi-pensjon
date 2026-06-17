@@ -1,0 +1,57 @@
+# Hjelp meg å dokumentere: K154.1 Nav må overholde taushetsplikten
+
+Tema: Saksbehandling og forvaltningsrett
+
+## Hensikten med kravet
+Reglene om taushetsplikt skal beskytte brukere mot at opplysninger om deres personlige forhold kommer på avveie. Taushetsplikten skal beskytte den enkeltes integritet og skape et tillitsforhold mellom bruker og Nav.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 4 tekster:
+
+Suksesskriterium 1 av 4
+Vi har gjort en konkret faglig vurdering av hvilke regler om taushetsplikt som gjelder i de konkrete tilfellene og overfor hvem taushetsplikten gjelder.
+
+Utfyllende om kriteriet
+Hovedregelen er at opplysninger som er underlagt taushetsplikt ikke kan utleveres til andre enn parten selv med mindre det finnes et unntak i loven for denne utleveringen.
+
+Ved systemutvikling må man ha et bevisst forhold til hvilke taushetspliktsregler som gjelder for det aktuelle området.
+
+Taushetsplikt innebærer en plikt til:
+- ikke å dele opplysninger, og
+- å behandle opplysningene på en forsvarlig måte
+
+Det har ingen betydning hvilken form opplysningene har. Vi har taushetsplikt om opplysninger vi har fått muntlig, og vi har plikt til å hindre at uvedkommende får tilgang til dokumenter med taushetsbelagte opplysninger.
+
+Taushetsplikten gjelder også overfor kollegaer, med mindre de har tjenstlig behov for opplysningene.
+
+Eksempler på vurderingstema kan være:
+- klargjøre hvem som har taushetsplikt og overfor hvem de har det
+- hvilke opplysninger som er underlagt taushetsplikt
+- hvordan det er tilrettelagt for at taushetsplikten blir ivaretatt
+- hvordan det er sikret at Nav kan dele nødvendig informasjon med tredjeparter, for eksempel helsepersonell eller arbeidsgiver som del av sykefraværsoppfølgingen.
+
+Suksesskriterium 2 av 4
+Vi har definert hvilke roller som har tjenstlig behov for hvilken type informasjon før det lages nye systemer.
+
+Utfyllende om kriteriet
+Utgangspunktet er at en ansatt ikke skal ha tilgang på flere opplysninger enn det som er nødvendig for å kunne gjøre de oppgavene vedkommende skal løse. For systemløsningen kan dette bety at ulike ansatte bør ha ulik tilgang til informasjon (ulik bildevisning) ut fra tjenstlig behov. Det betyr at det må være funksjonalitet for tilgangskontroller for ulike roller. For eksempel vil en som jobber hos Nav Kontaktsenter ha behov for annen informasjon enn en saksbehandler som fatter vedtak.
+
+Suksesskriterium 3 av 4
+Vi utleverer som hovedregel ikke taushetsbelagte opplysninger til andre enn den opplysningene gjelder.
+
+Utfyllende om kriteriet
+Taushetsplikten setter strenge rammer for deling av taushetsbelagte opplysninger. Dette betyr at det alltid må gjøres grundige vurderinger av hvilke opplysninger som er taushetsbelagte. Dette er en faglig vurdering.
+
+Suksesskriterium 4 av 4
+Vi har lagt til rette for at taushetsbelagte opplysninger kan utleveres til andre enn parten selv der vilkårene for dette er oppfylt.
+
+Utfyllende om kriteriet
+Det må i løsningen eller manuelle rutiner sikres at opplysninger om en part ikke gjøres tilgjengelig for andre enn parten selv før det foreligger dokumentasjon på at taushetsplikten åpner for det. Avklaringene skal dokumenteres og utleveringen skal registreres i Behandlingskatalogen.
+
+Det kan være behov for at forvaltningsorganer deler informasjon med hverandre for å kunne fatte korrekte beslutninger. En slik deling av opplysninger omfatter også taushetsbelagte opplysninger. Eksempler på slik utlevering:
+- nødvendige opplysninger kan gis til Nav Innkreving og Innkrevingssentralen for bidrag og tilbakebetalingskrav i tilknytning til krav som den krever inn på vegne av Nav.
+- kommunen kan etter anmodning utlevere bruker sine kontaktopplysninger og opplysninger om mulig oppholdssted til politiet og kriminalomsorgen til bruk i deres tjeneste.
+- Nav kan pålegges å gi opplysninger til utlendingsmyndighetene.
+

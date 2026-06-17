@@ -1,0 +1,40 @@
+# Hjelp meg å dokumentere: K197.1 Dere tester om løsningen fungerer for flest mulig i praksis.
+
+Tema: Likestilling og ikke-diskriminering
+
+## Hensikten med kravet
+Løsninger kan i teorien følge de lovpålagte Web Content Accessiblity Guidelines (WCAG), men kan likevel være svært vanskelig å bruke.
+
+Det er derfor viktig at dere tester hvordan løsninger i sin helhet fungerer.
+
+Disse testene kjøres etter:
+- automatiserte tester
+- manuelle gjennomganger av WCAG.
+
+Det er viktig å rette så mange feil som mulig før dere tester med reelle brukere. Dermed unngår dere at de setter seg fast ved tekniske feil dere kunne ha kjent, og ikke får testet brukeropplevelsen.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 2 tekster:
+
+Suksesskriterium 1 av 2
+Dere tester med simulatorer og hjelpemidler.
+
+Utfyllende om kriteriet
+Når dere har testet med automatiserte verktøy og kjørt manuelle tester, test også hvordan sidene oppleves når man bruker hjelpemidler.
+
+Her finnes det en del simulatorer, og dere kan også teste med hjelpemidler selv. Det finnes for eksempel gratis skjermlesere, se vår uu-verktøykasse. Dere er også velkomne å teste i NAVs empatilab.
+
+Dere kan også få bistand til ekspert-testing med skjermleser fra uu-teamet.
+
+Suksesskriterium 2 av 2
+Dere tester med reelle personer, blant annet med personer med nedsatt funksjonsevne.
+
+Utfyllende om kriteriet
+Syretesten for om løsningen virkelig kan brukes av flest mulig, er det å teste med reelle brukere.
+
+Her er det viktig å inkludere personer med variert funksjonsnivå, bakgrunn og ferdighetsnivå.
+
+For å lette tilgang til personer som bruker hjelpemidler som kan teste, har se gjerne "test min løsning", der NAV rekrutterer testbrukere som bruker delvis meget komplekse hjelpemidler.
+

@@ -1,0 +1,39 @@
+# Hjelp meg å dokumentere: K251.1 Barnets beste skal være et grunnleggende hensyn i alle saker og avgjørelser som berører barn
+
+Tema: Saksbehandling og forvaltningsrett
+
+## Hensikten med kravet
+Mange av avgjørelsene vi tar i Nav kan enten direkte eller indirekte berøre barn som gruppe. Fordi barn er særlig sårbare og har særlige behov, skal barnets beste være et grunnleggende hensyn og veie tungt. Dette stiller strenge krav til at Nav, i alt vi gjør, viser at vi tar utgangspunkt i, vurderer og legger vekt på barnets beste.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 2 tekster:
+
+Suksesskriterium 1 av 2
+Vi har vurdert om barn blir direkte eller indirekte berørt av systemet
+
+Utfyllende om kriteriet
+Barnets beste skal vurderes uavhengig av om barnet er tjeneste-/ytelsesmottaker, part i saken, eller er indirekte berørt ved å være en del av en gruppe eller gjennom foreldres/foresattes saker. Reglene om barns rettigheter krever av vi vurderer hva som barnets beste før vi tar avgjørelser i slike tilfeller.
+
+For å kunne vite når vi må vurdere barnets beste, må vi først finne ut om det vi gjør berører barn. Vi må derfor vurdere om systemet retter seg mot barn eller foreldre/foresatte til barn.
+
+Suksesskriterium 2 av 2
+Vi har gjort en vurdering av hva som er barnets beste og dokumentert vurderingen
+
+Utfyllende om kriteriet
+Dersom barn blir direkte eller indirekte berørt av systemet, må vi gjøre en vurdering av hva som er barnets beste. Det må gjøres en konkret vurdering i hvert enkelt tilfelle ut fra barnets situasjon og behov.
+
+Kontrollspørsmål:
+- Hvordan påvirker systemet barn?
+- Er barns beste vurdert under utviklingen av systemet?
+- Hvordan skal opplysninger om barn registreres?
+- Gjør systemet det enkelt å ivareta barns beste for de som skal bruke det?
+- Gir systemet foreldres/foresattes muligheter til å ivareta barn på en god måte?
+
+For å kunne se hvilke vurderinger som er gjort og ha mulighet for å etterprøve vurderingene må barnets beste-vurderingene dokumenteres. Vi må beskrive hvordan vi har vurdert og kommet frem til barnets beste og hvilken vekt barnets beste har fått i avveiningen mot andre hensyn og hvorfor eventuelt andre hensyn går foran.
+
+Det vil være ulike måter å dokumentere at det er gjort en barnets beste-vurdering avhengig av hvilket område og nivå vurderingen er gjort på. Vurderingen kan dokumenteres her eller annet egnet sted. Referanse eller lenke bør i så fall angis her.
+
+For nærmere informasjon om vurderingen og krav til dokumentasjon, se Navs veileder om barnets beste.
+

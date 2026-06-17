@@ -1,0 +1,92 @@
+# Hjelp meg å dokumentere: K230.2 Dokumentasjonen skal kunne avleverast og slettast til rett tid
+
+Tema: Arkiv og dokumentasjon
+
+## Hensikten med kravet
+Dokumentasjon som skal forvaltast som arkiv, skal oppbevarast av Nav så lenge det er behov for han. Når Nav ikkje lenger har behov for dokumentasjonen, skal den dokumentasjonen som er bevaringsverdig avleverast til Nasjonalarkivet. Først etter godkjend avlevering kan dokumentasjonen kasserast / slettast frå Nav sine system. Om han ikkje skal avleverast skal dokumentasjonen kasserast / slettast når lagringstida er nådd.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 5 tekster:
+
+Suksesskriterium 1 av 5
+Vi har avklart om dokumentasjon er bevaringsverdig for ettertida
+
+Utfyllende om kriteriet
+Kva dokumentasjon som skal takast vare på for ettertida står i bevaringsforskrifta eller i eigne bevaringsvedtak frå Nasjonalarkivet (tidlegare Riksarkivet).
+
+Nav kan ikkje slette dokumentasjon utan at Nasjonalarkivet har fatta vedtak om det.
+
+Oversikt over eksisterande vedtak finn de under Bevarings- og kassasjonsplan.
+
+Dersom dokumentasjonen ikkje er dekkja av eksisterande vedtak, må Nasjonalarkivet fatte vedtak om den skal bevarst eller om den kan kasserast / slettast. Nav utarbeider eit forslag til vedtak, som sendast Nasjonalarkivet for sakshandsaming der.
+
+Ta kontakt med Team Dokumentasjonsstyring ved behov for vurdering om dokumentasjonen er dekka av eksisterande vedtak, eller om det trengs nytt vedtak frå Nasjonalarkivet.
+
+Suksesskriterium 2 av 5
+Vi har fastsett lagringstid for dokumentasjonen vår
+
+Utfyllende om kriteriet
+Lagringstida seier kor lenge dokumentasjonen skal takast vare på i Nav før han tidlegast kan kasserast.
+
+Ved fastsetjing av lagringstid skal ein vurdere:
+- Krav om tidsavgrensa lagring i lovverk.
+- Organet sine administrative og juridiske behov.
+- Innbyggjarar og andre rettssubjekt sine dokumentasjonsbehov.
+
+Oversikt over fastsette lagringstider finnes under kvar avdeling her.
+
+Ta kontakt med Team Dokumentasjonsstyring ved behov for å fastsetje lagringstid.
+
+Suksesskriterium 3 av 5
+Tilgang til historisk dokumentasjon skal begrensast
+
+Utfyllende om kriteriet
+På mange områder er lagringstida veldig lang i Nav, samtidig som dokumentasjonen inneholder særskilte personopplysninger.
+
+Det er ikkje sånn at alle treng tilgang til dokumentasjonen i heile levetida.
+
+Datatilsynet har pålagd Nav å avgrense tilgang til dokumentasjon som ikkje er i aktiv bruk.
+
+Dette skal gjerast gjennom at denne skal tilgangsstyrast slik at berre tilsette med særskild tilgang kan lese dokumentasjonen.
+
+Dette må teamet sikre i sitt system.
+
+For å skjule dokument i fagarkivet Joark må saka avsluttast i Joark.
+
+For at ei sak skal kunne avsluttast, må ho oppfylle følgjande kriterium:
+- Saka må vere ferdigbehandla.
+- Alle utbetalingar må vere fullførte (gjeld berre ytingar).
+- Tenesta er ikkje lenger i bruk (gjeld andre område enn ytingar).
+- Det er lite sannsynleg med vidare aktivitet på same sak.
+- Dokumentasjonen er ikkje naudsynt i andre saker, anten på eige eller andre fagområde.
+
+Dette gjøres ved at systemet kaller joark-tjeneste for avsluttsak. Ta kontakt med team dokumentløsninger for spørsmål.
+
+Suksesskriterium 4 av 5
+Vi kan avlevere dokumentasjon som skal bevarast
+
+Utfyllende om kriteriet
+Bevaringsverdig dokumentasjon skal avleverast til Nasjonalarkivet. Avlevering skal skje når Nav ikkje har behov for dokumentasjonen lenger, eller når eit system går ut av bruk.
+
+Med mindre anna er avtalt, skal avlevering gjerast ved bruk av Nasjonalarkivet sine løysingar for strukturering og overføring. Ei arkivpakke skal innehalde:
+- Uttrekk av dokumentasjonen.
+- Dokumentasjon på at uttrekket er systematisk og etterprøvbart.
+- Informasjon om dokumentasjonen.
+- Tekniske skildringar og metadata, inkludert sjekksummar og filplasseringar.
+
+Utviklarar, produkteigar, fagansvarlege og arkivansvarleg må bidra ved avlevering.
+
+Ta kontakt med Team Dokumentasjonsstyring dersom avlevering er aktuelt.
+
+Suksesskriterium 5 av 5
+Vi har rutinar og løysingar for kassasjon
+
+Utfyllende om kriteriet
+Mykje av Nav sin dokumentasjon inneheld personopplysingar. Dokumentasjon som skal kasserast, må difor slettast når lagringstida er ute, utan ugrunna opphald (jfr. GDPR art. 17 nr. 1).
+
+Team må avklare korleis sletting skal gjennomførast, både organisatorisk og teknisk.
+
+NB: Dokumentasjon som skal bevarast kan ikkje slettast før ho er avlevert til Nasjonalarkivet og avleveringa er godkjend.
+

@@ -1,0 +1,20 @@
+# Hjelp meg å dokumentere: K268.1 Nav følger reglene, standardene, føringene og prinsippene i EØS-avtalen
+
+Tema: Saksbehandling og forvaltningsrett
+
+## Hensikten med kravet
+Vi skal overholde forpliktelsene i EØS-avtalen når vi utvikler produkter og tjenester i Nav. EØS-prinsippene om fri bevegelighet og likebehandling påvirker nasjonale regler som saksbehandling, forvaltning av tjenester og ytelser, arbeidsrettslige forhold og offentlige anskaffelser. Ifølge EØS-avtalen kan en EØS-borger som ikke bor eller jobber i Norge, ha rettigheter fra Nav. I andre tilfeller kan en EØS-borger som bor eller jobber i Norge, ha rettigheter i et annet EØS-land. Når Nav lager saksbehandlingssystemer eller andre digitale løsninger, må vi kunne dele informasjon/data med andre EØS-land. Systemene og løsningene våre må ta høyde for dette, slik at EØS-borgere ikke taper rettighetene sine eller får rettigheter/penger de ikke har krav på. Nav kan i tillegg bli holdt økonomisk ansvarlig for brudd på EØS-avtalen.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 1 tekster:
+
+Suksesskriterium 1 av 1
+Vi kontrollerer at produktet eller tjenesten vi lager, følger EØS-regelverket og ikke forskjellsbehandler EØS-borgere – og dokumenterer vurderingene våre.
+
+Utfyllende om kriteriet
+Retten til fri bevegelighet for EØS-borgere gjør at vi må være spesielt oppmerksomme på at produktet eller tjenesten vi lager, ikke forskjellsbehandler EØS-borgere som har benyttet seg av denne rettigheten. Vi må derfor kontrollere at produktet eller tjenesten vår behandler EØS-borgere likt – uavhengig av om de har benyttet seg av retten til fri bevegelighet (reise, studere, bosette seg eller arbeid i et annet EØS-land) eller ikke.
+
+Det er også andre EØS-regler som gjelder for Nav. Dette er sektorspesifikke regler for ulike områder, som trygdeforordningen, unionsdirektivet og arbeidstakerforordningen. Du finner mer informasjon om disse reglene under kilder. Ta kontakt med styringsseksjonen i fagavdelingen for tjenesten eller ytelsen hvis du er usikker på hva reglene betyr for det du jobber med.
+

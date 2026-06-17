@@ -1,0 +1,58 @@
+# Hjelp meg å dokumentere: K273.1 Journalpliktig dokumentasjon skal journalførast
+
+Tema: Arkiv og dokumentasjon
+
+## Hensikten med kravet
+Organet skal føre journal for å leggje til rette for offentleg innsyn. Alle inngåande og utgåande dokument som er saksbehandla og har verdi som dokumentasjon, skal registrerast i journalen. Journalen skal kunne hentast ut ved førespurnad. Unntak kan gjelde for dokument i enkeltsaker om farskap, bidrag og etter sosialtenestelova.
+
+Om mottatte og sendte dokument blir journalført i Joark eller P360, er kravet og alle suksesskriteria oppfylt, og ein kan henvise til kva system ein journalfører til i beskrivinga. Dersom ein ikkje nyttar Joark eller P360, må systemet sjølv føre journal, og oppfylle alle suksesskriteria i dette kravet.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 5 tekster:
+
+Suksesskriterium 1 av 5
+Vi journalfører inngåande og utgåande dokument
+
+Utfyllende om kriteriet
+Utgåande dokument skal journalførast når dei er ferdigstilte eller sendt ut. Inngåande dokument skal journalførast utan ugrunna opphald etter at dei er mottekne.
+
+Dersom tilsette mottek eller sender ut dokument i ei anna rolle enn som tilsett i Nav, skal dette ikkje journalførast.
+
+Suksesskriterium 2 av 5
+Vi journalfører organinterne dokument etter behov
+
+Utfyllende om kriteriet
+Organinterne dokument / notat er dokument Nav opprettar sjølv, utan intensjon om å sende ut. Desse kan journalførast etter behov. Systemet må sikre at organinterne dokument / notat ferdigstillast og journalførast utan ugrunna opphald. Dette skal sikre at dokumentet er ekte og er tilgjengeleg for å søke innsyn.
+
+Følgjande organinterne dokument skal alltid journalførast:
+
+- Dokument som inneheld den endelege avgjerda i ei sak.
+- Generelle retningslinjer for saksbehandling, som rutinar, brukarrettleiingar og rundskriv.
+
+Suksesskriterium 3 av 5
+Journalen inneheld naudsynte metadata
+
+Utfyllende om kriteriet
+Følgjande metadata skal registrerast for alle journalpliktige dokument:
+
+- Ein identifikator, som til dømes journalpostID.
+- Konteksten dokumentet er brukt i, og kva andre dokument det høyrer saman med (i dei fleste tilfeller saksnummer).
+- Tittel eller beskrivande informasjon.
+- Namn på avsendar eller mottakar.
+- Datoen på dokumentet eller datoen som viser når dokumentet blei sendt eller motteke.
+- Tidspunkt for journalføring.
+
+Suksesskriterium 4 av 5
+Vi utelet opplysningar med teieplikt
+
+Utfyllende om kriteriet
+Opplysningar som er underlagt lovfesta teieplikt, skal ikkje visast i offentleg journal. Heile journalregistreringar kan utelatast dersom innsyn vil røpe slike opplysningar. Personopplysningar skal aldri kome fram i offentleg journal.
+
+Suksesskriterium 5 av 5
+Vi kan hente ut journal frå systemet
+
+Utfyllende om kriteriet
+Systemet skal kunne hente ut ein komplett journal med alle registrerte metadata ved førespurnad.
+

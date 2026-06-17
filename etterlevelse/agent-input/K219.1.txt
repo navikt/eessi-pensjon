@@ -1,0 +1,51 @@
+# Hjelp meg å dokumentere: K219.1 IT-løsninger skal avlevere data slik at det lages offisiell statistikk, sentral styringsinformasjon og analyser
+
+Tema: Statistikk og styringsinformasjon
+
+## Hensikten med kravet
+Kravet omhandler at fagsystemene og vedtaksløsningene må tilgjengeliggjøre data til en prosess som historiserer og konsoliderer data, for så å bli tilgjengeliggjort med historiske data og data koblet fra andre fagsystemer. Per dagens dato så ivaretas dette gjennom et datavarehus. Dette med formål om å ha et datagrunnlag for å ivareta NAVs forpliktelser i henhold til lover og regler.
+
+Formålet er å kunne:
+- publisere offisiell statistikk på tvers av NAVs ansvarsområder
+- sikre enhetlig styringsinformasjon ut til det enkelt NAV kontor
+- besvare måloppnåelse for etaten gjennom rapporteringen til ASD
+- beregne ut utgiftene på velferdsbudsjettet
+- måle effekter av arbeidet vi gjør
+- måle overganger fra en status i NAV til en annen
+- besvare spørsmål fra Storting og Regjeringen på spørsmål som ikke bare omhandler data lagret i en applikasjon, men som går på tvers av områdene
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 5 tekster:
+
+Suksesskriterium 1 av 5
+Nødvendige data overleveres fra IT-løsningen til statistikkløsningen
+
+Utfyllende om kriteriet
+Nødvendige data avklares med Statistikkseksjon og Styringsinformasjon, der det ikke finnes standard maler for innhold i grensesnitt
+
+Suksesskriterium 2 av 5
+Data fra IT-løsningen er publisert som offisiell statistikk er publisert på nav.no
+
+Utfyllende om kriteriet
+Avklares i forhold til listen over offsiell statistikk
+
+Suksesskriterium 3 av 5
+Data fra IT-løsningen er publisert som sentral styringsinformasjon i NAV med tilgang for alle i NAV
+
+Utfyllende om kriteriet
+Alle forretningsområder i NAV er omfattet av økonomreglementet og det må lages sentral styringsinformasjon
+
+Suksesskriterium 4 av 5
+Data fra IT-løsningen er tilgjengelig for bruk i analyser og budsjettprosesser på forretningsområder
+
+Utfyllende om kriteriet
+Alle forretningsområder i NAV er omfattet av økonomreglementet og data må være tilgjengelig for analyser. Data må være tilgjengelig for analytikere i NAV som utfører analysene
+
+Suksesskriterium 5 av 5
+Data fra IT-løsningen er tilgjengelig for uttrekk til SSB, forskningsinstitutter og andre
+
+Utfyllende om kriteriet
+Alle forretningsområder i NAV er omfattet av økonomreglementet og data må være tilgjengelig for analyser av eksterne. For alle områder hvor SSB krever data basert på Statistikkloven må data overleveres
+

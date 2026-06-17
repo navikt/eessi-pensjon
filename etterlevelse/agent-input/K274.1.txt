@@ -1,0 +1,32 @@
+# Hjelp meg å dokumentere: K274.1 Feil i dokumentasjonen må kunne rettast
+
+Tema: Arkiv og dokumentasjon
+
+## Hensikten med kravet
+Når det oppdagast feil i opplysningar som er fryst, skal det vere mogleg å legge til korrekt informasjon utan at den opphavlege informasjonen går tapt. Det skal dokumenterast kva som blei retta, og når og korleis rettinga blei gjort.
+
+Fryste opplysningar kan berre endrast av autoriserte brukarar. Ein autorisert brukar kan til dømes vere ein utviklar i teamet, eller ein database-administrator. Alle endringar skal loggførast, og tidlegare versjonar skal takast vare på slik at informasjon ikkje går tapt.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 3 tekster:
+
+Suksesskriterium 1 av 3
+Vi har funksjonalitet for å rette feil
+
+Utfyllende om kriteriet
+Systemet skal dokumentere kva feil som er retta, når og korleis rettinga blei gjort. Den opphavlege informasjonen må framleis vere tilgjengeleg, men tydeleg merka som retta.
+
+Suksesskriterium 2 av 3
+Vi har fastsatt rutinar for retting
+
+Utfyllende om kriteriet
+Rutinar for retting av feil skal vere fastsette og tilgjengelege. Skildr kva rutinane inneheld og kor dei er lagra.
+
+Suksesskriterium 3 av 3
+Vi slettar ikkje dokumentasjon utan vedtak om kassasjon
+
+Utfyllende om kriteriet
+Dokumentasjon kan berre slettast dersom det finst tidligare vedtak om kassasjon frå Arkivverket, eller etter godkjent søknad til Nasjonalarkivet. Om ein treng å søkje til Nasjonalarkivet, ta kontakt med Team Dokumentasjonsstyring for støtte.
+

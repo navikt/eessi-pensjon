@@ -1,0 +1,24 @@
+# Hjelp meg å dokumentere: K195.1 Dere følger eller bruker NAV sitt designsystem
+
+Tema: Likestilling og ikke-diskriminering
+
+## Hensikten med kravet
+Å bruke NAV sitt designsystem og tilhørende frontend-komponenter kan spare dere for mye tid og forebygge mange vanlige uu-feil.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 2 tekster:
+
+Suksesskriterium 1 av 2
+Løsningen følger designsystemets retningslinjer for design og brukeropplevelse (Aksel)
+
+Utfyllende om kriteriet
+Aksel er vår interne verktøykasse med relevant innhold for hvordan vi jobber med produktutvikling i NAV IT. Den inkluderer regler og anbefalinger for god praksis rundt design og brukeropplevelse i våre løsninger.
+
+Suksesskriterium 2 av 2
+Løsningen implementerer designsystemets frontend-komponenter
+
+Utfyllende om kriteriet
+Designsystemet tilbyr et rikt sett med ferdige frontend-komponenter som gjør det enklere og raskere å bygge IT-løsninger i NAV. Frontend-komponentene er også utviklet med spesiell fokus på universell utforming og man kan forebygge svært mange vanlige UU-feil ved å bruke disse "rett ut av boksen".
+

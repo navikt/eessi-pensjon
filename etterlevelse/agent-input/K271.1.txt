@@ -1,0 +1,28 @@
+# Hjelp meg å dokumentere: K271.1 Systemet skal vere dokumentert
+
+Tema: Arkiv og dokumentasjon
+
+## Hensikten med kravet
+Organ skal ha skildringar av informasjonssystem som inneheld dokumentasjon som skal forvaltast som arkiv.
+
+Dette vil i dei fleste tilfeller bli dekka av ein form for systemdokumentasjon, som må dekke desse suksesskriteria.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 2 tekster:
+
+Suksesskriterium 1 av 2
+Vi har skildringar av dokumentasjonen i systemet vårt
+
+Utfyllende om kriteriet
+Beskriv kva slags typar dokumentasjon som er lagra og kva som er opphavet og historikken til dokumentasjonen. Eller pek på kor skildringane er lagra, til dømes gjennom ei lenkje til systemdokumentasjon.
+
+Suksesskriterium 2 av 2
+Vi har skildringar av informasjonsstrukturen i systemet vårt
+
+Utfyllende om kriteriet
+Dette suksesskriteriet gjeld berre for informasjonssystem som inneheld dokumentasjon som skal takast vare på for ettertida, og avleverast til Nasjonalarkivet.
+
+Beskriv kor informasjonsstrukturen er skildra, til dømes gjennom ei lenkje til systemdokumentasjon.
+
