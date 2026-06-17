@@ -51,10 +51,11 @@ Før du skriver tekst for et krav:
 2. `etterlevelse/doc/Veileder for kravbeskrivelser v. 1.0.txt` — offisiell veileder for feltutfylling.
 3. `etterlevelse/doc/Etterlevelseskrav for arkiv og arkivdokumentasjon.txt`, `Personvern.txt`, `Interoperabilitet og samhandling.txt`, `Likestilling og ikke-diskriminering.txt` — temaintroduksjoner.
 4. `etterlevelse/doc/PVK for EESSI Pensjon v1.1 (12.04.2021).docx` — PVK-dokument fra 2021, inneholder mye kontekst og tidligere formuleringer som kan gjenbrukes eller tilpasses til 2026.
-5. `etterlevelse/doc/eksempler-andre-team/` — konkrete eksempler fra andre team (f.eks. Melosys `E572.1`).
-6. **Lovdata** — når du refererer regelverk, bruk lenker til lovdata.no (offisielle paragrafer, ikke bokstaver/undernummer — de feiler i portalen).
-7. Tekniske aklaringer angpende funksjonalitet eller dataflyt ift. en av applikasjonene i eessi-pensjon: `architecture.md` først, deretter det lokalt klonede repoet for den aktuelle applikasjonen - ligger rett under eessi-pensjon (dette prosjektet).
-8. Ved tvil om en applikasjon: slå opp det aktuelle repoet på `github.com/navikt/<repo>` (f.eks. README, Kafka-konsumenter, kontrollere).
+5. `etterlevelse/doc/eksempler-andre-team/` — konkrete eksempler fra andre team (f.eks. nEESSI `K230.1`).
+6. `etterlevelse/doc/preutfylltesvar/` — eventuelle tidligere besvarelser laget av teamet, som kan brukes som inspirasjon, evt. gjenbrukes eller tilpasses. En fil per krav, med samme navn som krav-IDen, f.eks. `K226.1.txt`.
+7. **Lovdata** — når du refererer regelverk, bruk lenker til lovdata.no (offisielle paragrafer, ikke bokstaver/undernummer — de feiler i portalen).
+8. Tekniske aklaringer angpende funksjonalitet eller dataflyt ift. en av applikasjonene i eessi-pensjon: `architecture.md` først, deretter det lokalt klonede repoet for den aktuelle applikasjonen - ligger rett under eessi-pensjon (dette prosjektet).
+9. Ved tvil om en applikasjon: slå opp det aktuelle repoet på `github.com/navikt/<repo>` (f.eks. README, Kafka-konsumenter, kontrollere).
 
 Du kan også konsultere selve etterlevelse-kildekoden (`github.com/navikt/etterlevelse`) for å forstå datamodell og feltstruktur når det er relevant.
 
