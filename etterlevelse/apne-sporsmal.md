@@ -46,6 +46,11 @@
 
 - [x] **Avhengighet av K115.1 (SK1, SK2, SK3):** Vurderingen av K187.1 bygger på konklusjonen i K115.1 om at EESSI Pensjon ikke fatter helautomatiske avgjørelser. Dersom kravinitialisering eller dødsmelding reklassifiseres som del av en helautomatisk avgjørelseskjede, vil informasjonsplikten i K187.1 også gjelde for EESSI Pensjon. Se åpne spørsmål under K115.1.
 
+## K231.1 – Språket i løsningen er klart, korrekt og brukertilpasset
+
+- [ ] **Brukertest av språk (SK2):** Bekreftes om det er gjennomført strukturert brukertesting som spesifikt undersøker om språket i grensesnittet er forståelig og om saksbehandlerne finner fram og får løst oppgaven – utover den løpende, uformelle tilbakemeldingen fra fagmiljøet. Team eessipensjon. _Kommentar: teamet har i portalen markert dette kriteriet som «Ikke relevant» da løsningen fungerer tilfredsstillende og brukertesting ikke er aktuelt per nå._
+- [ ] **Kontakt med klarspråk-fagmiljø (SK3):** Bekreftes om teamet faktisk har vært i kontakt med Nav sitt fagmiljø for klarspråk om konkrete språkspørsmål i EESSI Pensjon, eller om kanalen kun er tilgjengelig og ikke benyttet. Team eessipensjon.
+
 ## K104.1 – Personopplysninger skal kunne slettes
 
 - [ ] **Mellomlagring i GCP Storage (SK1):** Bekreftes om GCP Storage-bøttene har automatiske livssyklusregler (retention/lifecycle policies) som sletter mellomlagrede SED-dokumenter etter en definert periode, og hva denne perioden er. Team eessipensjon.
