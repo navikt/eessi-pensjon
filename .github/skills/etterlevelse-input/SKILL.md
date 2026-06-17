@@ -64,9 +64,32 @@ Tema er kategorien kravet tilhører i portalen. Gyldige temaer:
 
 Tema står typisk i portalen sammen med krav-ID, før eller over kravtittelen. Hvis tema ikke kan utledes fra teksten brukeren gir deg, **spør brukeren** hvilket tema kravet tilhører (vis listen over gyldige temaer).
 
+## Preutfylte svar fra portalen
+
+Portalen kan inneholde svar teamet allerede har skrevet inn i feltet «Hvordan oppfylles kriteriet?» for ett eller flere suksesskriterier. Disse svarene er **ikke** en del av kriteriedefinisjonene og skal **ikke** inn i agent-input-filen. De er teamets eksisterende dokumentasjon og kan brukes av `eessi-pensjon-etterlevelse`-agenten som bakgrunnskontekst.
+
+**Hvis portalteksten inneholder preutfylte svar:**
+- Identifiser dem (tekst som følger etter «Hvordan oppfylles kriteriet?»-overskriften for hvert suksesskriterium, før neste «Redigering»/«Forhåndsvisning»-linje).
+- Strip dem fra agent-input-filen.
+- Lagre dem i `etterlevelse/doc/preutfylltesvar/K<nummer>.<versjon>.txt` i dette formatet:
+
+```
+# Preutfylte svar fra portalen: K<nummer>.<versjon>
+
+Suksesskriterium <n>: <kriterietittel>
+<svarets tekst, ren tekst uten HTML-tags>
+
+Suksesskriterium <n>: <kriterietittel>
+<svarets tekst>
+```
+
+- Hvis ingen preutfylte svar finnes, opprettes ikke denne filen.
+- Nevn i bekreftelsen til brukeren om preutfylte svar ble lagret.
+
 ## Hva du skal produsere
 
-Én fil: `etterlevelse/agent-input/K<nummer>.<versjon>.txt`
+- Alltid: `etterlevelse/agent-input/K<nummer>.<versjon>.txt`
+- Hvis preutfylte svar finnes: `etterlevelse/doc/preutfylltesvar/K<nummer>.<versjon>.txt`
 
 ## Filformat
 
@@ -120,8 +143,9 @@ Utfyllende om kriteriet
 3. **Valider.** Bekreft at du har funnet minst krav-ID og ett suksesskriterium. Hvis noe mangler, spør brukeren.
 4. **Formater.** Bygg filen etter formatet over.
 5. **Skriv til disk.** Lagre filen som `etterlevelse/agent-input/K<nummer>.<versjon>.txt`.
+5b. **Lagre preutfylte svar.** Hvis portalteksten inneholdt preutfylte svar, lagre dem i `etterlevelse/doc/preutfylltesvar/K<nummer>.<versjon>.txt` per formatet over.
 6. **Rydd opp.** Slett `etterlevelse/agent-input/raw.txt` hvis den eksisterer.
-7. **Bekreft.** Si til brukeren hva som ble opprettet: filnavn, kravnavn, og antall suksesskriterier.
+7. **Bekreft.** Si til brukeren hva som ble opprettet: filnavn, kravnavn, antall suksesskriterier, og om preutfylte svar ble lagret.
 8.  **Minne om komprimering.** Avslutt alltid med: "✅ Ferdig. Kjør `/compact` nå før neste krav.
 
 ## Eksempel
