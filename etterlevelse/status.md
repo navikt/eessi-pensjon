@@ -24,6 +24,9 @@
 | K253.1 | Visning av personopplysninger skal skrives til oppslagslogg (Arcsight) | Inf.sikkerhet | 6 | Ja (delvis) |
 | K231.1 | Språket i løsningen er klart, korrekt og brukertilpasset | Språk | 3 | Ja (delvis) |
 | K219.1 | IT-løsninger skal avlevere data slik at det lages offisiell statistikk, sentral styringsinformasjon og analyser | Statistikk og styringsinformasjon | 5 | Ja (delvis) |
+| K154.1 | Nav må overholde taushetsplikten | Saksbehandling og forvaltningsrett | 4 | Ja (delvis) |
+| K251.1 | Barnets beste skal være et grunnleggende hensyn i alle saker og avgjørelser som berører barn | Saksbehandling og forvaltningsrett | 2 | Ja (delvis) |
+| K268.1 | Nav følger reglene, standardene, føringene og prinsippene i EØS-avtalen | Saksbehandling og forvaltningsrett | 1 | Ja (delvis) |
 
 ---
 

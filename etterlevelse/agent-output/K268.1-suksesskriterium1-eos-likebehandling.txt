@@ -1,0 +1,5 @@
+EESSI Pensjon er bygget for å oppfylle EØS-avtalens regler om koordinering av trygdeytelser. Hele formålet med løsningen er å utveksle trygdeopplysninger mellom Nav og trygdeinstitusjoner i andre EU/EØS-land, slik at personer som har flyttet, arbeidet eller oppholdt seg i flere land får rettighetene sine ivaretatt på tvers av landegrenser. Utvekslingen følger felles europeiske regler og standardiserte dokumentformater som er like for alle land i samarbeidet.
+
+Løsningen behandler saker etter de samme felles standardene uavhengig av borgerens nasjonalitet og hvilket EØS-land som er involvert. Dermed er likebehandling av EØS-borgere ivaretatt i selve måten opplysninger utveksles på.
+
+Løsningen treffer ikke vedtak og avgjør ikke hvilke rettigheter den enkelte har. Den konkrete vurderingen av likebehandling og rettigheter etter EØS-regelverket gjøres i fagsystemet som behandler ytelsen. EESSI Pensjon sørger for at trygdeopplysninger utveksles korrekt og fullstendig, slik at EØS-borgere ikke taper rettigheter de har etter EØS-avtalen, og at de ikke får utbetalinger de ikke har krav på.

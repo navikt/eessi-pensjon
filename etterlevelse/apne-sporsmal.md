@@ -69,3 +69,16 @@
 
 - [ ] **Avklart datainnhold (SK1):** Bekreftes om innholdet og omfanget av dataene EESSI Pensjon avleverer til datavarehuset er avklart med Statistikkseksjonen og Styringsinformasjon, eller om avleveringen i dag dekker teamets eget behov uten en slik formell avklaring. Team eessipensjon / Statistikkseksjonen.
 - [ ] **Behov for EESSI-spesifikk statistikk (SK3, SK4):** Avklares om volum- og flyttall for SED-utvekslingen (antall SED-er per BUC og land, behandlingstid m.m.) skal inngå i sentral styringsinformasjon og analyser, eller om behovet dekkes av fagsystemenes egne avleveringer. Styrings- og statistikkmiljøet / berørte fagavdelinger.
+
+## K154.1 – Nav må overholde taushetsplikten
+
+- [ ] **Taushetspliktsvurdering (SK1):** Bekreftes om det finnes en dokumentert, konkret faglig vurdering av hvilke taushetspliktsregler som gjelder for EESSI Pensjon og overfor hvem, eller om dette utelukkende dekkes av de generelle vurderingene for pensjonsområdet. Team eessipensjon / Juridisk avdeling / fagansvarlige per ytelse.
+- [ ] **Behandlingskatalogen (SK4):** Bekreftes at utveksling av taushetsbelagte trygdeopplysninger med andre EU/EØS-land er registrert i Behandlingskatalogen, og hvor registreringen ligger. Team eessipensjon.
+
+## K251.1 – Barnets beste skal være et grunnleggende hensyn i alle saker og avgjørelser som berører barn
+
+- [ ] **Barnets beste-vurdering på systemnivå (SK2):** Bekreftes om det er gjort og dokumentert en overordnet barnets beste-vurdering for hvordan EESSI Pensjon formidler opplysninger i saker om barnepensjon og etterlatteytelser, eller om barnets beste utelukkende vurderes i fagsystemet i den enkelte sak. Team eessipensjon / fagansvarlige for etterlatteytelser.
+
+## K268.1 – Nav følger reglene, standardene, føringene og prinsippene i EØS-avtalen
+
+- [ ] **Dokumentert EØS-vurdering (SK1):** Bekreftes om det finnes en dokumentert vurdering på systemnivå av at EESSI Pensjon følger EØS-regelverket og ikke forskjellsbehandler EØS-borgere, eller om dette utelukkende dekkes av at løsningen følger de felles EESSI-standardene og av likebehandlingsvurderingene som gjøres i fagsystemet per sak. Team eessipensjon / Juridisk avdeling / styringsseksjonen i fagavdelingen.
