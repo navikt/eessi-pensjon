@@ -1,0 +1,3 @@
+EESSI Pensjon avleverer data om utvekslingen av SED-er til Nav sitt sentrale datavarehus. For hver SED som sendes og mottas, og for hver BUC som opprettes, overføres opplysninger som dokumenttype, BUC-type, avsender- og mottakerland, tidspunkt og kobling til pensjonssak. Avleveringen skjer løpende og automatisk etter hvert som dokumentutvekslingen med EU/EØS-land foregår.
+
+Det er viktig å avgrense hva EESSI Pensjon er kilde for: vedtaks-, ytelses- og utbetalingsdata for pensjon stammer fra fagsystemet PESYS, ikke fra EESSI Pensjon. EESSI Pensjon avleverer opplysninger om selve dokumentutvekslingen mot utlandet, ikke om utfallet av pensjonsbehandlingen.

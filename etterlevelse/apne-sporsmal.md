@@ -65,3 +65,7 @@
 
 - [ ] **Korrigering av sendte SED-er (SK2, SK3):** Bekreftes hvilken konkret prosedyre som gjelder i EESSI-regelverket for å korrigere feilaktige opplysninger i en allerede sendt SED — om det sendes en ny SED, eller om det håndteres via meldingsutveksling i BUC-en. Team eessipensjon / faggruppe pensjon.
 - [ ] **Varsling via PDL (SK3):** Bekreftes at PDL har egne mekanismer for å videreformidle rettinger til sine konsumenter, slik at EESSI Pensjon ikke har et selvstendig ansvar for å varsle andre Nav-systemer om rettinger mottatt fra utlandet. Team eessipensjon / PDL-teamet.
+## K219.1 – IT-løsninger skal avlevere data slik at det lages offisiell statistikk, sentral styringsinformasjon og analyser
+
+- [ ] **Avklart datainnhold (SK1):** Bekreftes om innholdet og omfanget av dataene EESSI Pensjon avleverer til datavarehuset er avklart med Statistikkseksjonen og Styringsinformasjon, eller om avleveringen i dag dekker teamets eget behov uten en slik formell avklaring. Team eessipensjon / Statistikkseksjonen.
+- [ ] **Behov for EESSI-spesifikk statistikk (SK3, SK4):** Avklares om volum- og flyttall for SED-utvekslingen (antall SED-er per BUC og land, behandlingstid m.m.) skal inngå i sentral styringsinformasjon og analyser, eller om behovet dekkes av fagsystemenes egne avleveringer. Styrings- og statistikkmiljøet / berørte fagavdelinger.

@@ -1,0 +1,3 @@
+Når data om dokumentutvekslingen er avlevert til datavarehuset, gjøres de tilgjengelige for analytikere i Nav gjennom datavarehusets etablerte løsninger. Tilgjengeliggjøring, tilgangsstyring og bruk i analyser og budsjettprosesser eies av Nav sitt datavarehus- og analysemiljø, ikke av EESSI Pensjon.
+
+Data om pensjonsytelsene som brukes i utgiftsprognoser og budsjettarbeid hentes fra fagsystemet PESYS. EESSI Pensjon er kilde for opplysninger om selve utvekslingen av trygdeopplysninger med EU/EØS-land, og disse er tilgjengelige for analyse på lik linje med øvrige data i datavarehuset.

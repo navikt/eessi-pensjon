@@ -1,0 +1,3 @@
+EESSI Pensjon publiserer ikke egen offisiell statistikk på nav.no og er ikke kilde for den offisielle statistikken om pensjon. Offisiell statistikk om pensjonsytelser bygger på tall fra fagsystemet PESYS og Nav sitt datavarehus, og publiseres av det ansvarlige statistikkmiljøet i Nav. Volumtall om utveksling av trygdeopplysninger med EU/EØS-land inngår i dag ikke i listen over offisiell statistikk fra Nav.
+
+Dette kriteriet er derfor ikke relevant for EESSI Pensjon. Løsningen avleverer data om dokumentutvekslingen til datavarehuset, men har ikke ansvar for å publisere offisiell statistikk.

@@ -1,0 +1,3 @@
+Uttrekk og utlevering av data til SSB, forskningsinstitutter og andre eksterne håndteres gjennom Nav sine etablerte rutiner for ekstern datadeling. Pliktene etter statistikkloven og rutinene for utlevering til SSB ivaretas av eier av datavarehuset, ikke av EESSI Pensjon direkte.
+
+EESSI Pensjon har ingen egen ekstern utleveringsflyt for disse dataene. Data om dokumentutvekslingen med EU/EØS-land er avlevert til datavarehuset og kan derfra inngå i eksterne uttrekk på linje med øvrige data, dersom et slikt behov defineres. Dette kriteriet er derfor ikke relevant for EESSI Pensjon utover selve avleveringen til datavarehuset.

@@ -1,0 +1,3 @@
+Sentral styringsinformasjon i Nav utarbeides av det sentrale statistikk- og styringsmiljøet på grunnlag av data i datavarehuset, ikke av EESSI Pensjon. EESSI Pensjon sitt ansvar er å avlevere data om dokumentutvekslingen med EU/EØS-land til datavarehuset. Videre bearbeiding, sammenstilling og publisering som styringsinformasjon med tilgang for ansatte i Nav eies av dette fagmiljøet.
+
+Styrings- og utbetalingstall for selve pensjonsytelsene kommer fra fagsystemet PESYS. EESSI Pensjon bidrar med opplysninger om volum og flyt i dokumentutvekslingen, dersom et slikt behov defineres av styrings- og statistikkmiljøet.
