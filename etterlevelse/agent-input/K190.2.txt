@@ -1,0 +1,56 @@
+# Hjelp meg å dokumentere: K190.2 Behandlingsansvar og databehandlerrelasjon er avklart og dokumentert
+
+Tema: Personvern
+
+## Hensikten med kravet
+Prinsippet om ansvarlighet understreker ansvaret for å opptre i samsvar med reglene for behandling av personopplysninger. Dette ansvaret ligger på alle virksomheter som behandler personopplysninger. Før all behandling av personopplysninger er det derfor viktig å avklare hvem som er behandlingsansvarlig, databehandler og om det foreligger felles behandlingsansvar med en annen virksomhet.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 3 tekster:
+
+Suksesskriterium 1 av 3
+Vi har avklart og dokumentert alle tredjepartsrelasjoner i Behandlingskatalogen.
+
+Utfyllende om kriteriet
+For hver behandling av personopplysninger må vi alltid avklare hvem som er behandlingsansvarlig, databehandler og om det foreligger felles behandlingsansvar med en annen virksomhet.
+
+Nav er behandlingsansvarlig ved all behandling av personopplysninger som skjer innenfor Navs lovpålagte virkeområde som forvaltningsvirksomhet og som arbeidsgiver. Det kan også tenkes andre tilfeller hvor Nav er behandlingsansvarlig, for eksempel i forbindelse med rekruttering av ansatte. Ofte er Nav utpekt som behandlingsansvarlig direkte eller indirekte gjennom Nav-loven, folketrygdloven eller andre særlover som Nav forvalter.
+
+I mange tilfeller håndterer Nav personopplysninger i forbindelse med sin relasjon til tredjeparter, for eksempel leverandører, kommuner og andre offentlige institusjoner. Nav vil ofte være behandlingsansvarlig i disse tilfellene, men de kan også ha felles behandlingsansvar med tredjeparten eller være databehandlere for disse. Det kan også tenkes at tredjeparten har selvstendig behandlingsansvar.
+
+Det kan være vanskelig å avgjøre hvilken rolle Nav har i en relasjon med tredjepart. Det kan være vanskelig å vurdere om:
+- en tredjepart et selvstendig behandlingsgrunnlag og formål for opplysningene som deles
+- det er utveksling/deling av informasjon med tredjepart eller om tredjepart utfører oppgaver på vegne av Nav
+
+Suksesskriterium 2 av 3
+Vi har inngått en skriftlig databehandleravtale der det foreligger en databehandlerrelasjon.
+
+Utfyllende om kriteriet
+Bruk av databehandler:
+
+Når Nav engasjerer en ekstern virksomhet som behandler personopplysninger på vegne av Nav, en databehandler, skal det inngås en skriftlig databehandleravtale som regulerer behandlingen av personopplysninger. Avtalene skal regulere databehandlerens oppgaver og ansvarsfordelingen mellom behandlingsansvarlig og databehandler. I relasjonen med databehandleren er det fortsatt vi som er behandlingsansvarlig og dermed bestemmer både hvorfor behandlingen skal skje og hvordan. Databehandlers bruk av egne underleverandører (underdatabehandlere) skal underlegges det samme regimet som databehandleren selv.
+
+Nav som databehandler:
+
+I noen tilfeller er Nav databehandler for andre virksomheter. Når Nav opptrer som databehandler er det like viktig at Nav har full kontroll på behandling av personopplysninger og at de kravene som behandlingsansvarlig stiller i databehandleravtalen oppfylles. Navs bruk av egne underleverandører (underdatabehandlere) skal underlegges det samme regimet som Nav som databehandler selv.
+
+Ved ny databehandleravtale: Avtaleinngåelse og bruk av Navs avtalemal
+
+Bruk Navs egen mal for databehandleravtaler. Utfyllingen må være konkret og tydelig, og avtalen må følges og forvaltes gjennom hele avtaleperioden. Roller og ansvar for videre forvaltning av avtalen må være avklart.
+
+Ved gjenbruk av allerede inngått avtale: Vurdering av om ny eller endret bruk av personopplysninger er innenfor rammene til den eksisterende avtalen
+
+I mange tilfeller skal det brukes en tjeneste som allerede er anskaffet og databehandleravtale er inngått. Dette krever en vurdering av om det er samsvar mellom det som er regulert i avtalen og egen tiltenkt bruk av personopplysninger.
+
+I tillegg til å dobbeltsjekke de ordinære kravene (behandlingsgrunnlag, behov for PVK m.m.), må det vurderes om ny bruk medfører behov for endringer i den gjeldende databehandleravtalen. Dette skal skje før den nye behandlingen igangsettes.
+
+Suksesskriterium 3 av 3
+Vi har inngått en skriftlig avtale der det foreligger et felles behandlingsansvar.
+
+Utfyllende om kriteriet
+Dersom Nav og en annen virksomhet går sammen om å bestemme formål og virkemidler med en behandling er vi behandlingsansvarlige sammen. Vi kaller dette delt eller felles behandlingsansvar.
+
+Når Nav innehar felles behandlingsansvar med en annen virksomhet må det foreligge en ordning (typisk en avtale) som sørger for at personvernforordningens krav oppfylles gjennom en klar ansvarsfordeling mellom partene, herunder en tydelig identifisering av hvilke deler av behandlingen det felles ansvaret omfatter. Dette er imidlertid ikke en databehandleravtale, og avtalemalen for databehandleravtaler skal derfor ikke benyttes i denne sammenheng.
+

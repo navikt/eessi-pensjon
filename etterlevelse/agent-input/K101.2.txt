@@ -1,0 +1,28 @@
+# Hjelp meg å dokumentere: K101.2 Overføring av personopplysninger til utlandet må være lovlig
+
+Tema: Personvern
+
+## Hensikten med kravet
+Navs overføring av personopplysninger til utlandet medfører plikt til å sikre forsvarlig behandling ved overføringen. Dette gjelder særlig når personopplysninger overføres til et tredjeland som ikke er underlagt personvernforordningens regler, som stiller spesielle krav til overføringen. Dette for å unngå at beskyttelsesnivået som gjelder innenfor EU/EØS ikke undergraves.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 2 tekster:
+
+Suksesskriterium 1 av 2
+Vi har brukt sjekklisten ved overføring for å vurdere om personopplysninger overføres til tredjeland.
+
+Utfyllende om kriteriet
+Nav har utarbeidet en Veileder til overføring av personopplysninger til tredjeland. Formålet med veilederen er å sikre at overføring av personopplysninger til tredjeland er i samsvar med gjeldende personvernregelverk og Navs interne retningslinjer. Veilederen gjelder for overføring av personopplysninger til tredjeland med grunnlag i eksisterende og nye avtaler, og i anskaffelsesprosesser. Veilederen må ses i sammenheng med informasjon og dokumentasjon om overføring til tredjeland på navet, inkludert Veileder om personvern i anskaffelser og Sjekkliste ved overføring.
+
+Sjekkliste for overføring er et verktøy for å sikre og dokumentere riktig gjennomføring av nødvendige vurderinger ved overføring av personopplysninger til tredjeland i henhold til regelverket og Navs interne krav. Sjekklisten skal fylles ut og arkiveres i Public360. Saksnummeret i Public360 skal dokumenteres her i besvarelsen.
+
+Alle overnevnte dokumenter er tilgjengelig under overføring til tredjeland (åpner i en ny fane).
+
+Suksesskriterium 2 av 2
+Vi har brukt sjekklisten ved overføring for å avklare om vi har lov til å overføre personopplysninger til tredjeland.
+
+Utfyllende om kriteriet
+Det må undersøkes om det foreligger dokumentasjon på at overføringen er lovlig. Hvis ikke må lovligheten avklares.
+

@@ -1,0 +1,51 @@
+# Hjelp meg å dokumentere: K198.1 Bruk av samtykke må oppfylle særskilte krav
+
+Tema: Personvern
+
+## Hensikten med kravet
+Nav må opptre i samsvar med personvernprinsippet om lovlighet, rettferdighet og åpenhet. Dersom behandlingsgrunnlaget er samtykke må samtykket oppfylle særskilte krav for å være gyldig. Dersom samtykket er ugyldig vil selve behandlingen av personopplysningene være ulovlig.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 1 tekster:
+
+Suksesskriterium 1 av 1
+Vi oppfyller særskilte krav til bruk av samtykke der samtykke benyttes som behandlingsgrunnlag.
+
+Utfyllende om kriteriet
+Dersom det er besluttet at behandlingsgrunnlaget er samtykke, må særskilte krav være oppfylt for at samtykket skal være gyldig:
+
+Samtykket skal være frivillig
+Samtykket kan kun brukes hvis personen har en reell valgfrihet. Har det negative konsekvenser å ikke samtykke, vil det ikke være snakk om reell frivillighet, og samtykket er ikke gyldig.
+
+Samtykket skal være tydelig
+- informasjonen som gis før vi innhenter samtykket, skal være klar og tydelig
+- samtykkeerklæringen skal være tydelig adskilt fra annen informasjon som gis til personen
+- vi kan ikke be om samtykke til behandling av opplysninger som ikke er nødvendige for den tjenesten eller avtalen som skal gjennomføres
+- samtykket skal dokumenteres
+
+Samtykket skal være informert
+Det må være klart hva den enkelte samtykker til og samtykkeforespørselen må i det minste inneholde:
+- hvem den behandlingsansvarlige er
+- formålet for hver av behandlingene som virksomheten ber om samtykke til
+- hva slags personopplysninger som vil samles inn
+- informasjon av retten til å trekke tilbake samtykke
+- informasjon om eventuelle automatiserte individuelle avgjørelser hvis det er relevant
+- informasjon om risiko og tiltak ved eventuell overføring utenfor EU/EØS-området
+
+Samtykket må skje gjennom aktiv handling
+Samtykket må gis ved en aktiv handling eller tydelig bekreftelse. Forhåndsavkryssede bokser eller taushet er dermed ikke tilstrekkelig.
+
+Særskilte krav til barns samtykke
+Som hovedregel kan barn under 18 år ikke samtykke til behandling av personopplysninger. Frem til fylte 18 år må foreldre eller foresatte samtykke på vegne av barnet. De plikter da å ta hensyn til barnets beste. For informasjonssamfunnstjenester som henvender seg direkte til barn og samtykke er behandlingsgrunnlaget, kan barn selv samtykke dersom barnet har fylt 13 år. Unntaket gjelder bare ved behandling av alminnelige personopplysninger. Informasjonssamfunnstjenester vil omfatte de fleste internettaktiviteter og bruk av sosiale medier som ytes mot godtgjørelse. Andre EU/EØS-land kan ha andre aldersgrenser.
+
+Samtykket kan når som helst trekkes tilbake
+Dersom samtykket trekkes, er behandlingsgrunnlaget borte. Behandlingen skal da stanses. Som hovedregel skal personopplysningene også slettes, med mindre Nav kan ha behov og plikt til å dokumentere tidligere behandling av personopplysninger. Samtykke bør bare brukes dersom det er mulig å administrere tilbaketrekkingen.
+
+Kontrollspørsmål:
+- Ønsker du å gi personen en mulighet til selv å avgjøre om du kan behandle personopplysningene eller ikke?
+- Står du i en maktposisjon som kan gjøre at personen føler seg forpliktet til å samtykke?
+- Kan det få negative konsekvenser for personen om hun eller han ikke samtykker?
+- Kan den mindreårige under 18 år samtykke på egne vegne?
+

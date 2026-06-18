@@ -1,0 +1,13 @@
+# Preutfylte svar fra portalen: K206.1
+
+Suksesskriterium 1: Nav sender varselet til den adressen som er registrert i Kontakt- og reservasjonsregisteret (KRR) eller i Enhetsregisteret
+Status: Ikke relevant
+Begrunnelse: EESSI Pensjon sender ikke varsler.
+
+Suksesskriterium 2: Varselet skal angi hvor og hvordan bruker/parten kan skaffe seg kunnskap om innholdet i forhåndsvarselet
+Status: Ikke relevant
+Begrunnelse: EESSI Pensjon sender ikke varsler.
+
+Suksesskriterium 3: Nav skal varsle innbygger på nytt (re-varsle) innen en uke etter første varsel er sendt, dersom innbygger ikke har skaffet seg tilgang til forhåndsvarselet.
+Status: Ikke relevant
+Begrunnelse: EESSI Pensjon sender ikke varsler.

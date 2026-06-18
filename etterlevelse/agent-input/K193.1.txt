@@ -1,0 +1,30 @@
+# Hjelp meg å dokumentere: K193.1 Nav skal kommunisere med innbygger gjennom innbyggers prefererte kanal
+
+Tema: Elektronisk kommunikasjon
+
+## Hensikten med kravet
+Privatpersoner og enheter som ikke er registrert i enhetsregisteret, kan reservere seg mot å motta meddelelser elektronisk fra Nav.
+
+Dersom personen eller enheten ikke har reservert seg mot å motta meddelelser elektronisk fra Nav, skal Nav følge de valgene som bruker har gjort, slik disse fremkommer i register over digital kontaktinformasjon og reservasjon (Kontaktregisteret, KRR).
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 2 tekster:
+
+Suksesskriterium 1 av 2
+Sjekke KRR om innbygger har reservert seg mot å motta meldinger elektronisk fra forvaltningen
+
+Utfyllende om kriteriet
+Dersom innbygger har reservert seg skal Nav sende brev om;
+
+- enkeltvedtak,
+- forhåndsvarsel etter fvl §16,
+- andre meldinger som har betydning for vedkommendes rettstilling eller for behandlingen av saken,
+- meldinger som det er av andre grunner er av særlig betydning å sikre at vedkommende mottar.
+
+Suksesskriterium 2 av 2
+Alle elektroniske kommunikasjonstjenester må forholde til de valgene bruker har tatt i KRR
+
+Utfyllende om kriteriet
+

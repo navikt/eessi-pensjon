@@ -1,0 +1,32 @@
+# Hjelp meg å dokumentere: K206.1 Nav skal varsle elektronisk til digitale brukere om forhåndsvarsel etter forvaltningsloven § 16
+
+Tema: Elektronisk kommunikasjon
+
+## Hensikten med kravet
+Hensikten er å gjøre innbygger istand til å ivareta sine interesser ved at vedkommende blir gjort kjent med at det foreligger et forhåndsvarsel etter forvaltningsloven § 16.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 3 tekster:
+
+Suksesskriterium 1 av 3
+Nav sender varselet til den adressen som er registrert i Kontakt- og reservasjonsregisteret (KRR) eller i Enhetsregisteret
+
+Utfyllende om kriteriet
+For enheter som er registert i Enhetsregisteret skal elektronisk adresse i Enhetsregisteret benyttes. For privatpersoner eller enheter som ikke er registert i Enhetsregisteret, skal varslingsadresse registert i KRR benyttes.
+
+Suksesskriterium 2 av 3
+Varselet skal angi hvor og hvordan bruker/parten kan skaffe seg kunnskap om innholdet i forhåndsvarselet
+
+Utfyllende om kriteriet
+Hensikten med kriteriet er å gi bruker informasjon om hvor meldingen er sendt (hvilken kanal som er brukt) og hvordan vedkommende skal gå fram for å få lest innholdet i meldingen.
+
+Eksempel: Dersom meldingen til bruker er en melding som ligger på brukers side på nav.no, må varselet inneholde informasjon om at bruker må logge seg på sin side på nav.no for å lese meldingen. På samme måte må varselet inneholde informasjon om at bruker må logge seg inn i sin digitale postkasse dersom det er der meldingen er.
+
+Suksesskriterium 3 av 3
+Nav skal varsle innbygger på nytt (re-varsle) innen en uke etter første varsel er sendt, dersom innbygger ikke har skaffet seg tilgang til forhåndsvarselet.
+
+Utfyllende om kriteriet
+Innbygger skal få en påminnelse om at vedkommende har fått en melding av denne typen i sin digitale postkasse, når Nav ser at det er gått èn uke fra meldningen ble tilgjengeligjort og første varsel ble sendt. Dette for at innbygger skal settes i stand til å ivareta sine interesser.
+

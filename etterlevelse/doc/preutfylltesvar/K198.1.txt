@@ -1,0 +1,5 @@
+# Preutfylte svar fra portalen: K198.1
+
+Suksesskriterium 1: Vi oppfyller særskilte krav til bruk av samtykke der samtykke benyttes som behandlingsgrunnlag.
+Status i portalen: Ikke relevant
+Begrunnelse: Behandlingen er hjemlet i en EU-forordning. Se behandlingskatalogen.

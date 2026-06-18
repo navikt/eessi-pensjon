@@ -1,0 +1,34 @@
+# Hjelp meg å dokumentere: K211.1 Når parten mottar enkeltvedtak elektronisk, skal Nav opplyse om det er mulig å klage elektronisk
+
+Tema: Elektronisk kommunikasjon
+
+## Hensikten med kravet
+Nav må informere parten om at klage kan sendes elektronisk, og når klage er sendt inn må parten få bekreftelse på at klage er mottatt. Bekreftelse bidrar til at klager sendes inn før klagefristen løper ut.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 3 tekster:
+
+Suksesskriterium 1 av 3
+Vi må informere om riktig elektronisk adresse som klagen skal sendes til når vi underretter om vedtaket
+
+Utfyllende om kriteriet
+Det kan for eksempel opplyses om at parten kan sende inn klage på nav.no/klage.
+
+Suksesskriterium 2 av 3
+Vi må sende klageren en elektronisk bekreftelse på at klage er mottatt
+
+Utfyllende om kriteriet
+Klageren bør få bekreftelse straks klagen er mottatt. Bekreftelsen bør inneholde
+
+- et referansenummer eller lignende, og
+- oppgi tidspunktet klagen ble mottatt.
+
+En bekreftelse fjerner usikkerhet for klager og gjør det lettere for klager å følge opp klagen overfor Nav.
+
+Suksesskriterium 3 av 3
+Vi må informere klager om at hen må kontrollere at hen mottar bekreftelse på at klage er mottatt, og at klager må sende klage på nytt dersom hen ikke mottar bekreftelse på at klagen er mottatt.
+
+Utfyllende om kriteriet
+

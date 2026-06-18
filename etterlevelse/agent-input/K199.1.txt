@@ -1,0 +1,24 @@
+# Hjelp meg å dokumentere: K199.1 Nav er pliktig til å tilby analoge alternativer til elektronisk kommunikasjon med innbygger
+
+Tema: Elektronisk kommunikasjon
+
+## Hensikten med kravet
+Innbygger skal ha valgfrihet til selv å velge om vedkommende vil kommunisere med Nav elektronisk eller analogt, med mindre noe annet er fremkommer av lov.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 2 tekster:
+
+Suksesskriterium 1 av 2
+Nav må ta stilling til om hvorvidt kommunikasjonen med innbygger er lovregulert på annen måte.
+
+Utfyllende om kriteriet
+Efvorvaltningsforskriftens bestemmelse om brukers valgfrihet er en generell bestemmelse. Lovgiver kan for noen tilfeller - i lov- ha valgt hvilken kommunikasjonsform som skal benyttes. Har lovgiver gjort et slik valg så må dette valget følges. Det betyr at eForvaltningsforskriftens bestemmelse om brukers valgfrihet ikke kommer til anvendelse.
+
+Suksesskriterium 2 av 2
+Nav må også tilby tjenester hvor innbygger kan få personlig kontakt med NAV og mulighet til å sende og motta fysiske brev fra Nav
+
+Utfyllende om kriteriet
+Ved siden av å tilby elektroniske tjenester har Nav en plikt - med mindre annet er regulert i lov- å gi innbygger mulighet til analog samhandling med Nav. Dette innebærer at vi må gi bruker mulighet til å både motta og sende brev, gi bruker personlig veiledning, samt opplyse om at bruker har en reell valgmulighet og om hvordan bruker skal gå fram for å få analoge tjenester.
+

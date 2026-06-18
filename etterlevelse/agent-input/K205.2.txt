@@ -1,0 +1,41 @@
+# Hjelp meg å dokumentere: K205.2 Nav må sikre at utenforstående ikke får uberettiget innsyn i enkeltvedtak, forhåndsvarsel og meldinger
+
+Tema: Elektronisk kommunikasjon
+
+## Hensikten med kravet
+Nav skal forebygge risiko for uberettiget innsyn på en tilfredsstillende måte. Nav skal med andre ord sikre at vi har kontroll med at uvedkommende ikke får tilgang. Dette gjelder for
+
+- Enkeltvedtak
+- Forhåndsvarsel etter forvaltningsloven § 16
+- Andre meldinger som har betydning for personens rettsstilling eller behandling av saken
+- Meldinger som det av andre grunner er av særlig betydning å sikre at personen mottar
+
+Grunnen til dette er at disse ofte inneholder opplysninger som er omfattet av lovpålagt taushetsplikt. Dette kan være opplysninger om en persons personlige forhold, for eksempel helseopplysninger.
+
+Det er først og fremst parten og partens representanter som skal ha tilgang til enkeltvedtaket, forhåndsvarsel og de nevnte meldingene. Parten er den eller de vedtaket gjelder, og partens representanter kan for eksempel være en advokat, verge eller fullmektig.
+
+I Nav er det kun ansatte med tjenstlig behov som skal ha tilgang til taushetsbelagte opplysninger. Dette betyr at ansatte kun skal ha tilgang til de taushetsbelagte opplysningene som er nødvendig for å løse den ansattes arbeidsoppgaver.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 3 tekster:
+
+Suksesskriterium 1 av 3
+Nav skal ha sikker og entydig elektronisk identifikasjon av den det gjelder
+
+Utfyllende om kriteriet
+Dette kan for eksempel oppnås gjennom bruk av ID-porten eller alternativer til ID-porten for elektronisk ID.
+
+Suksesskriterium 2 av 3
+Nav skal sikre tilgangsstyring for egne medarbeidere
+
+Utfyllende om kriteriet
+Det er kun medarbeidere i Nav med tjenstlig behov som skal ha tilgang til taushetsbelagte opplysninger.
+
+Suksesskriterium 3 av 3
+Nav må ha betryggende elektroniske løsninger som står i mot datainnbrudd fra eksterne
+
+Utfyllende om kriteriet
+Nav må ha tilfredsstillende sikkerhetsnivå på sine tekniske løsninger og sørge for at informasjonssikkerheten er ivaretatt.
+

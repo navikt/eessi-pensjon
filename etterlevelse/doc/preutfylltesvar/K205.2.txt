@@ -1,0 +1,10 @@
+# Preutfylte svar fra portalen: K205.2
+
+Suksesskriterium 1: Nav skal ha sikker og entydig elektronisk identifikasjon av den det gjelder
+Ikke relevant. Begrunnelse: EESSI Pensjon kommuniserer ikke direkte med brukere.
+
+Suksesskriterium 2: Nav skal sikre tilgangsstyring for egne medarbeidere
+Kun saksbhandlere som jobber med pensjon og uføretrygd har tilgang til EESSI Pensjon. Kun saksbehandlere som jobber med uføretrygd har tilgang til medinske opplysninger.
+
+Suksesskriterium 3: Nav må ha betryggende elektroniske løsninger som står i mot datainnbrudd fra eksterne
+EESSI Pensjon er sikret gjennom Navs skallsikkerhet.

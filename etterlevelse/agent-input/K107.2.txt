@@ -1,0 +1,82 @@
+# Hjelp meg å dokumentere: K107.2 Behandling av personopplysninger må være lovlig
+
+Tema: Personvern
+
+## Hensikten med kravet
+Nav må opptre i samsvar med personvernprinsippet om lovlighet, rettferdighet og åpenhet. For at Nav skal kunne bruke personopplysninger er vi nødt til å ha et behandlingsgrunnlag. Uten et behandlingsgrunnlag vil behandlingen være ulovlig. Det kalles også et rettslig grunnlag eller en hjemmel for å behandle personopplysninger.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 2 tekster:
+
+Suksesskriterium 1 av 2
+Vi har besluttet hvilke(t) behandlingsgrunnlag som skal benyttes og dokumentert dette i Behandlingskatalogen.
+
+Utfyllende om kriteriet
+Alminnelige personopplysninger
+
+Det finnes seks forskjellige behandlingsgrunnlag i personvernforordningen. Ett av dem må alltid foreligge for at vi skal kunne behandle personopplysninger. Noen ganger vil vi bare ha ett mulig grunnlag, andre ganger kan det være flere samtidig, eller deler av behandlingen vil bygge på forskjellige grunnlag.
+
+Nav kan behandle personopplysninger i disse tilfellene:
+- Det er nødvendig for at vi kan utføre lovpålagte oppgaver og utøve myndighet som vi har fått av Stortinget. Her må vi vise til hvilken lovhjemmel vi har.
+- Det er nødvendig for å oppfylle en rettlig forpliktelse. Her må vi vise til hvilken lovhjemmel vi har.
+- Det er nødvendig for at vi kan oppfylle en avtale.
+- Det er nødvendig for formål knyttet til en berettiget interesse, med mindre den registrertes interesser eller grunnleggende rettigheter veier tyngre og må gå foran. Dette behandlingsgrunnlaget kan aldri benyttes til å utøve offentlig myndighet og NAV bør derfor utvise varsomhet med å bruke grunnlaget.
+- Det er nødvendig for å verne den registrerte eller en annen fysisk persons vitale interesser.
+- Det foreligger et samtykke fra den registrerte.
+
+For de to første behandlingsgrunnlagene kreves det supplerende grunnlag i nasjonal lovgivning. Her må behandlingen følge av lov, forskrift, vedtak eller et annet rettslig grunnlag.
+
+På Navet er de ulike behandlingsgrunnlagene (åpner i en ny fane) nærmere beskrevet.
+
+Særlige kategorier av personopplysninger
+
+Dette ble tidligere kalt sensitive personopplysninger og omfatter blant annet helseopplysninger, opplysninger om etnisitet, seksuelle forhold og politisk- og religiøs oppfatning, samt opplysninger om fagforeningsmedlemskap. Det å motta sykepenger og uføretrygd er særlige kategorier av personopplysninger fordi dette forteller noe om helseforhold.
+
+Her kreves det et ekstra grunnlag i tillegg til det ordinære behandlingsgrunnlaget. Det finnes ti slike ekstra grunnlag i personvernforordningen. Minst ett av disse må være oppfylt for at behandlingen skal være lovlig.
+
+Eksempler på at vi kan behandle særlige kategorier av personopplysninger:
+- Det er nødvendig for å oppfylle Navs plikter innenfor arbeidsrett eller trygde- og sosialrett.
+- Vi har fått samtykke fra personen det gjelder.
+- Formålene krever det, for eksempel vitenskapelig eller historisk forskning, statistikk eller arkiv.
+- Det er nødvendig av hensyn til viktige allmenne interesser.
+
+Personopplysninger om straffedommer og lovovertredelser
+
+Med straffedommer og lovovertredelser menes behandling av opplysninger om lovovertredelser helt fra det straffeprosessuelle mistankestadiet til endelig straffedom foreligger.
+
+Slike opplysninger regnes ikke som særlige kategorier av personopplysninger, men er likevel underlagt strenge begrensninger.
+
+Behandling av disse opplysningene kan kun behandles dersom
+- behandlingen uttrykkelig fremgår av lov eller forskrift,
+- personen samtykker til dette,
+- behandlingen er nødvendig for å gjennomføre arbeidsrettslige plikter eller rettigheter, eller
+- Datatilsynet gir tillatelse til behandlingen.
+
+Vi må rådføre oss med personvernombudet dersom behandlingen er nødvendig for
+- arkivformål i allmennhetens interesse,
+- formål knyttet til vitenskapelig eller historisk forskning, eller
+- statistiske formål
+
+Dokumentasjon i Behandlingskatalogen
+
+Alle behandlingsgrunnlag skal dokumenteres i Behandlingskatalogen før behandlingen settes i gang. Vurderingen må oppdateres når det skjer endringer i en eksisterende løsning, slik at vi sikrer at vurderingen til enhver tid er dekkende for behandling av personopplysningene.
+
+Suksesskriterium 2 av 2
+Vi har dokumentert vår vurdering for valg av behandlingsgrunnlag.
+
+Utfyllende om kriteriet
+Når Nav behandler personopplysninger, må vi kunne påvise at behandlingsgrunnlag for behandlingen er vurdert og at vilkårene for bruk av behandlingsgrunnlaget er oppfylt.
+
+Vi anbefaler å alltid gi en skriftlig begrunnelse for valg av behandlingsgrunnlag. Der det er tvil om behandlingsgrunnlaget eller der behandlingsgrunnlaget gir rom for tolkning, skal teamet alltid dokumentere:
+- Angivelse av selve hjemmelen
+- Hvilke faktiske forhold og premisser vurderingene bygger på
+- Vekting av momentene som resultatet bygger på
+
+Teamet må sikre at den skriftlige vurderingen foreligger før oppstart av en ny eller endret behandlingsaktivitet. Vurderingen skal enten dokumenteres her, eventuelt kan det legges inn referanse til dokumentasjon i Public 360.
+
+Vurderingen må oppdateres når det skjer endringer i en eksisterende løsning, slik at vi sikrer at vurderingen til enhver tid er dekkende for behandling av personopplysningene.
+
+Dokumentasjon av disse vurderingene vil gjøre det lettere for Nav å gå tilbake til vurderingene og kontrollere om denne fremdeles er dekkende når utviklingsprosesser endrer retning. Uten en dokumentert vurdering vil det være vanskelig å se om endringer i løsningen har medført at Nav har gått utover behandlingsgrunnlaget som ble lagt til grunn ved oppstarten av utviklingsprosessen.
+

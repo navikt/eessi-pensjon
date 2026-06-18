@@ -1,0 +1,49 @@
+# Hjelp meg å dokumentere: K111.1 Behandling av personopplysninger skal være nødvendig og proporsjonal
+
+Tema: Personvern
+
+## Hensikten med kravet
+Nav må opptre i samsvar med personvernprinsippet om dataminimering. All behandling av personopplysninger skal være minst mulig inngripende for den det gjelder. Et viktig virkemiddel er å vurdere om behandlingen er nødvendig og proporsjonal (forholdsmessig). Behandling må være egnet til å oppnå formålet, og det må være et rimelig forhold mellom det inngrepet som gjøres i personvernet og de fordelene som oppnås ved behandlingen av personopplysninger.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 2 tekster:
+
+Suksesskriterium 1 av 2
+Vi har vurdert og dokumentert at behandlingen er nødvendig for å oppnå formålet.
+
+Utfyllende om kriteriet
+Det stilles strenge krav til hva som er nødvendig. Jo mer inngripende behandlingen av personopplysninger er, desto grundigere må nødvendighetsvurderingen være. Eksempler på inngripende behandling kan være behandling av særlige kategorier av personopplysninger, personopplysninger om barn, behandling av store mengder med data, kontroll eller overvåking, profilering mm.
+
+I nødvendighetsvurderingen skal vi vurdere om:
+- behandlingen er egnet til å oppnå formålet?
+- det finnes andre alternative måter eller metoder som er mindre inngripende?
+- formålet kan oppnås med mindre inngripende behandling:
+- behandle færre eller mindre detaljerte personopplysninger
+- begrense eller ikke bruke særlige kategorier av personopplysninger
+- iverksette større begrensinger i tid og omfang
+- raskere slette eller anonymisere personopplysningene etter at behandlingen er fullført
+- benytte anonyme eller pseudonymiserte opplysninger
+- begrense antall tilganger eller iverksette andre tiltak som forbedrer sikkerheten
+- etablere og iverksette bedre rutiner eller funksjonalitet for å slette, korrigere og/eller oppdaterte personopplysningene
+- gjøre informasjon om behandlingen bedre eller mer tilgjengelig for brukerne
+- forbedre rutiner og mekanismer for innsyn for å gi brukeren mulighet til å gjennomgå opplysningene Nav har registrert
+- begrense behandlingen av sårbare grupper, for eksempel barn, til det som er strengt nødvendig
+
+Vurderingen skal enten dokumenteres her, eventuelt kan det legges inn referanse til dokumentasjon i Public 360.
+
+Suksesskriterium 2 av 2
+Vi har vurdert og dokumentert hvilke fordeler og ulemper behandlingen vil kunne innebære for de registrerte.
+
+Utfyllende om kriteriet
+Kravet til proporsjonalitet går ut på at det må være et rimelig forhold mellom det inngrepet som gjøres i personvernet og de fordeler som oppnås ved behandlingen av personopplysninger. I praksis innebærer kravet at vi må gjøre en forholdsmessighetsvurdering. Det vil si at vi må veie motstridende interesser opp mot hverandre og vurdere om den ønskede behandlingen av personopplysninger bidrar til å oppnå fordeler eller effekter som rettferdiggjør inngrepet i personvernet. Som for nødvendighetsvurderingen, gjelder det også for proposjonalitetsvurderingen at jo mer inngripende behandlingen av personopplysninger er, desto grundigere må denne vurderingen være.
+
+I proposjonalitetsvurderingen skal vi vurdere om:
+- Hvilke fordeler oppnås ved å gjennomføre behandlingen?
+- Hvor inngripende er behandlingen for den registrerte?
+- Hvilke negative konsekvenser har behandlingen for den registrerte?
+- Hvorfor er behandlingen et passende og rimelig virkemiddel for å oppnå formålet?
+
+Vurderingen skal enten dokumenteres her, eventuelt kan det legges inn referanse til dokumentasjon i Public 360.
+

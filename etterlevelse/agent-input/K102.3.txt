@@ -1,0 +1,48 @@
+# Hjelp meg å dokumentere: K102.3 Det må fastsettes et klart formål før innsamling og behandling av personopplysninger
+
+Tema: Personvern
+
+## Hensikten med kravet
+Nav må opptre i samsvar med personvernprinsippene om formålsbegrensning og dataminimering. Formålet er viktig fordi det setter grenser for hvordan vi kan behandle personopplysningene. Vi kan bare samle inn eller behandle personopplysninger når det er nødvendig for formålet vi har satt.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 2 tekster:
+
+Suksesskriterium 1 av 2
+Vi har identifisert et klart formål før vi samler inn personopplysninger, og vi har dokumentert dette i Behandlingskatalogen.
+
+Utfyllende om kriteriet
+Før vi samler inn eller bruker personopplysninger må vi definere formålet med behandlingen. Vi kan bare samle inn og behandle personopplysninger for spesifikke, uttrykkelig angitte og berettigede formål:
+
+Spesifikt: Formålet må være så konkret at det er mulig å vurdere hvilke personopplysninger som er nødvendige å behandle. Dersom personopplysningene du ønsker å behandle ikke er nødvendig for formålet du har angitt, bør du forsøke å dele det opp og presisere det mer. For eksempel så kan personaladministrasjon deles opp i rekruttering, medarbeidersamtaler og adgangskontroll.
+
+Uttrykkelig angitt: Formålet skal formidles klart og tydelig og ikke være underforstått. Om det er vanskelig å vurdere hvor lenge det er nødvendig å ha opplysningene for formålet du har oppgitt, er det kanskje for vidt formulert.
+
+Berettiget: Formålet må være lovlig etter personvernforordningen og annet regelverk, og ligge innenfor hva man normalt forventer av en virksomhet som Nav.
+
+Eksempler på beskrivelse av formål:
+- Behandle og vurdere rett til alderspensjon som skal sikre inntekt for personer i alderdommen og legge til rette for en fleksibel og gradvis overgang fra arbeid til pensjon.
+- Behandle og vurdere rett til barnetrygd som ikke er gitt automatisk. Barnetrygd skal dekke utgifter til å forsørge barn.
+
+Formålet med behandlingen skal registreres i Behandlingskatalogen. Ved endringer skal det alltid vurderes om formålet må oppdateres.
+
+Suksesskriterium 2 av 2
+Vi har gjort en forenelighetsvurdering før vi gjenbruker personopplysninger til andre formål enn innsamlingsformålet, og vi har dokumentert behandlingsgrunnlaget for dette i Behandlingskatalogen.
+
+Utfyllende om kriteriet
+Noen ganger ønsker vi å gjenbruke opplysningene for andre formål enn innsamlingsformålet. Som hovedregel kan ikke personopplysningene gjenbrukes til nye og andre formål enn innsamlingsformålet uten at det foreligger en uttrykkelig lovhjemmel som tillater slik gjenbruk, eller at gjenbruken kan innfortolkes i det opprinnelige behandlingsgrunnlaget. Behandling i offentlig arkiv, vitenskapelig eller historisk forskning samt statistisk bruk er normalt ikke uforenlig med innsamlingsformål.
+
+Personopplysninger kan gjenbrukes til andre og nye formål, hvis forenlig med innsamlingsformålet. Det må da gjøres en forenlighetsvurdering. Behandlingsgrunnlaget vil være det samme som for innsamlingsformålet.
+
+I forenlighetsvurderingen skal dere vurdere følgende:
+- Hva er opprinnelig formål og tilhørende behandlingsgrunnlag? Er ønsket gjenbruk tilstrekkelig nær med det opprinnelige formålet?
+- Inngår særlige kategorier eller opplysninger om straffbare forhold som må hensyntas i vurderingene?
+- Er ønsket viderebruk forståelig, forventet eller i det minste påregnelig for den registrerte?
+- Er det noen mulige konsekvenser av den tiltenkte viderebehandlingen for de registrerte?
+- Foreligger tilstrekkelige garantier/sikkerhetstiltak eller er det behov for å iverksette ytterligere tiltak?
+- Er interessene til etaten i tilstrekkelig grad vurdert opp mot interessene til de registrerte, slik at den kan anses å være en nødvendig og forholdsmessig behandling?
+
+Forenlighetsvurderingen skal dokumenteres her. Formål og behandlingsgrunnlaget skal også registreres i Behandlingskatalogen.
+

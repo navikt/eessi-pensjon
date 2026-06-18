@@ -1,0 +1,13 @@
+# Preutfylte svar fra portalen: K211.1
+
+Suksesskriterium 1: Vi må informere om riktig elektronisk adresse som klagen skal sendes til når vi underretter om vedtaket
+Status: Ikke relevant
+Begrunnelse: EESSI Pensjon fatter ikke vedtak og kan ikke motta klager.
+
+Suksesskriterium 2: Vi må sende klageren en elektronisk bekreftelse på at klage er mottatt
+Status: Ikke relevant
+Begrunnelse: EESSI Pensjon fatter ikke vedtak og kan ikke motta klager.
+
+Suksesskriterium 3: Vi må informere klager om at hen må kontrollere at hen mottar bekreftelse på at klage er mottatt, og at klager må sende klage på nytt dersom hen ikke mottar bekreftelse på at klagen er mottatt.
+Status: Ikke relevant
+Begrunnelse: EESSI Pensjon fatter ikke vedtak og kan ikke motta klager.

@@ -1,0 +1,24 @@
+# Hjelp meg å dokumentere: K203.1 Nav skal gjøre innhold i enkeltvedtak tilgjengelig for bruker i egnet informasjonssystem
+
+Tema: Elektronisk kommunikasjon
+
+## Hensikten med kravet
+Egnet informasjonssystem vil som hovedregel være brukers digitale postkasse og "Ditt NAV".
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 2 tekster:
+
+Suksesskriterium 1 av 2
+Nav skal bruke digital postkasse for utsending av post til innbyggere som har valgt digital postkasse, og som ikke har reservert seg.
+
+Utfyllende om kriteriet
+Kravet om bruk av digital postkasse til innbyggere, gjelder alle tjenester hvor det sendes brev som har dokumentasjonsverdi for innbygger. Slike brev kan være både vedtak og andre viktige henvendelser.
+
+Suksesskriterium 2 av 2
+Informasjonssystemet må registrere tidspunkt for når bruker har skaffet seg tilgang til enkeltvedtaket, og data som bekrefter at vedkommende har rett til å gjøre seg kjent med innholdet i vedtaket
+
+Utfyllende om kriteriet
+Slik registering kan feks være logging av entydig personidentifikator som autensierer tilgangen, samt tidspunkt for pålogging.
+

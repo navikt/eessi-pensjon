@@ -1,0 +1,7 @@
+# Preutfylte svar fra portalen: K101.2
+
+Suksesskriterium 1: Vi har brukt sjekklisten ved overføring for å vurdere om personopplysninger overføres til tredjeland.
+Ikke relevant. Personopplysninger overføres kun innad i EU. Rina-løsningen, som eies av Team EESSI, ligger på server, ikke i sky og befinner seg i Norge.
+
+Suksesskriterium 2: Vi har brukt sjekklisten ved overføring for å avklare om vi har lov til å overføre personopplysninger til tredjeland.
+Ikke relevant. Personopplysninger overføres kun innad i EU.

@@ -1,0 +1,7 @@
+# Preutfylte svar fra portalen: K193.1
+
+Suksesskriterium 1: Sjekke KRR om innbygger har reservert seg mot å motta meldinger elektronisk fra forvaltningen
+Ikke relevant: EESSI Pensjon er ingen vedtaksløsning og kommuniserer ikke direkte med brukere.
+
+Suksesskriterium 2: Alle elektroniske kommunikasjonstjenester må forholde til de valgene bruker har tatt i KRR
+Ikke relevant: EESSI Pensjon er ingen vedtaksløsning og kommuniserer ikke direkte med brukere.

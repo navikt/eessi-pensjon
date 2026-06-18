@@ -1,0 +1,7 @@
+# Preutfylte svar fra portalen: K203.1
+
+Suksesskriterium 1: Nav skal bruke digital postkasse for utsending av post til innbyggere som har valgt digital postkasse, og som ikke har reservert seg.
+Ikke relevant: EESSI Pensjon er ingen vedtaksløsning og kommuniserer ikke direkte med brukere.
+
+Suksesskriterium 2: Informasjonssystemet må registrere tidspunkt for når bruker har skaffet seg tilgang til enkeltvedtaket, og data som bekrefter at vedkommende har rett til å gjøre seg kjent med innholdet i vedtaket
+Ikke relevant: EESSI Pensjon er ingen vedtaksløsning og kommuniserer ikke direkte med brukere.

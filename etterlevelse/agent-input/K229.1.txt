@@ -1,0 +1,50 @@
+# Hjelp meg å dokumentere: K229.1 Bruk av berettiget interesse må oppfylle særskilte krav
+
+Tema: Personvern
+
+## Hensikten med kravet
+Nav kan behandle personopplysninger når det er nødvendig for formål knyttet til en berettiget interesse, med mindre den registrertes interesser eller grunnlegggende rettigheter og friheter veier tyngre.
+
+## Oppgave til AI
+Skriv en tekst til meg for "Hvordan oppfylles kriteriet?" som jeg kan paste inn. ...
+
+du skal lage 1 tekster:
+
+Suksesskriterium 1 av 1
+Vi har vurdert om behandlingsgrunnlaget kan brukes, foretatt en interesseavveining og dokumentert denne vurderingen.
+
+Utfyllende om kriteriet
+Begrensninger:
+- kan ikke benyttes som behandlingsgrunnlag for behandling av personopplysninger som skjer som ledd i utøvelse av offentlig myndighet,
+- kan ikke brukes ved behandling av særlige kategorier av personopplysninger (for eksempel helseopplysninger).
+
+Interesseavveining - tre trinn
+
+For å kunne benytte behandlingsgrunnlaget må det gjennomføres og dokumenteres en vurdering i tre trinn:
+
+1. Identfisere en berettiget interesse
+
+Det må idetifiseres en konkret og saklig begrunnet interesse som Nav eller en tredjepart har i behandlingen. Den må være klart definert på forhånd, konkret og knyttet til Navs virksomhet. Det må også vurderes om behandlingen er påregnelig eller forventet for den registrerte, blant annet i lys av relasjonen mellom Nav og den registrerte.
+
+2. Vurdere nødvendighet
+
+Behandlingen må være nødvendig for å oppnå formålet. Dette innebærer at formålet ikke kan oppnås på en rimelig og effektiv måte med mindre inngripende tiltak. Det er ikke tilstrekkelig at behandlingen er hensiktsmessig eller praktisk. Det skal velges den løsningen som i minst mulig grad griper inn i den registrertes personvern.
+
+3. Foreta en interesseavveing
+
+Det skal identifiseres hvilke forhold som taler for og imot behandlingen. I denne vurderingen bør det blant annet legges vekt på:
+- hvilke typer personopplysninger som behandles
+- konsekvenser behandlingen kan få for den registrerte, både positive og negative
+- om behandlingen er påregnelig eller forventet for den registrerte
+- om den registrerte er i en sårbar situasjon
+- hvilke fordeler behandlingen gir og hvor viktige disse er
+- om det er iverksatt tiltak for å redusere personvernulempene.
+
+Det skal gjøres en samlet vurdering av hvilke forhold som taler for og imot behandlingen, og foretas en samlet avveining av disse, hvor det vurderes om fordelene ved behandlingen oppveier personvernulempene. Dersom hensynet til den registrerte veier tyngre, kan behandlingsgrunnlaget ikke brukes.
+
+Dokumentasjon
+
+Vurderingen skal dokumenteres og bør beskrive hvilken berettiget interesse som forfølges, hvorfor behandlingen er nødvendig, hvilke hensyn som taler for og imot behandlingen, tiltak for å minimere personvernulempene, og konklusjonen av interesseavveiningen.
+
+Dokumentasjonen kan være en kort, sammenhengende tekst hvor det redegjøres for formål, nødvendighet og hvilke forhold som taler for og imot behandlingen. Vurderingen skal dokumenteres her, eller ved henvisning til dokumentasjon lagret i Public 360.
+
