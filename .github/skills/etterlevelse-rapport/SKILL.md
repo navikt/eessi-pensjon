@@ -6,7 +6,7 @@ description: >-
   markdown-rapport som dokumenterer komponenten per krav og suksesskriterium.
   Kjøres lokalt i meta-repoet eller automatisk via GitHub Action i et
   komponent-repo.
-model: claude-opus-4.6
+model: claude-opus-4.8
 agent: eessi-pensjon-etterlevelse
 ---
 
@@ -22,8 +22,8 @@ komponenten bidrar til (eller er irrelevant for) hvert krav, med konkrete
 kodereferanser. Den er **ikke** paste-tekst til etterlevelse-portalen.
 
 > **Agent og modell:** Kjør med agenten **eessi-pensjon-etterlevelse**
-> (`/agent eessi-pensjon-etterlevelse`) og **Claude Opus 4.6**
-> (`/model claude-opus-4.6`). Agenten gir domenekunnskap, terminologi og
+> (`/agent eessi-pensjon-etterlevelse`) og **Claude Opus 4.8**
+> (`/model claude-opus-4.8`). Agenten gir domenekunnskap, terminologi og
 > avgrensninger (mot EUX og mot fagsystemer). **Denne skillen overstyrer
 > agentens output-regler:** du skal **ikke** skrive paste-tekst til
 > `etterlevelse/agent-output/` og **ikke** oppdatere meta-repoets `status.md`.

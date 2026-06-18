@@ -3,7 +3,7 @@ name: etterlev
 description: >-
   Dokumenterer et etterlevelseskrav for EESSI Pensjon. Tar inn krav-ID
   (f.eks. K255.1), leser agent-input-filen og utfører oppgaven beskrevet der.
-model: claude-opus-4.6
+model: claude-opus-4.8
 agent: eessi-pensjon-etterlevelse
 ---
 
@@ -14,7 +14,7 @@ Denne skillen tar inn en krav-ID og utfører etterlevelsesdokumentasjonen beskre
 > **Agent:** Denne skillen skal kjøres med agenten **eessi-pensjon-etterlevelse** (`@eessi-pensjon-etterlevelse`).
 > Bytt til agenten med `/agent eessi-pensjon-etterlevelse` før du utfører stegene under.
 >
-> **Modellkrav:** Bruk **Claude Opus 4.6** (`/model claude-opus-4.6`).
+> **Modellkrav:** Bruk **Claude Opus 4.8** (`/model claude-opus-4.8`).
 
 ## Input
 
