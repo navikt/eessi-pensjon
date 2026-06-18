@@ -1,0 +1,1 @@
+Saksbehandlerløsningen er bygget på Nav sitt designsystem Aksel, der frontend-komponentene er utviklet for å oppfylle WCAG 2.1 på nivå A og AA. Ved å bruke disse komponentene direkte og følge designsystemets retningslinjer legger vi til rette for at løsningen oppfyller A- og AA-kravene. De pensjonsspesifikke skjermbildene vi bygger selv, følger de samme prinsippene.

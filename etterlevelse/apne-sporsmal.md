@@ -82,3 +82,13 @@
 ## K268.1 – Nav følger reglene, standardene, føringene og prinsippene i EØS-avtalen
 
 - [ ] **Dokumentert EØS-vurdering (SK1):** Bekreftes om det finnes en dokumentert vurdering på systemnivå av at EESSI Pensjon følger EØS-regelverket og ikke forskjellsbehandler EØS-borgere, eller om dette utelukkende dekkes av at løsningen følger de felles EESSI-standardene og av likebehandlingsvurderingene som gjøres i fagsystemet per sak. Team eessipensjon / Juridisk avdeling / styringsseksjonen i fagavdelingen.
+
+## K196.6 – Løsningen oppfyller alle A- og AA-krav i WCAG 2.1
+
+- [ ] **WCAG-samsvar (SK1):** Bekreftes at de pensjonsspesifikke skjermbildene som er bygget utover standard Aksel-komponenter faktisk oppfyller WCAG 2.1 nivå A og AA, gjennom en dokumentert manuell gjennomgang av løsningen. Team eessipensjon / fagmiljøet for universell utforming.
+- [ ] **Automatiserte uu-tester (SK2):** Avklares om saksbehandlerløsningen skal ta i bruk automatiserte uu-tester i byggeprosessen (f.eks. axe/jest-axe og uu-linting, jf. https://github.com/navikt/uu-testing). Dette er en anbefaling, ikke et lovkrav. Team eessipensjon.
+
+## K197.1 – Dere tester om løsningen fungerer for flest mulig i praksis
+
+- [ ] **Testing med hjelpemidler (SK1):** Avklares om teamet skal etablere en fast rutine for å teste EESSI Pensjon med simulatorer og hjelpemidler (skjermleser, empatilab, ekspert-testing fra uu-teamet). Team eessipensjon / uu-teamet.
+- [ ] **Brukertesting (SK2):** Avklares om og hvordan løsningen skal brukertestes med reelle personer med variert funksjonsnivå, gitt at den er et internt saksbehandlerverktøy. Team eessipensjon / uu-teamet ("test min løsning").

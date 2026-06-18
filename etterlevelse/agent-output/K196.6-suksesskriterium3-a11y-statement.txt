@@ -1,0 +1,1 @@
+Saksbehandlerløsningen i EESSI Pensjon er en intern flate som bare brukes av saksbehandlere i Nav, og den ligger ikke på nav.no. Dette suksesskriteriet er ikke pålagt for interne flater, og løsningen registreres derfor ikke i tilgjengelighetserklæringen for nav.no eller på uustatus.no.

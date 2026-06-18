@@ -1,0 +1,1 @@
+Saksbehandlerløsningen er bygget på Aksel-komponenter som er testet med hjelpemidler som skjermleser av designsystemmiljøet i Nav. En egen, fast rutine i teamet for å teste hele EESSI Pensjon-løsningen med simulatorer og hjelpemidler – for eksempel skjermleser eller Navs empatilab – er foreløpig ikke etablert.

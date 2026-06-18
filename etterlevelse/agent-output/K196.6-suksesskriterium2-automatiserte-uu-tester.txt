@@ -1,0 +1,1 @@
+Saksbehandlerløsningen har automatiserte enhetstester som kjører som en del av byggeprosessen. Egne automatiserte tester som spesifikt sjekker universell utforming (for eksempel kontroll mot WCAG-brudd i komponentene) er foreløpig ikke en del av byggeprosessen.

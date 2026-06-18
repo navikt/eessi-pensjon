@@ -1,0 +1,1 @@
+Saksbehandlerløsningen er et internt verktøy for saksbehandlere i Nav. Det er foreløpig ikke gjennomført systematisk brukertesting av løsningen med reelle personer med variert funksjonsnivå og bruk av hjelpemidler.

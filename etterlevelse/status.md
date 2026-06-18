@@ -18,6 +18,9 @@
 | K115.1 | Behandling som benytter automatisering oppfyller vilkårene for dette | Personvern | 7 | Ja (delvis) |
 | K187.1 | Den registrerte skal ha tilstrekkelig informasjon om behandlingen når Nav fatter automatiske avgjørelser | Personvern | 3 | Ja (delvis) |
 | K188.1 | Behandling som benytter profilering oppfyller vilkårene for dette | Personvern | 4 | Ja |
+| K195.1 | Dere følger eller bruker NAV sitt designsystem | Likestilling/UU | 2 | Ja |
+| K196.6 | Løsningen oppfyller alle A- og AA-krav i WCAG 2.1 | Likestilling/UU | 3 | Nei (delvis) |
+| K197.1 | Dere tester om løsningen fungerer for flest mulig i praksis | Likestilling/UU | 2 | Nei (delvis) |
 | K267.1 | Applikasjoner skal ha et forsvarlig sikkerhetsnivå | Inf.sikkerhet | 7 | Ja (delvis) |
 | K255.1 | Nav skal beskytte brukere med adressebeskyttelse | Inf.sikkerhet | 8 | Ja (delvis) |
 | K245.1 | Krav til risikovurdering for applikasjoner, systemer og plattformer | Inf.sikkerhet | 5 | Ja (delvis) |
@@ -30,4 +33,4 @@
 
 ---
 
-Sist oppdatert: 2026-06-17
+Sist oppdatert: 2026-06-18
