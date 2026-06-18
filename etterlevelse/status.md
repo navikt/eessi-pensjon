@@ -33,6 +33,12 @@
 | K195.1 | Dere følger eller bruker NAV sitt designsystem | Likestilling/UU | 2 | Ja |
 | K196.6 | Løsningen oppfyller alle A- og AA-krav i WCAG 2.1 | Likestilling/UU | 3 | Nei (delvis) |
 | K197.1 | Dere tester om løsningen fungerer for flest mulig i praksis | Likestilling/UU | 2 | Nei (delvis) |
+| K193.1 | Nav skal kommunisere med innbygger gjennom innbyggers prefererte kanal | Elektronisk kommunikasjon | 2 | Ja |
+| K199.1 | Nav er pliktig til å tilby analoge alternativer til elektronisk kommunikasjon med innbygger | Elektronisk kommunikasjon | 2 | Ja |
+| K203.1 | Nav skal gjøre innhold i enkeltvedtak tilgjengelig for bruker i egnet informasjonssystem | Elektronisk kommunikasjon | 2 | Ja |
+| K205.2 | Nav må sikre at utenforstående ikke får uberettiget innsyn i enkeltvedtak, forhåndsvarsel og meldinger | Elektronisk kommunikasjon | 3 | Ja |
+| K206.1 | Nav skal varsle elektronisk til digitale brukere om forhåndsvarsel etter forvaltningsloven § 16 | Elektronisk kommunikasjon | 3 | Ja |
+| K211.1 | Når parten mottar enkeltvedtak elektronisk, skal Nav opplyse om det er mulig å klage elektronisk | Elektronisk kommunikasjon | 3 | Ja |
 | K267.1 | Applikasjoner skal ha et forsvarlig sikkerhetsnivå | Inf.sikkerhet | 7 | Ja (delvis) |
 | K255.1 | Nav skal beskytte brukere med adressebeskyttelse | Inf.sikkerhet | 8 | Ja (delvis) |
 | K245.1 | Krav til risikovurdering for applikasjoner, systemer og plattformer | Inf.sikkerhet | 5 | Ja (delvis) |

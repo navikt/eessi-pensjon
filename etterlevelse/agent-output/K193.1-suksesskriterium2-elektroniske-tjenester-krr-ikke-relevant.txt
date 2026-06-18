@@ -1,0 +1,3 @@
+Dette kriteriet er ikke relevant for EESSI Pensjon. Løsningen tilbyr ingen elektronisk kommunikasjonstjeneste mot innbygger og sender hverken meldinger, varsler eller brev til brukere. Kommunikasjonen skjer mellom Nav og trygdemyndigheter i andre EØS-land som ledd i saksbehandlingen.
+
+Ansvaret for å følge brukers valg i KRR ligger hos de fagsystemene og fellesløsningene som faktisk underretter innbygger. EESSI Pensjon er avgrenset mot denne innbyggerdialogen.

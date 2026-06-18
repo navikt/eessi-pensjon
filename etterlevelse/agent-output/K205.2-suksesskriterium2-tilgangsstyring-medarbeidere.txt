@@ -1,0 +1,3 @@
+EESSI Pensjon har rollebasert tilgangsstyring slik at en saksbehandler bare får tilgang til de opplysningene rollen har tjenstlig behov for. Bare saksbehandlere som arbeider med pensjon og uføretrygd har tilgang til løsningen, og medisinske opplysninger er forbeholdt saksbehandlere som arbeider med uføretrygd.
+
+Roller tildeles gjennom Nav sin felles tilgangsstyring, og løsningen håndhever i tillegg særskilt beskyttelse for brukere med adressebeskyttelse.

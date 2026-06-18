@@ -1,0 +1,3 @@
+EESSI Pensjon driftes på Nav sin applikasjonsplattform og er beskyttet av Nav sin skallsikkerhet, slik at tjenestene ikke er eksponert direkte mot internett. Sikkerhetsnivået forvaltes sammen med plattform- og sikkerhetsmiljøet i Nav.
+
+Kommunikasjonen er kryptert, hemmeligheter håndteres av plattformen og ikke i kildekode, og løsningen følger Nav sine felles krav til informasjonssikkerhet. Risikovurdering og oppfølging av sikkerhetstiltak er dekket nærmere under informasjonssikkerhetskravene.

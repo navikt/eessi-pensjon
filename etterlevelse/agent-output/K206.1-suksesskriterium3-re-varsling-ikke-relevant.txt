@@ -1,0 +1,3 @@
+Dette kriteriet er ikke relevant for EESSI Pensjon. Løsningen sender ikke varsler og kan dermed ikke re-varsle innbygger som ikke har skaffet seg tilgang til et forhåndsvarsel.
+
+Påminnelse og re-varsling ivaretas av de fagsystemene og fellesløsningene som står for varsling og innbyggerdialog på pensjonsområdet.

@@ -1,0 +1,3 @@
+Dette kriteriet er ikke relevant for EESSI Pensjon. Løsningen gjør ikke enkeltvedtak tilgjengelig for innbygger og har ingen innbyggerflate der bruker logger seg på for å lese vedtak.
+
+Registrering av når bruker har skaffet seg tilgang til et vedtak, og dokumentasjon på at vedkommende har rett til innsyn, hører hjemme i informasjonssystemet som faktisk viser vedtaket til innbygger. Det ligger utenfor EESSI Pensjon.
