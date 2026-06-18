@@ -1,0 +1,3 @@
+Driften av EESSI Pensjon skjer på skyplattform, og bruken av denne er regulert gjennom en databehandleravtale som Nav har inngått sentralt. EESSI Pensjon inngår ikke egne, separate databehandleravtaler utenom dette.
+
+Der løsningen bruker tekniske fellestjenester, er disse Nav-interne eller dekket av Nav sine sentralt forvaltede avtaler. Ny eller endret bruk vurderes mot rammene i de eksisterende avtalene før den settes i gang.

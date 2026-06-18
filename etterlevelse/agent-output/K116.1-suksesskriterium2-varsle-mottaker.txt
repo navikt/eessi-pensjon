@@ -1,0 +1,3 @@
+Når trygdeopplysninger er utvekslet, er mottakeren en trygdemyndighet i et annet EU/EØS-land. Varsling om begrensning til slike mottakere håndteres innenfor rammene av EESSI-samarbeidet og av fagsystemet og juridisk avdeling som forvalter saken, ikke som en egen automatisk funksjon i EESSI Pensjon.
+
+Den registrerte underrettes om hvilke mottakere opplysningene er delt med dersom hen ber om det, gjennom de ordinære innsyns- og saksbehandlingsrutinene.

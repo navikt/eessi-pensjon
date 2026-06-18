@@ -1,0 +1,3 @@
+Informasjonen gis der innbyggeren faktisk møter Nav — på nav.no og i fagsystemets brukerdialog — i tråd med prinsippet om at informasjonen skal være lett tilgjengelig, gis lagvis og i klart språk. Den viktigste informasjonen kommer først, med mulighet til å klikke seg videre til mer detaljert informasjon.
+
+Siden EESSI Pensjon er et internt saksbehandlerverktøy uten innbyggerflate, leveres ikke informasjonsplikten gjennom denne løsningen, men gjennom Nav sine felles informasjonskanaler. Behov for å oppdatere den generelle personvernerklæringen meldes til juridisk avdeling.

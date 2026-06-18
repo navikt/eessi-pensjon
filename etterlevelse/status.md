@@ -11,13 +11,25 @@
 
 | Kravid | Tittel | Tema | Ant. SK | Status |
 |--------|--------|------|---------|--------|
+| K101.2 | Overføring av personopplysninger til utlandet må være lovlig | Personvern | 2 | Ja |
+| K102.3 | Det må fastsettes et klart formål før innsamling og behandling av personopplysninger | Personvern | 2 | Ja (delvis) |
 | K103.2 | Personopplysninger skal kunne rettes | Personvern | 3 | Ja |
 | K104.1 | Personopplysninger skal kunne slettes | Personvern | 2 | Ja |
 | K105.1 | Det må tilrettelegges for dataportabilitet av personopplysninger | Personvern | 2 | Ja |
+| K107.2 | Behandling av personopplysninger må være lovlig | Personvern | 2 | Ja (delvis) |
+| K108.2 | Den registrerte skal informeres om hvordan Nav behandler personopplysninger | Personvern | 3 | Ja (delvis) |
 | K109.1 | Fødselsnummer og andre identifikasjonsmidler skal bare brukes der det er nødvendig for å oppnå sikker identifisering | Personvern | 2 | Ja |
+| K111.1 | Behandling av personopplysninger skal være nødvendig og proporsjonal | Personvern | 2 | Ja (delvis) |
+| K113.2 | Den registrerte har krav på innsyn i hvilke personopplysninger Nav har registrert | Personvern | 2 | Ja (delvis) |
 | K115.1 | Behandling som benytter automatisering oppfyller vilkårene for dette | Personvern | 7 | Ja (delvis) |
+| K116.1 | Behandling av personopplysninger må kunne begrenses | Personvern | 2 | Ja (delvis) |
 | K187.1 | Den registrerte skal ha tilstrekkelig informasjon om behandlingen når Nav fatter automatiske avgjørelser | Personvern | 3 | Ja (delvis) |
 | K188.1 | Behandling som benytter profilering oppfyller vilkårene for dette | Personvern | 4 | Ja |
+| K190.2 | Behandlingsansvar og databehandlerrelasjon er avklart og dokumentert | Personvern | 3 | Ja (delvis) |
+| K191.1 | Lagringstid skal være avklart for alle personopplysninger Nav behandler | Personvern | 3 | Ja (delvis) |
+| K198.1 | Bruk av samtykke må oppfylle særskilte krav | Personvern | 1 | Ja |
+| K229.1 | Bruk av berettiget interesse må oppfylle særskilte krav | Personvern | 1 | Ja |
+| K262.1 | Det må tilrettelegges for at den registrerte kan protestere mot behandling av personopplysninger | Personvern | 3 | Ja (delvis) |
 | K195.1 | Dere følger eller bruker NAV sitt designsystem | Likestilling/UU | 2 | Ja |
 | K196.6 | Løsningen oppfyller alle A- og AA-krav i WCAG 2.1 | Likestilling/UU | 3 | Nei (delvis) |
 | K197.1 | Dere tester om løsningen fungerer for flest mulig i praksis | Likestilling/UU | 2 | Nei (delvis) |

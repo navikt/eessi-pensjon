@@ -1,0 +1,3 @@
+Opplysningene som behandles i EESSI Pensjon brukes til det formålet de er hentet inn for — utveksling og koordinering av trygdeytelser mellom EU/EØS-land. Løsningen gjenbruker ikke personopplysninger til nye, uforenlige formål på eget initiativ. Opplysninger fra mottatte SED-er føres tilbake til PDL og inngår i pensjonssaken i fagsystemet, noe som er en påregnelig del av det samme trygdekoordineringsformålet.
+
+Data som avleveres til Nav sitt datavarehus skjer for statistikk- og styringsformål, som etter regelverket normalt regnes som forenlig viderebruk. Dersom det skulle bli aktuelt å bruke opplysningene til et nytt formål, gjøres forenlighetsvurderingen sammen med Nav sin juridiske avdeling og behandlingsgrunnlaget dokumenteres i Behandlingskatalogen.

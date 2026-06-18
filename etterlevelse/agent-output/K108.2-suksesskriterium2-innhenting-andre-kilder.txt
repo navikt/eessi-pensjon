@@ -1,0 +1,3 @@
+Mange av opplysningene EESSI Pensjon bruker, hentes fra andre kilder enn den registrerte selv — fra PDL, fra fagsystemet for pensjon og fra utenlandske trygdemyndigheter gjennom mottatte SED-er. At Nav innhenter og utveksler slike opplysninger som ledd i trygdekoordinering, og hvilke kilder de kommer fra, er informasjon som gis i personvernerklæringen og i søknads- og saksdialogen i fagsystemet.
+
+Innhentingen og utvekslingen har uttrykkelig hjemmel i trygderegelverket. EESSI Pensjon oppretter ikke en egen brukerdialog for dette, men inngår i den behandlingen det informeres om gjennom Nav sine felles kanaler.

@@ -1,0 +1,3 @@
+Innbygger kan via nav.no se opplysninger Nav har registrert i registre som PDL, og se dokumentene i egen sak — inkludert journalførte SED-er fra utvekslingen med andre land. Opplysningene som behandles i forbindelse med trygdekoordineringen er dermed gjenfinnbare gjennom Nav sine felles innbyggerflater.
+
+EESSI Pensjon tilbyr ikke en egen elektronisk innsynstjeneste mot innbygger, siden det er et saksbehandlerverktøy uten innbyggerflate. Elektronisk innsyn dekkes av Nav sine felles løsninger på nav.no.

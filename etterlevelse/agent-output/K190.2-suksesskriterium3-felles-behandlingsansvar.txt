@@ -1,0 +1,3 @@
+Dette kriteriet er ikke relevant for EESSI Pensjon. Løsningen utveksler trygdeopplysninger med andre EU/EØS-lands trygdemyndigheter, og disse partene har selvstendig behandlingsansvar etter eget lands gjennomføring av trygderegelverket — ikke felles behandlingsansvar med Nav. Ansvarsdelingen følger direkte av EU/EØS-regelverket som rammer inn EESSI-samarbeidet.
+
+Det er derfor ikke identifisert behandlinger i løsningen som krever en egen avtale om felles behandlingsansvar. Skulle et slikt forhold oppstå, inngås avtale etter Nav sine rutiner.

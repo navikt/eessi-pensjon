@@ -1,0 +1,3 @@
+EESSI Pensjon bygger ikke opp egne varige personregistre. Opplysninger hentes fra kilder ved behov, og de utvekslede dokumentene arkiveres i Nav sine fellesløsninger. Et krav om å begrense behandlingen — å stanse bruk uten å slette — håndteres derfor primært i fagsystemet og fellesløsningene som eier de varige opplysningene, etter Nav sin felles retningslinje for retting, sletting og begrensning. Selve vurderingen av kravet gjøres av juridisk avdeling.
+
+For den midlertidige mellomlagringen av dokumenter under behandling kan teamet stanse videre bruk av opplysninger knyttet til en bestemt person når et slikt krav er besluttet.

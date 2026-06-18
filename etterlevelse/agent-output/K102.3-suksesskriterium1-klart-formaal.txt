@@ -1,0 +1,3 @@
+EESSI Pensjon behandler personopplysninger for ett avgrenset formål: å utveksle trygdeopplysninger med andre EU/EØS-land slik at retten til pensjon kan vurderes og koordineres etter trygderegelverket. Formålet styrer hvilke opplysninger som forhåndsutfylles i SED-er, og løsningen henter ikke inn opplysninger utover det utvekslingen krever.
+
+Selve formålsbeskrivelsen hører hjemme på ytelses- og vedtaksnivå og forvaltes sammen med fagsystemet for pensjon og Nav sin juridiske avdeling. Formålet registreres i Behandlingskatalogen, og det vurderes om formålet må oppdateres ved endringer i løsningen.

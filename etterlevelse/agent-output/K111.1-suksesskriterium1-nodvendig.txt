@@ -1,0 +1,3 @@
+De personopplysningene EESSI Pensjon behandler er begrenset til det som trengs for å identifisere riktig person og fylle ut de SED-ene som trygdekoordineringen krever. Opplysninger hentes fra autoritative kilder ved behov i stedet for å kopieres til egne, varige registre, og forhåndsutfylling henter bare de feltene den aktuelle SED-typen krever.
+
+I tillegg vurderer saksbehandler konkret hvilke dokumenter som skal legges ved og hvilken informasjon som gis i fritekstfelt i den enkelte SED. Det kan være krevende å vite nøyaktig hvilke opplysninger den enkelte trygdemyndighet trenger, og nødvendighetsvurderingen hviler derfor delvis på saksbehandlers skjønn. Den overordnede vurderingen per ytelse gjøres sammen med fagsystemet for pensjon og dokumenteres på formålsnivå.

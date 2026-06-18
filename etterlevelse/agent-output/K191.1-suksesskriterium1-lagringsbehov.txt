@@ -1,0 +1,3 @@
+Lagringstid for personopplysninger på pensjonsområdet bestemmes av krav og vilkår i de enkelte ytelsene, av foreldelses- og fristregler og av økonomiregelverket. Disse vurderingene gjøres per ytelse og formål sammen med fagsystemet for pensjon, som eier vedtaks- og lagringstidene.
+
+EESSI Pensjon fastsetter ikke selv lagringstider, men retter seg etter de fastsatte tidene for de underliggende formålene. Begrunnelse for lagringstid dokumenteres i lagringstidsskjemaet på Confluence, og fastsatt lagringstid registreres i Behandlingskatalogen med lenke til begrunnelsen.

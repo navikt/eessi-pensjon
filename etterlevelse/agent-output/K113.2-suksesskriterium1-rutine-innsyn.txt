@@ -1,0 +1,3 @@
+De aller fleste personopplysninger en innbygger har i tilknytning til EESSI Pensjon, finnes igjen i kildene og fellesløsningene: persondata i PDL, pensjonsdata i fagsystemet, og de utvekslede SED-ene som journalføres i Nav sitt dokumentarkiv. Innsyn håndteres derfor gjennom Nav sine ordinære innsynsrutiner via Nav Kontaktsenter, med uttrekk fra disse kildene.
+
+EESSI Pensjon bygger ikke opp egne varige personregistre. Ved behov kan teamet finne igjen og hente ut opplysninger om en bestemt person fra den midlertidige mellomlagringen av dokumenter under behandling. Innsyn gis så raskt som mulig og senest innen en måned, sammen med informasjon om hva opplysningene er brukt til.

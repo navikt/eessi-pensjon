@@ -92,3 +92,48 @@
 
 - [ ] **Testing med hjelpemidler (SK1):** Avklares om teamet skal etablere en fast rutine for å teste EESSI Pensjon med simulatorer og hjelpemidler (skjermleser, empatilab, ekspert-testing fra uu-teamet). Team eessipensjon / uu-teamet.
 - [ ] **Brukertesting (SK2):** Avklares om og hvordan løsningen skal brukertestes med reelle personer med variert funksjonsnivå, gitt at den er et internt saksbehandlerverktøy. Team eessipensjon / uu-teamet ("test min løsning").
+
+## K101.2 – Overføring av personopplysninger til utlandet må være lovlig
+
+- [ ] **Tredjeland (SK1, SK2):** Bekreftes at all utveksling i EESSI Pensjon skjer med EU/EØS-land, og at det ikke utveksles med land utenfor EU/EØS (f.eks. Sveits eller andre avtaleland i EESSI-sammenheng) som ville utløse tredjelandsvurdering. Team eessipensjon / faggruppe pensjon. _Kommentar: teamet har tidligere markert kriteriet som «Ikke relevant – overføres kun innad i EU»._
+
+## K102.3 – Det må fastsettes et klart formål før innsamling og behandling av personopplysninger
+
+- [ ] **Formål i Behandlingskatalogen (SK1):** Bekreftes at formålet med behandlingen i EESSI Pensjon er registrert og oppdatert i Behandlingskatalogen. Team eessipensjon / personvernrådgiver.
+- [ ] **Avlevering til datavarehus (SK2):** Bekreftes at data som avleveres til datavarehuset for statistikk-/styringsformål er aggregert eller avidentifisert, slik at viderebruken er forenlig med innsamlingsformålet. Team eessipensjon / Statistikkseksjonen. _Se også åpne spørsmål under K219.1._
+
+## K107.2 – Behandling av personopplysninger må være lovlig
+
+- [ ] **Dokumentert vurdering (SK2):** Bekreftes hvor den skriftlige vurderingen av valg av behandlingsgrunnlag for pensjonsformålene er dokumentert (Behandlingskatalogen / Public 360), og at den er oppdatert. Team eessipensjon / Juridisk avdeling.
+
+## K108.2 – Den registrerte skal informeres om hvordan Nav behandler personopplysninger
+
+- [ ] **Informasjon i personvernerklæringen (SK1, SK2):** Bekreftes at personvernerklæringen på nav.no og fagsystemets brukerdialog faktisk dekker at trygdeopplysninger utveksles med andre EU/EØS-land, inkludert hvilke kategorier opplysninger og kilder som inngår. Team eessipensjon / Juridisk avdeling.
+
+## K111.1 – Behandling av personopplysninger skal være nødvendig og proporsjonal
+
+- [ ] **Nødvendighet av saksbehandlervalg (SK1):** Avklares hvordan det sikres at saksbehandlers valg av vedlegg og fritekst i SED-er ikke medfører at flere opplysninger enn nødvendig sendes, gitt at det kan være uklart hvilke opplysninger den enkelte trygdemyndighet trenger. Team eessipensjon / faggruppe pensjon.
+- [ ] **Dokumentert vurdering (SK1, SK2):** Bekreftes hvor nødvendighets- og forholdsmessighetsvurderingen per ytelse er dokumentert. Team eessipensjon / Juridisk avdeling.
+
+## K113.2 – Den registrerte har krav på innsyn i hvilke personopplysninger Nav har registrert
+
+- [ ] **Innsynsrutine (SK1):** Bekreftes at Nav Kontaktsenter er informert om EESSI Pensjon som løsning med personopplysninger (e-post med emne «K113.2 Innsyn»), og at teamet har en dokumentert rutine for å finne igjen og hente ut opplysninger om en bestemt person fra mellomlagringen ved en innsynsforespørsel. Team eessipensjon.
+
+## K116.1 – Behandling av personopplysninger må kunne begrenses
+
+- [ ] **Begrensning i mellomlagring (SK1):** Bekreftes at teamet teknisk kan stanse videre bruk (begrense) av opplysninger om en bestemt person i den midlertidige mellomlagringen, og at Nav sin felles retningslinje for retting, sletting og begrensning dekker EESSI Pensjon. Team eessipensjon.
+- [ ] **Varsling til mottakerland (SK2):** Bekreftes hvilken mekanisme i EESSI-samarbeidet som benyttes for å varsle et mottakerland om at opplysninger i en tidligere sendt SED er begrenset. Team eessipensjon / faggruppe pensjon. _Se også tilsvarende punkt om sletting under K104.1._
+
+## K190.2 – Behandlingsansvar og databehandlerrelasjon er avklart og dokumentert
+
+- [ ] **Tredjepartsrelasjoner i Behandlingskatalogen (SK1):** Bekreftes at relasjonene til andre lands trygdemyndigheter og til Nav sine fellesløsninger er dokumentert i Behandlingskatalogen for EESSI Pensjon. Team eessipensjon / personvernrådgiver.
+
+## K191.1 – Lagringstid skal være avklart for alle personopplysninger Nav behandler
+
+- [ ] **Lagringstid dokumentert (SK1, SK2):** Bekreftes at lagringstid og begrunnelse for pensjonsformålene er registrert i Behandlingskatalogen og i lagringstidsskjemaet på Confluence, og at EESSI Pensjon kan vise til disse. Team eessipensjon / fagansvarlige per ytelse.
+- [ ] **Sletting i mellomlagring (SK3):** Bekreftes at mellomlagrede dokumenter har en definert, automatisk levetid (lifecycle-regler) slik at de slettes rutinemessig. Team eessipensjon. _Samme antagelse som under K104.1._
+
+## K262.1 – Det må tilrettelegges for at den registrerte kan protestere mot behandling av personopplysninger
+
+- [ ] **Stans av behandling (SK2):** Bekreftes at teamet teknisk kan stanse videre bruk av opplysninger om en bestemt person i mellomlagringen, og at Nav sin felles retningslinje dekker EESSI Pensjon. Team eessipensjon. _Samme antagelse som under K116.1 (SK1)._
+- [ ] **Informasjon om protestrett (SK3):** Bekreftes at personvernerklæringen/fagsystemets brukerdialog uttrykkelig informerer om retten til å protestere på de områdene der rettigheten er aktuell. Team eessipensjon / Juridisk avdeling.
