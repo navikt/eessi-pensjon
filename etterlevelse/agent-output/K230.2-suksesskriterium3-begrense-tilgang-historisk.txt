@@ -1,0 +1,1 @@
+Tilgangen til journalført dokumentasjon styres i Joark, der historisk dokumentasjon som ikke lenger er i aktiv bruk kan skjermes ved at saken avsluttes. Saker som gjelder personer med adressebeskyttelse, skjermes særskilt allerede ved mottak. Mens en sak er under behandling, gir EESSI Pensjon bare saksbehandlere med rett rolle på pensjon og uføretrygd tilgang til opplysningene.

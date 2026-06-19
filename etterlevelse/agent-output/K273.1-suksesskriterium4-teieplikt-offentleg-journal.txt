@@ -1,0 +1,1 @@
+Offentlig journal og skjerming av taushetsbelagte opplysninger håndteres i Joark. I tillegg markerer løsningen saker som gjelder personer med adressebeskyttelse som sensitive allerede ved mottak, slik at de skjermes mot uberettiget innsyn.

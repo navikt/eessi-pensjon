@@ -39,6 +39,14 @@
 | K205.2 | Nav må sikre at utenforstående ikke får uberettiget innsyn i enkeltvedtak, forhåndsvarsel og meldinger | Elektronisk kommunikasjon | 3 | Ja |
 | K206.1 | Nav skal varsle elektronisk til digitale brukere om forhåndsvarsel etter forvaltningsloven § 16 | Elektronisk kommunikasjon | 3 | Ja |
 | K211.1 | Når parten mottar enkeltvedtak elektronisk, skal Nav opplyse om det er mulig å klage elektronisk | Elektronisk kommunikasjon | 3 | Ja |
+| K130.2 | Dokumentasjonen og databasen er lagret i Norge | Arkiv og dokumentasjon | 1 | Ja (delvis) |
+| K230.2 | Dokumentasjonen skal kunne avleveres og slettes til rett tid | Arkiv og dokumentasjon | 5 | Ja (delvis) |
+| K269.1 | Team skal avklare hvordan deres data og dokumentasjon skal forvaltes | Arkiv og dokumentasjon | 1 | Ja (delvis) |
+| K270.1 | Systemet skal oppfylle grunnleggende arkivkrav | Arkiv og dokumentasjon | 5 | Ja (delvis) |
+| K271.1 | Systemet skal være dokumentert | Arkiv og dokumentasjon | 2 | Ja (delvis) |
+| K272.1 | Dokumentasjonen må kunne vedlikeholdes | Arkiv og dokumentasjon | 3 | Ja (delvis) |
+| K273.1 | Journalpliktig dokumentasjon skal journalføres | Arkiv og dokumentasjon | 5 | Ja |
+| K274.1 | Feil i dokumentasjonen må kunne rettes | Arkiv og dokumentasjon | 3 | Ja (delvis) |
 | K267.1 | Applikasjoner skal ha et forsvarlig sikkerhetsnivå | Inf.sikkerhet | 7 | Ja (delvis) |
 | K255.1 | Nav skal beskytte brukere med adressebeskyttelse | Inf.sikkerhet | 8 | Ja (delvis) |
 | K245.1 | Krav til risikovurdering for applikasjoner, systemer og plattformer | Inf.sikkerhet | 5 | Ja (delvis) |
@@ -51,4 +59,4 @@
 
 ---
 
-Sist oppdatert: 2026-06-18
+Sist oppdatert: 2026-06-19

@@ -1,0 +1,1 @@
+Løsningen oppretter ikke organinterne notater. Den endelige avgjørelsen i en pensjonssak fattes i PESYS, ikke i EESSI Pensjon. Journalføring av organinterne dokumenter er derfor ikke aktuelt for løsningen.

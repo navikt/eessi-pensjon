@@ -1,0 +1,1 @@
+Ved journalføring registreres nødvendige metadata på hvert dokument: en journalpostID, tilknytning til sak og BUC, tittel og dokumenttype, avsender eller mottaker, samt dato og tidspunkt for journalføring. Metadataene hentes fra selve utvekslingen og fra Nav sine person- og saksregistre.

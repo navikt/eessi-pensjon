@@ -1,0 +1,1 @@
+Endringer på journalført dokumentasjon spores i Joark, som loggfører hvem som har gjort hva og når. I tillegg loggfører løsningen behandlingen av SED-ene gjennom hele utvekslingen, slik at det er sporbart når dokumenter er sendt, mottatt og journalført.

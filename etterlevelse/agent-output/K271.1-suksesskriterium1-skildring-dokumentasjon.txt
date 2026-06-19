@@ -1,0 +1,1 @@
+Hvilke typer dokumentasjon løsningen håndterer — SED-ene, hvordan de oppstår i utvekslingen mellom EU/EØS-land, og hvor de lagres — er beskrevet i systemdokumentasjonen for EESSI Pensjon. Dokumentasjonen vedlikeholdes av teamet sammen med arkitekturbeskrivelsen for løsningen.

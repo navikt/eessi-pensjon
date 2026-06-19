@@ -1,0 +1,1 @@
+Dokumenter og tilstand som mellomlagres midlertidig under behandling, slettes rutinemessig gjennom livssyklusregler i skylagringen. Journalførte SED-er kasseres ikke av EESSI Pensjon, men følger kassasjonsregimet i Joark, som krever vedtak fra Nasjonalarkivet før sletting.

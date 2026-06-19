@@ -1,0 +1,1 @@
+Den arkivpliktige dokumentasjonen journalføres i Joark, og det er arkivsystemet som ivaretar informasjonsstruktur og avlevering til Nasjonalarkivet. Informasjonsstrukturen i selve EESSI Pensjon — datamodell og hvordan SED-ene er bygd opp — er beskrevet i systemdokumentasjonen for løsningen.

@@ -1,0 +1,1 @@
+Journalførte SED-er med tilhørende metadata kan hentes ut gjennom Nav sine arkivtjenester ved forespørsel. Uthentingen ivaretas av Joark, som er det systemet dokumentene journalføres til.

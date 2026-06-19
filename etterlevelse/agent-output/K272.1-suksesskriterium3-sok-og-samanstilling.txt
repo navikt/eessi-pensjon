@@ -1,0 +1,1 @@
+Egenskaper for søk, kopling og gjenfinning ivaretas av Nav sine arkivtjenester, der dokumentene er knyttet til person, sak og BUC. Disse egenskapene opprettholdes uavhengig av tekniske endringer i EESSI Pensjon, fordi den varige dokumentasjonen ligger i arkivet og ikke i løsningens midlertidige mellomlagring.

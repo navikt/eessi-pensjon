@@ -1,0 +1,1 @@
+Metadata som viser opphav og hvordan SED-ene er behandlet, bevares i Joark sammen med dokumentene. EESSI Pensjon legger ved nødvendige metadata ved journalføring, og disse følger dokumentet videre uavhengig av senere tekniske endringer i løsningen.

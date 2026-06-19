@@ -1,0 +1,1 @@
+Feil i opplysninger i en SED rettes ved at det utveksles en ny, korrigert SED i samme BUC, slik at den opprinnelige informasjonen bevares og det går fram hva som er rettet. Journalførte dokumenter i Joark beholdes uendret, og rettingen kommer i tillegg.

@@ -137,3 +137,38 @@
 
 - [ ] **Stans av behandling (SK2):** Bekreftes at teamet teknisk kan stanse videre bruk av opplysninger om en bestemt person i mellomlagringen, og at Nav sin felles retningslinje dekker EESSI Pensjon. Team eessipensjon. _Samme antagelse som under K116.1 (SK1)._
 - [ ] **Informasjon om protestrett (SK3):** Bekreftes at personvernerklæringen/fagsystemets brukerdialog uttrykkelig informerer om retten til å protestere på de områdene der rettigheten er aktuell. Team eessipensjon / Juridisk avdeling.
+
+## Tverrgående antagelser – Arkiv og dokumentasjon
+
+- [ ] **Ansvarsdeling arkiv (Generelt):** Besvarelsene for arkivkravene legger til grunn at den arkivpliktige dokumentasjonen i EESSI Pensjon er trygdedokumentene (SED-er), at disse journalføres automatisk til Joark som dermed er arkiv av record, og at løsningens egen skylagring kun er midlertidig mellomlagring/arbeidstilstand som ikke er arkiv. Bekreftes at denne forståelsen er riktig, og at det ikke finnes arkivpliktig dokumentasjon i mellomlagringen som ikke også journalføres til Joark eller forvaltes i RINA. Team eessipensjon / Team Dokumentasjonsstyring.
+- [ ] **Formell arkivavklaring (Generelt):** Bekreftes at det er gjort en formell avklaring med Team Dokumentasjonsstyring om hvordan EESSI Pensjon sin dokumentasjon skal forvaltes, og at avgrensningen mot Joark og RINA er dokumentert. Team eessipensjon / Team Dokumentasjonsstyring.
+
+## K130.2 – Dokumentasjonen og databasen er lagret i Norge
+
+- [ ] **Lagringssted (SK1):** Bekreftes at den midlertidige mellomlagringen (skylagring) ligger i Norge eller er akseptabel etter arkivloven gitt at den ikke er arkiv av record, og at all arkivpliktig dokumentasjon faktisk havner i Joark som lagrer i Norge. Team eessipensjon / Team Dokumentasjonsstyring.
+
+## K230.2 – Dokumentasjonen skal kunne avleveres og slettes til rett tid
+
+- [ ] **Bevarings- og kassasjonsvedtak (SK1):** Bekreftes at de journalførte trygdedokumentene fra EESSI Pensjon dekkes av eksisterende bevarings- og kassasjonsvedtak for pensjonsområdet, eller om det trengs et eget vedtak fra Nasjonalarkivet. Team eessipensjon / Team Dokumentasjonsstyring.
+- [ ] **Lagringstid (SK2):** Bekreftes at fastsatt lagringstid for pensjonsområdets arkiv dekker EESSI-dokumentasjonen, og at mellomlagrede dokumenter har definerte livssyklusregler. Team eessipensjon / Team Dokumentasjonsstyring. _Se også K104.1/K191.1 om livssyklusregler i mellomlagringen._
+- [ ] **Begrense tilgang til historisk dokumentasjon (SK3):** Avklares om EESSI Pensjon kaller Joark sin tjeneste for å avslutte sak (avsluttsak) når en sak er ferdigbehandlet, slik at historisk dokumentasjon skjermes, eller om dette håndteres av andre. Team eessipensjon / Team dokumentløsninger.
+
+## K269.1 – Team skal avklare hvordan deres data og dokumentasjon skal forvaltes
+
+- [ ] **Arkivavklaring (SK1):** Se tverrgående punkt «Formell arkivavklaring» over. Bekreftes konklusjonen om at SED-er er arkivpliktige og journalføres til Joark, mens mellomlagringen ikke er arkiv. Team eessipensjon / Team Dokumentasjonsstyring.
+
+## K270.1 – Systemet skal oppfylle grunnleggende arkivkrav
+
+- [ ] **Arkivkrav dekket av Joark (SK1–SK5):** Besvarelsene legger til grunn at Joark ivaretar de grunnleggende arkivkravene (opphav/kontekst, frysing, sporing, gjenfinning, bevaringsvennlig format) for de journalførte trygdedokumentene. Bekreftes at dette er en gyldig avgrensning for EESSI Pensjon. Team eessipensjon / Team Dokumentasjonsstyring.
+
+## K271.1 – Systemet skal være dokumentert
+
+- [ ] **Systemdokumentasjon (SK1, SK2):** Bekreftes at systemdokumentasjonen faktisk beskriver hvilke typer dokumentasjon løsningen håndterer, opphav/historikk og informasjonsstrukturen, og hvor denne dokumentasjonen er lagret og tilgjengelig. Team eessipensjon.
+
+## K273.1 – Journalpliktig dokumentasjon skal journalføres
+
+- [ ] **Taushetsplikt i offentlig journal (SK4):** Bekreftes at skjerming av taushetsbelagte opplysninger i offentlig journal fullt ut ivaretas av Joark for de journalførte trygdedokumentene, og at EESSI Pensjon ikke har et selvstendig ansvar utover å markere sensitive saker. Team eessipensjon / Team dokumentløsninger.
+
+## K274.1 – Feil i dokumentasjonen må kunne rettes
+
+- [ ] **Korrigeringsmekanisme (SK1, SK2):** Bekreftes hvilken konkret mekanisme i EESSI-regelverket som benyttes for å korrigere feil i en allerede sendt SED, og hvor rutinen for retting er dokumentert. Team eessipensjon / faggruppe pensjon. _Samme antagelse som under K103.2._
