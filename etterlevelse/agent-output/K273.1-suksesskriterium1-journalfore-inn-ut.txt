@@ -1,1 +1,1 @@
-SED-er som sendes til og mottas fra andre EU/EØS-land, journalføres automatisk i Joark når de er sendt eller mottatt. Journalføringen skjer uten ugrunnet opphold som en del av den løpende behandlingen, uten at saksbehandler må gjøre noe ekstra.
+SED-er som sendes til og mottas fra andre EU/EØS-land, journalføres automatisk eller manuelt i Joark når de er sendt eller mottatt. Journalføringen skjer uten ugrunnet opphold som en del av den løpende behandlingen.

@@ -30,7 +30,7 @@
 
 ## K245.1 – Krav til risikovurdering for applikasjoner, systemer og plattformer
 
-- [ ] **Verdivurdering (SK1):** Bekreftes om det er gjennomført en formell verdivurdering av EESSI Pensjon etter verdivurderingsmalen, og om lenken er delt med HSB. Team eessipensjon.
+- [ ] **Verdivurdering (SK1):** Bekreftes om det er gjennomført en formell verdivurdering av EESSI Pensjon etter verdivurderingsmalen, og om lenken er delt med HSB. Team eessipensjon. _Kommentar: Jeg kan ikke finne denne vurderingen_
 - [ ] **Trusselmodellering (SK2):** Bekreftes om det er gjennomført en formell trusselmodellering (DFD + STRIPED/STRIDE) etter sikkerhetsmalen, utover den eksisterende arkitekturdokumentasjonen. Team eessipensjon / Team AppSec.
 - [ ] **Sikkerhetsrisikovurdering (SK3):** Avhenger av SK1 — dersom verdien er Høy eller Svært Høy, skal en sikkerhetsrisikovurdering gjennomføres. Bekreftes om dette er gjort. Team eessipensjon / HSB.
 - [ ] **Rutiner for oppdatering (SK4):** Bekreftes om teamet har en formell rutine (f.eks. årshjul eller som del av sprint-review) for å vurdere om sikkerhetsassessmentene er oppdaterte. Team eessipensjon.
@@ -149,17 +149,17 @@
 
 ## K230.2 – Dokumentasjonen skal kunne avleveres og slettes til rett tid
 
-- [ ] **Bevarings- og kassasjonsvedtak (SK1):** Bekreftes at de journalførte trygdedokumentene fra EESSI Pensjon dekkes av eksisterende bevarings- og kassasjonsvedtak for pensjonsområdet, eller om det trengs et eget vedtak fra Nasjonalarkivet. Team eessipensjon / Team Dokumentasjonsstyring.
+- [x] **Bevarings- og kassasjonsvedtak (SK1):** Bekreftes at de journalførte trygdedokumentene fra EESSI Pensjon dekkes av eksisterende bevarings- og kassasjonsvedtak for pensjonsområdet, eller om det trengs et eget vedtak fra Nasjonalarkivet. Team eessipensjon / Team Dokumentasjonsstyring.
 - [ ] **Lagringstid (SK2):** Bekreftes at fastsatt lagringstid for pensjonsområdets arkiv dekker EESSI-dokumentasjonen, og at mellomlagrede dokumenter har definerte livssyklusregler. Team eessipensjon / Team Dokumentasjonsstyring. _Se også K104.1/K191.1 om livssyklusregler i mellomlagringen._
-- [ ] **Begrense tilgang til historisk dokumentasjon (SK3):** Avklares om EESSI Pensjon kaller Joark sin tjeneste for å avslutte sak (avsluttsak) når en sak er ferdigbehandlet, slik at historisk dokumentasjon skjermes, eller om dette håndteres av andre. Team eessipensjon / Team dokumentløsninger.
+- [ ] **Begrense tilgang til historisk dokumentasjon (SK3):** Avklares om EESSI Pensjon kaller Joark sin tjeneste for å avslutte sak (avsluttsak) når en sak er ferdigbehandlet, slik at historisk dokumentasjon skjermes, eller om dette håndteres av andre. Team eessipensjon / Team dokumentløsninger. _Kommentar: Dette skal håndteres av Pesys._
 
 ## K269.1 – Team skal avklare hvordan deres data og dokumentasjon skal forvaltes
 
-- [ ] **Arkivavklaring (SK1):** Se tverrgående punkt «Formell arkivavklaring» over. Bekreftes konklusjonen om at SED-er er arkivpliktige og journalføres til Joark, mens mellomlagringen ikke er arkiv. Team eessipensjon / Team Dokumentasjonsstyring.
+- [x] **Arkivavklaring (SK1):** Se tverrgående punkt «Formell arkivavklaring» over. Bekreftes konklusjonen om at SED-er er arkivpliktige og journalføres til Joark, mens mellomlagringen ikke er arkiv. Team eessipensjon / Team Dokumentasjonsstyring.
 
 ## K270.1 – Systemet skal oppfylle grunnleggende arkivkrav
 
-- [ ] **Arkivkrav dekket av Joark (SK1–SK5):** Besvarelsene legger til grunn at Joark ivaretar de grunnleggende arkivkravene (opphav/kontekst, frysing, sporing, gjenfinning, bevaringsvennlig format) for de journalførte trygdedokumentene. Bekreftes at dette er en gyldig avgrensning for EESSI Pensjon. Team eessipensjon / Team Dokumentasjonsstyring.
+- [x] **Arkivkrav dekket av Joark (SK1–SK5):** Besvarelsene legger til grunn at Joark ivaretar de grunnleggende arkivkravene (opphav/kontekst, frysing, sporing, gjenfinning, bevaringsvennlig format) for de journalførte trygdedokumentene. Bekreftes at dette er en gyldig avgrensning for EESSI Pensjon. Team eessipensjon / Team Dokumentasjonsstyring.
 
 ## K271.1 – Systemet skal være dokumentert
 

@@ -9,5 +9,77 @@
   "K267.1-1": {
     "edited": true,
     "editTimestamp": "15.6.2026, 10:10:10"
+  },
+  "K269.1-1": {
+    "edited": true,
+    "editTimestamp": "22.6.2026, 13:30:25"
+  },
+  "K270.1-2": {
+    "status": "oppfylt",
+    "done": true,
+    "timestamp": "22.6.2026, 13:34:54",
+    "qaAt": 1782128094789,
+    "stale": false
+  },
+  "K270.1-4": {
+    "status": "oppfylt",
+    "done": false,
+    "timestamp": "22.6.2026, 14:14:44",
+    "qaAt": 1782130484853,
+    "stale": true,
+    "edited": true,
+    "editTimestamp": "22.6.2026, 14:14:46",
+    "staleReason": "Fil endret etter QA (22.6.2026, 14:14:46)"
+  },
+  "K270.1-5": {
+    "status": "oppfylt",
+    "done": false,
+    "timestamp": "22.6.2026, 14:16:51",
+    "qaAt": 1782130611475,
+    "stale": true,
+    "edited": true,
+    "editTimestamp": "22.6.2026, 14:16:53",
+    "staleReason": "Fil endret etter QA (22.6.2026, 14:16:53)"
+  },
+  "K272.1-1": {
+    "status": "ikke-oppfylt",
+    "done": false,
+    "timestamp": "22.6.2026, 14:36:55",
+    "qaAt": 1782131815140,
+    "stale": true,
+    "edited": true,
+    "editTimestamp": "22.6.2026, 14:36:59",
+    "staleReason": "Fil endret etter QA (22.6.2026, 14:36:59)"
+  },
+  "K273.1-1": {
+    "status": "oppfylt",
+    "done": false,
+    "timestamp": "22.6.2026, 14:50:21",
+    "qaAt": 1782132621376,
+    "stale": true,
+    "edited": true,
+    "editTimestamp": "22.6.2026, 14:53:41",
+    "staleReason": "Fil endret etter QA (22.6.2026, 14:53:41)"
+  },
+  "K273.1-2": {
+    "status": "oppfylt",
+    "done": true,
+    "timestamp": "22.6.2026, 14:51:10",
+    "qaAt": 1782132670736,
+    "stale": false
+  },
+  "K273.1-3": {
+    "status": "oppfylt",
+    "done": true,
+    "timestamp": "22.6.2026, 14:53:38",
+    "qaAt": 1782132818658,
+    "stale": false
+  },
+  "K273.1-4": {
+    "status": "oppfylt",
+    "done": true,
+    "timestamp": "22.6.2026, 14:54:18",
+    "qaAt": 1782132858794,
+    "stale": false
   }
 }

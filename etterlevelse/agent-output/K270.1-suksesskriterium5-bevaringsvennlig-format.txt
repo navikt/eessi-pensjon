@@ -1,1 +1,1 @@
-SED er strukturerte dokumenter i et standardisert EU-format, og journalføres i Joark i et format som er egnet for langtidsbevaring. Den strukturerte informasjonen konverteres ikke til bilde eller lukket format ved lagring, slik at dokumentene kan brukes videre.
+SED er strukturerte dokumenter i et standardisert EU-format, og journalføres i Joark som PDF-A, dette er egnet for langtidsbevaring. Den strukturerte informasjonen konverteres ikke til bilde eller lukket format ved lagring, slik at dokumentene kan brukes videre.
