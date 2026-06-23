@@ -145,13 +145,13 @@
 
 ## K130.2 – Dokumentasjonen og databasen er lagret i Norge
 
-- [ ] **Lagringssted (SK1):** Bekreftes at den midlertidige mellomlagringen (skylagring) ligger i Norge eller er akseptabel etter arkivloven gitt at den ikke er arkiv av record, og at all arkivpliktig dokumentasjon faktisk havner i Joark som lagrer i Norge. Team eessipensjon / Team Dokumentasjonsstyring.
+- [x] **Lagringssted (SK1):** Bekreftes at den midlertidige mellomlagringen (skylagring) ligger i Norge eller er akseptabel etter arkivloven gitt at den ikke er arkiv av record, og at all arkivpliktig dokumentasjon faktisk havner i Joark som lagrer i Norge. Team eessipensjon / Team Dokumentasjonsstyring.
 
 ## K230.2 – Dokumentasjonen skal kunne avleveres og slettes til rett tid
 
 - [x] **Bevarings- og kassasjonsvedtak (SK1):** Bekreftes at de journalførte trygdedokumentene fra EESSI Pensjon dekkes av eksisterende bevarings- og kassasjonsvedtak for pensjonsområdet, eller om det trengs et eget vedtak fra Nasjonalarkivet. Team eessipensjon / Team Dokumentasjonsstyring.
-- [ ] **Lagringstid (SK2):** Bekreftes at fastsatt lagringstid for pensjonsområdets arkiv dekker EESSI-dokumentasjonen, og at mellomlagrede dokumenter har definerte livssyklusregler. Team eessipensjon / Team Dokumentasjonsstyring. _Se også K104.1/K191.1 om livssyklusregler i mellomlagringen._
-- [ ] **Begrense tilgang til historisk dokumentasjon (SK3):** Avklares om EESSI Pensjon kaller Joark sin tjeneste for å avslutte sak (avsluttsak) når en sak er ferdigbehandlet, slik at historisk dokumentasjon skjermes, eller om dette håndteres av andre. Team eessipensjon / Team dokumentløsninger. _Kommentar: Dette skal håndteres av Pesys._
+- [x] **Lagringstid (SK2):** Bekreftes at fastsatt lagringstid for pensjonsområdets arkiv dekker EESSI-dokumentasjonen, og at mellomlagrede dokumenter har definerte livssyklusregler. Team eessipensjon / Team Dokumentasjonsstyring. _Se også K104.1/K191.1 om livssyklusregler i mellomlagringen._
+- [x] **Begrense tilgang til historisk dokumentasjon (SK3):** Avklares om EESSI Pensjon kaller Joark sin tjeneste for å avslutte sak (avsluttsak) når en sak er ferdigbehandlet, slik at historisk dokumentasjon skjermes, eller om dette håndteres av andre. Team eessipensjon / Team dokumentløsninger. _Kommentar: Dette skal håndteres av Pesys._
 
 ## K269.1 – Team skal avklare hvordan deres data og dokumentasjon skal forvaltes
 
