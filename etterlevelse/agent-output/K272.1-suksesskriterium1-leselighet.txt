@@ -1,2 +1,2 @@
-SED er strukturerte dokumenter som bevares i Joark. Ved tekniske endringer eller migrering ivaretas både menneskelig leselighet og maskinlesbarhet av arkivsystemet, slik at strukturerte format ikke konverteres til bilde eller PDF. EESSI Pensjon mellomlagrer kun dokumenter midlertidig under behandling og driver ikke eget langtidsvedlikehold av arkivdokumentasjon.
-Ved lagring av dokumenter i Joark vil SED i XML-format konverteres til PDF-A. Dette er bestemt utenfor Team EESSI Pensjon. 
+SED er strukturerte dokumenter som bevares i Joark. Ved tekniske endringer eller migrering ivaretas både menneskelig leselighet og maskinlesbarhet av Joark. EESSI Pensjon mellomlagrer kun dokumenter midlertidig under behandling og driver ikke eget langtidsvedlikehold av arkivdokumentasjon.
+

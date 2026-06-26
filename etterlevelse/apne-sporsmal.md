@@ -73,15 +73,15 @@
 ## K154.1 – Nav må overholde taushetsplikten
 
 - [ ] **Taushetspliktsvurdering (SK1):** Bekreftes om det finnes en dokumentert, konkret faglig vurdering av hvilke taushetspliktsregler som gjelder for EESSI Pensjon og overfor hvem, eller om dette utelukkende dekkes av de generelle vurderingene for pensjonsområdet. Team eessipensjon / Juridisk avdeling / fagansvarlige per ytelse.
-- [ ] **Behandlingskatalogen (SK4):** Bekreftes at utveksling av taushetsbelagte trygdeopplysninger med andre EU/EØS-land er registrert i Behandlingskatalogen, og hvor registreringen ligger. Team eessipensjon.
+- [x] **Behandlingskatalogen (SK4):** Bekreftes at utveksling av taushetsbelagte trygdeopplysninger med andre EU/EØS-land er registrert i Behandlingskatalogen, og hvor registreringen ligger. Team eessipensjon.
 
 ## K251.1 – Barnets beste skal være et grunnleggende hensyn i alle saker og avgjørelser som berører barn
 
-- [ ] **Barnets beste-vurdering på systemnivå (SK2):** Bekreftes om det er gjort og dokumentert en overordnet barnets beste-vurdering for hvordan EESSI Pensjon formidler opplysninger i saker om barnepensjon og etterlatteytelser, eller om barnets beste utelukkende vurderes i fagsystemet i den enkelte sak. Team eessipensjon / fagansvarlige for etterlatteytelser.
+- [x] **Barnets beste-vurdering på systemnivå (SK2):** Bekreftes om det er gjort og dokumentert en overordnet barnets beste-vurdering for hvordan EESSI Pensjon formidler opplysninger i saker om barnepensjon og etterlatteytelser, eller om barnets beste utelukkende vurderes i fagsystemet i den enkelte sak. Team eessipensjon / fagansvarlige for etterlatteytelser.
 
 ## K268.1 – Nav følger reglene, standardene, føringene og prinsippene i EØS-avtalen
 
-- [ ] **Dokumentert EØS-vurdering (SK1):** Bekreftes om det finnes en dokumentert vurdering på systemnivå av at EESSI Pensjon følger EØS-regelverket og ikke forskjellsbehandler EØS-borgere, eller om dette utelukkende dekkes av at løsningen følger de felles EESSI-standardene og av likebehandlingsvurderingene som gjøres i fagsystemet per sak. Team eessipensjon / Juridisk avdeling / styringsseksjonen i fagavdelingen.
+- [x] **Dokumentert EØS-vurdering (SK1):** Bekreftes om det finnes en dokumentert vurdering på systemnivå av at EESSI Pensjon følger EØS-regelverket og ikke forskjellsbehandler EØS-borgere, eller om dette utelukkende dekkes av at løsningen følger de felles EESSI-standardene og av likebehandlingsvurderingene som gjøres i fagsystemet per sak. Team eessipensjon / Juridisk avdeling / styringsseksjonen i fagavdelingen.
 
 ## K196.6 – Løsningen oppfyller alle A- og AA-krav i WCAG 2.1
 
@@ -95,7 +95,7 @@
 
 ## K101.2 – Overføring av personopplysninger til utlandet må være lovlig
 
-- [ ] **Tredjeland (SK1, SK2):** Bekreftes at all utveksling i EESSI Pensjon skjer med EU/EØS-land, og at det ikke utveksles med land utenfor EU/EØS (f.eks. Sveits eller andre avtaleland i EESSI-sammenheng) som ville utløse tredjelandsvurdering. Team eessipensjon / faggruppe pensjon. _Kommentar: teamet har tidligere markert kriteriet som «Ikke relevant – overføres kun innad i EU»._
+- [x] **Tredjeland (SK1, SK2):** Bekreftes at all utveksling i EESSI Pensjon skjer med EU/EØS-land, og at det ikke utveksles med land utenfor EU/EØS (f.eks. Sveits eller andre avtaleland i EESSI-sammenheng) som ville utløse tredjelandsvurdering. Team eessipensjon / faggruppe pensjon. _Kommentar: teamet har tidligere markert kriteriet som «Ikke relevant – overføres kun innad i EU»._
 
 ## K102.3 – Det må fastsettes et klart formål før innsamling og behandling av personopplysninger
 
@@ -167,8 +167,8 @@
 
 ## K273.1 – Journalpliktig dokumentasjon skal journalføres
 
-- [ ] **Taushetsplikt i offentlig journal (SK4):** Bekreftes at skjerming av taushetsbelagte opplysninger i offentlig journal fullt ut ivaretas av Joark for de journalførte trygdedokumentene, og at EESSI Pensjon ikke har et selvstendig ansvar utover å markere sensitive saker. Team eessipensjon / Team dokumentløsninger.
+- [x] **Taushetsplikt i offentlig journal (SK4):** Bekreftes at skjerming av taushetsbelagte opplysninger i offentlig journal fullt ut ivaretas av Joark for de journalførte trygdedokumentene, og at EESSI Pensjon ikke har et selvstendig ansvar utover å markere sensitive saker. Team eessipensjon / Team dokumentløsninger.
 
 ## K274.1 – Feil i dokumentasjonen må kunne rettes
 
-- [ ] **Korrigeringsmekanisme (SK1, SK2):** Bekreftes hvilken konkret mekanisme i EESSI-regelverket som benyttes for å korrigere feil i en allerede sendt SED, og hvor rutinen for retting er dokumentert. Team eessipensjon / faggruppe pensjon. _Samme antagelse som under K103.2._
+- [x] **Korrigeringsmekanisme (SK1, SK2):** Bekreftes hvilken konkret mekanisme i EESSI-regelverket som benyttes for å korrigere feil i en allerede sendt SED, og hvor rutinen for retting er dokumentert. Team eessipensjon / faggruppe pensjon. _Samme antagelse som under K103.2._

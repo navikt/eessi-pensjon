@@ -1,1 +1,1 @@
-Journalførte SED-er kan finnes og hentes ut gjennom Nav sine arkivtjenester, både til bruk i saksbehandlingen og for innsyn. Saksbehandler finner dokumentene knyttet til riktig person og BUC i EESSI Pensjons-løsningen.
+Journalførte SED-er kan finnes og hentes ut gjennom Nav sine arkivtjenester, både til bruk i saksbehandlingen og for innsyn. Saksbehandler finner dokumentene knyttet til riktig person i dokumentoversikten i Pesys.
