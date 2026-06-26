@@ -87,7 +87,7 @@ data class ApiRequest(
                     logger.info("ALL SED on existing Rina SED: ${request.sed} -> euxCaseId: ${request.euxCaseId} -> sakNr: ${request.sakId} ")
                     PrefillDataModel(
                         penSaksnummer = request.sakId,
-                        bruker = personInfo.also { logger.debug("FNR eller NPID: ${it.norskIdent}") },
+                        bruker = personInfo.also { fnr -> logger.debug("FNR eller NPID: ${fnr.norskIdent.let { if (it.length > 6) it.substring(0, 6) + "******" else it }}") },
                         avdod = populerAvdodHvisGjenlevendePensjonSak(request, avdodaktoerID),
                         sedType = sedType,
                         buc = request.buc,
@@ -115,6 +115,7 @@ data class ApiRequest(
 
         private fun populerAvdodPersonId(request: ApiRequest, avdodaktoerID: String?, kreverAvdod: Boolean = false): PersonInfo? {
             if (kreverAvdod && avdodaktoerID == null) {
+                if(request.gjenny) return null
                 logger.error("Mangler fnr for avdød")
                 if (request.gjenny) {
                     return null
@@ -133,6 +134,6 @@ data class ApiRequest(
 class KravTypeDeserializer : JsonDeserializer<KravType>() {
     override fun deserialize(p: JsonParser, ctxt: DeserializationContext?): KravType? {
         val value = p.text
-        return KravType.fraNavnEllerVerdi(value)
+        return KravType.fromValue(value)
     }
 }
