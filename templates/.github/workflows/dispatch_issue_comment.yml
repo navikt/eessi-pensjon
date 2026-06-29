@@ -22,7 +22,7 @@ jobs:
       - name: Slash Command Dispatch
         uses: peter-evans/slash-command-dispatch@v1
         with:
-          token: ${{ secrets.DISPATCH_TOKEN }}
-          reaction-token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{'{{ secrets.DISPATCH_TOKEN }}'}}
+          reaction-token: ${{'{{ secrets.GITHUB_TOKEN }}'}}
           permission: write
           commands: prodsett
