@@ -49,8 +49,8 @@ install-template-engine:
 generate-files: install-template-engine ## Oppdaterer filer fra templates i alle prosjekter
 	@meta exec "$(root_dir)script/generate_files.sh $(filter-out $@,$(MAKECMDGOALS))" --exclude eessi-pensjon
 
-setup-githooks: ## Configure git hooks for all eessi-pensjon* application repos
-	@for repo in eessi-pensjon*/; do \
+setup-githooks: ## Configure git hooks for all repos with a .githooks folder
+	@for repo in */; do \
 		if [ -d "$$repo/.git" ] && [ -d "$$repo/.githooks" ]; then \
 			echo "Configuring hooks in $$repo"; \
 			(cd "$$repo" && git config core.hooksPath .githooks && chmod +x .githooks/prepare-commit-msg); \
