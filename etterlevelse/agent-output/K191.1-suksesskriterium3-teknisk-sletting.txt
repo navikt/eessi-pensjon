@@ -1,3 +1,3 @@
-De varige personopplysningene ligger i Nav sine fellesløsninger — dokumentarkivet og PDL — som har egne mekanismer for bevaring og sletting i tråd med fastsatte lagringstider og arkivregelverket. Rutinemessig sletting etter fastsatt lagringstid for disse opplysningene ivaretas av fellesløsningene.
+De varige personopplysningene ligger i Nav sine fellesløsninger, Joark, som har egne mekanismer for bevaring og sletting i tråd med fastsatte lagringstider og arkivregelverket. Rutinemessig sletting etter fastsatt lagringstid for disse opplysningene ivaretas av fellesløsningene.
 
 EESSI Pensjon bygger ikke opp egne varige personregistre. Den midlertidige mellomlagringen av dokumenter under behandling har begrenset levetid, og teamet kan fjerne data knyttet til en bestemt person derfra ved behov.

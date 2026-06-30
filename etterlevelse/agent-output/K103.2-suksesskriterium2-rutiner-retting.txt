@@ -3,7 +3,7 @@ EESSI Pensjon har ikke egne registre med personopplysninger som kan rettes direk
 Rutiner og funksjonalitet for retting:
 
 - Dersom en saksbehandler oppdager feil i personopplysninger under arbeid med en SED, rettes feilen i PDL eller PESYS. Ved neste forhåndsutfylling vil korrekte opplysninger hentes automatisk.
-- SED-er som allerede er sendt til utlandet kan ikke rettes i EESSI Pensjon. Dersom det oppdages feil i en sendt SED, opprettes en ny SED med korrekte opplysninger i henhold til EESSI-regelverket.
+- SED-er som allerede er sendt til utlandet kan ikke rettes i EESSI Pensjon. Dersom det oppdages feil i en sendt SED, må det opprettes en ny SED med korrekte opplysninger i henhold til EESSI-regelverket.
 - Mottatte SED-er fra andre land som inneholder personopplysninger (adresse, utenlandsk ID) prosesseres og videresendes til PDL. Dersom opplysningene er feilaktige, håndteres dette gjennom dialog med avsenderlandet via EESSI og eventuell manuell korrigering i PDL.
 - Journalførte SED-er i Joark kan suppleres med merknad eller ny journalpost dersom innholdet gir et ufullstendig bilde.
 

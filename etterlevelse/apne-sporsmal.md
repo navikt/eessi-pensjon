@@ -63,7 +63,7 @@
 
 ## K103.2 – Personopplysninger skal kunne rettes
 
-- [ ] **Korrigering av sendte SED-er (SK2, SK3):** Bekreftes hvilken konkret prosedyre som gjelder i EESSI-regelverket for å korrigere feilaktige opplysninger i en allerede sendt SED — om det sendes en ny SED, eller om det håndteres via meldingsutveksling i BUC-en. Team eessipensjon / faggruppe pensjon.
+- [x] **Korrigering av sendte SED-er (SK2, SK3):** Bekreftes hvilken konkret prosedyre som gjelder i EESSI-regelverket for å korrigere feilaktige opplysninger i en allerede sendt SED — om det sendes en ny SED, eller om det håndteres via meldingsutveksling i BUC-en. Team eessipensjon / faggruppe pensjon.
 - [ ] **Varsling via PDL (SK3):** Bekreftes at PDL har egne mekanismer for å videreformidle rettinger til sine konsumenter, slik at EESSI Pensjon ikke har et selvstendig ansvar for å varsle andre Nav-systemer om rettinger mottatt fra utlandet. Team eessipensjon / PDL-teamet.
 ## K219.1 – IT-løsninger skal avlevere data slik at det lages offisiell statistikk, sentral styringsinformasjon og analyser
 
@@ -99,8 +99,8 @@
 
 ## K102.3 – Det må fastsettes et klart formål før innsamling og behandling av personopplysninger
 
-- [ ] **Formål i Behandlingskatalogen (SK1):** Bekreftes at formålet med behandlingen i EESSI Pensjon er registrert og oppdatert i Behandlingskatalogen. Team eessipensjon / personvernrådgiver.
-- [ ] **Avlevering til datavarehus (SK2):** Bekreftes at data som avleveres til datavarehuset for statistikk-/styringsformål er aggregert eller avidentifisert, slik at viderebruken er forenlig med innsamlingsformålet. Team eessipensjon / Statistikkseksjonen. _Se også åpne spørsmål under K219.1._
+- [x] **Formål i Behandlingskatalogen (SK1):** Bekreftes at formålet med behandlingen i EESSI Pensjon er registrert og oppdatert i Behandlingskatalogen. Team eessipensjon / personvernrådgiver.
+- [x] **Avlevering til datavarehus (SK2):** Bekreftes at data som avleveres til datavarehuset for statistikk-/styringsformål er aggregert eller avidentifisert, slik at viderebruken er forenlig med innsamlingsformålet. Team eessipensjon / Statistikkseksjonen. _Se også åpne spørsmål under K219.1._
 
 ## K107.2 – Behandling av personopplysninger må være lovlig
 
