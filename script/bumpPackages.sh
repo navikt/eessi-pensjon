@@ -184,7 +184,7 @@ for package in "${packages[@]}"; do
     npm run dist
 
     git add .
-    git commit -m "U - epd: New version $CUSTOM_COMMIT_MESSAGE"
+    git commit -m "U - New version $CUSTOM_COMMIT_MESSAGE"
     git push
 
     if [[ "$2" = "wip" || "$3" = "wip" ]]; then
