@@ -59,7 +59,7 @@
 
 ## K105.1 – Det må tilrettelegges for dataportabilitet av personopplysninger
 
-- [ ] **Håndtering av forespørsler (SK2):** Bekreftes at Nav sin sentrale innsyns-/rettighetsenhet håndterer eventuelle forespørsler om dataportabilitet, og at EESSI Pensjon ikke trenger en egen prosedyre utover å henvise videre. Team eessipensjon / Nav personvern.
+- [x] **Håndtering av forespørsler (SK2):** Bekreftes at Nav sin sentrale innsyns-/rettighetsenhet håndterer eventuelle forespørsler om dataportabilitet, og at EESSI Pensjon ikke trenger en egen prosedyre utover å henvise videre. Team eessipensjon / Nav personvern.
 
 ## K103.2 – Personopplysninger skal kunne rettes
 
@@ -117,7 +117,7 @@
 
 ## K113.2 – Den registrerte har krav på innsyn i hvilke personopplysninger Nav har registrert
 
-- [ ] **Innsynsrutine (SK1):** Bekreftes at Nav Kontaktsenter er informert om EESSI Pensjon som løsning med personopplysninger (e-post med emne «K113.2 Innsyn»), og at teamet har en dokumentert rutine for å finne igjen og hente ut opplysninger om en bestemt person fra mellomlagringen ved en innsynsforespørsel. Team eessipensjon.
+- [x] **Innsynsrutine (SK1):** Bekreftes at Nav Kontaktsenter er informert om EESSI Pensjon som løsning med personopplysninger (e-post med emne «K113.2 Innsyn»), og at teamet har en dokumentert rutine for å finne igjen og hente ut opplysninger om en bestemt person fra mellomlagringen ved en innsynsforespørsel. Team eessipensjon.
 
 ## K116.1 – Behandling av personopplysninger må kunne begrenses
 
@@ -135,7 +135,7 @@
 
 ## K262.1 – Det må tilrettelegges for at den registrerte kan protestere mot behandling av personopplysninger
 
-- [ ] **Stans av behandling (SK2):** Bekreftes at teamet teknisk kan stanse videre bruk av opplysninger om en bestemt person i mellomlagringen, og at Nav sin felles retningslinje dekker EESSI Pensjon. Team eessipensjon. _Samme antagelse som under K116.1 (SK1)._
+- [x] **Stans av behandling (SK2):** Bekreftes at teamet teknisk kan stanse videre bruk av opplysninger om en bestemt person i mellomlagringen, og at Nav sin felles retningslinje dekker EESSI Pensjon. Team eessipensjon. _Samme antagelse som under K116.1 (SK1)._
 - [ ] **Informasjon om protestrett (SK3):** Bekreftes at personvernerklæringen/fagsystemets brukerdialog uttrykkelig informerer om retten til å protestere på de områdene der rettigheten er aktuell. Team eessipensjon / Juridisk avdeling.
 
 ## Tverrgående antagelser – Arkiv og dokumentasjon
