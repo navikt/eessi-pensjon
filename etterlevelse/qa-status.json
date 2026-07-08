@@ -383,10 +383,10 @@
     "stale": false
   },
   "K271.1-2": {
-    "status": "ikke-relevant",
+    "status": "oppfylt",
     "done": true,
-    "timestamp": "29.6.2026, 10:44:01",
-    "qaAt": 1782722641509,
+    "timestamp": "7.7.2026, 13:58:03",
+    "qaAt": 1783425483638,
     "stale": false
   },
   "K113.2-1": {
@@ -409,16 +409,16 @@
   "K103.2-1": {
     "status": "oppfylt",
     "done": true,
-    "timestamp": "30.6.2026, 14:31:43",
-    "qaAt": 1782822703355,
+    "timestamp": "7.7.2026, 13:57:32",
+    "qaAt": 1783425452889,
     "stale": false
   },
   "K103.2-2": {
     "status": "oppfylt",
-    "done": false,
-    "timestamp": "30.6.2026, 14:31:43",
-    "qaAt": 1782822703355,
-    "stale": true,
+    "done": true,
+    "timestamp": "7.7.2026, 13:57:32",
+    "qaAt": 1783425452889,
+    "stale": false,
     "edited": true,
     "editTimestamp": "30.6.2026, 13:17:36",
     "staleReason": "Fil endret etter QA (30.6.2026, 14:34:41)"
@@ -426,8 +426,8 @@
   "K103.2-3": {
     "status": "oppfylt",
     "done": true,
-    "timestamp": "30.6.2026, 14:31:43",
-    "qaAt": 1782822703355,
+    "timestamp": "7.7.2026, 13:57:32",
+    "qaAt": 1783425452889,
     "stale": false
   },
   "K104.1-1": {
@@ -536,6 +536,13 @@
     "done": true,
     "timestamp": "1.7.2026, 13:24:31",
     "qaAt": 1782905071172,
+    "stale": false
+  },
+  "K271.1-1": {
+    "status": "oppfylt",
+    "done": true,
+    "timestamp": "7.7.2026, 13:58:03",
+    "qaAt": 1783425483638,
     "stale": false
   }
 }
