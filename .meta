@@ -16,6 +16,7 @@
     "ep-logging": "git@github.com:navikt/ep-logging",
     "ep-metrics": "git@github.com:navikt/ep-metrics",
     "ep-personoppslag": "git@github.com:navikt/ep-personoppslag",
+    "ep-routing": "git@github.com:navikt/ep-routing",
     "ep-meta-analyse": "git@github.com:navikt/ep-meta-analyse",
     "tabell": "git@github.com:navikt/tabell",
     "fetch-api": "git@github.com:navikt/fetch-api",
