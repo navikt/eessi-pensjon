@@ -57,8 +57,10 @@ setup-githooks: ## Configure git hooks for all repos with a .githooks folder
 		fi; \
 	done
 
+EP_LIBRARIES_SKIP := eessi-pensjon,eessi-pensjon-saksbehandling-ui,ep-meta-analyse,fetch-api,tabell,land-verktoy,landvelger,flagg-ikoner
+
 upgrade-ep-libraries-part-1: ## First (of eight) steps in upgrading the ep-*-libraries dependencies ...
-	@meta exec "./gradlew dependencyUpdates --refresh-dependencies | tail -n1" --parallel --exclude eessi-pensjon,eessi-pensjon-saksbehandling-ui,ep-meta-analyse
+	@meta exec "./gradlew dependencyUpdates --refresh-dependencies | tail -n1" --parallel --exclude $(EP_LIBRARIES_SKIP)
 	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-logging | tail -n1" --parallel --include-only ep-eux,ep-kodeverk,ep-personoppslag,ep-routing
 	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-metrics | tail -n1" --parallel --include-only ep-eux,ep-kodeverk,ep-personoppslag,ep-routing
 
@@ -69,36 +71,36 @@ upgrade-ep-libraries-part-3: ## ... third ...
 	@echo "Vent til bibliotek er bygget og oppdatert på github package repo"
 
 _upgrade-ep-lib: # internal helper - usage: LIB=no.nav.eessi.pensjon:ep-xxx make _upgrade-ep-lib
-	@meta exec "$(root_dir)script/upgrade_dependency.sh $(LIB) | tail -n1" --parallel --exclude eessi-pensjon,ep-meta-analyse
+	@meta exec "$(root_dir)script/upgrade_dependency.sh $(LIB) | tail -n1" --parallel --exclude $(EP_LIBRARIES_SKIP)
 
 upgrade-ep-libraries-part-4: ## ... fourth  ...
 	$(MAKE) pull
 	$(MAKE) _upgrade-ep-lib LIB=no.nav.eessi.pensjon:ep-logging
 	$(MAKE) _upgrade-ep-lib LIB=no.nav.eessi.pensjon:ep-metrics
-	@meta exec "git push" --exclude eessi-pensjon
+	@meta exec "git push" --exclude $(EP_LIBRARIES_SKIP)
 	@echo "Vent til app'er er deployet og sjekk at det gikk bra"
 
 upgrade-ep-libraries-part-5: ## ... fifth ...
 	$(MAKE) pull
 	$(MAKE) _upgrade-ep-lib LIB=no.nav.eessi.pensjon:ep-eux
-	@meta exec "git push" --exclude eessi-pensjon
+	@meta exec "git push" --exclude $(EP_LIBRARIES_SKIP)
 	@echo "Vent til app'er er deployet og sjekk at det gikk bra"
 
 upgrade-ep-libraries-part-6: ## ... sixth ...
 	$(MAKE) pull
 	$(MAKE) _upgrade-ep-lib LIB=no.nav.eessi.pensjon:ep-personoppslag
-	@meta exec "git push" --exclude eessi-pensjon
+	@meta exec "git push" --exclude $(EP_LIBRARIES_SKIP)
 	@echo "Vent til app'er er deployet og sjekk at det gikk bra"
 
 upgrade-ep-libraries-part-7: ## ... seventh ...
 	$(MAKE) pull
 	$(MAKE) _upgrade-ep-lib LIB=no.nav.eessi.pensjon:ep-kodeverk
-	@meta exec "git push" --exclude eessi-pensjon
+	@meta exec "git push" --exclude $(EP_LIBRARIES_SKIP)
 	@echo "Vent til app'er er deployet og sjekk at det gikk bra"
 
 upgrade-ep-libraries-part-8: ## ... eighth and final step.
 	$(MAKE) pull
 	$(MAKE) _upgrade-ep-lib LIB=no.nav.eessi.pensjon:ep-routing
-	@meta exec "git push" --exclude eessi-pensjon
+	@meta exec "git push" --exclude $(EP_LIBRARIES_SKIP)
 	@echo "Vent til app'er er deployet og sjekk at det gikk bra"
 	@echo "Deretter er du done!"
