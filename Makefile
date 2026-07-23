@@ -68,34 +68,37 @@ upgrade-ep-libraries-part-2: ## ... second ...
 upgrade-ep-libraries-part-3: ## ... third ...
 	@echo "Vent til bibliotek er bygget og oppdatert på github package repo"
 
+_upgrade-ep-lib: # internal helper - usage: LIB=no.nav.eessi.pensjon:ep-xxx make _upgrade-ep-lib
+	@meta exec "$(root_dir)script/upgrade_dependency.sh $(LIB) | tail -n1" --parallel --exclude eessi-pensjon,ep-meta-analyse
+
 upgrade-ep-libraries-part-4: ## ... fourth  ...
 	$(MAKE) pull
-	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-logging | tail -n1" --parallel --exclude eessi-pensjon,ep-meta-analyse
-	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-metrics | tail -n1" --parallel --exclude eessi-pensjon,ep-meta-analyse
+	$(MAKE) _upgrade-ep-lib LIB=no.nav.eessi.pensjon:ep-logging
+	$(MAKE) _upgrade-ep-lib LIB=no.nav.eessi.pensjon:ep-metrics
 	@meta exec "git push" --exclude eessi-pensjon
 	@echo "Vent til app'er er deployet og sjekk at det gikk bra"
 
 upgrade-ep-libraries-part-5: ## ... fifth ...
 	$(MAKE) pull
-	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-eux | tail -n1"  --parallel --exclude eessi-pensjon,ep-meta-analyse
+	$(MAKE) _upgrade-ep-lib LIB=no.nav.eessi.pensjon:ep-eux
 	@meta exec "git push" --exclude eessi-pensjon
 	@echo "Vent til app'er er deployet og sjekk at det gikk bra"
 
 upgrade-ep-libraries-part-6: ## ... sixth ...
 	$(MAKE) pull
-	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-personoppslag | tail -n1"  --parallel --exclude eessi-pensjon,ep-meta-analyse
+	$(MAKE) _upgrade-ep-lib LIB=no.nav.eessi.pensjon:ep-personoppslag
 	@meta exec "git push" --exclude eessi-pensjon
 	@echo "Vent til app'er er deployet og sjekk at det gikk bra"
 
 upgrade-ep-libraries-part-7: ## ... seventh ...
 	$(MAKE) pull
-	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-kodeverk | tail -n1"  --parallel --exclude eessi-pensjon,ep-meta-analyse
+	$(MAKE) _upgrade-ep-lib LIB=no.nav.eessi.pensjon:ep-kodeverk
 	@meta exec "git push" --exclude eessi-pensjon
 	@echo "Vent til app'er er deployet og sjekk at det gikk bra"
 
 upgrade-ep-libraries-part-8: ## ... eighth and final step.
 	$(MAKE) pull
-	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-routing | tail -n1"  --parallel --exclude eessi-pensjon,ep-meta-analyse
+	$(MAKE) _upgrade-ep-lib LIB=no.nav.eessi.pensjon:ep-routing
 	@meta exec "git push" --exclude eessi-pensjon
 	@echo "Vent til app'er er deployet og sjekk at det gikk bra"
 	@echo "Deretter er du done!"
