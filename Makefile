@@ -25,7 +25,7 @@ upgrade-gradle: ## Upgrade gradle in all projects - usage GRADLEW_VERSION=x.x.x 
 	script/upgrade_gradle.sh
 
 upgrade-dependency: ## Upgrade dep in all projects usage DEPENDENCY=group-colon-name make upgrade-dependency
-	@meta exec "$(root_dir)script/upgrade_dependency.sh | tail -n1" --exclude eessi-pensjon --parallel
+	@meta exec "$(root_dir)script/upgrade_dependency.sh | tail -n1" --exclude $(EP_LIBRARIES_SKIP) --parallel
 
 upgrade-safe-dependencies: ## Upgrade "safe" (test) dependencies in all projects (see script/safe_dependency_updates.sh)
 	@meta exec "$(root_dir)script/upgrade_safe_dependencies.sh | grep -A 100 'Commits:'" --exclude eessi-pensjon
