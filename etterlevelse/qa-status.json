@@ -8,7 +8,12 @@
   },
   "K267.1-1": {
     "edited": true,
-    "editTimestamp": "15.6.2026, 10:10:10"
+    "editTimestamp": "15.6.2026, 10:10:10",
+    "status": "oppfylt",
+    "done": true,
+    "timestamp": "6.8.2026, 15:04:04",
+    "qaAt": 1786021444958,
+    "stale": false
   },
   "K269.1-1": {
     "edited": true,
@@ -543,6 +548,73 @@
     "done": true,
     "timestamp": "7.7.2026, 13:58:03",
     "qaAt": 1783425483638,
+    "stale": false
+  },
+  "K245.1-3": {
+    "status": "ikke-relevant",
+    "done": true,
+    "timestamp": "6.8.2026, 14:43:22",
+    "qaAt": 1786020202062,
+    "stale": false
+  },
+  "K253.1-3": {
+    "status": "oppfylt",
+    "done": true,
+    "timestamp": "6.8.2026, 14:47:20",
+    "qaAt": 1786020440276,
+    "stale": false
+  },
+  "K253.1-5": {
+    "status": "oppfylt",
+    "done": true,
+    "timestamp": "6.8.2026, 14:47:55",
+    "qaAt": 1786020475076,
+    "stale": false
+  },
+  "K255.1-3": {
+    "status": "oppfylt",
+    "done": true,
+    "timestamp": "6.8.2026, 14:59:26",
+    "qaAt": 1786021166030,
+    "stale": false
+  },
+  "K255.1-4": {
+    "status": "ikke-relevant",
+    "done": true,
+    "timestamp": "6.8.2026, 14:59:40",
+    "qaAt": 1786021180349,
+    "stale": false
+  },
+  "K255.1-6": {
+    "status": "oppfylt",
+    "done": true,
+    "timestamp": "6.8.2026, 15:01:08",
+    "qaAt": 1786021268742,
+    "stale": false
+  },
+  "K255.1-7": {
+    "status": "ikke-relevant",
+    "done": true,
+    "timestamp": "6.8.2026, 15:01:16",
+    "qaAt": 1786021276941,
+    "stale": false
+  },
+  "K267.1-2": {
+    "status": "oppfylt",
+    "done": true,
+    "timestamp": "6.8.2026, 15:04:27",
+    "qaAt": 1786021467391,
+    "stale": false
+  },
+  "K111.1-2": {
+    "edited": true,
+    "editTimestamp": "6.8.2026, 15:20:36"
+  },
+  "K115.1-3": {
+    "status": "oppfylt",
+    "done": true,
+    "timestamp": "6.8.2026, 15:21:14",
+    "qaAt": 1786022474246,
     "stale": false
   }
 }
