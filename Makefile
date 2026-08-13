@@ -42,7 +42,7 @@ list-local-commits: ## shows local, unpushed, commits
 	@meta exec "git log --oneline origin/HEAD..HEAD | cat"
 
 upgradable-dependencies-report: ## Lists dependencies that are outdated - across all projects - then sorted uniquely
-	@make gw "dependencyUpdates --refresh-dependencies" 2>&1 | grep '\->' | grep -v "Gradle" | cut -d' ' -f3,4,6 | sed 's#\[##' | sed 's#\]##' | sort | uniq
+	@GW_QUIET=false make gw "dependencyUpdates --refresh-dependencies" 2>&1 | grep '\->' | grep -v "Gradle" | cut -d' ' -f3,4,6 | sed 's#\[##' | sed 's#\]##' | sort | uniq
 
 prepush-review: ## let's you look at local commits across all projects and decide if you want to push
 	@meta exec 'output=$$(git log --oneline origin/HEAD..HEAD) ; [ -n "$$output" ] && (git show --oneline origin/HEAD..HEAD | cat && echo "Pushe? (y/N)" && read a && [ "$$a" = "y" ] && git push) || true' --exclude $(CURRENT_DIR)
