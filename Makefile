@@ -41,8 +41,13 @@ check-if-up-to-date: ## check if all changes are commited and pushed - and that 
 list-local-commits: ## shows local, unpushed, commits
 	@meta exec "git log --oneline origin/HEAD..HEAD | cat"
 
-upgradable-dependencies-report: ## Lists dependencies that are outdated - across all projects - then sorted uniquely
-	@GW_QUIET=false make gw "dependencyUpdates --refresh-dependencies" 2>&1 | grep '\->' | grep -v "Gradle" | cut -d' ' -f3,4,6 | sed 's#\[##' | sed 's#\]##' | sort | uniq
+upgradable-dependencies-report: ## Lists dependencies that are outdated - across all projects - then sorted uniquely (prints live progress to stderr)
+	@tmp=$$(mktemp); \
+	total=$$(python3 -c "import json; print(len(json.load(open('.meta'))['projects']) - 1)"); \
+	GW_QUIET=false make gw "dependencyUpdates --refresh-dependencies " 2>&1 | tee "$$tmp" | \
+	  awk -v total="$$total" '/✓/{c++; printf("\rProgress: %d/%d repos done (%d%%)", c, total, (c*100)/total) > "/dev/stderr"; fflush("/dev/stderr")} END{print "" > "/dev/stderr"}'; \
+	grep '\->' "$$tmp" | grep -v "Gradle" | cut -d' ' -f3,4,6 | sed 's#\[##' | sed 's#\]##' | sort | uniq; \
+	rm -f "$$tmp"
 
 prepush-review: ## let's you look at local commits across all projects and decide if you want to push
 	@meta exec 'output=$$(git log --oneline origin/HEAD..HEAD) ; [ -n "$$output" ] && (git show --oneline origin/HEAD..HEAD | cat && echo "Pushe? (y/N)" && read a && [ "$$a" = "y" ] && git push) || true' --exclude $(CURRENT_DIR)
