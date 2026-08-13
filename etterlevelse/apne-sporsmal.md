@@ -14,13 +14,13 @@
 
 ## K255.1 – Nav skal beskytte brukere med adressebeskyttelse
 
-- [ ] **Tilgangssjekk (SK1):** Avklares om tilgangskontrollen for adressebeskyttede brukere utelukkende håndheves av RINA/EUX-plattformen, eller om EESSI Pensjon har en egen sjekk mot GA-Fortrolig_Adresse / GA-Strengt_Fortrolig_Adresse i sitt API-lag. Team eessipensjon.
+- [ ] **Tilgangssjekk (SK1):** Avklares om tilgangskontrollen for adressebeskyttede brukere utelukkende håndheves av RINA/EUX-plattformen, eller om EESSI Pensjon har en egen sjekk mot GA-Fortrolig_Adresse / GA-Strengt_Fortrolig_Adresse i sitt API-lag. Team eessipensjon. _Kommentar: EESSI Pensjon har en egen tilgangskontroll mot PDL._
 - [ ] **Tilgangssjekk (SK1, SK5):** Begrens-innsyn-sjekken markerer BUC-er som sensitive kun for STRENGT_FORTROLIG og STRENGT_FORTROLIG_UTLAND — ikke for FORTROLIG (kode 7). Avklares om dette er tilsiktet, og om brukere med kode 7 likevel er tilstrekkelig beskyttet gjennom at adressefeltet utelates i prefill. Team eessipensjon.
-- [ ] **Tydelig markering (SK2):** Bekreftes at saksbehandlergrensesnittet tydelig viser at en sak involverer en person med adressebeskyttelse (f.eks. med ikon, farge eller banner) — ikke bare at tilgangen avvises. Team eessipensjon / EUX-plattformteam.
-- [ ] **Tydelig markering (SK2):** Bekreftes at RINA faktisk gir saksbehandler en forklaring når tilgang avvises (f.eks. "saken er sensitiv") og ikke bare returnerer en generisk feilmelding. Team eessipensjon / EUX-plattformteam.
-- [ ] **Sammenstilte oversikter (SK4):** Bekreftes at saksoversikter i saksbehandlergrensesnittet faktisk filtrerer bort sensitive saker for saksbehandlere uten riktig rolle, og ikke bare skjuler innholdet. Team eessipensjon.
-- [ ] **Deling av adresse (SK5) — BEKREFTET AVVIK:** Koden i PrefillPDLAdresse sjekker kun FORTROLIG og STRENGT_FORTROLIG — men IKKE STRENGT_FORTROLIG_UTLAND. Brukere med strengt fortrolig adresse utland kan ha adresse i PDL som i dag forhåndsutfylles i utgående SED-er. Avviket bør lukkes. Team eessipensjon.
-- [ ] **Geolokaliserende opplysninger (SK6):** Kartlegges hvilke felter i SED-er som kan inneholde geolokaliserende opplysninger utover adresse (f.eks. arbeidsgiver, trygdetilhørighet), og om det er mulig/ønskelig å utelate disse for adressebeskyttede brukere. Team eessipensjon / faggruppe pensjon.
+- [x] **Tydelig markering (SK2):** Bekreftes at saksbehandlergrensesnittet tydelig viser at en sak involverer en person med adressebeskyttelse (f.eks. med ikon, farge eller banner) — ikke bare at tilgangen avvises. Team eessipensjon / EUX-plattformteam.
+- [x] **Tydelig markering (SK2):** Bekreftes at RINA faktisk gir saksbehandler en forklaring når tilgang avvises (f.eks. "saken er sensitiv") og ikke bare returnerer en generisk feilmelding. Team eessipensjon / EUX-plattformteam.
+- [x] **Sammenstilte oversikter (SK4):** Bekreftes at saksoversikter i saksbehandlergrensesnittet faktisk filtrerer bort sensitive saker for saksbehandlere uten riktig rolle, og ikke bare skjuler innholdet. Team eessipensjon. _Kommentar: Ikke relevant suksesskriterium_
+- [ ] **Deling av adresse (SK5) — BEKREFTET AVVIK:** Koden i PrefillPDLAdresse sjekker kun FORTROLIG og STRENGT_FORTROLIG — men IKKE STRENGT_FORTROLIG_UTLAND. Brukere med strengt fortrolig adresse utland kan ha adresse i PDL som i dag forhåndsutfylles i utgående SED-er. Avviket bør lukkes. Team eessipensjon. _Kommentar: Adressen sendes fra utlandet til oss og skal lagres i PDL. Det er kun egne saksbehandlere som kan se adressen._
+- [x] **Geolokaliserende opplysninger (SK6):** Kartlegges hvilke felter i SED-er som kan inneholde geolokaliserende opplysninger utover adresse (f.eks. arbeidsgiver, trygdetilhørighet), og om det er mulig/ønskelig å utelate disse for adressebeskyttede brukere. Team eessipensjon / faggruppe pensjon.
 
 ## K253.1 – Visning av personopplysninger skal skrives til oppslagslogg (Arcsight)
 
