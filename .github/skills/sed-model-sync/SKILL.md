@@ -65,6 +65,13 @@ If the skill was added or changed during the current CLI session, run
 2. **Inventory template paths and shapes.**
    - Extract every distinct `$nav.*` and `$pensjon.*` mapping from each selected
      version's template.
+   - Treat each full `$nav.*` or `$pensjon.*` expression as a model source
+     field, preserving its root and `[x]` segments. Count its destination JSON
+     path occurrences and check whether the same source field feeds multiple
+     destination fields. Report repeated source fields with all destination
+     paths, plus the maximum destinations per source field. Do not collapse
+     unrelated properties that share a leaf name. State clearly that this
+     checks textual template fan-out, not runtime expansion of `[x]` arrays.
    - Count distinct mapped leaf paths by useful model/domain group.
    - Record `[x]` array markers at every segment; distinguish those from
      non-indexed object and scalar paths.
@@ -74,6 +81,17 @@ If the skill was added or changed during the current CLI session, run
    - Resolve each template path through the selected SED's Kotlin model and
      shared nested models, using source definitions rather than naming
      assumptions.
+   - Inventory all leaf and collection-element property paths reachable from
+     the selected SED's NAV and pension model roots, including inherited and
+     shared nested DTO properties. Compare these paths against each selected
+     template and report Kotlin paths with no corresponding source expression
+     in a separate grouped table. Keep full paths distinct when the same DTO
+     is reused under multiple roots.
+   - Add a possible reason for each group only as a clearly labeled hypothesis
+     (for example, shared/generic DTO fields, inherited fields, optional or
+     conditional data, or a potentially missing mapping). Do not treat
+     "generic" as proof that a field is intentionally unused; distinguish these
+     model-only paths from template expressions that have no Kotlin property.
    - A template segment containing `[x]` must correspond to a Kotlin
      collection at that segment; a non-indexed segment must resolve to a
      single object or scalar.
@@ -98,7 +116,13 @@ If the skill was added or changed during the current CLI session, run
    - Save under `eessi-pensjon/docs/` with a filename that includes the SED and
      checked versions, for example
      `p2200-v44-v45-sync-report.html`.
+   - At the top of the report, state the mapping rules applied: full source
+     path resolution, collection cardinality at each path segment, leaf
+     property/type compatibility, source-field fan-out, and independent
+     version comparison.
    - Include total path counts by version, path/type/cardinality results,
+     source-field fan-out counts and any repeated destination mappings,
+     grouped Kotlin properties not mapped by the ACL with possible reasons,
      actionable mismatches, version differences, test evidence and limitations.
    - Make path counts clickable, expanding to the exact template leaf paths.
    - Do not mark a version or model as fully compatible when any mapping or
