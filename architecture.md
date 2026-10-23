@@ -50,6 +50,7 @@ These are not deployed applications — they are shared dependencies used by the
 | [ep-logging](https://github.com/navikt/ep-logging) | Shared logging library. MDC-based request tracing, audit logging via syslog. |
 | [ep-metrics](https://github.com/navikt/ep-metrics) | Shared metrics library. Prometheus request-count filter with toggle (`METRICS_REQUESTFILTER_ENABLE`). |
 | [ep-personoppslag](https://github.com/navikt/ep-personoppslag) | Shared person-lookup library. Wraps PDL calls for consistent person data access across EP apps. |
+| [ep-routing](https://github.com/navikt/ep-routing) | Routes oppgaver to the right NAV unit (enhet) based on BUC type, residence and case info. Used by journalforing, oppgave, pdl-produsent and dodsmelding. |
 
 ### Supporting Tools
 
