@@ -56,6 +56,8 @@ These are not deployed applications — they are shared dependencies used by the
 | Tool | Description |
 |---|---|
 | [ep-meta-analyse](https://github.com/navikt/eessi-pensjon/tree/master/ep-meta-analyse) | Code and revision history analysis tool. Generates PDF notebook reports. |
+| [eessi-pensjon-documentation](https://github.com/navikt/eessi-pensjon-documentation) | Documentation portal for the team (React / TypeScript / Vite, Aksel). Node server behind Wonderwall proxies `/api` → eessi-pensjon-documentation-api with an OBO token. dev-gcp only. |
+| [eessi-pensjon-documentation-api](https://github.com/navikt/eessi-pensjon-documentation-api) | Backend for the documentation portal (Kotlin / Spring Boot). Entra ID-protected. dev-gcp only. |
 
 ## Architecture Diagram
 
