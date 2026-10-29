@@ -38,6 +38,9 @@ upgrade-safe-dependencies: ## Upgrade "safe" (test) dependencies in all projects
 check-if-up-to-date: ## check if all changes are commited and pushed - and that we are on the mainline with all changes pulled
 	@meta exec "$(root_dir)script/check_if_we_are_up_to_date.sh" --exclude "$(CURRENT_DIR)" # --parallel seemed to skip some projects(?!)
 
+check-secrets: ## Scan all local repos and working files for secrets with TruffleHog (brew install trufflehog)
+	@bash "$(root_dir)script/check_secrets.sh"
+
 list-local-commits: ## shows local, unpushed, commits
 	@meta exec "git log --oneline origin/HEAD..HEAD | cat"
 
