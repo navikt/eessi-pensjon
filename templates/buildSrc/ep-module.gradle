@@ -24,22 +24,22 @@ repositories {
 
     maven {
         url = uri("https://github-package-registry-mirror.gc.nav.no/cached/maven-release")
-    }
+        }
 }
 
 dependencies {
     implementation(platform("org.jetbrains.kotlin:kotlin-bom:${kotlinVersion}"))
 }
 
-assert JavaVersion.current().isCompatibleWith(JavaVersion.VERSION_21): "Java 21 or newer is required"
+assert JavaVersion.current().isCompatibleWith(JavaVersion.VERSION_{{ java_version | default(21) }}): "Java {{ java_version | default(21) }} or newer is required"
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_21
-    targetCompatibility = JavaVersion.VERSION_21
+    sourceCompatibility = JavaVersion.VERSION_{{ java_version | default(21) }}
+    targetCompatibility = JavaVersion.VERSION_{{ java_version | default(21) }}
 }
 
 kotlin {
-    jvmToolchain(21)
+    jvmToolchain({{ java_version | default(21) }})
 
     compilerOptions {
         allWarningsAsErrors.set(true)
@@ -67,7 +67,7 @@ dependencyUpdates {
 
 // https://docs.gradle.org/current/userguide/jacoco_plugin.html
 jacoco {
-    toolVersion = "0.8.10"
+    toolVersion = "0.8.14"
 }
 
 jacocoTestReport {
