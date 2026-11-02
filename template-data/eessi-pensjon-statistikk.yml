@@ -1,4 +1,2 @@
 
 build_jar: "build/libs/eessi-pensjon-statistikk.jar"
-java_version: 25
-jacoco_version: "0.8.14"
