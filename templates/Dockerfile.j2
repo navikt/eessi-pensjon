@@ -1,4 +1,4 @@
-FROM europe-north1-docker.pkg.dev/cgr-nav/pull-through/nav.no/jre:openjdk-{{ java_version | default(21) }}{% if appd is defined %}-appdynamics{% endif %}
+FROM europe-north1-docker.pkg.dev/cgr-nav/pull-through/nav.no/jre:openjdk-{{ java_version | default(25) }}{% if appd is defined %}-appdynamics{% endif %}
 
 COPY init-scripts/ep-jvm-tuning.sh /init-scripts/
 
