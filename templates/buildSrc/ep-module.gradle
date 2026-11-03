@@ -24,22 +24,22 @@ repositories {
 
     maven {
         url = uri("https://github-package-registry-mirror.gc.nav.no/cached/maven-release")
-        }
+    }
 }
 
 dependencies {
     implementation(platform("org.jetbrains.kotlin:kotlin-bom:${kotlinVersion}"))
 }
 
-assert JavaVersion.current().isCompatibleWith(JavaVersion.VERSION_{{ java_version | default(21) }}): "Java {{ java_version | default(21) }} or newer is required"
+assert JavaVersion.current().isCompatibleWith(JavaVersion.VERSION_25): "Java 25 or newer is required"
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_{{ java_version | default(21) }}
-    targetCompatibility = JavaVersion.VERSION_{{ java_version | default(21) }}
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
 }
 
 kotlin {
-    jvmToolchain({{ java_version | default(21) }})
+    jvmToolchain(25)
 
     compilerOptions {
         allWarningsAsErrors.set(true)
