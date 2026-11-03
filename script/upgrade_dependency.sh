@@ -15,7 +15,7 @@ DEPENDENCY_NAME=$(echo $DEPENDENCY | cut -f2 -d':')
 source $(dirname -- "$0")/java_use.sh
 DEFAULT_JAVA=11
 export JAVA_VERSION=$(test -f .java-version && cat .java-version || echo "$DEFAULT_JAVA")
-java_use "$JAVA_VERSION"
+java_use "$JAVA_VERSION" || exit 1
 
 if test ! -f build.gradle && test ! -f build.gradle.kts; then
   echo "Not a Gradle project."

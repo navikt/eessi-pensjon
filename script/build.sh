@@ -3,7 +3,7 @@
 source $(dirname -- "$0")/java_use.sh
 DEFAULT_JAVA=11
 export JAVA_VERSION=$(test -f .java-version && cat .java-version || echo "$DEFAULT_JAVA")
-java_use $JAVA_VERSION
+java_use "$JAVA_VERSION" || exit 1
 
 test ! -f build.gradle && test ! -f build.gradle.kts || ./gradlew build --quiet
 
