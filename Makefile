@@ -70,10 +70,10 @@ setup-githooks: ## Configure git hooks for all repos with a .githooks folder
 		fi; \
 	done
 
-EP_LIBRARIES_SKIP := $(CURRENT_DIR),eessi-pensjon-saksbehandling-ui,ep-meta-analyse,fetch-api,tabell,land-verktoy,landvelger,flagg-ikoner
+EP_LIBRARIES_SKIP := $(CURRENT_DIR),eessi-pensjon-saksbehandling-ui,ep-meta-analyse,fetch-api,tabell,land-verktoy,landvelger,flagg-ikoner,eessi-pensjon-documentation-api,eessi-pensjon-documentation
 
 upgrade-ep-libraries-part-1: ## First (of eight) steps in upgrading the ep-*-libraries dependencies ...
-	@meta exec "./gradlew dependencyUpdates --refresh-dependencies | tail -n1" --parallel --exclude $(EP_LIBRARIES_SKIP)
+	@meta exec "GW_QUIET=false $(root_dir)script/gw.sh dependencyUpdates --refresh-dependencies | tail -n1" --parallel --exclude $(EP_LIBRARIES_SKIP)
 	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-logging | tail -n1" --parallel --include-only ep-eux,ep-kodeverk,ep-personoppslag,ep-routing
 	@meta exec "$(root_dir)script/upgrade_dependency.sh no.nav.eessi.pensjon:ep-metrics | tail -n1" --parallel --include-only ep-eux,ep-kodeverk,ep-personoppslag,ep-routing
 
